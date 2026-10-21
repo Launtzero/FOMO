@@ -148,6 +148,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 
 <script>
 (function(){
+var CLE_WEB3FORMS="8b552722-4f90-44a7-b7d3-d39eae1f79d0";
 var CATS=[["concert","Concert"],["theatre","Théâtre"],["spectacle","Spectacle"],["danse","Danse"],["classique","Opéra & classique"],["jeune","Jeune public"],["expo","Exposition"],["vernissage","Vernissage"],["visite","Visites & ateliers"],["conference","Conférences & rencontres"],["manif","Manifs"],["jam","Jam & open mic"],["standup","Stand-up"],["autre","Autre"]];
 var box=document.getElementById("cats");
 CATS.forEach(function(c,i){
@@ -176,12 +177,17 @@ f.addEventListener("submit",function(e){
   if(!/^https?:\/\/\S+\.\S+/.test(lien.value.trim())){show("Le lien doit commencer par https:// (copiez l'adresse de la page).");lien.focus();return}
   var em=document.getElementById("email");
   if(em.value.trim()&&!/^\S+@\S+\.\S+$/.test(em.value.trim())){show("L'adresse e-mail ne semble pas complète.");em.focus();return}
+  if(document.getElementById("site").value){f.reset();sync();f.hidden=true;document.getElementById("done").hidden=false;return}
   send.disabled=true;send.textContent="Envoi…";
-  fetch("contribuer.php",{method:"POST",body:new FormData(f),headers:{"Accept":"application/json"}})
-    .then(function(r){return r.json().catch(function(){throw new Error("off")}).then(function(j){if(!r.ok||!j.ok)throw new Error(j.error||"off");return j})})
+  var d=new FormData(f);d.delete("site");
+  d.append("access_key",CLE_WEB3FORMS);
+  d.append("subject","Fomo – proposition : "+document.getElementById("titre").value.trim());
+  d.append("from_name","Formulaire Fomo");
+  fetch("https://api.web3forms.com/submit",{method:"POST",body:d,headers:{"Accept":"application/json"}})
+    .then(function(r){return r.json().catch(function(){throw new Error("off")}).then(function(j){if(!r.ok||!j.success)throw new Error("off");return j})})
     .then(function(){f.reset();sync();f.hidden=true;document.getElementById("done").hidden=false;window.scrollTo(0,0)})
     .catch(function(x){
-      show(x.message&&x.message!=="off"&&x.message!=="Failed to fetch"?x.message:"L'envoi n'a pas abouti. Le formulaire fonctionnera une fois le site en ligne ; en attendant, réessayez plus tard.");
+      show(x.message&&x.message!=="off"&&x.message!=="Failed to fetch"?x.message:"L'envoi n'a pas abouti. Vérifiez votre connexion et réessayez dans un instant.");
     })
     .finally(function(){send.disabled=false;send.textContent="Envoyer la proposition"});
 });
