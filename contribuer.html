@@ -33,6 +33,8 @@ input[type=text],input[type=date],input[type=time],input[type=url],input[type=em
   font:inherit;font-size:15px;color:var(--fg);background:var(--bg);border:0;border-radius:999px;
   box-shadow:inset 0 0 0 .5px var(--fg);padding:9px 16px;width:100%;line-height:1.5;min-height:42px;-webkit-appearance:none;appearance:none}
 input[type=text],input[type=date],input[type=time],input[type=url],input[type=email]{height:42px;padding-top:0;padding-bottom:0}
+input::placeholder,textarea::placeholder{color:var(--muted);opacity:1;transition:opacity .25s}
+input:focus::placeholder,textarea:focus::placeholder{opacity:.3}
 input:focus,textarea:focus{outline:none;box-shadow:inset 0 0 0 1.5px var(--fg)}
 textarea{min-height:5.5rem;resize:vertical;border-radius:22px!important}
 @media (pointer:coarse){input,textarea{font-size:16px}}
@@ -70,7 +72,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
   <form id="form" novalidate>
     <div class="f">
       <label for="titre">Nom de l'événement</label>
-      <input type="text" id="titre" name="titre" required maxlength="160" placeholder="Ex. Concert de jazz manouche">
+      <input type="text" id="titre" name="titre" required maxlength="160">
     </div>
 
     <fieldset class="chips" id="cats">
@@ -100,11 +102,11 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
     <div class="two">
       <div class="f">
         <label for="lieu">Lieu</label>
-        <input type="text" id="lieu" name="lieu" required maxlength="120" placeholder="Ex. La Machine à Coudre">
+        <input type="text" id="lieu" name="lieu" required maxlength="120">
       </div>
       <div class="f">
         <label for="adresse">Adresse <span class="opt">facultatif</span></label>
-        <input type="text" id="adresse" name="adresse" maxlength="160" placeholder="Rue, numéro, ville">
+        <input type="text" id="adresse" name="adresse" maxlength="160">
       </div>
     </div>
 
@@ -121,7 +123,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 
     <div class="f">
       <label for="texte">En quelques mots <span class="opt">facultatif</span></label>
-      <textarea id="texte" name="texte" maxlength="800" placeholder="Ce qu'il faut savoir, sans ton publicitaire."></textarea>
+      <textarea id="texte" name="texte" maxlength="800" placeholder="Sans ton publicitaire."></textarea>
     </div>
 
     <div class="f">
