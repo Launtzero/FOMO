@@ -261,9 +261,9 @@ footer a.propose:hover{border-color:var(--fg)}
 /* le O s'arrondit jusqu'au cercle parfait puis revient, douze fois par minute, comme une respiration (animation dans le logo) */
 
 /* ESSAI LUEUR : comme le logo (jaune + lueur interne orangée), chaque couleur a sa lueur, un ton plus profond, sur le logo et les pastilles colorées */
-:root{--glow:#ff7d14;--glow-a:17%}
-.logo .lueur-c{flood-color:var(--glow);flood-opacity:.17}
-.chip[aria-pressed="true"],.day.now,.day.sel,.det .pin[aria-expanded="true"],:root:not([data-theme="dark"]) .tag.g,:root:not([data-theme="dark"]) .more,:root:not([data-theme="dark"]) .big small{box-shadow:inset 0 0 7px color-mix(in srgb,var(--glow) var(--glow-a),transparent)}
+:root{--glow:#ff7d14;--glow-o:.17}
+.logo .lueur-c{flood-color:var(--glow);flood-opacity:var(--glow-o)}
+.chip[aria-pressed="true"],.day.now,.day.sel,.det .pin[aria-expanded="true"],:root:not([data-theme="dark"]) .tag.g,:root:not([data-theme="dark"]) .more,:root:not([data-theme="dark"]) .big small{box-shadow:inset 0 0 7px color-mix(in srgb,var(--glow) calc(var(--glow-o) * 100%),transparent)}
 </style>
 
 <div class="wrap">
@@ -403,7 +403,7 @@ document.addEventListener("click",function(e){var b=e.target.closest("[data-ev]"
 function row(o,ctx){
   var when=o.h||"";
   if(o.e&&isExpo(o))when="→ "+fmtShort(o.e);
-  var tags=o.c.filter(function(c){return state.q||!state.cats[c]}).filter(function(c){return !MUTE[c]}).map(function(c){var mx=mixed();return '<span class="tag'+(mx?' g':'')+'"'+(mx?' style="--accent:'+(TONES[c]||"#fff53d")+';--glow:'+(GLOWS[c]||"#ff7d14")+'"':'')+'>'+esc(CL[c])+'</span>'}).join("");
+  var tags=o.c.filter(function(c){return state.q||!state.cats[c]}).filter(function(c){return !MUTE[c]}).map(function(c){var mx=mixed();return '<span class="tag'+(mx?' g':'')+'"'+(mx?' style="--accent:'+(TONES[c]||"#fff53d")+';--glow:'+(GLOWS[c]||"#ff7d14")+';--glow-o:'+(GLOWO[c]||.17)+'"':'')+'>'+esc(CL[c])+'</span>'}).join("");
   var Dd=state.sel||T;if(o.e&&o.c.indexOf("expo")>=0&&Dd>=o.d&&(dt(Dd)-dt(o.d))/864e5<5)tags='<span class="tag new">new</span>'+tags;
   if(o.g)tags+='<span class="tag g">'+esc(o.g)+'</span>';
   if(o.x&&o.x!=="Complet")tags+='<span class="tag st">'+esc(o.x)+'</span>';
@@ -412,7 +412,7 @@ function row(o,ctx){
   var hh=ctx==='range'?hrs(o,state.sel||T):null;var meta=[esc(o.v),(hh&&hh!==1&&hh!=='closed')?'ouvert '+esc(hh):'',(o.n===o.g?'':esc(o.n))].filter(function(x,i,ar){return x&&ar.indexOf(x)===i}).join(" · ");
   var d=DESC[o.i]||{},link=d.l||o.u,id="ev"+(EVK++);
   var det='<div class="det" id="'+id+'" hidden>'+(d.d?'<p>'+esc(d.d)+'</p>':'')+'<div class="det-l"><button type="button" class="pin" data-pin="'+id+'" aria-expanded="false" aria-label="Adresse et itinéraire"><svg viewBox="0 0 16 20" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.6 0 0 3.5 0 7.9 0 13.5 8 20 8 20s8-6.5 8-12.1C16 3.5 12.4 0 8 0zm0 10.9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></button><a href="'+esc(link)+'" target="_blank" rel="noopener">On donne nos sources</a></div>'+adr(o,id)+'</div>';
-  var wpl=where(o.v);var tn=mixed()&&tone(o);return '<div class="row'+(o.x==="Annulé"?" gone":"")+'"'+(tn?' style="--hl:'+tn+';--accent:'+tn+';--glow:'+GLOWS[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+'"':'')+(wpl&&wpl.k!=null?' data-pl="'+wpl.k+'"':(wpl&&wpl.out?' data-pl="o:'+esc(wpl.out)+'"':''))+'><div class="time">'+esc(when)+'</div><div class="ttl"><button type="button" class="evt" aria-expanded="false" aria-controls="'+id+'" data-ev="'+id+'">'+esc(o.t)+'</button><span class="meta">'+meta+'</span>'+det+'</div><div class="tags"><button type="button" class="plus" data-for="'+id+'" aria-label="Voir le résumé" tabindex="-1"></button>'+tags+'</div></div>';
+  var wpl=where(o.v);var tn=mixed()&&tone(o);return '<div class="row'+(o.x==="Annulé"?" gone":"")+'"'+(tn?' style="--hl:'+tn+';--accent:'+tn+';--glow:'+GLOWS[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+';--glow-o:'+GLOWO[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+'"':'')+(wpl&&wpl.k!=null?' data-pl="'+wpl.k+'"':(wpl&&wpl.out?' data-pl="o:'+esc(wpl.out)+'"':''))+'><div class="time">'+esc(when)+'</div><div class="ttl"><button type="button" class="evt" aria-expanded="false" aria-controls="'+id+'" data-ev="'+id+'">'+esc(o.t)+'</button><span class="meta">'+meta+'</span>'+det+'</div><div class="tags"><button type="button" class="plus" data-for="'+id+'" aria-label="Voir le résumé" tabindex="-1"></button>'+tags+'</div></div>';
 }
 function list(){
   if(state.q)return found();
@@ -684,9 +684,9 @@ window.addEventListener("resize",function(){view()});
 /* ordinateur : la carte démarre au même bord gauche que les pastilles de rubriques */
 function alignMap(){var b=document.querySelector(".body"),c=document.getElementById("rub");if(!b||!c)return;if(!window.matchMedia("(min-width:861px)").matches){["--mapw","--listw","--mgap"].forEach(function(p){b.style.removeProperty(p)});return}var cs=getComputedStyle(c),br=b.getBoundingClientRect(),left=c.getBoundingClientRect().left+parseFloat(cs.paddingLeft||0),w=br.right-left,lg=document.querySelector(".logo"),lw=br.width-w-60,gp=60;if(w>=200)b.style.setProperty("--mapw",Math.round(w)+"px");else b.style.removeProperty("--mapw");if(w>=200&&lw>=300&&gp>=16){b.style.setProperty("--listw",Math.floor(lw)+"px");b.style.setProperty("--mgap",gp+"px")}else{b.style.removeProperty("--listw");b.style.removeProperty("--mgap")}if(MAPSEL!=null&&map.by&&map.by[MAPSEL])tip(MAPSEL,map.by[MAPSEL].length)}
 window.addEventListener("resize",alignMap);window.addEventListener("load",alignMap);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(alignMap);if(window.ResizeObserver){var _tp=document.querySelector(".top");if(_tp)new ResizeObserver(alignMap).observe(_tp)}setTimeout(alignMap,0);
-var GLOWS={"expo":"#28ff26","vernissage":"#39ff08","manif":"#ff277a","visite":"#ff2d16","conference":"#4e60df","rencontre":"#4e60df","theatre":"#367bff","spectacle":"#7e31ff","danse":"#6d8bff","classique":"#a672ff","jeune":"#ff7687"};var TONES={expo:"#5cf2a6",vernissage:"#bdf53b",manif:"#ff6450",visite:"#ffb23f",conference:"#8ab3cc",rencontre:"#8ab3cc",theatre:"#5fe6ff",spectacle:"#5a6fff",danse:"#b596ff",classique:"#f29bff",jeune:"#ff9fdb"};
+var GLOWS={"expo":"#13ff12","vernissage":"#30f300","manif":"#ff136e","visite":"#ff1b02","conference":"#3d50dc","rencontre":"#3d50dc","theatre":"#226eff","spectacle":"#711dff","danse":"#597bff","classique":"#995eff","jeune":"#ff6275"};var GLOWO={"expo":0.13,"vernissage":0.21,"manif":0.236,"visite":0.134,"conference":0.154,"rencontre":0.154,"theatre":0.14,"spectacle":0.182,"danse":0.402,"classique":0.27,"jeune":0.292};var TONES={expo:"#5cf2a6",vernissage:"#bdf53b",manif:"#ff6450",visite:"#ffb23f",conference:"#8ab3cc",rencontre:"#8ab3cc",theatre:"#5fe6ff",spectacle:"#5a6fff",danse:"#b596ff",classique:"#f29bff",jeune:"#ff9fdb"};
 document.addEventListener("click",function(e){var p=e.target.closest&&e.target.closest(".plus[data-for]");if(!p)return;var t=document.querySelector('[data-ev="'+p.dataset.for+'"]');if(t)t.click()});document.documentElement.classList.add("hint");document.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("[data-ev],.plus"))document.documentElement.classList.remove("hint")},true);setTimeout(function(){document.documentElement.classList.remove("hint")},15000);
-function all(){var t=Object.keys(state.cats).filter(function(k){return state.cats[k]})[0],c=TONES[t],st=document.documentElement.style;if(c){st.setProperty("--hl",c);st.setProperty("--accent",c);st.setProperty("--glow",GLOWS[t])}else{st.removeProperty("--hl");st.removeProperty("--accent");st.removeProperty("--glow")}cal();chips();list()}
+function all(){var t=Object.keys(state.cats).filter(function(k){return state.cats[k]})[0],c=TONES[t],st=document.documentElement.style;if(c){st.setProperty("--hl",c);st.setProperty("--accent",c);st.setProperty("--glow",GLOWS[t]);st.setProperty("--glow-o",GLOWO[t])}else{st.removeProperty("--hl");st.removeProperty("--accent");st.removeProperty("--glow");st.removeProperty("--glow-o")}cal();chips();list()}
 document.addEventListener("click",function(e){
   var b=e.target.closest("button");if(!b)return;
   if(b.dataset.nav){state.m+=+b.dataset.nav;if(state.m<0){state.m=11;state.y--}if(state.m>11){state.m=0;state.y++}cal();return}
