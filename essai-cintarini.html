@@ -264,9 +264,9 @@ footer a.propose:hover{border-color:var(--fg)}
 :root{--glow:#ff7d14;--glow-o:.13}
 .logo .lueur-c{flood-color:var(--glow);flood-opacity:var(--glow-o)}
 .chip[aria-pressed="true"],.day.now,.day.sel,.det .pin[aria-expanded="true"],:root:not([data-theme="dark"]) .tag.g,:root:not([data-theme="dark"]) .more,:root:not([data-theme="dark"]) .big small{box-shadow:inset 0 0 7px color-mix(in srgb,var(--glow) calc(var(--glow-o) * 45%),transparent)}
-/* ESSAI ACCROCHE : « Ne rien louper à Marseille » sur le logo, en noir ; la nuit, blanc sur le fond et noir sur les lettres jaunes */
+/* ESSAI ACCROCHE : « Ne rien louper à Marseille » sur le logo, en noir le jour, entièrement en blanc la nuit */
 .logo .accroche{color:var(--fg)}
-.logo .accroche-sur{fill:#000}
+.logo .accroche-sur{fill:var(--fg)}
 @media (max-width:560px){.top .today .logo{width:min(77vw,316px)}}
 </style>
 
