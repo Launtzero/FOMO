@@ -271,8 +271,10 @@ footer a.propose:hover{border-color:var(--fg)}
 @media (max-width:560px){.top .today .logo{width:min(82vw,337px);margin-left:calc(50vw - 16px - .5289 * min(82vw,337px));margin-bottom:22px}
   /* plus d'air entre calendrier et barre de recherche */
   .top .rub{margin-top:16px}}
-/* ordinateur : logo à 95 % pour laisser respirer */
-@media (min-width:561px){.top .today .logo{height:255px;margin-top:2px}}
+/* ordinateur : logo réduit deux fois à 95 % pour laisser respirer */
+/* nuit : accroche en gris clair */
+:root[data-theme="dark"] .logo .accroche{color:#c4c4bd}
+@media (min-width:561px){.top .today .logo{height:242px;margin-top:8px}}
 </style>
 
 <div class="wrap">
