@@ -6,11 +6,11 @@
 /* Layout : une colonne étroite, logo en tête, formulaire en pastilles comme le site. */
 :root{
   --bg:#ffffff; --surface:#f7f7f2; --fg:#111110; --muted:#66665d; --line:#e3e3db; --soft:#efefe6;
-  --hl:#fff53d; --hl-ink:#111110; --warn:#c2410c; --ok:#1d6b2f;
+  --hl:#fff53d; --hl-ink:#111110; --warn:#c2410c; --ok:#1d6b2f; --glow:#ff7d14; --glow-o:.13;
   --f-body:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 :root[data-theme="dark"]{
-  --bg:#1f1f1d; --surface:#282826; --fg:#f1f1e8; --muted:#a5a59a; --line:#474741; --soft:#33332f;
+  --bg:#000000; --surface:#1a1a19; --fg:#f1f1e8; --muted:#a5a59a; --line:#474741; --soft:#33332f;
   --hl:#fff53d; --hl-ink:#161615; --warn:#ff7a4d; --ok:#7ef95e; color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -37,11 +37,11 @@ textarea{min-height:5.5rem;resize:vertical;border-radius:14px}
 @media (pointer:coarse){input,textarea{font-size:16px}}
 .chips{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0}
 .chips legend{padding:0;margin-bottom:10px}
-.chip{position:relative}
+.chip{position:relative;font-size:12.5px;font-weight:400;letter-spacing:0;text-transform:none;line-height:1.5}
 .chip input{position:absolute;opacity:0;pointer-events:none}
-.chip span{display:inline-block;font-size:12.5px;padding:4px 11px;border-radius:999px;background:var(--soft);cursor:pointer}
+.chip span{display:inline-block;font-size:12.5px;padding:4px 11px;border:1px solid transparent;border-radius:999px;background:var(--soft);color:var(--fg);cursor:pointer}
 .chip span:hover{background:var(--line)}
-.chip input:checked+span{background:var(--hl);color:var(--hl-ink)}
+.chip input:checked+span{background:var(--hl);color:var(--hl-ink);box-shadow:inset 0 0 7px color-mix(in srgb,var(--glow) calc(var(--glow-o) * 45%),transparent)}
 .chip input:focus-visible+span{outline:2px solid var(--fg);outline-offset:2px}
 .hint{font-size:12.5px;color:var(--muted)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -78,7 +78,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 
     <div class="f" id="genreBox" hidden>
       <label for="genre">Genre musical <span class="opt">facultatif</span></label>
-      <input type="text" id="genre" name="genre" maxlength="60" placeholder="Ex. rock, électro, rap, jazz">
+      <input type="text" id="genre" name="genre" maxlength="60" placeholder="Ex. rock, électro, rap, jazz, jam, open mic">
     </div>
 
     <div class="two">
@@ -150,7 +150,10 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 <script>
 (function(){
 var CLE_WEB3FORMS="8b552722-4f90-44a7-b7d3-d39eae1f79d0";
-var CATS=[["concert","Concert"],["theatre","Théâtre"],["spectacle","Spectacle"],["danse","Danse"],["classique","Opéra & classique"],["jeune","Jeune public"],["expo","Exposition"],["vernissage","Vernissage"],["visite","Visites & ateliers"],["conference","Conférences & rencontres"],["manif","Manifs"],["jam","Jam & open mic"],["standup","Stand-up"],["autre","Autre"]];
+var CATS=[["concert","Concert"],["theatre","Théâtre"],["spectacle","Spectacle"],["danse","Danse"],["classique","Opéra & classique"],["jeune","Jeune public"],["expo","Exposition"],["vernissage","Vernissage"],["visite","Visites & ateliers"],["conference","Conférences & rencontres"],["manif","Manifs"]];
+var TONES={expo:"#5cf2a6",vernissage:"#bdf53b",manif:"#ff6450",visite:"#ffb23f",conference:"#8ab3cc",theatre:"#5fe6ff",spectacle:"#5a6fff",danse:"#b596ff",classique:"#f29bff",jeune:"#ff9fdb"};
+var GLOWS={expo:"#00f277",vernissage:"#94d400",manif:"#b61500",visite:"#e28700",conference:"#338fc7",theatre:"#00a6c5",spectacle:"#0020fd",danse:"#4a00fc",classique:"#de02ff",jeune:"#ff06a2"};
+var GLOWO={expo:.675,vernissage:.544,manif:.675,visite:.64,conference:.646,theatre:.675,spectacle:.674,danse:.266,classique:.28,jeune:.338};
 var box=document.getElementById("cats");
 CATS.forEach(function(c,i){
   var l=document.createElement("label");l.className="chip";
@@ -160,7 +163,8 @@ CATS.forEach(function(c,i){
 var f=document.getElementById("form"),err=document.getElementById("err"),send=document.getElementById("send");
 function cat(){var r=f.querySelector("input[name=categorie]:checked");return r?r.value:"concert"}
 function sync(){
-  var c=cat();
+  var c=cat(),st=document.documentElement.style;
+  if(TONES[c]){st.setProperty("--hl",TONES[c]);st.setProperty("--glow",GLOWS[c]);st.setProperty("--glow-o",GLOWO[c])}else{st.removeProperty("--hl");st.removeProperty("--glow");st.removeProperty("--glow-o")}
   document.getElementById("genreBox").hidden=c!=="concert";
   var expo=c==="expo";
   document.getElementById("finBox").hidden=!expo;
