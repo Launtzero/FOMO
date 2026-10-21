@@ -114,8 +114,8 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 
     <div class="f">
       <label for="lien">Lien vers l'événement</label>
-      <input type="url" id="lien" name="lien" required maxlength="400" placeholder="https://… (site du lieu, billetterie, page de l'organisateur)">
-      <span class="hint">Il nous sert à vérifier les infos.</span>
+      <input type="url" id="lien" name="lien" maxlength="400" placeholder="https://… (site du lieu, billetterie, page de l'organisateur)">
+      <span class="hint">Il nous sert à vérifier les infos. Pas de lien ? Laissez-nous votre e-mail plus bas.</span>
     </div>
 
     <div class="f">
@@ -124,8 +124,9 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
     </div>
 
     <div class="f">
-      <label for="email">Votre e-mail <span class="opt">facultatif, jamais publié</span></label>
+      <label for="email">Votre e-mail <span class="opt">jamais publié</span></label>
       <input type="email" id="email" name="email" maxlength="120" placeholder="Pour vous contacter en cas de question">
+      <span class="hint">Obligatoire seulement si vous n'avez pas de lien.</span>
     </div>
 
     <div class="hp" aria-hidden="true">
@@ -171,11 +172,11 @@ box.addEventListener("change",sync);sync();
 function show(t){err.textContent=t;err.hidden=false}
 f.addEventListener("submit",function(e){
   e.preventDefault();err.hidden=true;
-  var need=[["titre","le nom de l'événement"],["date","la date"],["lieu","le lieu"],["lien","le lien vers l'événement"]];
+  var need=[["titre","le nom de l'événement"],["date","la date"],["lieu","le lieu"]];
   for(var i=0;i<need.length;i++){var el=document.getElementById(need[i][0]);if(!el.value.trim()){show("Il manque "+need[i][1]+".");el.focus();return}}
-  var lien=document.getElementById("lien");
-  if(!/^https?:\/\/\S+\.\S+/.test(lien.value.trim())){show("Le lien doit commencer par https:// (copiez l'adresse de la page).");lien.focus();return}
-  var em=document.getElementById("email");
+  var lien=document.getElementById("lien"),em=document.getElementById("email");
+  if(!lien.value.trim()&&!em.value.trim()){show("Indiquez un lien vers l'événement ou votre e-mail, pour qu'on puisse vérifier les infos.");lien.focus();return}
+  if(lien.value.trim()&&!/^https?:\/\/\S+\.\S+/.test(lien.value.trim())){show("Le lien doit commencer par https:// (copiez l'adresse de la page).");lien.focus();return}
   if(em.value.trim()&&!/^\S+@\S+\.\S+$/.test(em.value.trim())){show("L'adresse e-mail ne semble pas complète.");em.focus();return}
   if(document.getElementById("site").value){f.reset();sync();f.hidden=true;document.getElementById("done").hidden=false;return}
   send.disabled=true;send.textContent="Envoi…";
