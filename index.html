@@ -329,13 +329,12 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   .srch svg circle{stroke-width:2.6}.srch svg path{stroke-width:2.8}
   :root:not([data-theme="dark"]) .srch svg{color:#000}
 }
-/* nuit : plus de contour sombre sur les gabians blancs ; chaque forme a un contour de sa propre couleur,
-   seuls les traits intérieurs (aile, plumes, cuisses) restent en gris clair pour garder le dessin lisible */
-:root[data-theme="dark"] .gab.old svg [stroke="#141412"][fill="#fff"]:not(.ey *){stroke:#fff}
-:root[data-theme="dark"] .gab.old svg [stroke="#141412"][fill="#fff43d"]{stroke:#fff43d}
-:root[data-theme="dark"] .gab.old svg [stroke="#141412"][fill="#141412"]:not(.ey *):not(.br){stroke:#5d5d57}
-:root[data-theme="dark"] .gab.old svg [stroke="#141412"][fill="none"]:not(.ey *):not(.br){stroke:#b4b4ad}
-:root[data-theme="dark"] .gab.old svg .ft [stroke="#141412"][fill="none"],:root[data-theme="dark"] .gab.old svg .ftp [stroke="#141412"][fill="none"]{stroke:#fff43d}
+/* nuit : contours noirs bien francs (trait épaissi, sinon il paraît gris à petite taille) */
+:root[data-theme="dark"] .gab.old svg [stroke="#141412"]:not(.ey *):not(.br){stroke:#000}
+:root[data-theme="dark"] .gab.old svg [stroke-width=".8"]:not(.ey *){stroke-width:1.6}
+:root[data-theme="dark"] .gab.old svg [stroke-width=".45"]{stroke-width:.9}
+:root[data-theme="dark"] .gab.old svg [stroke-width="1.1301"]:not(.ey *){stroke-width:2.26}
+:root[data-theme="dark"] .gab.old svg [stroke-width=".6357"]{stroke-width:1.27}
 </style>
 
 <div class="wrap">
