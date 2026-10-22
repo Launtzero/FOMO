@@ -285,6 +285,22 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
 /* flèche des villes hors carte : dessinée (pas d'émoji sur téléphone) */
 .map .edge{display:inline-flex;align-items:center;gap:4px}
 .map .edge .ar{display:block;width:9px!important;height:9px!important;margin:0!important;background:none!important;border-radius:0!important;flex:none;cursor:inherit;touch-action:auto}
+/* épingle du lieu : noire sur blanc le jour, blanche sur noir la nuit, fin contour */
+.det .pin,.det .pin:hover,.det .pin[aria-expanded="true"]{background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 .5px var(--fg)}
+/* téléphone, événement ouvert : titre, lieu, résumé, prix et style, puis épingle et source ; pas de bouton « moins » */
+@media (max-width:560px){
+  .row:has(.evt[aria-expanded="true"]) .ttl,.row:has(.evt[aria-expanded="true"]) .det:not([hidden]){display:contents}
+  .row:has(.evt[aria-expanded="true"]) .time{grid-row:1}
+  .row:has(.evt[aria-expanded="true"]) .ttl>*,.row:has(.evt[aria-expanded="true"]) .det>*,.row:has(.evt[aria-expanded="true"]) .tags{grid-column:2;min-width:0}
+  .row:has(.evt[aria-expanded="true"]) .evt{order:1;font-weight:700}
+  .row:has(.evt[aria-expanded="true"]) .meta{order:2}
+  .row:has(.evt[aria-expanded="true"]) .det>p{order:3;margin-top:6px;font-weight:400;font-size:14px}
+  .row:has(.evt[aria-expanded="true"]) .tags{order:4;margin-top:4px}
+  .row:has(.evt[aria-expanded="true"]) .det-l{order:5;margin-top:2px}
+  .row:has(.evt[aria-expanded="true"]) .adr{order:6;font-weight:400}
+  .row:has(.evt[aria-expanded="true"]) .det-l a{font-weight:400}
+  .row:has(.evt[aria-expanded="true"]) .plus{display:none}
+}
 </style>
 
 <div class="wrap">
