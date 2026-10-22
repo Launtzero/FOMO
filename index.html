@@ -311,6 +311,16 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   .logo g[filter]{filter:none}
   .chip[aria-pressed="true"],.day.now,.day.sel,.det .pin[aria-expanded="true"],:root:not([data-theme="dark"]) .tag.g,:root:not([data-theme="dark"]) .more,:root:not([data-theme="dark"]) .big small{box-shadow:none}
 }
+/* téléphone : texte de la recherche à la taille des rubriques (rubriques un peu agrandies).
+   Le champ garde 16px en interne pour que l'iPhone ne zoome pas, puis il est réduit à l'affichage. */
+@media (max-width:560px){
+  .chip{font-size:13.5px;padding:5px 12px}
+  .srch{height:32px}
+}
+@media (max-width:560px) and (pointer:coarse){
+  .srch input{flex:none;font-size:16px;width:calc(100% / .84);height:calc(100% / .84);transform:scale(.84);transform-origin:left center;padding:0 calc(28px / .84) 0 calc(31px / .84)}
+}
+@media (max-width:560px) and (pointer:fine){.srch input{font-size:13.5px}}
 </style>
 
 <div class="wrap">
