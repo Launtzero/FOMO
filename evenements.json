@@ -2314,21 +2314,6 @@
    "source": "Infoconcert"
   },
   {
-   "titre": "Claudine François",
-   "lieu": "Basilique Abbaye Saint-Victor",
-   "categories": [
-    "classique"
-   ],
-   "dates": [
-    "2026-10-31 20:30"
-   ],
-   "genre": "Classique",
-   "prix": "À partir de 10€",
-   "resume": "Concert de musique classique de Claudine François à la basilique de l'abbaye Saint-Victor.",
-   "lien": "https://www.infoconcert.com/concerts/concert-claudine-francois-marseille-1942469",
-   "source": "Infoconcert"
-  },
-  {
    "titre": "Eyehategod",
    "lieu": "Le Molotov",
    "categories": [
@@ -9829,10 +9814,9 @@
    "source": "MyProvence"
   },
   {
-   "titre": "Memento mori - Voix des Suds",
-   "lieu": "Abbaye Saint-Victor, Marseille",
+   "titre": "Memento mori, Claudine François",
+   "lieu": "Basilique Abbaye Saint-Victor",
    "categories": [
-    "concert",
     "classique"
    ],
    "dates": [
@@ -9841,7 +9825,7 @@
    "genre": "Classique",
    "prix": "À partir de 15€",
    "note": "Festival Voix des Suds",
-   "resume": "Concert Memento mori de l'abbaye Saint-Victor, dans le festival Voix des Suds (musique sacrée et profane, jazz). Programme en attente de validation.",
+   "resume": "Spectacle Memento mori de Claudine François à la basilique de l'abbaye Saint-Victor, dans le cadre du festival Voix des Suds.",
    "lien": "https://amisdesaintvictor.com",
    "source": "MyProvence"
   },
