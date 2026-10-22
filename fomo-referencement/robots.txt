@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /essai-
+Sitemap: https://fo-mo.fr/sitemap.xml

@@ -1,0 +1,211 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#000000"><link rel="canonical" href="https://fo-mo.fr/contribuer.html"><meta property="og:type" content="website"><meta property="og:site_name" content="FOMO"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="Proposer un événement · FOMO Marseille"><meta property="og:description" content="Proposez un concert, une expo, un spectacle ou une manif à Marseille et alentours pour l'agenda FOMO."><meta property="og:url" content="https://fo-mo.fr/contribuer.html"><meta property="og:image" content="https://fo-mo.fr/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Logo FOMO, ne rien louper à Marseille"><meta name="twitter:card" content="summary_large_image"><meta name="description" content="Proposez un concert, une expo, un spectacle ou une manif à Marseille et alentours pour l'agenda FOMO."></head><body>
+<title>Proposer un événement · FOMO Marseille</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script>/* mode nuit du coucher au lever du soleil à Marseille (calculés chaque jour) */
+(function(){function sun(d){var r=Math.PI/180,lat=43.2965*r,lon=5.3698,y=d.getUTCFullYear(),b=Date.UTC(y,d.getUTCMonth(),d.getUTCDate()),n=Math.round((b-Date.UTC(y,0,1))/864e5)+1,g=2*Math.PI/365*(n-1),
+eq=229.18*(.000075+.001868*Math.cos(g)-.032077*Math.sin(g)-.014615*Math.cos(2*g)-.040849*Math.sin(2*g)),
+de=.006918-.399912*Math.cos(g)+.070257*Math.sin(g)-.006758*Math.cos(2*g)+.000907*Math.sin(2*g)-.002697*Math.cos(3*g)+.00148*Math.sin(3*g),
+ha=Math.acos(Math.cos(90.833*r)/(Math.cos(lat)*Math.cos(de))-Math.tan(lat)*Math.tan(de))/r,no=720-4*lon-eq;return [b+(no-4*ha)*6e4,b+(no+4*ha)*6e4]}
+function t(){var d=new Date(),s=sun(d),now=d.getTime();document.documentElement.setAttribute("data-theme",(now<s[0]||now>=s[1])?"dark":"light")}t();setInterval(t,60000)})();</script>
+<style>
+/* Layout : une colonne étroite, logo en tête, formulaire en pastilles comme le site. */
+:root{
+  --bg:#ffffff; --surface:#f7f7f2; --fg:#111110; --muted:#66665d; --line:#e3e3db; --soft:#efefe6;
+  --hl:#fff43d; --hl-ink:#111110; --warn:#c2410c; --ok:#1d6b2f; --glow:#ff7d14; --glow-o:.13;
+  --f-body:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+:root[data-theme="dark"]{
+  --bg:#000000; --surface:#1a1a19; --fg:#f1f1e8; --muted:#a5a59a; --line:#474741; --soft:#33332f;
+  --hl:#fff43d; --hl-ink:#161615; --warn:#ff7a4d; --ok:#7ef95e; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.5;margin:0;
+  padding-block:48px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));transition:background-color .4s,color .4s}
+.wrap{max-width:38rem;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+a{color:inherit}
+.back{align-self:flex-start;font-size:12.5px;text-decoration:none;background:var(--soft);border-radius:999px;padding:4px 12px}
+.back:hover{background:var(--line)}
+.logo{display:block;width:clamp(150px,36vw,220px);height:auto;color:var(--hl);margin-left:-4px}
+h1{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:800;letter-spacing:-.02em;line-height:1;margin:0;text-wrap:balance}
+.intro{color:var(--muted);margin:10px 0 0;max-width:34rem}
+form{display:flex;flex-direction:column;gap:22px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px 16px}
+@media (max-width:480px){.two{grid-template-columns:1fr}}
+label,.lg{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.opt{font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)}
+input[type=text],input[type=date],input[type=time],input[type=url],input[type=email],textarea{
+  font:inherit;font-size:15px;color:var(--fg);background:var(--bg);border:0;border-radius:999px;
+  box-shadow:inset 0 0 0 .5px var(--fg);padding:9px 16px;width:100%;line-height:1.5;min-height:42px;-webkit-appearance:none;appearance:none}
+input[type=text],input[type=date],input[type=time],input[type=url],input[type=email]{height:42px;padding-top:0;padding-bottom:0}
+input::placeholder,textarea::placeholder{color:var(--muted);opacity:1;transition:opacity .25s}
+input:focus::placeholder,textarea:focus::placeholder{opacity:.3}
+input:focus,textarea:focus{outline:none;box-shadow:inset 0 0 0 1.5px var(--fg)}
+textarea{min-height:5.5rem;resize:vertical;border-radius:22px!important}
+@media (pointer:coarse){input,textarea{font-size:16px}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0}
+.chips legend{padding:0;margin-bottom:10px}
+.chip{position:relative;font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;line-height:1.5}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-block;font-size:15px;line-height:1.5;padding:6px 15px;border:0;border-radius:999px;background:var(--soft);color:var(--fg);cursor:pointer}
+.chip span:hover{background:var(--line)}
+.chip input:checked+span{background:var(--hl);color:var(--hl-ink);box-shadow:inset 0 0 7px color-mix(in srgb,var(--glow) calc(var(--glow-o) * 45%),transparent)}
+.chip input:focus-visible+span{outline:2px solid var(--fg);outline-offset:2px}
+.hint{font-size:12.5px;color:var(--muted)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.send{align-self:flex-start;font:inherit;font-weight:700;border:0;border-radius:999px;background:var(--hl);color:var(--hl-ink);padding:10px 22px;cursor:pointer}
+.send:hover{filter:brightness(.96)}
+.send:disabled{opacity:.5;cursor:default}
+.send:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.msg{font-size:14px;margin:0}
+.msg.err{color:var(--warn)}
+.done{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.done p{margin:0}
+.done button{font:inherit;font-size:12.5px;border:0;border-radius:999px;background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 .5px var(--fg);padding:4px 12px;cursor:pointer}
+footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px}
+@media (prefers-reduced-motion:reduce){body{transition:none}}
+</style>
+
+<div class="wrap">
+  <a class="back" href="./">← Retour à l'agenda</a>
+  <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="127.6 103.5 148.4 135" role="img" aria-label="Fomo"><path fill="currentColor" d="M 196.078125 150.84375 C 201.894531 150.84375 206.890625 146.199219 206.890625 140.214844 C 206.890625 133.941406 202.070312 129.582031 196.078125 129.582031 L 178.070312 129.582031 L 178.070312 127.035156 L 196.078125 127.035156 C 202.015625 127.035156 206.890625 122.039062 206.890625 115.761719 C 206.890625 109.546875 202.015625 105.132812 196.078125 105.132812 L 167.042969 105.132812 C 160.992188 105.132812 155.3125 109.777344 155.3125 116.402344 L 155.3125 167.785156 C 154.648438 167.742188 153.972656 167.722656 153.28125 167.722656 C 133.417969 167.722656 128.125 181.609375 128.125 195.550781 L 128.125 225.585938 C 128.125 231.804688 133.355469 236.917969 139.707031 236.917969 C 146.167969 236.917969 151.339844 231.804688 151.339844 225.585938 L 151.339844 195.378906 C 151.339844 192.355469 151.695312 190.382812 153.28125 190.382812 C 154.808594 190.382812 155.21875 192.707031 155.21875 195.378906 L 155.21875 225.585938 C 155.21875 231.804688 160.453125 236.917969 166.855469 236.917969 C 173.261719 236.917969 178.4375 231.804688 178.4375 225.585938 L 178.4375 195.378906 C 178.4375 192.355469 178.785156 190.382812 180.375 190.382812 C 181.902344 190.382812 182.3125 192.707031 182.3125 195.378906 L 182.3125 225.585938 C 182.3125 231.804688 187.542969 236.917969 193.949219 236.917969 C 200.355469 236.917969 205.527344 231.804688 205.527344 225.585938 L 205.527344 195.550781 C 205.527344 181.609375 200.296875 167.722656 180.375 167.722656 C 179.589844 167.722656 178.820312 167.753906 178.070312 167.804688 L 178.070312 150.84375 Z M 196.078125 150.84375"/><path fill="currentColor" d="M 258.0625 171.082031 C 268.8125 164.78125 275.523438 152.496094 275.523438 139.726562 C 275.523438 120.378906 260.34375 103.996094 241.851562 103.996094 C 221.671875 103.996094 208.179688 121.542969 208.179688 139.726562 C 208.179688 152.945312 215.125 164.777344 225.519531 170.949219 C 214.730469 177.28125 208.179688 189.628906 208.179688 202.289062 C 208.179688 221.636719 223.050781 238.019531 241.851562 238.019531 C 261.65625 238.019531 275.523438 220.648438 275.523438 202.289062 C 275.523438 189.078125 268.441406 177.253906 258.0625 171.082031"/></svg>
+  <header>
+    <h1>Proposer un événement</h1>
+    <p class="intro">Un concert, une expo, une manif qui manque à l'agenda ? Envoyez-nous les infos. Chaque proposition est vérifiée avant d'être ajoutée, en général sous quelques jours.</p>
+  </header>
+
+  <form id="form" novalidate>
+    <div class="f">
+      <label for="titre">Nom de l'événement</label>
+      <input type="text" id="titre" name="titre" required maxlength="160">
+    </div>
+
+    <fieldset class="chips" id="cats">
+      <legend class="lg">Rubrique</legend>
+    </fieldset>
+
+    <div class="f" id="genreBox" hidden>
+      <label for="genre">Genre musical <span class="opt">facultatif</span></label>
+      <input type="text" id="genre" name="genre" maxlength="60" placeholder="Ex. rock, électro, rap, jazz, jam, open mic">
+    </div>
+
+    <div class="two">
+      <div class="f">
+        <label for="date" id="dateLbl">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="f" id="heureBox">
+        <label for="heure">Heure de début</label>
+        <input type="time" id="heure" name="heure">
+      </div>
+      <div class="f" id="finBox" hidden>
+        <label for="fin">Date de fin</label>
+        <input type="date" id="fin" name="fin">
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="f">
+        <label for="lieu">Lieu</label>
+        <input type="text" id="lieu" name="lieu" required maxlength="120">
+      </div>
+      <div class="f">
+        <label for="adresse">Adresse <span class="opt">facultatif</span></label>
+        <input type="text" id="adresse" name="adresse" maxlength="160">
+      </div>
+    </div>
+
+    <div class="f" id="prixBox">
+      <label for="prix">Prix</label>
+      <input type="text" id="prix" name="prix" maxlength="60" placeholder="Ex. 12 €, 8–15 €, entrée libre, prix libre">
+    </div>
+
+    <div class="f">
+      <label for="lien">Lien vers l'événement</label>
+      <input type="url" id="lien" name="lien" maxlength="400" placeholder="https://… (site du lieu, billetterie, page de l'organisateur)">
+      <span class="hint">Il nous sert à vérifier les infos. Pas de lien ? Laissez-nous votre e-mail plus bas.</span>
+    </div>
+
+    <div class="f">
+      <label for="texte">En quelques mots <span class="opt">facultatif</span></label>
+      <textarea id="texte" name="texte" maxlength="800" placeholder="Ce qu'il faut savoir, sans le ton publicitaire."></textarea>
+    </div>
+
+    <div class="f">
+      <label for="email">Votre e-mail <span class="opt">jamais publié</span></label>
+      <input type="email" id="email" name="email" maxlength="120" placeholder="Pour vous contacter en cas de question">
+      <span class="hint">Obligatoire seulement si vous n'avez pas de lien.</span>
+    </div>
+
+    <div class="hp" aria-hidden="true">
+      <label for="site">Ne pas remplir</label>
+      <input type="text" id="site" name="site" tabindex="-1" autocomplete="off">
+    </div>
+
+    <p class="msg err" id="err" hidden></p>
+    <button class="send" id="send" type="submit">Envoyer la proposition</button>
+  </form>
+
+  <div class="done" id="done" hidden>
+    <h1>Merci !</h1>
+    <p>Votre proposition est bien arrivée. Elle sera vérifiée avant d'apparaître dans l'agenda.</p>
+    <button type="button" id="again">Proposer un autre événement</button>
+  </div>
+
+  <footer>On n'ajoute que des événements publics à Marseille et alentours, de La Ciotat à Martigues. Pas de publicité.</footer>
+</div>
+
+<script>
+(function(){
+var CLE_WEB3FORMS="8b552722-4f90-44a7-b7d3-d39eae1f79d0";
+var CATS=[["concert","Concert"],["theatre","Théâtre"],["spectacle","Spectacle"],["danse","Danse"],["classique","Opéra & classique"],["jeune","Jeune public"],["expo","Exposition"],["vernissage","Vernissage"],["visite","Visites & ateliers"],["conference","Conférences & rencontres"],["manif","Manifs"]];
+var TONES={expo:"#5cf2a6",vernissage:"#bdf53b",manif:"#ff6450",visite:"#ffb23f",conference:"#8ab3cc",theatre:"#5fe6ff",spectacle:"#5a6fff",danse:"#b596ff",classique:"#f29bff",jeune:"#ff9fdb"};
+var GLOWS={expo:"#00f277",vernissage:"#94d400",manif:"#b61500",visite:"#e28700",conference:"#338fc7",theatre:"#00a6c5",spectacle:"#0020fd",danse:"#4a00fc",classique:"#de02ff",jeune:"#ff06a2"};
+var GLOWO={expo:.675,vernissage:.544,manif:.675,visite:.64,conference:.646,theatre:.675,spectacle:.674,danse:.266,classique:.28,jeune:.338};
+var box=document.getElementById("cats");
+CATS.forEach(function(c,i){
+  var l=document.createElement("label");l.className="chip";
+  l.innerHTML='<input type="radio" name="categorie" id="cat-'+c[0]+'" value="'+c[0]+'"'+(i===0?" checked":"")+'><span></span>';
+  l.querySelector("span").textContent=c[1];box.appendChild(l);
+});
+var f=document.getElementById("form"),err=document.getElementById("err"),send=document.getElementById("send");
+function cat(){var r=f.querySelector("input[name=categorie]:checked");return r?r.value:"concert"}
+function sync(){
+  var c=cat(),st=document.documentElement.style;
+  if(TONES[c]){st.setProperty("--hl",TONES[c]);st.setProperty("--glow",GLOWS[c]);st.setProperty("--glow-o",GLOWO[c])}else{st.removeProperty("--hl");st.removeProperty("--glow");st.removeProperty("--glow-o")}
+  document.getElementById("genreBox").hidden=c!=="concert";
+  var expo=c==="expo";
+  document.getElementById("finBox").hidden=!expo;
+  document.getElementById("heureBox").hidden=expo;
+  document.getElementById("dateLbl").textContent=expo?"Date de début":"Date";
+  document.getElementById("prixBox").hidden=c==="manif";
+}
+box.addEventListener("change",sync);sync();
+function show(t){err.textContent=t;err.hidden=false}
+f.addEventListener("submit",function(e){
+  e.preventDefault();err.hidden=true;
+  var need=[["titre","le nom de l'événement"],["date","la date"],["lieu","le lieu"]];
+  for(var i=0;i<need.length;i++){var el=document.getElementById(need[i][0]);if(!el.value.trim()){show("Il manque "+need[i][1]+".");el.focus();return}}
+  var lien=document.getElementById("lien"),em=document.getElementById("email");
+  if(!lien.value.trim()&&!em.value.trim()){show("Indiquez un lien vers l'événement ou votre e-mail, pour qu'on puisse vérifier les infos.");lien.focus();return}
+  if(lien.value.trim()&&!/^https?:\/\/\S+\.\S+/.test(lien.value.trim())){show("Le lien doit commencer par https:// (copiez l'adresse de la page).");lien.focus();return}
+  if(em.value.trim()&&!/^\S+@\S+\.\S+$/.test(em.value.trim())){show("L'adresse e-mail ne semble pas complète.");em.focus();return}
+  if(document.getElementById("site").value){f.reset();sync();f.hidden=true;document.getElementById("done").hidden=false;return}
+  send.disabled=true;send.textContent="Envoi…";
+  var d=new FormData(f);d.delete("site");
+  d.append("access_key",CLE_WEB3FORMS);
+  d.append("subject","Fomo – proposition : "+document.getElementById("titre").value.trim());
+  d.append("from_name","Formulaire Fomo");
+  fetch("https://api.web3forms.com/submit",{method:"POST",body:d,headers:{"Accept":"application/json"}})
+    .then(function(r){return r.json().catch(function(){throw new Error("off")}).then(function(j){if(!r.ok||!j.success)throw new Error("off");return j})})
+    .then(function(){f.reset();sync();f.hidden=true;document.getElementById("done").hidden=false;window.scrollTo(0,0)})
+    .catch(function(x){
+      show(x.message&&x.message!=="off"&&x.message!=="Failed to fetch"?x.message:"L'envoi n'a pas abouti. Vérifiez votre connexion et réessayez dans un instant.");
+    })
+    .finally(function(){send.disabled=false;send.textContent="Envoyer la proposition"});
+});
+document.getElementById("again").addEventListener("click",function(){document.getElementById("done").hidden=true;f.hidden=false});
+})();
+</script>
+
+</body></html>
