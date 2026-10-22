@@ -1,7 +1,12 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>FOMO, ne rien louper à Marseille</title>
 <meta name="description" content="Agenda culturel de Marseille et alentours : concerts, théâtre, danse, expositions, vernissages, conférences et manifs, au jour le jour.">
-<script>(function(){function t(){var h=parseInt(new Intl.DateTimeFormat("fr-FR",{hour:"numeric",hourCycle:"h23",timeZone:"Europe/Paris"}).format(new Date()),10);document.documentElement.setAttribute("data-theme",(h>=20||h<7)?"dark":"light")}t();setInterval(t,60000)})();</script>
+<script>/* mode nuit du coucher au lever du soleil à Marseille (calculés chaque jour) */
+(function(){function sun(d){var r=Math.PI/180,lat=43.2965*r,lon=5.3698,y=d.getUTCFullYear(),b=Date.UTC(y,d.getUTCMonth(),d.getUTCDate()),n=Math.round((b-Date.UTC(y,0,1))/864e5)+1,g=2*Math.PI/365*(n-1),
+eq=229.18*(.000075+.001868*Math.cos(g)-.032077*Math.sin(g)-.014615*Math.cos(2*g)-.040849*Math.sin(2*g)),
+de=.006918-.399912*Math.cos(g)+.070257*Math.sin(g)-.006758*Math.cos(2*g)+.000907*Math.sin(2*g)-.002697*Math.cos(3*g)+.00148*Math.sin(3*g),
+ha=Math.acos(Math.cos(90.833*r)/(Math.cos(lat)*Math.cos(de))-Math.tan(lat)*Math.tan(de))/r,no=720-4*lon-eq;return [b+(no-4*ha)*6e4,b+(no+4*ha)*6e4]}
+function t(){var d=new Date(),s=sun(d),now=d.getTime();document.documentElement.setAttribute("data-theme",(now<s[0]||now>=s[1])?"dark":"light")}t();setInterval(t,60000)})();</script>
 
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
