@@ -123,6 +123,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .tag.price.full{color:var(--warn);font-weight:600}
 .tag.new{background:#000;color:#fff;font-weight:700;box-shadow:0 0 0 1px #5a5a52}
 .row.gone .ttl a{text-decoration:line-through;color:var(--muted)}
+/* événement annulé ou reporté : titre barré */
+.row.gone .evt,.row.gone .evt:hover{text-decoration-line:line-through!important;text-decoration-thickness:1.5px!important}
+.tag.price.stop{font-weight:700;letter-spacing:.03em}
 .empty{padding:18px 0;color:var(--muted);border-top:1px solid var(--line)}
 .more{align-self:flex-start;margin-top:12px;font:inherit;border:1px solid var(--accent);background:none;color:var(--accent);padding:8px 16px;border-radius:4px;cursor:pointer}
 .more:hover{background:var(--accent);color:var(--accent-ink)}
@@ -469,13 +472,15 @@ function row(o,ctx){
   var tags=o.c.filter(function(c){return state.q||!state.cats[c]}).filter(function(c){return !MUTE[c]}).map(function(c){var mx=mixed();return '<span class="tag'+(mx?' g':'')+'"'+(mx?' style="--accent:'+(TONES[c]||"#fff43d")+';--glow:'+(GLOWS[c]||"#ff7d14")+';--glow-o:'+(GLOWO[c]||.13)+'"':'')+'>'+esc(CL[c])+'</span>'}).join("");
   var Dd=state.sel||T;if(o.e&&o.c.indexOf("expo")>=0&&Dd>=o.d&&(dt(Dd)-dt(o.d))/864e5<5)tags='<span class="tag new">new</span>'+tags;
   if(o.g)tags+='<span class="tag g">'+esc(o.g)+'</span>';
-  if(o.x&&o.x!=="Complet")tags+='<span class="tag st">'+esc(o.x)+'</span>';
-  var price=o.x==="Complet"?"Complet":(o.x==="Annulé"||o.c.indexOf("manif")>=0?"":o.p);
-  if(price){var pp='<span class="tag price'+(o.x==="Complet"?" full":"")+'">'+esc(price)+'</span>',gt=o.g?'<span class="tag g">'+esc(o.g)+'</span>':'';tags=gt&&tags.indexOf(gt)>=0?tags.replace(gt,pp+gt):tags+pp}
+  /* annulé ou reporté : écrit en majuscules à la place du prix, titre barré */
+  var stop=/^(annul|report)/i.test(o.x);
+  if(o.x&&o.x!=="Complet"&&!stop)tags+='<span class="tag st">'+esc(o.x)+'</span>';
+  var price=stop?o.x.toUpperCase():o.x==="Complet"?"Complet":(o.c.indexOf("manif")>=0?"":o.p);
+  if(price){var pp='<span class="tag price'+(o.x==="Complet"?" full":"")+(stop?" stop":"")+'">'+esc(price)+'</span>',gt=o.g?'<span class="tag g">'+esc(o.g)+'</span>':'';tags=gt&&tags.indexOf(gt)>=0?tags.replace(gt,pp+gt):tags+pp}
   var hh=ctx==='range'?hrs(o,state.sel||T):null;var meta=[esc(o.v),(hh&&hh!==1&&hh!=='closed')?'ouvert '+esc(hh):'',(o.n===o.g?'':esc(o.n))].filter(function(x,i,ar){return x&&ar.indexOf(x)===i}).join(" · ");
   var d=DESC[o.i]||{},link=d.l||o.u,id="ev"+(EVK++);
   var det='<div class="det" id="'+id+'" hidden>'+(d.d?'<p>'+esc(d.d)+'</p>':'')+'<div class="det-l"><button type="button" class="pin" data-pin="'+id+'" aria-expanded="false" aria-label="Adresse et itinéraire"><svg viewBox="0 0 16 20" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.6 0 0 3.5 0 7.9 0 13.5 8 20 8 20s8-6.5 8-12.1C16 3.5 12.4 0 8 0zm0 10.9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></button><a href="'+esc(link)+'" target="_blank" rel="noopener">On donne nos sources</a></div>'+adr(o,id)+'</div>';
-  var wpl=where(o.v);var tn=mixed()&&tone(o);return '<div class="row'+(o.x==="Annulé"?" gone":"")+'"'+(tn?' style="--hl:'+tn+';--accent:'+tn+';--glow:'+GLOWS[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+';--glow-o:'+GLOWO[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+'"':'')+(wpl&&wpl.k!=null?' data-pl="'+wpl.k+'"':(wpl&&wpl.out?' data-pl="o:'+esc(wpl.out)+'"':''))+'><div class="time">'+esc(when)+'</div><div class="ttl"><button type="button" class="evt" aria-expanded="false" aria-controls="'+id+'" data-ev="'+id+'">'+esc(o.t)+'</button><span class="meta">'+meta+'</span>'+det+'</div><div class="tags"><button type="button" class="plus" data-for="'+id+'" aria-label="Voir le résumé" tabindex="-1"></button>'+tags+'</div></div>';
+  var wpl=where(o.v);var tn=mixed()&&tone(o);return '<div class="row'+(stop?" gone":"")+'"'+(tn?' style="--hl:'+tn+';--accent:'+tn+';--glow:'+GLOWS[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+';--glow-o:'+GLOWO[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+'"':'')+(wpl&&wpl.k!=null?' data-pl="'+wpl.k+'"':(wpl&&wpl.out?' data-pl="o:'+esc(wpl.out)+'"':''))+'><div class="time">'+esc(when)+'</div><div class="ttl"><button type="button" class="evt" aria-expanded="false" aria-controls="'+id+'" data-ev="'+id+'">'+esc(o.t)+'</button><span class="meta">'+meta+'</span>'+det+'</div><div class="tags"><button type="button" class="plus" data-for="'+id+'" aria-label="Voir le résumé" tabindex="-1"></button>'+tags+'</div></div>';
 }
 function list(){
   if(state.q)return found();
