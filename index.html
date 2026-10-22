@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="fr"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#000000"><link rel="canonical" href="https://fo-mo.fr/"><meta property="og:type" content="website"><meta property="og:site_name" content="FOMO"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="FOMO, ne rien louper à Marseille"><meta property="og:description" content="Agenda culturel de Marseille et alentours : concerts, théâtre, danse, expositions, vernissages, conférences et manifs, au jour le jour."><meta property="og:url" content="https://fo-mo.fr/"><meta property="og:image" content="https://fo-mo.fr/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Logo FOMO, ne rien louper à Marseille"><meta name="twitter:card" content="summary_large_image"></head><body>
 <title>FOMO, ne rien louper à Marseille</title>
 <meta name="description" content="Agenda culturel de Marseille et alentours : concerts, théâtre, danse, expositions, vernissages, conférences et manifs, au jour le jour.">
 <script>/* mode nuit du coucher au lever du soleil à Marseille (calculés chaque jour) */
@@ -1206,4 +1206,20 @@ html{position:relative;min-height:100%}
 })();
 </script>
 
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FOMO","alternateName":"FOMO, ne rien louper à Marseille","url":"https://fo-mo.fr/","inLanguage":"fr"}</script><script data-src="evenements.json">
+/* Données pour Google : décrit les événements à venir (format schema.org), lu par les moteurs de recherche. */
+(function(){var SRC=document.currentScript.getAttribute("data-src");
+function off(d){var y=+d.slice(0,4),m=+d.slice(5,7),j=+d.slice(8,10);function ls(mo){var x=new Date(Date.UTC(y,mo,0));return x.getUTCDate()-x.getUTCDay()}if(m>3&&m<10)return"+02:00";if(m==3)return j>=ls(3)?"+02:00":"+01:00";if(m==10)return j<ls(10)?"+02:00":"+01:00";return"+01:00"}
+function city(v){return /Martigues/i.test(v)?"Martigues":/Ciotat/i.test(v)?"La Ciotat":/Aubagne/i.test(v)?"Aubagne":/Cassis/i.test(v)?"Cassis":"Marseille"}
+fetch(SRC,{cache:"no-cache"}).then(function(r){return r.json()}).then(function(DB){
+var t=new Date(),T=t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0"),L=[];
+(DB.evenements||[]).forEach(function(ev){(Array.isArray(ev.dates)?ev.dates:[ev.dates]).forEach(function(sp){if(!sp||!ev.titre||!ev.lieu)return;
+var o={"@type":"Event",name:ev.titre,eventAttendanceMode:"https://schema.org/OfflineEventAttendanceMode",location:{"@type":"Place",name:ev.lieu,address:{"@type":"PostalAddress",addressLocality:city(ev.lieu),addressCountry:"FR"}}};
+if(sp.indexOf("/")>-1){var p=sp.split("/");if(p[1]<T)return;o.startDate=p[0];o.endDate=p[1]}else{var q=sp.split(" "),d=q[0];if(d<T)return;o.startDate=q[1]?d+"T"+q[1]+":00"+off(d):d}
+if(ev.resume)o.description=ev.resume;if(ev.lien)o.url=ev.lien;
+o.eventStatus=ev.statut==="Annulé"?"https://schema.org/EventCancelled":"https://schema.org/EventScheduled";
+L.push(o)})});
+function k(o){var d=o.startDate.slice(0,10);return d<T?T:d}L.sort(function(a,b){return k(a)<k(b)?-1:k(a)>k(b)?1:0});L=L.slice(0,150);
+var s=document.createElement("script");s.type="application/ld+json";s.textContent=JSON.stringify({"@context":"https://schema.org","@graph":L});document.head.appendChild(s)}).catch(function(){})})();
+</script>
 </body></html>
