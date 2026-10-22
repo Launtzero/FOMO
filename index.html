@@ -321,6 +321,11 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   .srch input{flex:none;font-size:16px;width:calc(100% / .84);height:calc(100% / .84);transform:scale(.84);transform-origin:left center;padding:0 calc(28px / .84) 0 calc(31px / .84)}
 }
 @media (max-width:560px) and (pointer:fine){.srch input{font-size:13.5px}}
+/* téléphone : loupe un peu plus épaisse, noire le jour (blanche la nuit) */
+@media (max-width:560px){
+  .srch svg circle{stroke-width:2.6}.srch svg path{stroke-width:2.8}
+  :root:not([data-theme="dark"]) .srch svg{color:#000}
+}
 </style>
 
 <div class="wrap">
