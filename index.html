@@ -856,7 +856,7 @@ html{position:relative;min-height:100%}
       fc="M"+sx0.toFixed(1)+" "+sy0.toFixed(1)+"C"+(sx0+4*Math.cos(tg)).toFixed(1)+" "+(sy0+4*Math.sin(tg)).toFixed(1)+" "+(bx-2.5).toFixed(1)+" "+(by-1.2).toFixed(1)+" "+bx.toFixed(1)+" "+by.toFixed(1);
     var brow=p.fh>.01?'<path d="'+fc+'L182 52L172 40Z" fill="#fff"/><path d="'+fc+'" fill="none" '+S+'/>':'';
     var tt="translate(46 68) scale("+p.tl.toFixed(2)+" 1) translate(-46 -68)";
-    var eye=p.gentle?
+    var eye=false?
       '<g class="ey"><circle cx="167" cy="40.8" r="6.3" fill="#fff" '+SE+'/><circle class="pu" cx="168.4" cy="40" r="1.9" fill="'+K+'"/></g>':
       '<g class="ey"><circle cx="167" cy="41.5" r="5.2" fill="#fff" '+SE+'/><circle class="pu" cx="168.8" cy="42.6" r="2.4" fill="'+K+'"/>'+
       '<path d="M161.8 40.6C164 36.6 170 36.4 172.3 40.4" fill="#fff" '+SE+'/></g><path class="br" d="M159 34.6l15.5 2" '+SE+'/>';
@@ -896,7 +896,7 @@ html{position:relative;min-height:100%}
     });
     /* le bébête : gros oeil rond cerclé, paupière lourde qui retombe, toute petite pupille dans le vide */
     /* le bébête louche : deux yeux blancs sans contour, pupilles qui se regardent */
-    sv.querySelector(".ey").innerHTML=gentle?'<circle class="gds" cx="166.8" cy="40.8" r="6.6" fill="#fff" stroke-width=".95"/><g class="pu"><circle cx="166.8" cy="40.8" r="2.2" fill="#141412"/></g>':
+    if(false)sv.querySelector(".ey").innerHTML=gentle?'<circle class="gds" cx="166.8" cy="40.8" r="6.6" fill="#fff" stroke-width=".95"/><g class="pu"><circle cx="166.8" cy="40.8" r="2.2" fill="#141412"/></g>':
       '<g transform="translate(168 40.6) scale(1.3) translate(-168 -40.6)"><g class="pu"><circle cx="168.2" cy="41.6" r="3.2" fill="#141412"/><circle cx="169.4" cy="41.9" r=".85" fill="#fff"/></g>'+
       '<g transform="rotate('+(Math.random()*10-4).toFixed(1)+' 168 40)"><path class="gb" d="M160 35.9L160 37.6L175.5 40.6L175.5 35.9Z"/><path d="M160.6 37.5L174.6 40.3" stroke="#141412" stroke-width="2.1" stroke-linecap="round"/></g></g>';
     var br=sv.querySelector(".br");if(br)br.style.display="none";
@@ -959,8 +959,8 @@ html{position:relative;min-height:100%}
     if(!(job&&(job.chase||job.oust))&&BETE&&(nSpawn==2||sinceB>=8||(sinceB>=4&&Math.random()<.15))){g.gentle=true;sinceB=0}
     /* essai : un gabian de l'ancien style (avec contours, teigneux) en même temps que les nouveaux */
     var nOld=gulls.filter(function(o){return o.old}).length,nNew=gulls.length-nOld;
-    g.old=g.gentle?false:nOld==0&&nNew>0?true:nNew==0?false:Math.random()<.4;
-    var fh=Math.random()<.45?0:r(.35,1),look={nk:r(-.4,.35),bl:r(.85,1.3),ba:fh?r(2,9):r(0,3),fh:fh,tl:r(.6,1),gentle:g.gentle};
+    g.old=document.documentElement.getAttribute("data-theme")=="dark"?true:g.gentle?false:nOld==0&&nNew>0?true:nNew==0?false:Math.random()<.4;
+    var fh=Math.random()<.45?0:r(.35,1),look={nk:r(-.4,.35),bl:r(.85,1.18),ba:fh?r(2,9):r(0,3),fh:fh,tl:r(.6,1),gentle:g.gentle};
     g.tk=73+22*look.bl;g.mean=g.gentle?0:r(.4,1);g.slack=g.gentle;
     var el=document.createElement("div");el.className="gab";el.style.width=s+"px";el.innerHTML=MK(look);if(g.old)el.classList.add("old");else FLAT(el.firstChild,look.gentle);sky.appendChild(el);g.el=el;
     ["bd","wn","wf","bk","ey","pu","ft","fo","tl","br","tu","sk","th","th2"].forEach(function(c){g[c]=el.querySelectorAll("."+c)});
