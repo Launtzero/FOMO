@@ -329,6 +329,13 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   .srch svg circle{stroke-width:2.6}.srch svg path{stroke-width:2.8}
   :root:not([data-theme="dark"]) .srch svg{color:#000}
 }
+/* nuit : plus de contour sombre sur les gabians blancs ; chaque forme a un contour de sa propre couleur,
+   seuls les traits intérieurs (aile, plumes, cuisses) restent en gris clair pour garder le dessin lisible */
+:root[data-theme="dark"] .gab.old svg [stroke="#141412"][fill="#fff"]:not(.ey *){stroke:#fff}
+:root[data-theme="dark"] .gab.old svg [stroke="#141412"][fill="#fff43d"]{stroke:#fff43d}
+:root[data-theme="dark"] .gab.old svg [stroke="#141412"][fill="#141412"]:not(.ey *):not(.br){stroke:#5d5d57}
+:root[data-theme="dark"] .gab.old svg [stroke="#141412"][fill="none"]:not(.ey *):not(.br){stroke:#b4b4ad}
+:root[data-theme="dark"] .gab.old svg .ft [stroke="#141412"][fill="none"],:root[data-theme="dark"] .gab.old svg .ftp [stroke="#141412"][fill="none"]{stroke:#fff43d}
 </style>
 
 <div class="wrap">
