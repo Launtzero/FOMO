@@ -2113,10 +2113,11 @@
    ],
    "genre": "Rap / Hip-Hop",
    "prix": "À partir de 27,50€",
-   "note": "Reporté (Infoconcert)",
-   "resume": "Concert du rappeur Jazzy Bazz à l'Espace Julien, annoncé comme reporté au 18 février 2027 selon Infoconcert.",
-   "lien": "https://www.infoconcert.com/concerts/concert-jazzy-bazz-marseille-1841043",
-   "source": "Infoconcert"
+   "note": "Nouvelle date : 18 février 2027",
+   "resume": "Concert du rappeur Jazzy Bazz, reporté au jeudi 18 février 2027 à l'Espace Julien.",
+   "lien": "https://espace-julien.com/agenda/jazzy-bazz",
+   "source": "Espace Julien",
+   "statut": "Reporté"
   },
   {
    "titre": "Big Fish",
@@ -2530,9 +2531,12 @@
     "2026-11-11 20:00"
    ],
    "prix": "À partir de 28€",
-   "note": "Reporté (Infoconcert)",
-   "lien": "https://www.infoconcert.com/concerts/concert-still-fresh-marseille-1886655",
-   "source": "Infoconcert"
+   "note": "Nouvelle date : 22 avril 2027",
+   "lien": "https://espace-julien.com/agenda/still-fresh",
+   "source": "Espace Julien",
+   "statut": "Reporté",
+   "genre": "Rap / Hip-Hop",
+   "resume": "Concert du rappeur Still Fresh, reporté au jeudi 22 avril 2027 à l'Espace Julien."
   },
   {
    "titre": "Ashen",
@@ -3652,8 +3656,10 @@
    ],
    "genre": "Rap / Hip-Hop",
    "prix": "À partir de 27,50€",
-   "lien": "https://www.infoconcert.com/concerts/concert-jazzy-bazz-marseille-1914837",
-   "source": "Infoconcert"
+   "lien": "https://espace-julien.com/agenda/jazzy-bazz",
+   "source": "Espace Julien",
+   "note": "Report du 22 octobre 2026",
+   "resume": "Concert du rappeur Jazzy Bazz, nouvelle date après le report du 22 octobre. Placement libre, debout."
   },
   {
    "titre": "Typhée",
@@ -6682,7 +6688,8 @@
    ],
    "genre": "Rap / Hip-Hop",
    "lien": "https://espace-julien.com/agenda/still-fresh",
-   "source": "Espace Julien"
+   "source": "Espace Julien",
+   "note": "Report du 11 novembre 2026"
   },
   {
    "titre": "Le Filip",
