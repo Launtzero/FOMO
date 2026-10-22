@@ -1001,7 +1001,27 @@ html{position:relative;min-height:100%}
   function toCross(g){if(g.tgt&&!g.held&&STEAL[g.mode])unwrap(g.tgt);if(g.mode=="dive")fold(g,false);g.mode="cross";g.f=g.face}
   function grab(g){var c=document.createElement("span");c.className="gab-lt";c.textContent=g.tgt.textContent;c.style.font=fontOf(g.tgt);
     c.style.left=(g.w/2+(g.tk+1)*g.u)+"px";c.style.top=(g.h/2+1*g.u)+"px";g.el.appendChild(c);g.held=c;g.tgt.style.visibility="hidden";g.open=0}
-  function fold(g,on,pc){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":"";var q=!!(on&&pc);g.nb.style.display=q?"none":"";g.pb.style.display=q?"":"none"}
+  /* atterrissage souple (0,6 s) : 1) les pattes partent en avant et accrochent le sol pendant que les ailes freinent,
+     2) les ailes se replient et le corps bascule vers l'avant par-dessus les pattes, avec un petit tassement, 3) position posée */
+  var PBT="translate(-5.5 -26.1) scale(.70791) translate(15.65 36.88)";
+  function touchdown(g,dt,cyp){
+    var T1=.24,T2=.62;g.td+=dt;var t=g.td;
+    function e(v){v=cl(v,0,1);return 1-Math.pow(1-v,3)}
+    if(t<T1){var u=t/T1;
+      g.flap=true;g.y=g.y0td+(cyp-g.y0td)*e(u);
+      g.laT=-62+22*e(u);g.rot+=(-16-g.rot)*Math.min(1,dt*10);
+    }else{
+      if(g.pb.style.display=="none"){fold(g,true,true);g.td=t;g.laT=-40}
+      var v=(t-T1)/(T2-T1),f=cl(v/.4,0,1);g.y=cyp;
+      g.nb.style.display=f<1?"":"none";g.nb.style.opacity=(1-f).toFixed(2);g.pb.style.opacity=f.toFixed(2);
+      /* le corps suit : il passe de basculé en arrière à droit, avec un léger dépassement, et se tasse un instant sur les pattes */
+      var s=cl(v,0,1),ob=1+2.2*Math.pow(s-1,3)+1.2*Math.pow(s-1,2),a=-14*(1-ob),sq=1-.08*Math.sin(Math.PI*cl(v*1.4,0,1));
+      g.pb.setAttribute("transform","rotate("+a.toFixed(2)+" 110 124) translate(110 124) scale(1 "+sq.toFixed(3)+") translate(-110 -124) "+PBT);
+      g.rot+=(-5-g.rot)*Math.min(1,dt*8);
+      if(t>=T2){g.td=null;g.laT=null;g.nb.style.display="none";g.nb.style.opacity=g.pb.style.opacity="";g.pb.setAttribute("transform",PBT)}
+    }
+  }
+  function fold(g,on,pc){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":"";var q=!!(on&&pc);g.nb.style.display=q?"none":"";g.pb.style.display=q?"":"none";g.nb.style.opacity=g.pb.style.opacity="";g.pb.setAttribute("transform",PBT);if(!pc){g.td=null;g.laT=null}}
   function takeoff(g){fold(g,false);g.mode="cross";g.f=Math.random()<.7?g.face:-g.face;g.face=g.f;g.vy=-r(90,140);g.vx=g.f*30;g.ev=null;g.gl=false;g.seg=1.4;g.cvy=-r(60,90)}
   /* approche d'un point : il plane de loin, bat des ailes pour freiner en arrivant */
   function seek(g,cx,cy,o){var dx=cx-g.x,dy=cy-g.y,d=Math.hypot(dx,dy)||1,v=g.sp*Math.min(1,d/170)+25;
@@ -1027,7 +1047,8 @@ html{position:relative;min-height:100%}
       if(!g.pel.isConnected){g.mode=="perch"?takeoff(g):toCross(g)}else{
         var P=perchRect(g),px=P.left+g.ox*P.width,cxp=px+g.face*8*g.u,cyp=P.top-54*g.u;
         if(P.bottom<0||P.top>H){g.mode=="perch"?takeoff(g):toCross(g)}
-        else if(g.mode=="land"){g.ld=seek(g,cxp,cyp,o);if(g.ld<10){g.mode="perch";g.pt=0;g.pd=r(7,15);g.ev=null;g.look=r(.8,2.2);fold(g,true,true)}}
+        else if(g.mode=="land"){g.ld=seek(g,cxp,cyp,o);if(g.ld<10){g.mode="perch";g.pt=0;g.pd=r(7,15);g.ev=null;g.look=r(.8,2.2);g.td=0;g.y0td=g.y}}
+        else if(g.td!=null){hold=true;g.vx=g.vy=0;g.x+=(cxp-g.x)*Math.min(1,dt*10);touchdown(g,dt,cyp)}
         else{hold=true;g.pt+=dt;g.x+=(cxp-g.x)*Math.min(1,dt*12);g.y=cyp;g.vx=g.vy=0;
           var A=g.harassed&&g.harassed.osT!=null?g.harassed:null;
           if(A){g.face=A.x>g.x?1:-1;g.rot+=(-13-g.rot)*Math.min(1,dt*8);g.pdx=1.2;g.pdy=-.6;
@@ -1137,7 +1158,7 @@ html{position:relative;min-height:100%}
     g.blink-=dt;var b=1;if(g.blink<0){b=.12;if(g.blink<-.12)g.blink=r(1.5,5)}
     at(g.ey,"matrix(1 0 0 "+b+" 0 "+(41.5*(1-b)).toFixed(2)+")");at(g.ey2,"matrix(1 0 0 "+b+" 0 "+(21.74*(1-b)).toFixed(2)+")");
     var pz=g.panic&&!g.gentle;at(g.pu2,"translate("+((pz?0:g.pdx)*1.4126).toFixed(2)+" "+((pz?0:g.pdy)*1.4126).toFixed(2)+")"+(pz?" translate(222.8 23.3) scale(.6) translate(-222.8 -23.3)":""));at(g.pu,"translate("+(pz?0:g.pdx).toFixed(2)+" "+(pz?0:g.pdy).toFixed(2)+")"+(pz?" translate(168.8 42.6) scale(.6) translate(-168.8 -42.6)":""));
-    var la=g.mode=="dive"?48:g.mode=="perch"?-30:(g.tuck?40:0)+Math.sin(g.t*(g.panic?7:1.6)+g.leg)*(g.tuck?3:8);
+    var la=g.mode=="dive"?48:g.laT!=null?g.laT:g.mode=="perch"?-30:(g.tuck?40:0)+Math.sin(g.t*(g.panic?7:1.6)+g.leg)*(g.tuck?3:8);
     if(g.mode=="land"&&g.ld<170){var q2=1-g.ld/170;la=la*(1-q2)-62*q2}
     g.la=g.la==null?la:g.la+(la-g.la)*Math.min(1,dt*7);
     /* cuisses accrochées au ventre : seule la pointe (le genou) suit la patte */
