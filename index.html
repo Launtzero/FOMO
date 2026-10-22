@@ -282,6 +282,9 @@ footer a.propose:hover{border-color:var(--fg)}
 .srch:focus-within input::placeholder{opacity:0;color:transparent}
 footer .pres{color:var(--fg)}
 footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+/* flèche des villes hors carte : dessinée (pas d'émoji sur téléphone) */
+.map .edge{display:inline-flex;align-items:center;gap:4px}
+.map .edge .ar{display:block;width:9px!important;height:9px!important;margin:0!important;background:none!important;border-radius:0!important;flex:none;cursor:inherit;touch-action:auto}
 </style>
 
 <div class="wrap">
@@ -653,10 +656,10 @@ function view(){
     var b=sv.getBoundingClientRect(),m=sv.parentNode.getBoundingClientRect(),W=b.width,H=b.height,ox=b.left-m.left,oy=b.top-m.top,groups={};
     (map.towns||[]).forEach(function(k){var p=kxy(k),sx=(p[0]-x)/v.s*W,sy=(p[1]-y)/v.s*H;if(sx>=4&&sx<=W-4&&sy>=4&&sy<=H-4)return;
       var dx=sx-W/2,dy=sy-H/2,a=Math.atan2(dy,dx),o=(Math.round(a/(Math.PI/4))+8)%8;(groups[o]=groups[o]||{n:[],dx:0,dy:0,k:k}).n.push(k.slice(2));groups[o].dx+=dx;groups[o].dy+=dy});
-    var AR=["→","↘","↓","↙","←","↖","↑","↗"],h="";
+    var h="";function AR(o){return '<svg class="ar" viewBox="0 0 12 12" aria-hidden="true" style="transform:rotate('+(o*45)+'deg)"><path d="M1.5 6H10M6.5 2.5 10 6 6.5 9.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>'}
     Object.keys(groups).forEach(function(o){var g=groups[o],dx=g.dx/g.n.length,dy=g.dy/g.n.length,t=Math.min((W/2-10)/Math.abs(dx||1e-6),(H/2-10)/Math.abs(dy||1e-6)),ex=W/2+dx*t,ey=H/2+dy*t,
-      lab=o>=3&&o<=5?AR[o]+" "+g.n.join(", "):g.n.join(", ")+" "+AR[o];
-      h+='<button type="button" class="edge" data-edge="'+o+'" data-k="'+esc(g.k)+'" style="left:'+(ox+ex).toFixed(0)+'px;top:'+(oy+ey).toFixed(0)+'px">'+esc(lab)+'</button>'});
+      lab=o>=3&&o<=5?AR(o)+esc(g.n.join(", ")):esc(g.n.join(", "))+AR(o);
+      h+='<button type="button" class="edge" data-edge="'+o+'" data-k="'+esc(g.k)+'" style="left:'+(ox+ex).toFixed(0)+'px;top:'+(oy+ey).toFixed(0)+'px">'+lab+'</button>'});
     ed.innerHTML=h;
     ed.querySelectorAll(".edge").forEach(function(e){var r=e.getBoundingClientRect(),l=parseFloat(e.style.left)-r.width/2,tp=parseFloat(e.style.top)-r.height/2;e.style.left=Math.max(ox+6,Math.min(ox+W-6-r.width,l)).toFixed(0)+"px";e.style.top=Math.max(oy+6,Math.min(oy+H-6-r.height,tp)).toFixed(0)+"px"});
   }
