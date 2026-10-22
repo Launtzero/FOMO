@@ -760,7 +760,8 @@ fetch("evenements.json",{cache:"no-cache"}).then(function(r){return r.json()}).t
 
 <style>
 /* Gabians : un ou deux à la fois (trois, rarement), chacun son physique et son caractère ; les teigneux chassent les autres, se bagarrent en l'air et délogent ceux qui sont posés ; la plupart volent une lettre, en picorant, en la raflant au passage ou en plongeant ; même taille, chacun son caractère ; le nouveau venu chasse parfois l'autre de son territoire ; ils planent en parabole, battent des ailes pour monter, se posent (parfois sur le texte) et volent des lettres. Ils ne bloquent jamais les clics. */
-.gab-sky{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:60}
+html{position:relative;min-height:100%}
+.gab-sky{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:60}
 .gab{position:absolute;left:0;top:0;will-change:transform}
 .gab svg{display:block;width:100%;height:auto;overflow:visible}
 :root[data-theme="dark"] .gab.old svg{filter:drop-shadow(0 0 1px rgba(255,255,255,.85))}
@@ -770,9 +771,9 @@ fetch("evenements.json",{cache:"no-cache"}).then(function(r){return r.json()}).t
 .gab-sky .gb{fill:#efefeb}.gab-sky .gw{fill:#e2e2dd}.gab-sky .gf{fill:#cfcfc9}.gab-sky .gd{fill:#45453f}.gab-sky .gy{fill:#fff53d}.gab-sky .gyl{stroke:#fff53d}.gab-sky .gds{stroke:#9b9b94}:root[data-theme="dark"] .gab-sky .gds{stroke:#74746d}
 :root[data-theme="dark"] .gab-sky .gb{fill:#fff}:root[data-theme="dark"] .gab-sky .gw{fill:#d9d9d3}:root[data-theme="dark"] .gab-sky .gf{fill:#b4b4ad}:root[data-theme="dark"] .gab-sky .gd{fill:#5d5d57}
 .gab-lt{position:absolute;line-height:1;white-space:pre;pointer-events:none;color:var(--fg)}
-.gab-fall{position:fixed;left:0;top:0;line-height:1;white-space:pre;pointer-events:none;color:var(--fg);will-change:transform,opacity}
-.gab-back{display:inline-block;animation:gabback .45s cubic-bezier(.3,1.6,.5,1)}
-@keyframes gabback{from{transform:scale(0)}to{transform:scale(1)}}
+.gab-fall{position:absolute;left:0;top:0;line-height:1;white-space:pre;pointer-events:none;color:var(--fg);will-change:transform,opacity}
+.gab-back{animation:gabback .45s ease-out}
+@keyframes gabback{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.gab-sky{display:none}}
 </style>
 <script>
@@ -925,7 +926,7 @@ fetch("evenements.json",{cache:"no-cache"}).then(function(r){return r.json()}).t
       else{g.mode="go";g.sp=r(140,210)}}
     else if(job&&job.oust){var V=job.oust;g.f=g.face=V.x<W/2?1:-1;g.x=g.f>0?-g.w*.6:W+g.w*.6;g.y=cl(V.y-r(40,140),H*.04,H*.8);startOust(g,V)}
     else if(job&&job.chase){g.mode="chase";g.prey=job.chase;g.sp=r(230,260);g.chT=0;job.chase.chased=g;g.willFight=Math.random()<.4}
-    gulls.push(g);if(!raf){last=performance.now();raf=requestAnimationFrame(tick)}
+    gulls.push(g);if(!raf){last=performance.now();SY=window.scrollY||0;raf=requestAnimationFrame(tick)}
   }
   function bye(g){if(g.fight)endBrawl(g.fight);if(g.vic&&g.vic.harassed===g)g.vic.harassed=null;
     gulls.forEach(function(o){if(o.vic===g&&o.mode=="oust"){o.mode="cross";o.f=o.face;o.osT=null}});
@@ -1087,7 +1088,7 @@ fetch("evenements.json",{cache:"no-cache"}).then(function(r){return r.json()}).t
     at(g.ft,"rotate("+ta.toFixed(1)+" 112 84) rotate("+(g.la-ta).toFixed(1)+" 111 98.7)");
     if(Math.abs(ta-g.tla)>.4){g.tla=ta;var t0=THP(0,ta),t1=THP(1,ta);g.thf.setAttribute("d",t0.fill);g.ths.setAttribute("d",t0.line);g.thk.setAttribute("d",t0.tick);g.t2f.setAttribute("d",t1.fill)}
     at(g.bk,"rotate("+g.open.toFixed(1)+" 185 53)");
-    g.el.style.transform="translate("+(g.x-g.w/2).toFixed(1)+"px,"+(g.y-g.h/2).toFixed(1)+"px) scaleX("+g.face+") rotate("+g.rot.toFixed(1)+"deg)";
+    g.el.style.transform="translate("+(g.x-g.w/2).toFixed(1)+"px,"+(g.y-g.h/2+SY).toFixed(1)+"px) scaleX("+g.face+") rotate("+g.rot.toFixed(1)+"deg)";
     if(g.held)g.held.style.transform="translate(-50%,-30%) scaleX("+g.face+") rotate("+(Math.sin(g.t*7)*10).toFixed(1)+"deg)";
     if((g.mode=="cross"||g.mode=="flee"||g.mode=="chase"||g.mode=="dive")&&(g.x<-g.w||g.x>W+g.w||g.y<-g.h*1.5||g.y>H+g.h*1.5))bye(g);
   }
@@ -1116,14 +1117,17 @@ fetch("evenements.json",{cache:"no-cache"}).then(function(r){return r.json()}).t
     for(var i=0;i<free.length;i++)for(var j=0;j<free.length;j++){var a=free[i],b=free[j];
       if(a!==b&&a.mean>.3&&(a.mode=="cross"||a.mode=="perch")&&a.fought!==b&&Math.hypot(a.x-b.x,a.y-b.y)<W*(b.gentle?.6:.45)&&Math.random()<dt*(b.gentle?1.1:.35)*a.mean){startChase(a,b);return}}
   }
+  var SY=window.scrollY||0;
   function tick(now){
-    var dt=Math.min(.05,(now-last)/1000);last=now;quarrel(dt);
+    var dt=Math.min(.05,(now-last)/1000);last=now;var sy=window.scrollY||0,dsy=sy-SY;SY=sy;
+    if(dsy){var fs=[];gulls.forEach(function(g){g.y-=dsy;if(g.fight&&fs.indexOf(g.fight)<0)fs.push(g.fight)});fs.forEach(function(F){F.cy-=dsy});falls.forEach(function(f){f.y-=dsy})}
+    quarrel(dt);
     gulls.slice().forEach(function(g){step(g,dt)});
     falls.slice().forEach(function(f){if(f.fe){f.t+=dt;f.vy+=(30-f.vy)*dt*2.5;f.vx*=1-dt*2;f.x+=(f.vx+Math.cos(f.t*3.5+f.ph)*35)*dt;f.y+=f.vy*dt;
-        f.el.style.transform="translate("+f.x.toFixed(1)+"px,"+f.y.toFixed(1)+"px) rotate("+(Math.sin(f.t*3.5+f.ph)*40).toFixed(0)+"deg)";f.el.style.opacity=f.t<1.6?1:Math.max(0,1-(f.t-1.6)/.8);
+        f.el.style.transform="translate("+f.x.toFixed(1)+"px,"+(f.y+SY).toFixed(1)+"px) rotate("+(Math.sin(f.t*3.5+f.ph)*40).toFixed(0)+"deg)";f.el.style.opacity=f.t<1.6?1:Math.max(0,1-(f.t-1.6)/.8);
         if(f.t>2.4){f.el.remove();falls.splice(falls.indexOf(f),1)}return}
       f.t+=dt;f.vy+=900*dt;f.x+=f.vx*dt;f.y+=f.vy*dt;f.a+=f.va*dt;
-      f.el.style.transform="translate("+f.x.toFixed(1)+"px,"+f.y.toFixed(1)+"px) rotate("+f.a.toFixed(0)+"deg)";f.el.style.opacity=f.t<.6?1:Math.max(0,1-(f.t-.6)/.6);
+      f.el.style.transform="translate("+f.x.toFixed(1)+"px,"+(f.y+SY).toFixed(1)+"px) rotate("+f.a.toFixed(0)+"deg)";f.el.style.opacity=f.t<.6?1:Math.max(0,1-(f.t-.6)/.6);
       if(f.t>1.2){f.el.remove();falls.splice(falls.indexOf(f),1)}});
     raf=(gulls.length||falls.length)?requestAnimationFrame(tick):0;
   }
