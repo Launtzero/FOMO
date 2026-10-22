@@ -860,7 +860,7 @@ html{position:relative;min-height:100%}
       '<g class="ey"><circle cx="167" cy="40.8" r="6.3" fill="#fff" '+SE+'/><circle class="pu" cx="168.4" cy="40" r="1.9" fill="'+K+'"/></g>':
       '<g class="ey"><circle cx="167" cy="41.5" r="5.2" fill="#fff" '+SE+'/><circle class="pu" cx="168.8" cy="42.6" r="2.4" fill="'+K+'"/>'+
       '<path d="M161.8 40.6C164 36.6 170 36.4 172.3 40.4" fill="#fff" '+SE+'/></g><path class="br" d="M159 34.6l15.5 2" '+SE+'/>';
-    return '<svg viewBox="0 -10 222 125"><g class="bd">'+
+    return '<svg viewBox="0 -10 222 125"><g class="bd"><g class="nb">'+
     '<g class="wf"><path d="M112 56C118 36 134 14 160 0C168 -4 178 -6 186 -6C192 -5 191 0 186 1C191 3 189 8 183 8C187 11 184 15 178 14C170 16 162 20 156 26C146 36 138 46 134 56Z" fill="#fff" '+S+'/>'+
     '<path d="M160 0C168 -4 178 -6 186 -6C192 -5 191 0 186 1C191 3 189 8 183 8C187 11 184 15 178 14C172 15 166 17 162 20C164 16 161 13 158 14C160 10 157 7 154 8C156 4 157 2 160 0Z" fill="'+K+'" '+S+'/></g>'+
     /* pattes : sortent des cuisses */
@@ -880,18 +880,20 @@ html{position:relative;min-height:100%}
     '<g class="wn"><path d="M98 62L130 58C124 36 104 14 76 4C62 -1 46 -2 34 0L60 22C64 26 66 30 64 33C70 34 72 38 70 42C77 42 80 47 78 51C85 51 88 56 86 60C90 61 94 62 98 62Z" fill="#fff"/>'+
     '<path d="M130 58C124 36 104 14 76 4C62 -1 46 -2 34 0M60 22C64 26 66 30 64 33C70 34 72 38 70 42C77 42 80 47 78 51C85 51 88 56 86 60" fill="none" '+S+'/>'+
     '<path d="M76 4C62 -1 46 -2 34 0C29 1 29 6 35 7C29 9 30 14 37 14C32 17 35 22 42 20C48 19 54 19 60 22C57 17 61 14 65 15C62 11 65 8 69 9C68 6 72 3 76 4Z" fill="'+K+'" '+S+'/>'+
-    '<g class="sk" fill="'+K+'"><circle cx="96" cy="44" r="1"/><circle cx="104" cy="36" r=".9"/><circle cx="112" cy="46" r="1"/><circle cx="90" cy="52" r=".9"/><circle cx="118" cy="38" r=".8"/></g></g></g></svg>';
+    '<g class="sk" fill="'+K+'"><circle cx="96" cy="44" r="1"/><circle cx="104" cy="36" r=".9"/><circle cx="112" cy="46" r="1"/><circle cx="90" cy="52" r=".9"/><circle cx="118" cy="38" r=".8"/></g></g></g>'+PB+'</g></svg>';
   }
 
+  /* gabian perché : dessin retravaillé (proportions de corps plausibles quand il est posé) */
+  var PB="<g class=\"pb\" style=\"display:none\" transform=\"translate(-5.5 -26.1) scale(.70791) translate(15.65 36.88)\"><g><g class=\"ftp\" transform=\"rotate(-15 112 84) rotate(-15 111 98.7)\"><path fill=\"none\" stroke=\"#141412\" stroke-width=\"4.5202\" stroke-linecap=\"round\" d=\"M122,135.7L109.4,154 M136.8,138.8l-11,20.8\"/><path fill=\"none\" stroke=\"#fff43d\" stroke-width=\"2.8251\" stroke-linecap=\"round\" d=\"M122,135.7L109.4,154 M136.8,138.8l-11,20.8\"/><path fill=\"#fff43d\" stroke=\"#141412\" stroke-width=\"1.1301\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M108.9,151.9l-16.4,3l7.9,3.3l-0.2,9.4l10.6-11.3L108.9,151.9z M123.2,159.1l-2.6,10.4l4.5,0l12.2,9.6 l-8.4-20.3L123.2,159.1z\"/></g><g><path fill=\"#fff\" stroke=\"#141412\" stroke-width=\"1.1301\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M142,95.9l3,11.6c1.4,5.7,9.9,10.7,11.2,15c1.2,1.6,2.5,1.6,3.8,0c4.4-5.4,14.7-17.8,20.3-24.1l-12.2-2.4H142 z\"/></g><g><g transform=\"translate(46 68) scale(0.80 1) translate(-46 -68)\"><path fill=\"#141412\" stroke=\"#141412\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M48.9,47.3C37.6,41.6,13.6,35.4-0.5,35.4c-9.9,0-11.3,8.5-2.8,10.6c-9.9,0.7-11.3,9.9-1.4,10.6 c-8.5,2.8-7.1,12,2.8,10.6c12.7-2.1,43.2-0.3,57.3,4L48.9,47.3z\"/></g></g><path fill=\"#fff\" stroke=\"#141412\" stroke-width=\"1.1301\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M34.2,51.5c22.6-11.3,70.6-17,115.8-17c19.9,0,31.2-2.5,38.1-11.2c5.7-11.4,14.1-17.1,25.4-17.1 c18.4-1.4,30.1,9.9,30.1,21.2s-0.8,18.4-20.2,22.6c-11.6,0-17.1,9.6-21.3,15.3c1.8-8.7-5,39.7-46.6,41.8 c-34.9,1.2-102-36.7-112.9-41.5L34.2,51.5z\"/><g><path fill=\"#fff\" d=\"M131.2,95.9l-0.7,9.7c-2.6,5.7,9.3,13.9,10.6,18.2c1.2,1.6,2.5,1.6,3.8,0c4.4-5.4,23.5-18.2,29.1-24.5 l-12.2-3.3H131.2z\"/><path fill=\"none\" stroke=\"#141412\" stroke-width=\"1.1301\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M121.1,100.1c1.4,5.7,18.6,19.3,19.9,23.6c1.2,1.6,2.5,1.6,3.8,0c4.4-5.4,23.5-18.2,29.1-24.5\"/><path fill=\"none\" stroke=\"#141412\" stroke-width=\"0.6357\" stroke-linecap=\"round\" d=\"M137.4,115.2l3.1-0.7 M141.3,119.6l3.1-0.7\"/></g><path fill=\"none\" stroke=\"#141412\" stroke-width=\"0.6357\" stroke-linecap=\"round\" d=\"M76.6,74.1c9.4,2.8,30.9,19.4,40.3,19.4\"/><path fill=\"#fff\" d=\"M234.1,10.6c4.2,3.7,13.1,11.3,16.7,13l-11.3,11l-13.1-17L234.1,10.6z\"/><path fill=\"none\" stroke=\"#141412\" stroke-width=\"1.1301\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M234.1,10.6c4.2,3.7,11.1,11.3,14.7,13\"/><g class=\"ey ey2\"><circle fill=\"#fff\" stroke=\"#141412\" stroke-width=\"2.2601\" stroke-linecap=\"round\" stroke-linejoin=\"round\" cx=\"220.2\" cy=\"21.7\" r=\"7.3\"/><circle class=\"pu2\" fill=\"#141412\" cx=\"222.8\" cy=\"23.3\" r=\"3.4\"/><path fill=\"#fff\" stroke=\"#141412\" stroke-width=\"2.2601\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M212.9,20.5c3.1-5.7,11.6-5.9,14.8-0.3\"/></g><path class=\"br\" stroke=\"#141412\" stroke-width=\"2.2601\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"#141412\" d=\"M209.4,10.5l21.2,6.2\"/><g class=\"bkw\" transform=\"translate(184 50) rotate(4.0) scale(1.01 1) translate(-184 -50)\"><g class=\"bk2\"><path fill=\"#fff43d\" stroke=\"#141412\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M241.7,30.5c12.7,0,24,0,32.5,0c-2.8,4.2-11.3,6.5-19.8,6.5c-5.7,0-9.9-0.8-12.7-3V30.5z\"/></g><path fill=\"#fff43d\" stroke=\"#141412\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M238.9,19.2c17-1.7,33.9-1.4,43.8,2.8c3.7,2.1,3.1,6.5-0.6,7.9c-2.3-2-5.1-2.3-9.3-2.3 c-11.3,0-22.6,1.4-31.8,3.1L238.9,19.2z\"/></g><g class=\"fo2\"><path fill=\"#fff\" stroke=\"#141412\" stroke-width=\"1.1301\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M183.1,37.4c-28.3-7.1-69.8-4.2-100.9,2.8l-42.4,1.4c-9.9,1.4-9.9,9.9,0,9.9l31.1,2.8 C108.5,78,156.7,78,183.1,37.4z\"/><path fill=\"#141412\" stroke=\"#141412\" stroke-width=\"1.1301\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M82.2,40.2l-42.4,1.4c-9.9,1.4-9.9,9.9,0,9.9l31.1,2.8C66.7,48.7,72.3,43,82.2,40.2z\"/><path fill=\"none\" stroke=\"#141412\" stroke-width=\"0.6357\" stroke-linecap=\"round\" d=\"M102,48.7c7.5,1.9,14.1,1.9,19.8,0 M130.2,47.3c7.5,0.9,14.1,0.5,19.8-1.4\"/></g></g></g>";
   function FLAT(sv,gentle){
     [].slice.call(sv.querySelectorAll("path,circle")).forEach(function(e){
       if(e.closest(".ey")||e.classList.contains("br"))return;
-      var f=e.getAttribute("fill"),ft=e.closest(".ft"),bk=e.closest(".bk")||e.closest(".bkw");
+      var f=e.getAttribute("fill"),ft=e.closest(".ft,.ftp"),bk=e.closest(".bk")||e.closest(".bkw");
       if(ft&&f=="none"){if(e.getAttribute("stroke")=="#fff43d"){e.setAttribute("class","gyl");e.setAttribute("stroke-width","2.8")}else e.style.display="none";return}
       e.removeAttribute("stroke");e.removeAttribute("stroke-width");
       if(f=="none"||!f){e.style.display="none";return}
       if(ft||bk||f=="#fff43d"){e.classList.add("gy");return}
-      if(f=="#fff")e.classList.add(e.closest(".wn")||e.closest(".fo")?"gw":e.closest(".wf")||e.closest(".th2")?"gf":"gb");
+      if(f=="#fff")e.classList.add(e.closest(".wn")||e.closest(".fo")||e.closest(".fo2")?"gw":e.closest(".wf")||e.closest(".th2")?"gf":"gb");
       else e.classList.add("gd");
     });
     /* le bébête : gros oeil rond cerclé, paupière lourde qui retombe, toute petite pupille dans le vide */
@@ -964,7 +966,7 @@ html{position:relative;min-height:100%}
     g.tk=73+22*look.bl;g.mean=g.gentle?0:r(.4,1);g.slack=g.gentle;
     var el=document.createElement("div");el.className="gab";el.style.width=s+"px";el.innerHTML=MK(look);if(g.old)el.classList.add("old");else FLAT(el.firstChild,look.gentle);sky.appendChild(el);g.el=el;
     ["bd","wn","wf","bk","ey","pu","ft","fo","tl","br","tu","sk","th","th2"].forEach(function(c){g[c]=el.querySelectorAll("."+c)});
-    g.wn=g.wn[0];g.wfar=g.wf[0];g.bk=g.bk[0];g.ey=g.ey[0];g.pu=g.pu[0];g.ft=g.ft[0];g.fo=g.fo[0];g.tl=g.tl[0];g.bd=g.bd[0];g.thf=el.querySelector(".thf");g.ths=el.querySelector(".ths");g.thk=el.querySelector(".thk");g.t2f=el.querySelector(".t2f");g.tla=0;
+    g.nb=el.querySelector(".nb");g.pb=el.querySelector(".pb");g.ey2=el.querySelector(".ey2");g.pu2=el.querySelector(".pu2");g.bk2=el.querySelector(".bk2");g.wn=g.wn[0];g.wfar=g.wf[0];g.bk=g.bk[0];g.ey=g.ey[0];g.pu=g.pu[0];g.ft=g.ft[0];g.fo=g.fo[0];g.tl=g.tl[0];g.bd=g.bd[0];g.thf=el.querySelector(".thf");g.ths=el.querySelector(".ths");g.thk=el.querySelector(".thk");g.t2f=el.querySelector(".t2f");g.tla=0;
     if(g.br[0])at(g.br[0],"rotate("+r(2,16).toFixed(1)+" 166 36)");
     if(Math.random()>.25)g.tu[0].style.display="none";
     if(Math.random()>.3)g.sk.forEach(function(e){e.style.display="none"});
@@ -993,7 +995,7 @@ html{position:relative;min-height:100%}
   function toCross(g){if(g.tgt&&!g.held&&STEAL[g.mode])unwrap(g.tgt);if(g.mode=="dive")fold(g,false);g.mode="cross";g.f=g.face}
   function grab(g){var c=document.createElement("span");c.className="gab-lt";c.textContent=g.tgt.textContent;c.style.font=fontOf(g.tgt);
     c.style.left=(g.w/2+(g.tk+1)*g.u)+"px";c.style.top=(g.h/2+1*g.u)+"px";g.el.appendChild(c);g.held=c;g.tgt.style.visibility="hidden";g.open=0}
-  function fold(g,on){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":""}
+  function fold(g,on,pc){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":"";var q=!!(on&&pc);g.nb.style.display=q?"none":"";g.pb.style.display=q?"":"none"}
   function takeoff(g){fold(g,false);g.mode="cross";g.f=Math.random()<.7?g.face:-g.face;g.face=g.f;g.vy=-r(90,140);g.vx=g.f*30;g.ev=null;g.gl=false;g.seg=1.4;g.cvy=-r(60,90)}
   /* approche d'un point : il plane de loin, bat des ailes pour freiner en arrivant */
   function seek(g,cx,cy,o){var dx=cx-g.x,dy=cy-g.y,d=Math.hypot(dx,dy)||1,v=g.sp*Math.min(1,d/170)+25;
@@ -1019,7 +1021,7 @@ html{position:relative;min-height:100%}
       if(!g.pel.isConnected){g.mode=="perch"?takeoff(g):toCross(g)}else{
         var P=perchRect(g),px=P.left+g.ox*P.width,cxp=px+g.face*8*g.u,cyp=P.top-54*g.u;
         if(P.bottom<0||P.top>H){g.mode=="perch"?takeoff(g):toCross(g)}
-        else if(g.mode=="land"){g.ld=seek(g,cxp,cyp,o);if(g.ld<10){g.mode="perch";g.pt=0;g.pd=r(7,15);g.ev=null;g.look=r(.8,2.2);fold(g,true)}}
+        else if(g.mode=="land"){g.ld=seek(g,cxp,cyp,o);if(g.ld<10){g.mode="perch";g.pt=0;g.pd=r(7,15);g.ev=null;g.look=r(.8,2.2);fold(g,true,true)}}
         else{hold=true;g.pt+=dt;g.x+=(cxp-g.x)*Math.min(1,dt*12);g.y=cyp;g.vx=g.vy=0;
           var A=g.harassed&&g.harassed.osT!=null?g.harassed:null;
           if(A){g.face=A.x>g.x?1:-1;g.rot+=(-13-g.rot)*Math.min(1,dt*8);g.pdx=1.2;g.pdy=-.6;
@@ -1127,8 +1129,8 @@ html{position:relative;min-height:100%}
     /* le bébête : la pupille tourne en rond dans l'oeil */
     if(g.gentle){g.spin=(g.spin||Math.random()*6)+dt*(g.spd||(g.spd=(Math.random()<.5?-1:1)*r(2.2,3.6)));g.pdx=3.4*Math.cos(g.spin);g.pdy=3.4*Math.sin(g.spin)}
     g.blink-=dt;var b=1;if(g.blink<0){b=.12;if(g.blink<-.12)g.blink=r(1.5,5)}
-    at(g.ey,"matrix(1 0 0 "+b+" 0 "+(41.5*(1-b)).toFixed(2)+")");
-    var pz=g.panic&&!g.gentle;at(g.pu,"translate("+(pz?0:g.pdx).toFixed(2)+" "+(pz?0:g.pdy).toFixed(2)+")"+(pz?" translate(168.8 42.6) scale(.6) translate(-168.8 -42.6)":""));
+    at(g.ey,"matrix(1 0 0 "+b+" 0 "+(41.5*(1-b)).toFixed(2)+")");at(g.ey2,"matrix(1 0 0 "+b+" 0 "+(21.74*(1-b)).toFixed(2)+")");
+    var pz=g.panic&&!g.gentle;at(g.pu2,"translate("+((pz?0:g.pdx)*1.4126).toFixed(2)+" "+((pz?0:g.pdy)*1.4126).toFixed(2)+")"+(pz?" translate(222.8 23.3) scale(.6) translate(-222.8 -23.3)":""));at(g.pu,"translate("+(pz?0:g.pdx).toFixed(2)+" "+(pz?0:g.pdy).toFixed(2)+")"+(pz?" translate(168.8 42.6) scale(.6) translate(-168.8 -42.6)":""));
     var la=g.mode=="dive"?48:g.mode=="perch"?-30:(g.tuck?40:0)+Math.sin(g.t*(g.panic?7:1.6)+g.leg)*(g.tuck?3:8);
     if(g.mode=="land"&&g.ld<170){var q2=1-g.ld/170;la=la*(1-q2)-62*q2}
     g.la=g.la==null?la:g.la+(la-g.la)*Math.min(1,dt*7);
@@ -1136,7 +1138,7 @@ html{position:relative;min-height:100%}
     var ta=cl(g.la*.5,-35,30);
     at(g.ft,"rotate("+ta.toFixed(1)+" 112 84) rotate("+(g.la-ta).toFixed(1)+" 111 98.7)");
     if(Math.abs(ta-g.tla)>.4){g.tla=ta;var t0=THP(0,ta),t1=THP(1,ta);g.thf.setAttribute("d",t0.fill);g.ths.setAttribute("d",t0.line);g.thk.setAttribute("d",t0.tick);g.t2f.setAttribute("d",t1.fill)}
-    at(g.bk,"rotate("+g.open.toFixed(1)+" 185 53)");
+    at(g.bk,"rotate("+g.open.toFixed(1)+" 185 53)");at(g.bk2,"rotate("+g.open.toFixed(1)+" 241.7 31)");
     g.el.style.transform="translate("+(g.x-g.w/2).toFixed(1)+"px,"+(g.y-g.h/2+SY).toFixed(1)+"px) scaleX("+g.face+") rotate("+g.rot.toFixed(1)+"deg)";
     if(g.held)g.held.style.transform="translate(-50%,-30%) scaleX("+g.face+") rotate("+(Math.sin(g.t*7)*10).toFixed(1)+"deg)";
     if((g.mode=="cross"||g.mode=="flee"||g.mode=="chase"||g.mode=="dive")&&(g.x<-g.w||g.x>W+g.w||g.y<-g.h*1.5||g.y>H+g.h*1.5))bye(g);
