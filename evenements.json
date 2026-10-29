@@ -1,5 +1,5 @@
 {
- "mise_a_jour": "2026-10-26",
+ "mise_a_jour": "2026-10-29",
  "evenements": [
   {
    "titre": "Naïm, Chapitre 3",
@@ -985,21 +985,6 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Animations Mexique et fête El Día de los Muertos",
-   "lieu": "Musée d'Arts Africains, Océaniens, Amérindiens",
-   "categories": [
-    "visite"
-   ],
-   "dates": [
-    "2026-10-28 14:30"
-   ],
-   "prix": "Gratuit",
-   "note": "Gratuit, en continu jusqu'à 16h30",
-   "resume": "Atelier pédagogique du musée autour du Mexique et de la fête des morts : jeux de plateau, coloriage et lecture avec les médiatrices, dès 4 ans. Gratuit, sans inscription, de 14h30 à 16h30.",
-   "lien": "https://musees.marseille.fr/animations-mexique-et-fete-el-dia-de-los-muertos?museum=musee-darts-africains-oceaniens-amerindiens",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Visite commentée, spécial Día de los Muertos",
    "lieu": "Musée d'Arts Africains, Océaniens, Amérindiens",
    "categories": [
@@ -1214,79 +1199,6 @@
    "resume": "Cycle de trois séances de courts-métrages expérimentaux sur le thème du cinéma et de la danse, organisé par Grains de Lumière et conçu par Mireille Laplace. Séances de 19h30 à 20h30.",
    "lien": "https://www.videodrome2.fr/cycle-cinema-cinema-experimental-cinedanse/",
    "source": "Videodrome 2"
-  },
-  {
-   "titre": "Pirate punk pour l'anniversaire de Screaming Jayrôme",
-   "lieu": "La Plaine (ou pas loin)",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-28"
-   ],
-   "genre": "Punk",
-   "note": "Horaire et lieu à trouver sur les affiches",
-   "resume": "Soirée de punk à l'esprit pirate pour l'anniversaire de Screaming Jayrôme, dans le quartier de la Plaine. Horaire et lieu à trouver sur les affiches.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Médiathèque, Fanzinothèque",
-   "lieu": "Data",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-28 16:00"
-   ],
-   "prix": "Entrée libre",
-   "resume": "Permanence de la médiathèque et fanzinothèque du lieu Data, en entrée libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Vincent Khouni (folk)",
-   "lieu": "L'Intermédiaire",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-28 20:00"
-   ],
-   "genre": "Folk",
-   "prix": "5/7€",
-   "resume": "Concert de folk de Vincent Khouni à L'Intermédiaire.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "The Telescopes (rock psyché)",
-   "lieu": "Le Molotov",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-28 20:00"
-   ],
-   "genre": "Rock",
-   "prix": "10/13€",
-   "resume": "Concert de rock psychédélique du groupe britannique The Telescopes au Molotov.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Blind test par JP",
-   "lieu": "Sing or Die",
-   "categories": [
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-28 19:30"
-   ],
-   "prix": "Gratuit",
-   "resume": "Blind test animé par JP au bar Sing or Die, entrée gratuite.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
   },
   {
    "titre": "La Singular Tropique (salsa cumbia), Mollo-Mollo (mathrock) et DJ Supremsupacheez (UK bass)",
@@ -1656,35 +1568,6 @@
    "source": "Infoconcert"
   },
   {
-   "titre": "Messa",
-   "lieu": "Le Dodu",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-27 20:00"
-   ],
-   "genre": "Metal",
-   "prix": "À partir de 21€",
-   "resume": "Concert du groupe Messa au Dodu, formation de metal.",
-   "lien": "https://www.infoconcert.com/concerts/concert-messa-marseille-1888597",
-   "source": "Infoconcert"
-  },
-  {
-   "titre": "Duo Monsieur Madame / Michael Amram",
-   "lieu": "La Caravelle",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-28 20:30"
-   ],
-   "prix": "À partir de 4€",
-   "resume": "Concert du Duo Monsieur Madame et de Michael Amram à La Caravelle. Programme non précisé.",
-   "lien": "https://www.infoconcert.com/concerts/concert-duo-monsieur-madame-michael-amram-marseille-1966641",
-   "source": "Infoconcert"
-  },
-  {
    "titre": "Ulysse",
    "lieu": "Le Makeda",
    "categories": [
@@ -1742,7 +1625,8 @@
    "prix": "À partir de 12€",
    "resume": "Concert de rap de Diez à L'Affranchi.",
    "lien": "https://www.infoconcert.com/concerts/concert-diez-marseille-1955023",
-   "source": "Infoconcert"
+   "source": "Infoconcert",
+   "statut": "Complet"
   },
   {
    "titre": "Papaya Jazz",
@@ -1844,7 +1728,7 @@
    "source": "Infoconcert"
   },
   {
-   "titre": "Al Walid",
+   "titre": "Al Walid + Falzar",
    "lieu": "Le Makeda",
    "categories": [
     "concert"
@@ -2230,13 +2114,14 @@
     "concert"
    ],
    "dates": [
-    "2026-11-24 20:00"
+    "2026-11-24 19:00"
    ],
    "genre": "Rap / Hip-Hop",
    "prix": "À partir de 28€",
    "lien": "https://www.infoconcert.com/concerts/concert-lagui-marseille-1945837",
    "source": "Infoconcert",
-   "statut": "Complet"
+   "statut": "Complet",
+   "note": "19h selon Shotgun, 20h selon d'autres sources (ouverture des portes ?)"
   },
   {
    "titre": "Gvllow",
@@ -3373,20 +3258,6 @@
    "source": "Infoconcert"
   },
   {
-   "titre": "Clément Blouin",
-   "lieu": "La Comédie des Suds, Cabriès",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-28 20:00"
-   ],
-   "prix": "À partir de 27,20€",
-   "resume": "Spectacle ou concert de Clément Blouin à La Comédie des Suds, à Cabriès.",
-   "lien": "https://www.infoconcert.com/concerts/concert-clement-blouin-cabries-1948727",
-   "source": "Infoconcert"
-  },
-  {
    "titre": "Soom T",
    "lieu": "La Halle de Martigues, Martigues",
    "categories": [
@@ -3603,22 +3474,6 @@
    "note": "Tremplin TPA 2026",
    "resume": "Soirée rock du tremplin TPA 2026 à la MJC de Martigues : Les Cigales Engatsées et les lauréats de Class'Eurock.",
    "lien": "https://shotgun.live/fr/events/tpa-2026-les-cigales-engatses-laureat-class-eurock",
-   "source": "Shotgun"
-  },
-  {
-   "titre": "Walking Bass Festival 2026 : The Last Raver",
-   "lieu": "Parc Chanot",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30/2026-11-01"
-   ],
-   "genre": "Électro",
-   "prix": "À partir de 22€",
-   "note": "Clash des collectifs 30/10, Walking Bass 31/10",
-   "resume": "Festival de musiques électroniques au Parc Chanot : clash des collectifs le 30 octobre, puis soirée Walking Bass le 31 octobre.",
-   "lien": "https://shotgun.live/fr/festivals/walking-bass-festival-2026-the-last-raver",
    "source": "Shotgun"
   },
   {
@@ -5645,21 +5500,6 @@
    "source": "Shotgun"
   },
   {
-   "titre": "Bedou : L'Art Dû",
-   "lieu": "Espace Julien",
-   "categories": [
-    "standup"
-   ],
-   "dates": [
-    "2026-10-27 20:00"
-   ],
-   "prix": "24 à 32€",
-   "note": "Lieu précis non indiqué",
-   "resume": "Stand-up de Bedou, « L'Art Dû » ou « C'est pas la question », fondé sur l'improvisation et le rapport au public, avec autodérision.",
-   "lien": "https://espace-julien.com/agenda/bedou",
-   "source": "Espace Julien"
-  },
-  {
    "titre": "Nenia Ira + Bonjour bourgeons",
    "lieu": "Café Julien",
    "categories": [
@@ -6297,20 +6137,6 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "L'art naturaliste imprimé depuis la Renaissance",
-   "lieu": "Muséum d'histoire naturelle",
-   "categories": [
-    "conference"
-   ],
-   "dates": [
-    "2026-10-28 18:30"
-   ],
-   "prix": "Gratuit",
-   "resume": "Conférence gratuite au Muséum d'histoire naturelle sur l'art naturaliste imprimé depuis la Renaissance.",
-   "lien": "https://musees.marseille.fr/lart-naturaliste-imprime-depuis-la-renaissance-mhnm",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Soirées Safaris : Peaupoil et plumécaille",
    "lieu": "Muséum d'histoire naturelle",
    "categories": [
@@ -6462,35 +6288,6 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Atelier Affiche ton style",
-   "lieu": "Château Borély",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-27 14:30"
-   ],
-   "prix": "Enfants 4€, adultes : droit d'entrée",
-   "resume": "Atelier pour jeune public au Château Borély, autour de l'affiche.",
-   "lien": "https://musees.marseille.fr/atelier-affiche-ton-style-borely",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Atelier Paravents",
-   "lieu": "Château Borély",
-   "categories": [
-    "visite"
-   ],
-   "dates": [
-    "2026-10-28 14:00"
-   ],
-   "prix": "Enfants 4€, adultes : droit d'entrée",
-   "resume": "Atelier de deux heures pour adolescents dès 16 ans et adultes : décorer les deux faces d'un paravent, l'une en style Art nouveau, l'autre en Art déco. Réservation par e-mail.",
-   "lien": "https://musees.marseille.fr/atelier-paravents-borely",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Atelier Paravents de poche",
    "lieu": "Château Borély",
    "categories": [
@@ -6635,37 +6432,6 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Visite-atelier en famille : La retouche, tout un art",
-   "lieu": "Musée d'Histoire de Marseille",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-28 14:30"
-   ],
-   "prix": "Gratuit",
-   "resume": "Visite-atelier gratuit en famille au Musée d'Histoire de Marseille, intitulé « La retouche, tout un art ».",
-   "lien": "https://musees.marseille.fr/visite-atelier-en-famille-la-retouche-tout-un-art-mhm",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Vacances en famille : Ateliers d'artistes",
-   "lieu": "Musée des Beaux-Arts",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-27 10:00",
-    "2026-10-27 14:30"
-   ],
-   "prix": "Adultes gratuit, enfants 4€",
-   "resume": "Ateliers d'artistes en famille proposés au musée des Beaux-Arts pendant les vacances d'automne.",
-   "lien": "https://musees.marseille.fr/vacances-en-famille-ateliers-dartistes-mba",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Vacances en famille : Nature peinture !",
    "lieu": "Musée des Beaux-Arts",
    "categories": [
@@ -6804,24 +6570,6 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Dame Nature : création d'automne",
-   "lieu": "Muséum d'histoire naturelle",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-27 10:30",
-    "2026-10-27 16:00",
-    "2026-10-28 10:30",
-    "2026-10-28 16:00"
-   ],
-   "prix": "Gratuit",
-   "resume": "Atelier de création d'automne en famille au Muséum d'histoire naturelle, gratuit, sur le thème de Dame Nature.",
-   "lien": "https://musees.marseille.fr/dame-nature-creation-dautomne-mhnm",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Visite-atelier : Fabrique ton savon",
    "lieu": "Musée d'Histoire de Marseille",
    "categories": [
@@ -6849,20 +6597,6 @@
    "prix": "Gratuit",
    "resume": "Visite commentée gratuite au Mémorial des déportations sur Marseille entre 1900 et 1943, autour de la « mauvaise réputation » de la ville.",
    "lien": "https://musees.marseille.fr/visite-commentee-marseille-1900-1943-la-mauvaise-reputation-memorial-des-deportations",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Atelier ouvert !",
-   "lieu": "Musée d'Arts Africains, Océaniens, Amérindiens",
-   "categories": [
-    "visite"
-   ],
-   "dates": [
-    "2026-10-28 14:30"
-   ],
-   "prix": "Gratuit",
-   "resume": "Atelier ouvert du musée, animé par les médiatrices, accessible gratuitement et sans inscription pendant les vacances.",
-   "lien": "https://musees.marseille.fr/atelier-ouvert-au-maaoa",
    "source": "Musées de Marseille"
   },
   {
@@ -7664,21 +7398,6 @@
    "source": "Friche la Belle de Mai"
   },
   {
-   "titre": "Human computers, une histoire de l'informatique laborieuse",
-   "lieu": "La Friche la Belle de Mai",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-28 18:30"
-   ],
-   "prix": "Gratuit",
-   "note": "Avec RYBN",
-   "resume": "Présentation de « Human computers », histoire de l'informatique laborieuse, avec le collectif RYBN, à la Friche la Belle de Mai. Gratuit.",
-   "lien": "https://www.lafriche.org/evenements/presentation-human-computers-une-histoire-de-linformatique-laborieuse/",
-   "source": "Friche la Belle de Mai"
-  },
-  {
    "titre": "Cicatrices. Comment la vulnérabilité fait monde.",
    "lieu": "La Friche la Belle de Mai",
    "categories": [
@@ -7747,22 +7466,6 @@
    "prix": "Gratuit",
    "note": "Avec Okyang Chae-Duporge",
    "lien": "https://www.lafriche.org/evenements/peintures-de-coree-munjado-chaekgeori/",
-   "source": "Friche la Belle de Mai"
-  },
-  {
-   "titre": "Stage de skate, d'éveil graphique, de graffiti et de flocage",
-   "lieu": "La Friche la Belle de Mai",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-19/2026-10-28"
-   ],
-   "heure": "09:30",
-   "note": "Dès 5 ans, 9h30-16h",
-   "resume": "Stage dès 5 ans, de 9h30 à 16h, mêlant skate, éveil graphique, graffiti et flocage.",
-   "lien": "https://www.lafriche.org/evenements/stage-de-skate-deveil-graphique-de-graffiti-et-de-flocage/",
    "source": "Friche la Belle de Mai"
   },
   {
@@ -7900,33 +7603,18 @@
    "source": "Mucem"
   },
   {
-   "titre": "Digérer l'Art : pratiques iconophages contemporaines",
-   "lieu": "Mucem",
-   "categories": [
-    "conference",
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-28 14:00"
-   ],
-   "note": "Table ronde, MucemLab",
-   "resume": "Table ronde au MucemLab sur les pratiques artistiques contemporaines dites iconophages, en lien avec l'exposition « Manger les images ».",
-   "lien": "https://mucem.org/expositions/manger-les-images/",
-   "source": "Mucem"
-  },
-  {
-   "titre": "Soirée portes ouvertes Manger les images",
+   "titre": "Après-midi portes ouvertes Manger les images",
    "lieu": "Mucem",
    "categories": [
     "visite"
    ],
    "dates": [
-    "2026-10-31 19:00"
+    "2026-11-01 14:00"
    ],
    "prix": "Gratuit",
-   "note": "Ateliers culinaires, DJ set",
+   "note": "14h-18h, J4 niveau 2 ; masterclass, ateliers de design culinaire, barbes à papa, DJ Dizonord",
    "resume": "Soirée d'Halloween en accès libre autour de l'exposition Manger les images, sur les images ingérées de l'Antiquité à nos jours : ateliers culinaires, masterclass de pâtissiers, sculptures en sucre, sélection de vinyles.",
-   "lien": "https://mucem.org/expositions/manger-les-images/",
+   "lien": "https://mucem.org/en/evenement/open-house-for-the-manger-les-images-exhibition/",
    "source": "Mucem"
   },
   {
@@ -8014,36 +7702,6 @@
    "source": "Mucem"
   },
   {
-   "titre": "King of Drag, viewing party",
-   "lieu": "La Mûrisserie",
-   "categories": [
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-27 19:30"
-   ],
-   "prix": "À partir de 5€",
-   "note": "Visionnage et performances",
-   "resume": "Projection de la saison 2 de l'émission King of Drag, accompagnée de performances en direct de deux drag kings, dans l'ambiance du bistrot.",
-   "lien": "https://bistrotmurisserie.fr/evenements/9b0dc8f360006125b46ade250bb3b145?m=2026-10&v=liste",
-   "source": "La Mûrisserie (Bistrot)"
-  },
-  {
-   "titre": "Apéropistolaires",
-   "lieu": "La Mûrisserie",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-28 18:30"
-   ],
-   "prix": "Prix libre",
-   "note": "Atelier d'écriture et scène ouverte",
-   "resume": "Atelier d'écriture épistolaire et scène ouverte à la Mûrisserie, à prix libre.",
-   "lien": "https://bistrotmurisserie.fr/evenements/e141c84eb4d9a5a34914eb1b6423cc9d?m=2026-10&v=liste",
-   "source": "La Mûrisserie (Bistrot)"
-  },
-  {
    "titre": "Concert Live Nouveau Monde",
    "lieu": "La Mûrisserie",
    "categories": [
@@ -8116,21 +7774,6 @@
    "prix": "5/4€",
    "resume": "Exposition consacrée au dessinateur Sempé, sur le thème « Rêver le monde », au musée Regards de Provence.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/blog-marseille/current-exhibitions/",
-   "source": "Marseille Tourisme"
-  },
-  {
-   "titre": "Concert corse (polyphonies, association Culombu)",
-   "lieu": "Chapelle Saint-Luc, Marseille",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-27 18:30"
-   ],
-   "genre": "Chants / Choeurs",
-   "prix": "10€ / 5€ adhérents",
-   "resume": "Concert de polyphonies corses donné par l'association Culombu à la chapelle Saint-Luc.",
-   "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/concert-corse-marseille-5eme-en-6770825/",
    "source": "Marseille Tourisme"
   },
   {
@@ -8591,22 +8234,6 @@
    "source": "Marseille Tourisme"
   },
   {
-   "titre": "Même pas peur des mini monstres",
-   "lieu": "Divadlo Théâtre, Marseille",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-28 10:00",
-    "2026-10-28 11:15"
-   ],
-   "prix": "De 6 à 8€",
-   "note": "Horaires à confirmer",
-   "resume": "Spectacle jeune public autour des petits monstres au Divadlo Théâtre ; horaires à confirmer.",
-   "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/meme-pas-peur-des-mini-monstres-marseille-5eme-en-6690831/",
-   "source": "Marseille Tourisme"
-  },
-  {
    "titre": "Marie Colomera + Melba",
    "lieu": "Espace Hypérion",
    "categories": [
@@ -8675,34 +8302,6 @@
    "note": "Spectacle chanté",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/vassilius-de-la-compagnie-la-naive-marseille-4eme-en-6742287/",
    "source": "Marseille Tourisme"
-  },
-  {
-   "titre": "Cartographier nos territoires avec Nadin Nadine (ateliers)",
-   "lieu": "La Fabulerie",
-   "categories": [
-    "visite"
-   ],
-   "dates": [
-    "2026-10-28 10:00"
-   ],
-   "resume": "Atelier de cartographie sensible et de sérigraphie mené par l'artiste Nadin Nadine avec des habitants de la Vallée Française (Lozère), dans le cadre d'Archipel(s) Lozère. Écriture le matin, carto-sérigraphie l'après-midi.",
-   "lien": "https://lafabulerie.com/agenda/cartographier-nos-territoires-avec-nadin-nadine/",
-   "source": "La Fabulerie"
-  },
-  {
-   "titre": "Micromondes - Résidence musicale",
-   "lieu": "La Fabulerie",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-28 17:30"
-   ],
-   "genre": "Expérimental",
-   "note": "Résidence",
-   "resume": "Résidence du duo MicroMondes, la compositrice Nathalie Ong et le beatboxer Jacinto Matthieu (Joos), qui recueillent des récits d'habitants et animent des ateliers de beatbox et de création électroacoustique.",
-   "lien": "https://lafabulerie.com/agenda/micromondes-residence-musicale/",
-   "source": "La Fabulerie"
   },
   {
    "titre": "La Martinerie fait sa crémaillère",
@@ -8888,21 +8487,6 @@
    "source": "JDS"
   },
   {
-   "titre": "Le parc national des Calanques : la solidarité écologique, projet de territoire",
-   "lieu": "Bibliothèque de l'Alcazar",
-   "categories": [
-    "conference"
-   ],
-   "dates": [
-    "2026-10-28 18:00"
-   ],
-   "prix": "Sur réservation, gratuit",
-   "note": "Thierry Tatoni ; inscription obligatoire",
-   "resume": "Conférence de l'écologue Thierry Tatoni sur le Parc national des Calanques, créé en 2012, et sur la solidarité écologique à l'échelle de la métropole. Inscription obligatoire.",
-   "lien": "https://www.bmvr.marseille.fr",
-   "source": "Unidivers"
-  },
-  {
    "titre": "Si Victor m'était conté - Voix des Suds",
    "lieu": "Abbaye Saint-Victor, Marseille",
    "categories": [
@@ -8982,22 +8566,6 @@
    "note": "Festival Voix des Suds",
    "lien": "https://www.myprovence.fr/agenda/festival/marseille/festival-voix-des-suds-2026",
    "source": "MyProvence"
-  },
-  {
-   "titre": "The Walking Bass Festival - The Last Raver",
-   "lieu": "Salle des Sucres et Parc Chanot, Marseille",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30/2026-10-31"
-   ],
-   "genre": "Électro",
-   "prix": "22€ le 30/10, dès 48,20€ le 31/10",
-   "note": "Clash des Collectifs (30/10) puis Last Raver (31/10)",
-   "resume": "Festival électro en deux soirées : Clash des Collectifs en face à face à la Salle des Sucres le 30 octobre, puis The Last Raver au Parc Chanot le 31, sur deux scènes (hard techno, drum and bass, trance, tekno).",
-   "lien": "https://www.thewalkingbass.fr",
-   "source": "JDS"
   },
   {
    "titre": "Walking Bass - Clash des Collectifs",
@@ -9259,62 +8827,6 @@
    "source": "Fest.fr"
   },
   {
-   "titre": "Les magiciens du monde",
-   "lieu": "Théâtre L'Archange",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-26 10:00"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle de magie pour jeune public : un magicien présente des numéros qui illustrent différentes facettes de l'illusion. Se joue à l'Archange Théâtre (Marseille 8e).",
-   "lien": "https://www.fest.fr/les-magiciens-du-monde-2684196.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Le zoo des tout petits",
-   "lieu": "Divadlo Théâtre",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-27 10:00"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle pour les tout petits autour du thème du zoo, à Marseille 5e. Lieu précis non indiqué.",
-   "lien": "https://www.fest.fr/le-zoo-des-tout-petits-2623592.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Dalil Tahri - Première consultation",
-   "lieu": "Marseille 6e",
-   "categories": [
-    "standup"
-   ],
-   "dates": [
-    "2026-10-27 20:30"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle de stand-up de Dalil Tahri, « Première consultation », à Marseille 6e. Lieu précis non indiqué.",
-   "lien": "https://www.fest.fr/dalil-tahri-dans-premiere-consultation-2695525.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Mamouchka l'apprentie sorcière",
-   "lieu": "Divadlo Théâtre",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-28"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle musical et interactif pour enfants : Mamouchka passe son examen de sorcière avec l'aide du public, entre chansons et marionnettes. Présenté au Divadlo Théâtre.",
-   "lien": "https://www.fest.fr/mamouchka-l-apprentie-sorciere-2702033.html",
-   "source": "Fest.fr"
-  },
-  {
    "titre": "Sorcier Lovecraft",
    "lieu": "Théâtre des Chartreux",
    "categories": [
@@ -9340,21 +8852,6 @@
    "note": "Lieu précis non indiqué",
    "resume": "Spectacle d'humour du duo Lucas & Veufla, intitulé En carence de fer.",
    "lien": "https://www.fest.fr/lucas-veufla-en-carence-de-fer-2479947.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Allauch ciné - L'automne de Pougne",
-   "lieu": "Allauch",
-   "categories": [
-    "cinema",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-28 10:30"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Projection de trois courts métrages d'animation du studio Folimage, dont L'automne de Pougne (26 min), pour le jeune public, à la bibliothèque municipale d'Allauch.",
-   "lien": "https://www.allauch.com/information-transversale/annuaires/lieux-de-lagenda/bibliotheque-municipale/",
    "source": "Fest.fr"
   },
   {
@@ -9919,36 +9416,6 @@
    "source": "Fest.fr"
   },
   {
-   "titre": "Débat d'ouverture : Du besoin de raconter des histoires",
-   "lieu": "Espace Julien",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-28 19:00"
-   ],
-   "prix": "10/5€ (couplé Loghofète)",
-   "note": "Avec Sabyl Ghoussoub",
-   "resume": "Débat d'ouverture, en partenariat avec Mediapart, sur le récit à la lisière du journalisme et de la littérature, avec l'écrivain et journaliste Sabyl Ghoussoub.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Loghofète, le prénom perdu",
-   "lieu": "Espace Julien",
-   "categories": [
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-28 21:00"
-   ],
-   "prix": "10/5€ (couplé débat)",
-   "note": "Création de Fred Nevché, avec Diala Lteif",
-   "resume": "Performance hybride de Fred Nevché avec la chercheuse Diala Lteif, retraçant l'histoire de deux familles arméniennes installées à Marseille et à Beyrouth en 1923. Documentaire, poésie, archives, musique et images.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
    "titre": "L'ombre en soi qui écrit (Wajdi Mouawad)",
    "lieu": "Mucem, auditorium",
    "categories": [
@@ -10245,7 +9712,7 @@
     "expo"
    ],
    "dates": [
-    "2026-10-15/2026-11-14"
+    "2026-10-15/2026-11-15"
    ],
    "prix": "Gratuit",
    "resume": "Exposition de Quentin Destieu composée d'installations qui détournent des objets et des technologies (cailloux, cuillères à absinthe en composants électroniques, nichoirs), dans une démarche low-tech critique du discours technophile.",
@@ -11669,20 +11136,6 @@
    "source": "fest.fr"
   },
   {
-   "titre": "Hands up !",
-   "lieu": "Le Sémaphore, Port-de-Bouc",
-   "categories": [
-    "jeune",
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-28 14:30"
-   ],
-   "prix": "4€",
-   "lien": "https://www.fest.fr/hands-up-2588025.html",
-   "source": "fest.fr"
-  },
-  {
    "titre": "Marcher dans le vent",
    "lieu": "Le Sémaphore, Port-de-Bouc",
    "categories": [
@@ -12349,19 +11802,6 @@
    "source": "Fnacspectacles"
   },
   {
-   "titre": "Ma sorcière adorée",
-   "lieu": "Atelier des arts",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-28"
-   ],
-   "prix": "12,95€",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/ma-sorc-ere-adoree.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
    "titre": "Cache cache Père Noël",
    "lieu": "Atelier des arts",
    "categories": [
@@ -12557,19 +11997,6 @@
    "source": "Agenda Culturel 13"
   },
   {
-   "titre": "Jacky sorcier pour de vrai",
-   "lieu": "Théâtre L'Archange",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-27"
-   ],
-   "prix": "Dès 10,95€",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/jacky-sorcier-pour-de-vrai.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
    "titre": "L'anniversaire magique",
    "lieu": "Théâtre L'Archange",
    "categories": [
@@ -12595,19 +12022,6 @@
    "prix": "Dès 10,95€",
    "note": "Dates précises : voir lien",
    "lien": "https://13.agendaculturel.fr/jeune-public/marseille/les-jumeaux-magiciens-dans-drole-de-magie-1.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Les Jumeaux Magiciens, Drôle de Magie",
-   "lieu": "Théâtre L'Archange",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-26"
-   ],
-   "prix": "Dès 10,95€",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/les-jumeaux-magiciens-dans-drole-de-magie.html",
    "source": "Agenda Culturel 13"
   },
   {
@@ -12661,19 +12075,6 @@
    ],
    "prix": "14€",
    "lien": "https://13.agendaculturel.fr/jeune-public/marseille/soiree-petit-frisson.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Fario, dans le ventre du poisson vagabond",
-   "lieu": "Le Hangart",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-28"
-   ],
-   "prix": "Gratuit",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/fario-dans-le-ventre-du-poisson-vagabond.html",
    "source": "Agenda Culturel 13"
   },
   {
@@ -13533,8 +12934,8 @@
    "dates": [
     "2026-11-05"
    ],
-   "note": "Heure et lieu de départ non publiés au 19/10 (securmanif)",
-   "resume": "Grève interprofessionnelle à l'appel de l'intersyndicale : retrait du projet de budget, fin des 54 milliards d'euros de coupes budgétaires, indexation des salaires et pensions sur les prix, réponse aux plans de licenciements, fin de la répression des mouvements sociaux et de la jeunesse.",
+   "note": "Heure et lieu de départ non publiés au 29/10 ; cortège annoncé hors du centre-ville. Manifestations interdites dans les Bouches-du-Rhône par arrêté préfectoral depuis fin octobre : vérifier l'autorisation",
+   "resume": "Grève interprofessionnelle à l'appel de l'intersyndicale (CFDT, CGT, FO, Unsa, FSU) : salaires et pensions, services publics, retrait du projet de budget et de ses 54 milliards d'euros de coupes, réponse aux plans de licenciements.",
    "lien": "https://securmanif.fr/2026-11-05/marseille",
    "source": "manif"
   },
@@ -13731,33 +13132,6 @@
    "resume": "Louis Caratini et son piano proposent un grand blind-test de chanson française, de la variété au rap, en partant des paroles. Concert interactif, 1h20.",
    "lien": "https://www.lestheatres.net/fr/a/6171-tu-connais-la-chanson",
    "source": "Les Théâtres"
-  },
-  {
-   "titre": "Chroniques et débats BD de C'Marseille",
-   "lieu": "Zoumaï",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-26 19:30"
-   ],
-   "resume": "Deuxième soirée de chroniques et de débats autour d'une sélection de bandes dessinées.",
-   "lien": "https://www.instagram.com/cmarseillebd/p/DeZf5ZBIziI/",
-   "source": "Zoumaï"
-  },
-  {
-   "titre": "Ciné-quiz « Vivre avec le risque inondation »",
-   "lieu": "Zoumaï",
-   "categories": [
-    "conference"
-   ],
-   "dates": [
-    "2026-10-28 19:00"
-   ],
-   "prix": "Gratuit",
-   "resume": "Projection d'un film interactif et quiz sur les bons gestes avant, pendant et après une inondation, par l'Atelier Bleu (CPIE) et l'EPAGE Huveaune. Jusqu'à 21h, lots à gagner.",
-   "lien": "https://www.instagram.com/atelier_bleu_cpie/p/DetsUrwCD_8/",
-   "source": "Zoumaï"
   },
   {
    "titre": "Afrimayé présente Twa",
@@ -14216,20 +13590,6 @@
    "source": "mucem.org"
   },
   {
-   "titre": "Bouger autrement : récits de territoires en mouvement",
-   "lieu": "Frac Sud - Cité de l'art contemporain",
-   "categories": [
-    "conference",
-    "cinema"
-   ],
-   "dates": [
-    "2026-10-28 18:30"
-   ],
-   "resume": "Projections et rencontre autour des mobilités douces.",
-   "lien": "https://fracsud.org/Bouger-autrement-recits-de-territoires-en-mouvement",
-   "source": "fracsud.org"
-  },
-  {
    "titre": "Projection du film Résonances",
    "lieu": "Frac Sud - Cité de l'art contemporain",
    "categories": [
@@ -14431,22 +13791,6 @@
    "note": "38 traverse Notre-Dame du Bon Secours, 13003",
    "source": "Shotgun",
    "lien": "https://shotgun.live/en/venues/le-chapiteau-marseille"
-  },
-  {
-   "titre": "Jam Jazz qui dérape",
-   "lieu": "L'Intermédiaire",
-   "categories": [
-    "jam"
-   ],
-   "genre": "jazz",
-   "dates": [
-    "2026-10-27 20:00"
-   ],
-   "prix": "Entrée libre",
-   "resume": "Jam session ouverte aux musiciens de tous niveaux, avec batterie, piano, contrebasse et amplis sur place.",
-   "note": "Rendez-vous du mardi ; dates de novembre non encore publiées",
-   "source": "Concert and Co",
-   "lien": "https://www.concertandco.com/lieu/intermediaire-marseille/salle-concert-352.htm"
   },
   {
    "titre": "Bakélite Duo",
@@ -14809,12 +14153,13 @@
     "conference"
    ],
    "dates": [
-    "2026-11-24 20:00"
+    "2026-11-24 19:30"
    ],
    "prix": "25€ (abonné 20€)",
    "resume": "L'écrivain voyageur évoque ses expériences, la liberté et la protection de l'environnement.",
    "lien": "https://www.lachaudronnerie-laciotat.com/evenement/conference-sylvain-tesson/",
-   "source": "La Chaudronnerie"
+   "source": "La Chaudronnerie",
+   "note": "Horaire 19h30 (Fnac) ou 20h selon les sources"
   },
   {
    "titre": "Cassis Comedy Festival : Morgane Cadignan, La nuit je mens",
@@ -14942,20 +14287,6 @@
    "lien": "https://13.agendaculturel.fr/theatre/marseille/gad-friends-1.html",
    "source": "agendaculturel",
    "note": "Dates précises : voir lien"
-  },
-  {
-   "titre": "Mabeeelle Comedy Club, 100 % meufs",
-   "lieu": "Marseille Comedy Club",
-   "categories": [
-    "humour",
-    "standup"
-   ],
-   "dates": [
-    "2026-10-27"
-   ],
-   "resume": "Plateau d'humoristes femmes.",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/mabeeelle-comedy-club-100-meufs.html",
-   "source": "agendaculturel"
   },
   {
    "titre": "Mathieu Triay",
@@ -15509,21 +14840,6 @@
    "source": "PAC Provence Art Contemporain"
   },
   {
-   "titre": "Mon amour, Laurane Fahrni",
-   "lieu": "Le 33 (fonds Carta)",
-   "categories": [
-    "expo"
-   ],
-   "dates": [
-    "2026-08-28/2026-10-28"
-   ],
-   "prix": "Gratuit",
-   "note": "Visite sur rendez-vous, 33 rue Saint-Jacques (6e)",
-   "resume": "Dessins sur papier des traces laissées par le temps sur les matériaux (rouille, moisissures, brûlures), dans le cadre de La Saison du Dessin.",
-   "lien": "https://p-a-c.fr/les-membres/le-33/evenements/mon-amour",
-   "source": "PAC Provence Art Contemporain"
-  },
-  {
    "titre": "Michel Simon, une carrière internationale",
    "lieu": "Office de Tourisme de La Ciotat",
    "categories": [
@@ -15794,6 +15110,499 @@
    "note": "Tarif non-adhérent non indiqué",
    "lien": "https://www.fest.fr/les-conferences-du-centre-culturel-cassis---lucca-en-toscane-2689115.html",
    "source": "fest.fr"
+  },
+  {
+   "titre": "La Jam Jazz qui Dérape",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert",
+    "jam"
+   ],
+   "dates": [
+    "2026-11-03 21:00",
+    "2026-11-10 21:00",
+    "2026-11-17 21:00"
+   ],
+   "genre": "Jazz (jam session)",
+   "prix": "Gratuit",
+   "resume": "Jam session jazz hebdomadaire du mardi soir, menée par un binôme de musiciens locaux différent chaque semaine. Batterie, contrebasse, piano, ampli et micros sur place.",
+   "lien": "https://www.bouger-en-provence.com/evenement/concert/jam-jazz-derape-%F0%9F%A5%B3-%F0%9F%8E%B7%F0%9F%8E%B9%F0%9F%8E%BA%F0%9F%A5%81%F0%9F%8E%B8/",
+   "source": "Bouger en Provence"
+  },
+  {
+   "titre": "Jam-ais fini !",
+   "lieu": "Le Makeda",
+   "categories": [
+    "concert",
+    "jam"
+   ],
+   "dates": [
+    "2026-11-11 20:00"
+   ],
+   "genre": "Jam session (jazz, funk, rock, soul, hip-hop, reggae, électro)",
+   "prix": "Prix libre",
+   "resume": "Jam ouverte aux musiciens de tous niveaux organisée par le label Boucan avec La Baguetterie : batterie, clavier, ampli guitare et micros fournis. Le public peut venir simplement écouter.",
+   "lien": "https://www.myprovence.fr/agenda/concert/marseille/jam-ais-fini-0",
+   "source": "MyProvence"
+  },
+  {
+   "titre": "Fethi Trab + Sirbey",
+   "lieu": "Le Makeda",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-19 20:00"
+   ],
+   "genre": "Musiques du monde, blues-rock",
+   "prix": "12 à 15€",
+   "resume": "Fethi Trab mêle blues, rock et influences d'Afrique du Nord et de l'Ouest (ney, lespine). En première partie, Sirbey, projet électro-pop marseillais aux sonorités nord-africaines et espagnoles.",
+   "lien": "https://www.marseille-tourisme.com/vivez-marseille-blog/agenda/fethi-trab-%c2%b7-sirbey-marseille-5eme-fr-6591996/",
+   "source": "Office de tourisme de Marseille"
+  },
+  {
+   "titre": "Harmonie Show #4 : Sto, La Marmite, Ingmar, Calvary Clover",
+   "lieu": "Le Makeda",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-12 20:00"
+   ],
+   "genre": "Rap",
+   "prix": "À partir de 12€",
+   "resume": "Quatrième édition de la soirée Harmonie, plateau de jeunes artistes avec Sto, La Marmite, Ingmar et Calvary Clover.",
+   "lien": "https://www.concertandco.com/lieu/le-poste-galene-marseille/salle-concert-292.htm",
+   "source": "Concert and Co / Scènes du Sud"
+  },
+  {
+   "titre": "Mofak & friends (Dezzy Hollow + DJ Cali)",
+   "lieu": "Le Makeda",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28"
+   ],
+   "genre": "Funk, G-funk",
+   "prix": "15€",
+   "resume": "Soirée funk autour du producteur marseillais Mofak et de son live band, avec le rappeur californien Dezzy Hollow et DJ Cali aux platines.",
+   "lien": "https://www.jds.fr/marseille/salle-de-concert/le-makeda-16772_L",
+   "source": "JDS / Scènes du Sud"
+  },
+  {
+   "titre": "Piedebiche + 21st Century Beatnixx",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 20:00"
+   ],
+   "genre": "Punk, rock",
+   "resume": "Double plateau rock au bar-concert de la Plaine, avec Piedebiche et 21st Century Beatnixx.",
+   "lien": "https://www.concertandco.com/lieu/intermediaire-marseille/salle-concert-352.htm",
+   "source": "Concert and Co"
+  },
+  {
+   "titre": "Second Major + Auto",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-11 21:00"
+   ],
+   "genre": "Rock",
+   "resume": "Concert de Second Major et Auto à L'Intermédiaire, place Jean-Jaurès.",
+   "lien": "https://www.concertandco.com/lieu/intermediaire-marseille/salle-concert-352.htm",
+   "source": "Concert and Co"
+  },
+  {
+   "titre": "Ourania Jazz Quartet",
+   "lieu": "Club 27",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-10-29 20:30"
+   ],
+   "genre": "Jazz vocal",
+   "prix": "10€ (+ adhésion annuelle 10€)",
+   "resume": "Quartet jazz avec Ourania Vaud (voix), José Assa (piano), Philippe Gallet (contrebasse) et Yves De Lucas (batterie). Ouverture et apéro à 19h30.",
+   "lien": "https://club27.fr/",
+   "source": "Club 27"
+  },
+  {
+   "titre": "Julien Brunetaud Trio",
+   "lieu": "Club 27",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-10-31 20:30"
+   ],
+   "genre": "Boogie-woogie, jazz, blues",
+   "prix": "10€ (+ adhésion annuelle 10€)",
+   "resume": "Le pianiste Julien Brunetaud en trio avec Sam Favreau (contrebasse) et Cédrick Bec (batterie), entre boogie-woogie, jazz et blues. Ouverture et apéro à 19h30.",
+   "lien": "https://club27.fr/",
+   "source": "Club 27"
+  },
+  {
+   "titre": "Nuit du cirque : Run Run (Collectif Merkén)",
+   "lieu": "Archaos, Pôle national du cirque, Marseille 15e",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-14 19:00"
+   ],
+   "prix": "15,44€ (réduit 12,41€) ; gratuit sur réservation (publics@archaos.fr)",
+   "note": "Dès 10 ans, 1h20. 22 bd de la Méditerranée",
+   "resume": "Théâtre, marionnette et suspension aérienne : Run Run, collectionneur d'objets suspendu à un manège, raconte l'histoire cachée d'un village bouleversé par un coup d'État. Des collégiens de Rosa Parks jouent avec les artistes.",
+   "lien": "https://www.billetweb.fr/run-run-collectif-merken-la-nuit-du-cirque-2026",
+   "source": "Marseille Tourisme / myprovence"
+  },
+  {
+   "titre": "Desafogadas – non-noyées – undrowned (sortie de résidence)",
+   "lieu": "Archaos, Pôle national du cirque, Marseille 15e",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-20 19:00"
+   ],
+   "prix": "Gratuit sur réservation (publics@archaos.fr)",
+   "resume": "Sortie de résidence de la Cie Aquilomba (Maïra de Oliveira Aggio) : exploration circassienne de la mémoire de l'Atlantique noir, avec quatre interprètes et un immense hamac en caroá.",
+   "lien": "https://www.marseille-tourisme.com/vivez-marseille-blog/agenda/desafogadas-non-noyees-undrowned-marseille-15eme-fr-6674476/",
+   "source": "Marseille Tourisme"
+  },
+  {
+   "titre": "Thomas Wiesel, Société écrans",
+   "lieu": "La Chaudronnerie, La Ciotat",
+   "categories": [
+    "humour",
+    "standup"
+   ],
+   "dates": [
+    "2026-11-28 20:00"
+   ],
+   "resume": "Nouveau seul-en-scène de l'humoriste suisse Thomas Wiesel.",
+   "lien": "https://www.fnacspectacles.com/event/thomas-wiesel-societe-ecrans-tournee-la-chaudronnerie-la-ciotat-21728014/",
+   "source": "Fnac Spectacles"
+  },
+  {
+   "titre": "Stand Up Fabien Guyno, l'Homme à la Guitare",
+   "lieu": "Maison Ritt, La Ciotat",
+   "categories": [
+    "humour"
+   ],
+   "dates": [
+    "2026-11-14 20:30"
+   ],
+   "prix": "16€ (adhérent 13€, enfant 8€)",
+   "resume": "Seul-en-scène mêlant guitare, chansons et stand-up autodérisoire, avec improvisations à partir des histoires du public.",
+   "lien": "https://en.destinationlaciotat.com/offers/stand-up-by-fabien-guyno-the-guitar-man-la-ciotat-en-5740614/",
+   "source": "Destination La Ciotat"
+  },
+  {
+   "titre": "1ère Journée du Faubourg des Arts",
+   "lieu": "Rue Louis Vignol, La Ciotat",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-11-07/2026-11-07"
+   ],
+   "prix": "Gratuit",
+   "note": "10h-19h",
+   "resume": "La rue Vignol devient parcours artistique : ateliers et galeries ouverts, expositions, démonstrations et performances.",
+   "lien": "https://en.destinationlaciotat.com/offers/1st-faubourg-des-arts-day-la-ciotat-en-6871089/",
+   "source": "Destination La Ciotat"
+  },
+  {
+   "titre": "Calanque Comedy Club",
+   "lieu": "Oustau Calendal, Cassis",
+   "categories": [
+    "standup",
+    "humour"
+   ],
+   "dates": [
+    "2026-11-27 20:30"
+   ],
+   "prix": "25€ (adhérents CCC 20€)",
+   "note": "Placement libre, ouverture 20h",
+   "resume": "Lancement du comedy club du Centre culturel de Cassis avec Moustazou, BabaRUDY, Mano Parmigiano, Marco Paolo et Bedou.",
+   "lien": "https://booking.ot-cassis.com/stand-up-comedy-the-calanque-comedy-club.html",
+   "source": "Office de tourisme de Cassis"
+  },
+  {
+   "titre": "Sur les traces du Cassis antique",
+   "lieu": "Musée municipal d'arts et traditions populaires, Cassis",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-02-02/2026-12-31"
+   ],
+   "prix": "Gratuit",
+   "note": "Mer-ven 10h-12h30 et 13h30-17h30, sam 10h-13h",
+   "resume": "Objets antiques mis au jour à Cassis et pièces d'épaves prêtées par le DRASSM.",
+   "lien": "https://www.ot-cassis.com/en/touristic_sheet/on-the-trail-of-ancient-cassis-exhibition-at-the-museum-cassis-en-6187737/",
+   "source": "Office de tourisme de Cassis"
+  },
+  {
+   "titre": "Populaire ? Trésors des collections du Mucem",
+   "lieu": "Mucem",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2023-12-13/2030-09-01"
+   ],
+   "prix": "11€ / 7,50€",
+   "note": "Exposition semi-permanente, J4 rez-de-chaussée",
+   "resume": "Exposition semi-permanente présentant environ 1 200 objets et documents des collections du Mucem, classés par grandes catégories (peinture, sculpture, céramique...) sans opposer beaux-arts et arts populaires.",
+   "lien": "https://mucem.org/en/exhibitions/",
+   "source": "Mucem / Office de tourisme de Marseille"
+  },
+  {
+   "titre": "Procès du siècle : Comment bien communiquer ?",
+   "lieu": "Mucem",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-16 19:00"
+   ],
+   "prix": "Gratuit sur réservation",
+   "note": "Auditorium J4, 19h-20h30 ; titre traduit de la page anglaise du Mucem",
+   "resume": "Débat animé par Nora Hamadi avec Mathilde Imer et Frédéric Taddeï : le dialogue est-il encore possible dans une société polarisée ? Ouverture de la saison 6 des Procès du siècle.",
+   "lien": "https://mucem.org/en/evenement/how-can-we-communicate-effectively/",
+   "source": "Mucem"
+  },
+  {
+   "titre": "L'École du Louvre au Mucem : Les jardins méditerranéens",
+   "lieu": "Mucem",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-02 14:00",
+    "2026-11-09 11:00",
+    "2026-11-09 14:00"
+   ],
+   "prix": "75€ / 45€ le cycle",
+   "note": "Auditorium, séances de 1h30 ; fin du cycle 1",
+   "resume": "Cours de l'École du Louvre sur les jardins monastiques puis les jardins marocains traditionnels et contemporains, avec Catherine Richarte (Inrap) et Mounia Bennani (paysagiste).",
+   "lien": "https://www.ecoledulouvre.fr/sites/default/files/media/document/Programme-MARSEILLE-2026-2027.pdf",
+   "source": "École du Louvre"
+  },
+  {
+   "titre": "Lecture poétique polyphonique autour d'Ernest Pignon-Ernest",
+   "lieu": "Musée Ziem, Martigues",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-05 18:00"
+   ],
+   "note": "Réservation 04 42 41 39 60 ; suivie d'un apéritif",
+   "resume": "Lecture à plusieurs voix (Richard Mathias, Stéphane Wowak Papantoniou, Florence Pazzottu) autour des thèmes sociaux et politiques de l'œuvre d'Ernest Pignon-Ernest, avec le CIPM.",
+   "lien": "https://p-a-c.fr/les-membres/musee-ziem/evenements/lecture-poetique-polyphonique",
+   "source": "Provence Art Contemporain"
+  },
+  {
+   "titre": "Visite commentée : Carte blanche à Ernest Pignon-Ernest",
+   "lieu": "Musée Ziem, Martigues",
+   "categories": [
+    "visite"
+   ],
+   "dates": [
+    "2026-11-04 16:00",
+    "2026-11-15 16:00"
+   ],
+   "prix": "Gratuit",
+   "note": "Durée 1h30 ; programme signalé « en attente de validation »",
+   "resume": "Visite de l'exposition rétrospective consacrée à Ernest Pignon-Ernest, menée par les médiateurs du musée.",
+   "lien": "https://www.myprovence.fr/agenda/visites-guidees/martigues/visites-commentees-au-musee-ziem",
+   "source": "MyProvence"
+  },
+  {
+   "titre": "Sentō Trip / Kyoto Sketches, César Debargue",
+   "lieu": "Studio Fotokino",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-11-10/2026-11-28"
+   ],
+   "prix": "Entrée libre",
+   "note": "Librairie du studio, mardi-samedi 14h-18h30",
+   "resume": "Présentation du leporello sérigraphié Sentō Trip sur les bains publics japonais et des dessins Kyoto Sketches réalisés lors de la résidence de César Debargue à la Villa Kujoyama.",
+   "lien": "https://fotokino.org/en/agenda/sento-trip-kyoto-sketches-cesar-debargue/",
+   "source": "Fotokino"
+  },
+  {
+   "titre": "Lancement Sentō Trip, rencontre avec César Debargue",
+   "lieu": "Studio Fotokino",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-12 18:30"
+   ],
+   "prix": "Entrée libre",
+   "resume": "Lancement du livre et discussion sur les techniques d'impression au Japon avec César Debargue et Vincent Tuset-Anrès.",
+   "lien": "https://fotokino.org/en/agenda/sento-trip-kyoto-sketches-cesar-debargue/",
+   "source": "Fotokino"
+  },
+  {
+   "titre": "Viens jouer ! Lancement avec Fanny Dreyer et Carole Saturno",
+   "lieu": "Studio Fotokino",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-06 18:30"
+   ],
+   "prix": "Entrée libre",
+   "resume": "Présentation du livre Viens jouer ! (éditions La Partie), recueil de plus de cent jeux anciens et actuels, par son autrice Carole Saturno et son illustratrice Fanny Dreyer.",
+   "lien": "https://fotokino.org/en/agenda/viens-jouer-lancement-avec-fanny-dreyer-et-carole-saturno/var/ri-0.l-L2",
+   "source": "Fotokino"
+  },
+  {
+   "titre": "Agenda, Paul Cox",
+   "lieu": "Studio Fotokino",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-12-05/2027-02-20"
+   ],
+   "prix": "Entrée libre",
+   "note": "Mardi-samedi 14h-18h30",
+   "resume": "Sélection des dessins quotidiens de Paul Cox, réalisés comme une pratique régulière « pour ne pas perdre la main ».",
+   "lien": "https://fotokino.org/en/agenda/agenda-paul-cox/",
+   "source": "Fotokino"
+  },
+  {
+   "titre": "Behind The Burning Sun, Eugénie Baccot",
+   "lieu": "Librairie Maupetit",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-10-15/2026-11-21"
+   ],
+   "prix": "Entrée libre",
+   "note": "Côté Galerie",
+   "resume": "Série photographique née en Gambie, voyage poétique et onirique inspiré du roman Racines d'Alex Haley.",
+   "lien": "https://contemporaneitesdelart.fr/art-marseille/",
+   "source": "Contemporanéités de l'art"
+  },
+  {
+   "titre": "Motion in live",
+   "lieu": "Atelier-Galerie Zemma",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-08-27/2026-11-07"
+   ],
+   "prix": "Entrée libre",
+   "note": "40 rue Sainte, 1er",
+   "resume": "Exposition à l'atelier-galerie Zemma, lieu consacré à la représentation du travail dans l'art contemporain.",
+   "lien": "https://p-a-c.fr/les-membres/zemma/evenements/motion-in-live-jusqu-au-7-novembre",
+   "source": "Provence Art Contemporain"
+  },
+  {
+   "titre": "Julien Creuzet",
+   "lieu": "Digitale Zone",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-08-28/2026-11-29"
+   ],
+   "prix": "Gratuit",
+   "note": "11 avenue de Mazargues, 8e ; écran LED visible depuis la rue",
+   "resume": "Œuvre de Julien Creuzet diffusée sur l'écran LED de Digitale Zone, lieu dédié à la création numérique visuelle dans l'espace public.",
+   "lien": "https://p-a-c.fr/les-membres/digitale-zone/evenements/julien-creuzet",
+   "source": "Provence Art Contemporain"
+  },
+  {
+   "titre": "Un entre-deux, 31e salon d'automne",
+   "lieu": "Centre d'Arts Plastiques Fernand Léger, Port-de-Bouc",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-11-20/2026-12-04"
+   ],
+   "prix": "Entrée libre",
+   "resume": "31e salon d'automne du centre d'arts plastiques de Port-de-Bouc.",
+   "lien": "https://p-a-c.fr/les-membres/centre-d-arts-plastiques-fernand-leger/evenements/un-entre-deux-31e-salon-d-automne",
+   "source": "Provence Art Contemporain"
+  },
+  {
+   "titre": "Vernissage : Un entre-deux, 31e salon d'automne",
+   "lieu": "Centre d'Arts Plastiques Fernand Léger, Port-de-Bouc",
+   "categories": [
+    "vernissage"
+   ],
+   "dates": [
+    "2026-11-20 18:00"
+   ],
+   "prix": "Gratuit",
+   "resume": "Vernissage du 31e salon d'automne du centre d'arts plastiques Fernand Léger.",
+   "lien": "https://p-a-c.fr/les-membres/centre-d-arts-plastiques-fernand-leger/evenements/un-entre-deux-31e-salon-d-automne",
+   "source": "Provence Art Contemporain"
+  },
+  {
+   "titre": "La Noblesse de servir - Képi blanc et têtes couronnées",
+   "lieu": "Musée de la Légion étrangère, Aubagne",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-04-25/2027-01-03"
+   ],
+   "prix": "Gratuit",
+   "note": "Mardi-dimanche 10h-12h et 14h-18h",
+   "resume": "Une centaine d'objets retracent l'histoire de la Légion étrangère à travers les couronnes et les monarques qui lui sont liés.",
+   "lien": "https://en.tourisme-paysdaubagne.fr/preparing-your-stay/events-ideas/exposition-la-noblesse-de-servir-kepi-blanc-et-tetes-couronnees-aubagne-en-6400823/",
+   "source": "Office de tourisme du Pays d'Aubagne"
+  },
+  {
+   "titre": "Vernissage : exposition de Chrystèle Gonçalves",
+   "lieu": "Centre d'art contemporain Les Pénitents Noirs, Aubagne",
+   "categories": [
+    "vernissage"
+   ],
+   "dates": [
+    "2026-11-27 16:30"
+   ],
+   "prix": "Gratuit",
+   "note": "16h30-18h30 ; dates de l'exposition non communiquées",
+   "resume": "Inauguration de l'exposition de peinture de l'artiste Chrystèle Gonçalves.",
+   "lien": "https://en.tourisme-paysdaubagne.fr/preparing-your-stay/events-ideas/vernissage-de-lexposition-de-lartiste-chrystele-goncalves-aubagne-en-6851832/",
+   "source": "Office de tourisme du Pays d'Aubagne"
+  },
+  {
+   "titre": "Ports d'attache : football, supporters et identités dans les villes portuaires",
+   "lieu": "La Friche la Belle de Mai",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-12 18:00"
+   ],
+   "prix": "Gratuit sur réservation",
+   "note": "18h-19h45, Campus AFD et INA",
+   "resume": "Rencontre autour du football, des supporters et des identités dans les villes portuaires, proposée avec le Campus AFD et l'INA.",
+   "lien": "https://www.lafriche.org/evenements/ports-dattache-football-supporters-et-identites-dans-les-villes-portuaires/",
+   "source": "Friche la Belle de Mai (agenda)"
   }
  ]
 }
