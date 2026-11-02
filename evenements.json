@@ -1049,7 +1049,9 @@
     "2026-11-05 20:00"
    ],
    "lien": "https://bandsintown.com/fr/v/10295876-l%27intermediaire",
-   "source": "Songkick et Bandsintown (Le Molotov, L'Intermédiaire)"
+   "source": "Songkick et Bandsintown (Le Molotov, L'Intermédiaire)",
+   "prix": "10€",
+   "genre": "hardcore"
   },
   {
    "titre": "To The Max!",
@@ -1061,7 +1063,9 @@
     "2026-11-19 21:00"
    ],
    "lien": "https://bandsintown.com/fr/v/10295876-l%27intermediaire",
-   "source": "Songkick et Bandsintown (Le Molotov, L'Intermédiaire)"
+   "source": "Songkick et Bandsintown (Le Molotov, L'Intermédiaire)",
+   "prix": "5€",
+   "genre": "post-punk / hard rock / rock alt"
   },
   {
    "titre": "Bloody Jenny",
@@ -1073,7 +1077,9 @@
     "2026-11-28 20:30"
    ],
    "lien": "https://bandsintown.com/fr/v/10295876-l%27intermediaire",
-   "source": "Songkick et Bandsintown (Le Molotov, L'Intermédiaire)"
+   "source": "Songkick et Bandsintown (Le Molotov, L'Intermédiaire)",
+   "prix": "8€",
+   "genre": "post-punk"
   },
   {
    "titre": "Désintéressé",
@@ -1146,7 +1152,8 @@
    ],
    "prix": "12€ (9€ en prévente)",
    "lien": "https://www.infoconcert.com/concerts/concert-the-lets-gos-marseille-1953179",
-   "source": "Infoconcert"
+   "source": "Infoconcert",
+   "genre": "punk rock / garage pop"
   },
   {
    "titre": "Quartiers Nord",
@@ -2987,7 +2994,8 @@
    ],
    "lien": "https://www.songkick.com/concerts/43408857-rats-dont-sink-at-le-molotov",
    "source": "Songkick",
-   "prix": "À partir de 10€"
+   "prix": "À partir de 10€",
+   "genre": "hardcore punk"
   },
   {
    "titre": "Byby",
@@ -2999,7 +3007,9 @@
     "2026-11-12"
    ],
    "lien": "https://www.songkick.com/concerts/43413311-byby-at-les-9-salopards",
-   "source": "Songkick"
+   "source": "Songkick",
+   "prix": "5€",
+   "genre": "rock brut / synthpunk"
   },
   {
    "titre": "Nobodylikesbirdie + Jaymee",
@@ -3054,7 +3064,9 @@
     "2026-11-18"
    ],
    "lien": "https://www.songkick.com/concerts/43391507-gus-englehorn-at-lollipop-music-store",
-   "source": "Songkick"
+   "source": "Songkick",
+   "prix": "Entrée libre",
+   "genre": "indie rock acoustique"
   },
   {
    "titre": "Manon Provansal",
@@ -3147,7 +3159,9 @@
     "2026-11-24"
    ],
    "lien": "https://www.songkick.com/concerts/43457309-unwanted-noise-at-lintermediaire",
-   "source": "Songkick"
+   "source": "Songkick",
+   "prix": "5 à 7€",
+   "genre": "street punk / rock'n'roll"
   },
   {
    "titre": "Supernova",
@@ -13420,7 +13434,8 @@
    "genre": "Punk, rock",
    "resume": "Double plateau rock au bar-concert de la Plaine, avec Piedebiche et 21st Century Beatnixx.",
    "lien": "https://www.concertandco.com/lieu/intermediaire-marseille/salle-concert-352.htm",
-   "source": "Concert and Co"
+   "source": "Concert and Co",
+   "prix": "5€"
   },
   {
    "titre": "Second Major + Auto",
@@ -13434,7 +13449,8 @@
    "genre": "Rock",
    "resume": "Concert de Second Major et Auto à L'Intermédiaire, place Jean-Jaurès.",
    "lien": "https://www.concertandco.com/lieu/intermediaire-marseille/salle-concert-352.htm",
-   "source": "Concert and Co"
+   "source": "Concert and Co",
+   "prix": "7€"
   },
   {
    "titre": "Nuit du cirque : Run Run (Collectif Merkén)",
@@ -14088,6 +14104,1900 @@
    "resume": "Rendez-vous annoncé par LSR Marseille, relais des organisations de retraités, contre les mesures d'austérité du projet de budget 2027.",
    "lien": "https://marseille.evous.fr/citoyen/manifestations/",
    "source": "manif"
+  },
+  {
+   "titre": "Jam jazz manouche",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert",
+    "jam"
+   ],
+   "dates": [
+    "2026-11-02 20:00"
+   ],
+   "genre": "jazz manouche",
+   "prix": "Entrée libre",
+   "resume": "Concert jazz manouche.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Oai Cheap + Cheap Entertainment + Yasey & Sysy + Ekloz",
+   "lieu": "Le Molotov",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-04 20:00"
+   ],
+   "genre": "rap / dj set",
+   "prix": "Prix libre",
+   "resume": "Soirée de soutien au mouvement lycéen.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Zone Bleue + Doresale + Rébecca Bonté",
+   "lieu": "Les 9 Salopards",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-04 19:00"
+   ],
+   "genre": "expérimental",
+   "prix": "8€",
+   "resume": "Soirée La Satiété Générale : orchestration polymorphe, collages sonores et minimalisme cathartique.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Drag Show",
+   "lieu": "Sing or Die",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-04 19:30"
+   ],
+   "prix": "5 à 7€",
+   "resume": "Drag show et mini-jeux.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Drag Show",
+   "lieu": "Sing or Die",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-11 19:30"
+   ],
+   "prix": "5 à 7€",
+   "resume": "Drag show et mini-jeux.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Section Zyeux Rouges",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-04 20:00"
+   ],
+   "genre": "sound system",
+   "prix": "Prix libre",
+   "resume": "Sound system bouleguan.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Hommage aux victimes des effondrements de la rue d'Aubagne",
+   "lieu": "Rue d'Aubagne",
+   "categories": [
+    "manif"
+   ],
+   "dates": [
+    "2026-11-05 09:00"
+   ],
+   "resume": "Rassemblement en hommage aux victimes des effondrements du 5 novembre 2018, rue d'Aubagne.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Grève interprofessionnelle",
+   "lieu": "Les Réformés (départ)",
+   "categories": [
+    "manif"
+   ],
+   "dates": [
+    "2026-11-05 10:30"
+   ],
+   "resume": "Manifestation dans le cadre de la grève interprofessionnelle, départ des Réformés.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Couteau + CøøL",
+   "lieu": "Leda Atomica Musique",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-05 20:00"
+   ],
+   "genre": "krautrock / noise",
+   "prix": "5 à 7€",
+   "resume": "Concert krautrock / noise.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Rok et Dudu + Contour Direct + guests",
+   "lieu": "L'Embobineuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-05 20:00"
+   ],
+   "genre": "rap",
+   "prix": "5€",
+   "resume": "Soirée de soutien au mouvement social : queer trap rap et boom bap.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Monde moderne + Hinin",
+   "lieu": "Les 9 Salopards",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-05 21:00"
+   ],
+   "genre": "post-punk / punk",
+   "prix": "5€",
+   "resume": "Concert post-punk / punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Animal détecté + Télécastré + Mumuse",
+   "lieu": "Leda Atomica Musique",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 20:00"
+   ],
+   "genre": "rock alt / punk / électro noise",
+   "prix": "4€",
+   "resume": "Tatoo Circus : ouverture à 18h avec tatouage, bijoux et sérigraphie.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Cagnard + Pericolo + Catchy Peril + Las Grimas",
+   "lieu": "Leda Atomica Musique",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-07 19:00"
+   ],
+   "genre": "punk",
+   "prix": "4€",
+   "resume": "Tatoo Circus : ouverture à 15h avec tatouage, piercing, bijoux et sérigraphie.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Le poil de la bête",
+   "lieu": "Lollipop Music Store",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 19:00"
+   ],
+   "genre": "folk",
+   "prix": "Entrée libre",
+   "resume": "Concert folk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Kaz D'Aïla",
+   "lieu": "La Camaraderie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 20:00"
+   ],
+   "genre": "occitano-créole",
+   "prix": "Prix libre",
+   "resume": "Concert occitano-créole.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Yellow Stone + Marla Singer + Otherwhere",
+   "lieu": "La Maison Hantée",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 20:00"
+   ],
+   "genre": "stoner / garage",
+   "prix": "Prix libre",
+   "resume": "Concert stoner / garage.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Marta Cancela 4tet + Salifou Diarra",
+   "lieu": "Casa Consolat",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 20:00"
+   ],
+   "genre": "pop latine / kora, balafon",
+   "prix": "6 à 10€",
+   "resume": "Concert pop latine / kora, balafon.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Flash & the Gang",
+   "lieu": "Zoumaï",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 20:30"
+   ],
+   "genre": "électro funk",
+   "prix": "Entrée libre",
+   "resume": "Concert électro funk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Manigances",
+   "lieu": "Le Non-Lieu",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 20:30"
+   ],
+   "genre": "polyphonies vocales / jazz",
+   "prix": "10 à 12€",
+   "resume": "Concert polyphonies vocales / jazz.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Mariad",
+   "lieu": "La Merveilleuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 22:00"
+   ],
+   "genre": "bass / break / dub",
+   "prix": "Entrée libre",
+   "resume": "Soirée de soutien à une cantine solidaire et aux street médics.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Pierre Andrieu : The Cure, Just Like Heaven",
+   "lieu": "Lollipop Music Store",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-07 17:00"
+   ],
+   "prix": "Entrée libre",
+   "resume": "Rencontre et dédicace autour du livre de Pierre Andrieu consacré à The Cure.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Laura Bolt + Hélène et le Garçon + Marie Deback vs Stereovoid",
+   "lieu": "La Société Étrange",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-07 20:00"
+   ],
+   "genre": "synth wave / poésie / dj set",
+   "prix": "5 à 7€",
+   "resume": "Concert synth wave / poésie / dj set.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "UNDR bloc",
+   "lieu": "La Maison Hantée",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-07 20:00"
+   ],
+   "genre": "rap",
+   "prix": "Prix libre",
+   "resume": "Concert rap.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Erica Dawn Lyle",
+   "lieu": "Data",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-07 19:00"
+   ],
+   "genre": "impro guitare expérimentale",
+   "prix": "3 à 9€",
+   "resume": "Concert impro guitare expérimentale.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Alvaro Figueroa Trio",
+   "lieu": "Le Mounguy",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-07 21:30"
+   ],
+   "genre": "musique latino-américaine",
+   "prix": "Entrée libre",
+   "resume": "Concert musique latino-américaine.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "The Ape Shuffles + Copains!",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-07 21:00"
+   ],
+   "genre": "stoner psyché",
+   "prix": "5€",
+   "resume": "Concert stoner psyché.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Fameless",
+   "lieu": "Casa Consolat",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-07 18:00",
+    "2026-11-08 15:00"
+   ],
+   "prix": "5 à 8€",
+   "resume": "Performances drag, cabaret, chant et lecture.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "DUB4",
+   "lieu": "La Merveilleuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-07 22:00"
+   ],
+   "genre": "dub / drum & bass",
+   "prix": "Entrée libre",
+   "resume": "Concert dub / drum & bass.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Transmission In Silver + Its From Above",
+   "lieu": "Labo L'Argent",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-08 19:00"
+   ],
+   "genre": "musique de film live",
+   "prix": "Prix libre",
+   "resume": "Combo Data et Labo Film, musique live.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "La complainte de Fantômas",
+   "lieu": "Archipel 49",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-08 18:30"
+   ],
+   "resume": "Cabaret.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Hybride #2 + Signal/bruit",
+   "lieu": "Conservatoire Pierre Barbizet",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-09 19:00"
+   ],
+   "genre": "sax & électroacoustique",
+   "prix": "Entrée libre",
+   "resume": "Concert sax & électroacoustique.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Catchy Peril",
+   "lieu": "Lollipop Music Store",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-10 19:00"
+   ],
+   "genre": "post-punk",
+   "prix": "Entrée libre",
+   "resume": "Concert post-punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Acousmodrome : Observations Microsoniques",
+   "lieu": "Videodrome 2",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-10 19:30"
+   ],
+   "genre": "électroacoustique live",
+   "prix": "Prix libre",
+   "resume": "Live électroacoustique et installation interactive (label TSSS Tapes).",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Chants de comptoir",
+   "lieu": "Manifesten",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-11 20:00"
+   ],
+   "genre": "chanson",
+   "prix": "Prix libre",
+   "resume": "Concert chanson.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Azogia",
+   "lieu": "La Merveilleuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-11 22:00"
+   ],
+   "genre": "break / techno",
+   "prix": "Entrée libre",
+   "resume": "Concert break / techno.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Why Aliens Why? + Corium + The Butcher Project",
+   "lieu": "Leda Atomica Musique",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-12 20:00"
+   ],
+   "genre": "noisecore / deathcrust / thrashcore",
+   "prix": "5€",
+   "resume": "Concert noisecore / deathcrust / thrashcore.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "ÅÅÅ + Canari Sans Lasso + Impro(bable)",
+   "lieu": "La Société Étrange",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-12 20:00"
+   ],
+   "genre": "noise / performance",
+   "prix": "5€",
+   "resume": "Concert noise / performance.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Pyrex + Traumatizer + Screaming Eyes",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-12 21:00"
+   ],
+   "genre": "punk / hardcore",
+   "prix": "5€",
+   "resume": "Concert punk / hardcore.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Ziùr + V:Triol + Ola Terreur",
+   "lieu": "La Cômerie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-12 20:30"
+   ],
+   "genre": "expérimental / noise",
+   "prix": "8€",
+   "resume": "Festival Dreamachine.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Bladi Sound System",
+   "lieu": "La Merveilleuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-12 22:00"
+   ],
+   "genre": "acid arab",
+   "prix": "Entrée libre",
+   "resume": "Concert acid arab.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Soirée Gitane : Diego",
+   "lieu": "Casa Consolat",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-12 20:00"
+   ],
+   "genre": "flamenco",
+   "prix": "Au chapeau",
+   "resume": "Soirée gitane avec exposition et repas.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Gami",
+   "lieu": "Lollipop Music Store",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 19:00"
+   ],
+   "genre": "rock indé",
+   "prix": "Entrée libre",
+   "resume": "Concert rock indé.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Gaouta + Radical Kitten + Cheikha + Adarab",
+   "lieu": "La Camaraderie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 19:00"
+   ],
+   "prix": "Prix libre",
+   "resume": "Festival Dreamachine.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Joao Orecchia + PHOS Athanathos",
+   "lieu": "Data",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 19:00"
+   ],
+   "genre": "clarinette électroacoustique",
+   "prix": "3 à 9€",
+   "resume": "Concert clarinette électroacoustique.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Mehdi Black Wind + Blaze 5th + Amaru + Arthur MGZ",
+   "lieu": "L'Embobineuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 21:00"
+   ],
+   "genre": "rap",
+   "prix": "9€",
+   "resume": "Concert rap.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Levantiko + Nka",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 21:00"
+   ],
+   "genre": "trad grec & balkans",
+   "prix": "5€",
+   "resume": "Concert trad grec & balkans.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Butch Party : Sheitan + SM6 + Z3NIA",
+   "lieu": "Les 9 Salopards",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 22:00"
+   ],
+   "genre": "dj sets électro",
+   "prix": "5 à 8€",
+   "resume": "Concert dj sets électro.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Chu Chi Cha",
+   "lieu": "Espace Hypérion",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 20:00"
+   ],
+   "genre": "cumbia électro-acoustique",
+   "prix": "10 à 13€",
+   "resume": "Concert cumbia électro-acoustique.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Grégoire Garigue",
+   "lieu": "La Maison Hantée",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 20:00"
+   ],
+   "genre": "rock",
+   "prix": "Prix libre",
+   "resume": "Concert rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "TöT + Jauzas The Shining + Rawdive",
+   "lieu": "Danceteria",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 22:00"
+   ],
+   "genre": "EBM",
+   "prix": "10€",
+   "resume": "Lives EBM et dj sets jusqu'à 6h.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Body Revolution",
+   "lieu": "Casa Consolat",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-13 15:00"
+   ],
+   "prix": "Prix libre",
+   "resume": "Ateliers parole et écriture, open mic poétique, repas, impros et performances.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Pazsarinha",
+   "lieu": "Zoumaï",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 20:30"
+   ],
+   "genre": "musique brésilienne",
+   "prix": "Entrée libre",
+   "resume": "Concert musique brésilienne.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Caroline Dauzincourt & Nini Dogskin",
+   "lieu": "Le Non-Lieu",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 20:30"
+   ],
+   "genre": "hommage à Erik Satie",
+   "prix": "10 à 11€",
+   "resume": "Concert hommage à Erik Satie.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Mother Medusa + L'Orchidée Cosmique",
+   "lieu": "Les 9 Salopards",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 21:00"
+   ],
+   "genre": "noise rock",
+   "prix": "5€ si tu peux",
+   "resume": "Concert noise rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Brouhaharmonia + Jimmy Looping + Télécastré + Fita",
+   "lieu": "Système C",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 20:00"
+   ],
+   "genre": "performance sonore / chanson / punk",
+   "prix": "Prix libre",
+   "resume": "Concert performance sonore / chanson / punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Inturist + Dima Midborn",
+   "lieu": "Data",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 19:00"
+   ],
+   "genre": "avant-pop / avant-rock",
+   "prix": "3 à 9€",
+   "resume": "Concert avant-pop / avant-rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Lyssa + Zek + UKWXXX",
+   "lieu": "Leda Atomica Musique",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 20:00"
+   ],
+   "genre": "noise rock",
+   "prix": "7€",
+   "resume": "Concert noise rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Les Rascasses",
+   "lieu": "Manifesten",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 20:00"
+   ],
+   "genre": "chorale féministe",
+   "prix": "Prix libre",
+   "resume": "Cantine de soutien pour Manifesten.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "La Cartouche + Crado Sapiens + Les Cafards",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 21:00"
+   ],
+   "genre": "punk",
+   "prix": "5 à 7€",
+   "resume": "Concert punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Muchmuche Company + Deadwood",
+   "lieu": "L'Idéaliste",
+   "categories": [
+    "concert",
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-14 19:00"
+   ],
+   "genre": "cirque / blues électro",
+   "prix": "10 à 15€",
+   "resume": "Festival Chaos Magique.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Rascal Saloon",
+   "lieu": "Le Non-Lieu",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 20:30"
+   ],
+   "genre": "irish western / folk",
+   "prix": "10 à 11€",
+   "resume": "Concert irish western / folk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Towel + Armor&Murmur",
+   "lieu": "Brasserie Communale",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 21:00"
+   ],
+   "genre": "hardcore métal / doom industriel",
+   "prix": "Entrée libre",
+   "resume": "Concert hardcore métal / doom industriel.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Set Catena + Odil",
+   "lieu": "La Maison Hantée",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 20:00"
+   ],
+   "genre": "metal",
+   "prix": "Prix libre",
+   "resume": "Concert metal.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Gazpacho Records Brunch",
+   "lieu": "La Camaraderie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 11:00"
+   ],
+   "genre": "sound system",
+   "prix": "Entrée libre",
+   "resume": "Concert sound system.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Ghoster",
+   "lieu": "La Merveilleuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 22:00"
+   ],
+   "genre": "dj rock",
+   "prix": "Entrée libre",
+   "resume": "Concert dj rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Cul Zag + Plainmen",
+   "lieu": "Les 9 Salopards",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-15 20:00"
+   ],
+   "genre": "synthwave / post-rock",
+   "prix": "5€",
+   "resume": "Concert synthwave / post-rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Tiq + Stereovoid",
+   "lieu": "L'Embobineuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-15 20:00"
+   ],
+   "genre": "minimal synth / post-punk",
+   "prix": "Prix libre",
+   "resume": "Concert minimal synth / post-punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Johnny Mafia",
+   "lieu": "Lollipop Music Store",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-17 19:00"
+   ],
+   "genre": "folk-rock acoustique",
+   "prix": "Entrée libre",
+   "resume": "Concert folk-rock acoustique.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Claptrap + Dourdou",
+   "lieu": "Le Molotov",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-17 19:00"
+   ],
+   "genre": "pop baroque / occitan expérimental",
+   "prix": "8 à 10€",
+   "resume": "Soirée La Satiété Générale.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Magma #24 : Amytis David Merlo",
+   "lieu": "Videodrome 2",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-17 19:30"
+   ],
+   "genre": "impro basse électrique",
+   "prix": "Prix libre",
+   "resume": "Avec projection de films expérimentaux.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Massilia rap",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-18 20:00"
+   ],
+   "genre": "rap",
+   "prix": "5€ ou une denrée alimentaire",
+   "resume": "Concerts, dj set et open mic.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Méryll Ampe + Turner Williams Jr.",
+   "lieu": "Ateliers Jeanne Barret",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-19 20:00"
+   ],
+   "genre": "électroacoustique / impro",
+   "prix": "7€",
+   "resume": "Concert électroacoustique / impro.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "TROP x Release Party Martinio",
+   "lieu": "Le Makeda",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-19 20:00"
+   ],
+   "genre": "alt-pop / rap / alt-rock",
+   "prix": "10 à 13€",
+   "resume": "Concert alt-pop / rap / alt-rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Polux",
+   "lieu": "Artless Gallery & English Bookstore",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-19 19:30"
+   ],
+   "genre": "pop / folk",
+   "prix": "Prix libre",
+   "resume": "Concert pop / folk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Bœuf Hanté",
+   "lieu": "La Maison Hantée",
+   "categories": [
+    "concert",
+    "jam"
+   ],
+   "dates": [
+    "2026-11-19 20:00"
+   ],
+   "genre": "bœuf",
+   "prix": "Prix libre",
+   "resume": "Concert bœuf.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Chiale + Mumuse",
+   "lieu": "Les 9 Salopards",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-20 20:00"
+   ],
+   "genre": "stoner core / électro punk",
+   "prix": "5€ ou plus",
+   "resume": "Soirée de soutien au Vortex.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Thoury chante Sani",
+   "lieu": "Lollipop Music Store",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-20 19:00"
+   ],
+   "genre": "pop rock",
+   "prix": "Entrée libre",
+   "resume": "Concert pop rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Picnic Républic + Éléphant Green",
+   "lieu": "La Maison Hantée",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-20 20:00"
+   ],
+   "genre": "rock / indie pop",
+   "prix": "Prix libre",
+   "resume": "Concert rock / indie pop.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Cel Ray + Schlagg + Ganagobie + Dj Yves Remords",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-20 21:00"
+   ],
+   "genre": "punk / garage / électro trad",
+   "prix": "7€",
+   "resume": "Concert punk / garage / électro trad.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Fazaz Fx & Dounia",
+   "lieu": "Le Mounguy",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-20 21:30"
+   ],
+   "genre": "chanson amazighe",
+   "prix": "Entrée libre",
+   "resume": "Concert chanson amazighe.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Augustin Braud",
+   "lieu": "La Société Étrange",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-20 20:00"
+   ],
+   "genre": "ambient drone",
+   "prix": "5€",
+   "resume": "Concert ambient drone.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Jenys + Bonne Aventure + Maria Cargnelli + Le Kaiju",
+   "lieu": "Ivresse, Frac Sud",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-20 21:00"
+   ],
+   "genre": "électro",
+   "prix": "8€",
+   "resume": "Festival Dreamachine.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Télécastré + Policiá + Los Manices",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-21 21:00"
+   ],
+   "genre": "électro punk / noise",
+   "prix": "5 à 7€",
+   "resume": "Concert électro punk / noise.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Blind Delon + Heimberg",
+   "lieu": "Leda Atomica Musique",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-21 19:00"
+   ],
+   "genre": "post-punk wave",
+   "prix": "7€",
+   "resume": "Concert post-punk wave.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Météo Club + Corine",
+   "lieu": "La Maison Hantée",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-21 20:00"
+   ],
+   "genre": "rock",
+   "prix": "Prix libre",
+   "resume": "Concert rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Monsieur Vertigo trio",
+   "lieu": "Le Non-Lieu",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-21 20:30"
+   ],
+   "genre": "rock poétique",
+   "prix": "8€",
+   "resume": "Concert rock poétique.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "RumboS avec Germain Chaperon",
+   "lieu": "Manifesten",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-21 20:00"
+   ],
+   "genre": "acoustique",
+   "prix": "Prix libre",
+   "resume": "Concert acoustique.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Concert de soutien au Liban",
+   "lieu": "Casa Consolat",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-21 20:00"
+   ],
+   "prix": "Prix libre",
+   "resume": "Concert.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Tomy and the Cougars + Technopolice + Dj Yves Remords",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-22 21:00"
+   ],
+   "genre": "garage / punk",
+   "prix": "5 à 7€",
+   "resume": "Concert garage / punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Rebetiko poétique + jam Rebetik",
+   "lieu": "La Société Étrange",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-22 19:00"
+   ],
+   "genre": "rebetiko",
+   "prix": "5€",
+   "resume": "Poèmes et chansons grecques, puis jam.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Lecture musicale + Mildacoro",
+   "lieu": "Le Petit Cab, Friche la Belle de Mai",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-22 18:00"
+   ],
+   "genre": "krautrock / dream pop",
+   "prix": "5 à 9€",
+   "resume": "Festival Jest.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Holy Fish",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-23 21:00"
+   ],
+   "genre": "alt grunge",
+   "prix": "5 à 7€",
+   "resume": "Concert alt grunge.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Armor&Murmur + Mai Mai Mai",
+   "lieu": "Le Petit Cab, Friche la Belle de Mai",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-25 20:00"
+   ],
+   "genre": "indus / drone / trad",
+   "prix": "8 à 11€",
+   "resume": "Festival Jest.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Clara Fez",
+   "lieu": "Manifesten",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-25 20:00"
+   ],
+   "genre": "chansons engagées",
+   "prix": "Prix libre",
+   "resume": "Concert chansons engagées.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Manu Louis",
+   "lieu": "La Société Étrange",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-26 20:00"
+   ],
+   "genre": "électro / art-pop",
+   "prix": "5€",
+   "resume": "Concert électro / art-pop.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Goutte2mere + Delphine Joussein",
+   "lieu": "La Friche la Belle de Mai",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-26 20:30"
+   ],
+   "genre": "harpe et flûte expérimentales",
+   "prix": "10 à 13€",
+   "resume": "Festival Jest.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Drag show + Hammer Sisters",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-26 20:00"
+   ],
+   "prix": "Prix libre",
+   "resume": "Soirée de soutien au centre LGBTQIA+.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Khalk + Moonee",
+   "lieu": "La Merveilleuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-26 22:00"
+   ],
+   "genre": "deep house",
+   "prix": "Entrée libre",
+   "resume": "Concert deep house.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Starlight Society",
+   "lieu": "Le Molotov",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-26 20:00"
+   ],
+   "genre": "dj set pop",
+   "prix": "3 à 10€",
+   "resume": "Concert dj set pop.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Farouche Zoé",
+   "lieu": "Lollipop Music Store",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 19:00"
+   ],
+   "genre": "freak folk disco punk",
+   "prix": "Entrée libre",
+   "resume": "Concert freak folk disco punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Soirée de soutien au mouvement social",
+   "lieu": "La DAR, centre social autogéré",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 20:30"
+   ],
+   "prix": "Prix libre",
+   "resume": "Concert.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Garrigomax + Noailles Strip Club",
+   "lieu": "Casa Consolat",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 21:00"
+   ],
+   "genre": "impro no wave / noise punk",
+   "prix": "5€ si tu peux",
+   "resume": "Concert impro no wave / noise punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Reclaimed + Losing Patience + Swirl",
+   "lieu": "L'Intermédiaire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 21:00"
+   ],
+   "genre": "hardcore",
+   "prix": "5 à 7€",
+   "resume": "Concert hardcore.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Julia Hanadi Al Abed + Fabrizio Bozzi",
+   "lieu": "La Société Étrange",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 20:00"
+   ],
+   "genre": "électroacoustique / guitare expérimentale",
+   "prix": "5€",
+   "resume": "Concert électroacoustique / guitare expérimentale.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Eradikal Insane + Reign + Vulher",
+   "lieu": "Le Molotov",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 20:00"
+   ],
+   "genre": "deathcore",
+   "prix": "5 à 8€",
+   "resume": "Concert deathcore.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Lucien Balconi + Peter Kernel",
+   "lieu": "Le Petit Cab, Friche la Belle de Mai",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 21:00"
+   ],
+   "genre": "guitare expérimentale / noise rock",
+   "prix": "10 à 13€",
+   "resume": "Festival Jest.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Olivier Ronfard (scène ouverte)",
+   "lieu": "Le Non-Lieu",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 20:30"
+   ],
+   "genre": "accordéon",
+   "resume": "Festival d'accordéon.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Jam Session jazz",
+   "lieu": "Zoumaï",
+   "categories": [
+    "concert",
+    "jam"
+   ],
+   "dates": [
+    "2026-11-27 20:30"
+   ],
+   "genre": "jazz",
+   "prix": "Entrée libre",
+   "resume": "Concert jazz.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Röm",
+   "lieu": "La Merveilleuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 22:00"
+   ],
+   "genre": "dub / break / bass",
+   "prix": "Entrée libre",
+   "resume": "Concert dub / break / bass.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Drunken Soul",
+   "lieu": "Le Mounguy",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 21:30"
+   ],
+   "genre": "funk disco world",
+   "prix": "Entrée libre",
+   "resume": "Concert funk disco world.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Teigne et Marto",
+   "lieu": "La Plaine (lieu à confirmer)",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28"
+   ],
+   "genre": "hardcore / powerviolence / grind",
+   "resume": "Soirée pirate punk pour l'anniversaire de Screaming Jayrôme ; lieu et heure annoncés par affiches.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Soirée Parpaing : Corps en mémoires",
+   "lieu": "Le Rideau",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 18:30"
+   ],
+   "genre": "micro ouvert",
+   "prix": "Prix libre",
+   "resume": "Micro ouvert avec MaudLaLoutre, Matamé Sounds, Flo Mekouyenski, performances et lectures.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Soutien à la Salle Gueule",
+   "lieu": "Manifesten",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28"
+   ],
+   "genre": "dj set",
+   "prix": "Prix libre",
+   "resume": "Cantine et dj set après la soirée pirate punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Las Grimas + Schmilblick + Dj Yakuzak",
+   "lieu": "Le Molotov",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 20:00"
+   ],
+   "genre": "egg punk / garage",
+   "prix": "8€",
+   "resume": "Concert egg punk / garage.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Germain CLS",
+   "lieu": "La Merveilleuse",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 22:00"
+   ],
+   "genre": "UK garage / break / techno",
+   "prix": "Entrée libre",
+   "resume": "Soirée de soutien à SOS Méditerranée.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Zona + Vertiges",
+   "lieu": "Leda Atomica Musique",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 20:00"
+   ],
+   "genre": "hardcore / noise rock",
+   "prix": "5 à 7€",
+   "resume": "Concert hardcore / noise rock.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Victor Steil & invités",
+   "lieu": "Le Non-Lieu",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 20:30"
+   ],
+   "genre": "accordéon",
+   "prix": "10€",
+   "resume": "Festival d'accordéon, avec D. Hoffman, L. Briguglio et A. Seguy.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Terrine + Philippe Lavigne",
+   "lieu": "Data",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 19:00"
+   ],
+   "genre": "électro expérimentale / chanson",
+   "prix": "3 à 9€",
+   "resume": "Concert électro expérimentale / chanson.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Tango queer : DJ Perrine Bucólica",
+   "lieu": "Casa Consolat",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 21:00"
+   ],
+   "genre": "tango",
+   "prix": "6 à 10€",
+   "resume": "Milonga Soñar ; ateliers, cours et discussions de 13h à 21h.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Allusion + Charlie Mouton",
+   "lieu": "La Mer à Boire",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 20:30"
+   ],
+   "genre": "punk hardcore / indus noise",
+   "prix": "Prix libre",
+   "resume": "Concert punk hardcore / indus noise.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Namscha + Antelogos + Manon Tombe + La Voix de Satan",
+   "lieu": "Les 9 Salopards",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 21:00"
+   ],
+   "genre": "ritual electronics / dark ambient",
+   "prix": "5€",
+   "resume": "Concert ritual electronics / dark ambient.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Velvet Attac",
+   "lieu": "La Maison Hantée",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 20:00"
+   ],
+   "genre": "punk",
+   "prix": "7€",
+   "resume": "Concert punk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Saïph + Matchume Zango feat Le Motel & Antoine Jaunard",
+   "lieu": "Le Petit Cab, Friche la Belle de Mai",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 21:00"
+   ],
+   "genre": "afrobeat / musique du Mozambique",
+   "prix": "10 à 13€",
+   "resume": "Festival Jest.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Swing on Mars",
+   "lieu": "Zoumaï",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 20:30"
+   ],
+   "genre": "bal swing",
+   "prix": "Entrée libre",
+   "resume": "Concert bal swing.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Musique Magique",
+   "lieu": "Brasserie Communale",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-28 21:00"
+   ],
+   "genre": "concerts surprise",
+   "prix": "Entrée libre",
+   "resume": "Concert concerts surprise.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Christophe Clébard",
+   "lieu": "Les 9 Salopards",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-29 20:30"
+   ],
+   "genre": "post folk",
+   "prix": "5€",
+   "resume": "Concert post folk.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
+  },
+  {
+   "titre": "Fantômas",
+   "lieu": "Le Non-Lieu",
+   "categories": [
+    "concert",
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-29 18:30"
+   ],
+   "genre": "cabaret",
+   "prix": "8€",
+   "resume": "Festival d'accordéon.",
+   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
+   "source": "Vortex"
   }
  ]
 }
