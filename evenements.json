@@ -1,5 +1,5 @@
 {
- "mise_a_jour": "2026-10-29",
+ "mise_a_jour": "2026-11-02",
  "evenements": [
   {
    "titre": "Naïm, Chapitre 3",
@@ -8,41 +8,11 @@
     "humour"
    ],
    "dates": [
-    "2026-10-24 20:00",
     "2027-03-20 20:00"
    ],
    "prix": "35 à 50€",
    "resume": "Spectacle d'humour de Naïm, troisième volet, qui revient sur ce qui l'agace, lui et son public. Places numérotées, déconseillé aux moins de 14 ans.",
    "lien": "https://www.cepacsilo-marseille.fr/evenement/naim-chapitre-3/",
-   "source": "Cepac Silo"
-  },
-  {
-   "titre": "Samuel Bambi",
-   "lieu": "Cepac Silo",
-   "categories": [
-    "humour"
-   ],
-   "dates": [
-    "2026-10-29 20:00"
-   ],
-   "prix": "À partir de 26€",
-   "resume": "Spectacle d'humour de Samuel Bambi au CEPAC Silo.",
-   "lien": "https://www.cepacsilo-marseille.fr/evenement/samuel-bambi/",
-   "source": "Cepac Silo"
-  },
-  {
-   "titre": "Bachar Mar-Khalifé joue Christophe",
-   "lieu": "Cepac Silo",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 21:00"
-   ],
-   "genre": "Musiques du monde",
-   "prix": "À partir de 25€",
-   "resume": "Concert de Bachar Mar-Khalifé consacré au répertoire de Christophe, au CEPAC Silo.",
-   "lien": "https://www.cepacsilo-marseille.fr/evenement/bachar-mar-khalife-joue-christophe/",
    "source": "Cepac Silo"
   },
   {
@@ -431,54 +401,6 @@
    "source": "Le Dôme"
   },
   {
-   "titre": "Zoufris Maracas",
-   "lieu": "Espace Julien",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-29 20:00"
-   ],
-   "genre": "Chanson",
-   "prix": "À partir de 29,70€",
-   "resume": "Concert de Zoufris Maracas à l'Espace Julien.",
-   "lien": "https://espace-julien.com/agenda/zoufris-maracas",
-   "source": "Espace Julien",
-   "statut": "Complet"
-  },
-  {
-   "titre": "NeS + Stanislas",
-   "lieu": "Espace Julien",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:00"
-   ],
-   "genre": "Rap / Hip-Hop",
-   "prix": "À partir de 29,70€",
-   "note": "Rap / Hip-Hop",
-   "resume": "Concert de rap de NeS, accompagné de Stanislas, à l'Espace Julien.",
-   "lien": "https://espace-julien.com/agenda/nes",
-   "source": "Espace Julien"
-  },
-  {
-   "titre": "Noam Sinseau, Makoumè Superstar",
-   "lieu": "Espace Julien",
-   "categories": [
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-31 20:00"
-   ],
-   "prix": "31,20€",
-   "statut": "Complet",
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle de stand-up de Noam Sinseau mêlant humour, voguing et moments poétiques, autour d'un parcours de la Martinique à Paris, de l'identité et de l'émancipation.",
-   "lien": "https://espace-julien.com/agenda/noam-sinseau",
-   "source": "Espace Julien"
-  },
-  {
    "titre": "L'EJ c'est le S x The Session",
    "lieu": "Café Julien",
    "categories": [
@@ -526,7 +448,7 @@
     "2026-11-10 20:00"
    ],
    "genre": "Blues",
-   "prix": "À partir de 26€",
+   "prix": "24 à 26€",
    "note": "Blues / Jazz",
    "lien": "https://espace-julien.com/agenda/robert-finley",
    "source": "Espace Julien"
@@ -742,20 +664,6 @@
    ],
    "lien": "https://theatre-lacriee.com/programmation/evenements/comme-un-vertige",
    "source": "La Criée"
-  },
-  {
-   "titre": "Mauricio Vallina joue Liszt et Bach",
-   "lieu": "Foyer de l'Opéra",
-   "categories": [
-    "classique"
-   ],
-   "dates": [
-    "2026-11-01 11:00"
-   ],
-   "genre": "Classique",
-   "prix": "15€",
-   "lien": "https://opera-odeon.marseille.fr/programmation/mauricio-vallina-joue-liszt-et-bach",
-   "source": "Opéra – Odéon"
   },
   {
    "titre": "Deux flûtes à l'Opéra",
@@ -985,20 +893,6 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Visite commentée, spécial Día de los Muertos",
-   "lieu": "Musée d'Arts Africains, Océaniens, Amérindiens",
-   "categories": [
-    "visite"
-   ],
-   "dates": [
-    "2026-10-31 14:30"
-   ],
-   "prix": "3€",
-   "resume": "Visite commentée d'une heure consacrée aux arts du Mexique et à la fête des morts, célébrée à la Toussaint. Sans réservation, dans la limite des places.",
-   "lien": "https://musees.marseille.fr/visite-individuelle-commentee-special-dia-de-los-muertos?museum=musee-darts-africains-oceaniens-amerindiens",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Rencontre avec Ariella Aïsha Azoulay",
    "lieu": "Musée Cantini",
    "categories": [
@@ -1103,47 +997,6 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Lancement du livre Fécal, chronique d'un reste de terre",
-   "lieu": "SOMA",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-30 19:00"
-   ],
-   "note": "Lectures, puis DJ set de 21h30 à 00h30",
-   "resume": "Lancement du livre Fécal, chronique d'un reste de terre à SOMA : lectures à partir de 19h, puis DJ set de 21h30 à minuit et demi.",
-   "lien": "https://soma-art.org/residents_soma/521/",
-   "source": "SOMA"
-  },
-  {
-   "titre": "Hors Peindre #Bougainville",
-   "lieu": "Ateliers Jeanne Barret",
-   "categories": [
-    "expo"
-   ],
-   "dates": [
-    "2026-10-26/2026-10-31"
-   ],
-   "note": "Catégorie non précisée",
-   "resume": "Exposition d'artistes aux Ateliers Jeanne Barret, intitulée « Hors Peindre #Bougainville », du 26 au 31 octobre. Page non lue, programme non précisé.",
-   "lien": "https://www.jeannebarret.com/hors-peindre-bougainville-26-au-31-octobre-2026",
-   "source": "Ateliers Jeanne Barret"
-  },
-  {
-   "titre": "Un dimanche aux Aygalades x Vide-Cafoutch",
-   "lieu": "Cité des arts de la rue",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-11-01 10:00"
-   ],
-   "note": "Marché, visites, conférences, jusqu'à 15h",
-   "lien": "https://www.lacitedesartsdelarue.net/agenda/",
-   "source": "Cité des arts de la rue"
-  },
-  {
    "titre": "Un dimanche aux Aygalades",
    "lieu": "Cité des arts de la rue",
    "categories": [
@@ -1185,304 +1038,6 @@
    "resume": "Cycle de cinq films sur les grandes passions romantiques du XIXe siècle, présenté par Sarah Yaacoub : Senso, L'Histoire d'Adèle H., Olivia, Le Temps de l'innocence et The Music Lovers.",
    "lien": "https://www.videodrome2.fr/coeurs-sombres-cycle-cinema/",
    "source": "Videodrome 2"
-  },
-  {
-   "titre": "Cinéma expérimental, Cinédanse",
-   "lieu": "Videodrome 2",
-   "categories": [
-    "cinema"
-   ],
-   "dates": [
-    "2026-10-27/2026-10-29"
-   ],
-   "prix": "Prix libre",
-   "resume": "Cycle de trois séances de courts-métrages expérimentaux sur le thème du cinéma et de la danse, organisé par Grains de Lumière et conçu par Mireille Laplace. Séances de 19h30 à 20h30.",
-   "lien": "https://www.videodrome2.fr/cycle-cinema-cinema-experimental-cinedanse/",
-   "source": "Videodrome 2"
-  },
-  {
-   "titre": "La Singular Tropique (salsa cumbia), Mollo-Mollo (mathrock) et DJ Supremsupacheez (UK bass)",
-   "lieu": "L'Intermédiaire",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-29 19:00"
-   ],
-   "genre": "Salsa / Latine",
-   "prix": "8€ ou plus si tu peux",
-   "resume": "Soirée à trois : La Singular Tropique (salsa cumbia), Mollo-Mollo (math rock) et DJ Supremsupacheez (UK bass), à L'Intermédiaire.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Cisaille (hardcore)",
-   "lieu": "Les 9 Salopards",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-29 21:00"
-   ],
-   "genre": "Hardcore",
-   "prix": "5€ si tu peux",
-   "resume": "Concert du groupe de hardcore Cisaille aux 9 Salopards.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Fine Klementine, Knafeh Jacuzzi et Noisy Peasy & Strokevitch (yougopop, psych pop, acid techno)",
-   "lieu": "Le Molotov",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-29 20:00"
-   ],
-   "genre": "Pop",
-   "prix": "7/10€",
-   "resume": "Soirée à trois plateaux au Molotov : Fine Klementine (yougopop), Knafeh Jacuzzi (psych pop) et Noisy Peasy & Strokevitch (acid techno).",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "21st Century Beatnix (punk) et Victor Pénin (chanson punk)",
-   "lieu": "La Maison Hantée",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-29 20:00"
-   ],
-   "genre": "Punk",
-   "prix": "Prix libre",
-   "resume": "Concert de punk avec 21st Century Beatnix et Victor Pénin (chanson punk) à La Maison Hantée. Prix libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Akhatar (musique galicienne)",
-   "lieu": "Le Bar Jo",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-29 20:00"
-   ],
-   "genre": "Musiques du monde",
-   "prix": "Entrée libre",
-   "resume": "Concert d'Akhatar, groupe de musique galicienne, au Bar Jo. Entrée libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Le Stu (indie psyché)",
-   "lieu": "Lollipop",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 19:00"
-   ],
-   "genre": "Indie",
-   "prix": "Entrée libre",
-   "resume": "Concert d'indie psyché du Stu au Lollipop. Entrée libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Radical Edward (post hardcore)",
-   "lieu": "Leda Atomica",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 19:00"
-   ],
-   "genre": "Hardcore",
-   "prix": "5/7€",
-   "resume": "Concert de post-hardcore de Radical Edward à Leda Atomica.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Mathias Richard (wave-rock poétique) et Surprise !",
-   "lieu": "La Société Étrange",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 19:30"
-   ],
-   "genre": "Rock",
-   "prix": "5€",
-   "resume": "Concert de wave-rock poétique de Mathias Richard, avec un invité surprise, à La Société Étrange.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Radio Hito (lyrisme minimal) et Le Diable Dégoûtant, par La Satiété Générale",
-   "lieu": "La Chapelle de la Cômerie",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 19:00"
-   ],
-   "genre": "Chanson",
-   "prix": "10€",
-   "resume": "Soirée à La Chapelle de la Cômerie avec Radio Hito (lyrisme minimal) et Le Diable Dégoûtant, organisée par La Satiété Générale.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Slip, Nosebone Inc et Drop Out (punk, ska punk)",
-   "lieu": "La Maison Hantée",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:00"
-   ],
-   "genre": "Punk",
-   "prix": "Prix libre",
-   "resume": "Concert de punk et ska punk avec Slip, Nosebone Inc et Drop Out, à La Maison Hantée. Prix libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Marta Cancela Quartet (salsa)",
-   "lieu": "La Mer à Boire",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 21:00"
-   ],
-   "genre": "Salsa / Latine",
-   "prix": "Entrée libre",
-   "resume": "Concert de salsa du Marta Cancela Quartet à La Mer à Boire. Entrée libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Kotopeli & Patalova avec Tommy Jalova & Patakila (dancehall/reggae party)",
-   "lieu": "Le Mounguy",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 21:30"
-   ],
-   "genre": "Reggae / Dub",
-   "prix": "Entrée libre",
-   "resume": "Soirée dancehall et reggae avec Kotopeli, Patalova, Tommy Jalova et Patakila au Mounguy. Entrée libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Menace Rekords (drum'n'bass)",
-   "lieu": "Le Molotov",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 22:00"
-   ],
-   "genre": "Électro",
-   "prix": "6/8/10€",
-   "resume": "Soirée drum'n'bass avec Menace Rekords au Molotov.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Skulld (feminist death/crust), Confetti Malaise (darkwave) et DJ set Discorde Crew (goth)",
-   "lieu": "L'Intermédiaire",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 20:00"
-   ],
-   "genre": "Punk",
-   "prix": "5€",
-   "resume": "Soirée avec Skulld (death/crust féministe), Confetti Malaise (darkwave) et un DJ set goth de Discorde Crew.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Halloween Party : Suspifun, La Pignata, Lispency et DJ La Vague",
-   "lieu": "La Maison Hantée",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 19:00"
-   ],
-   "prix": "Prix libre",
-   "resume": "Soirée d'Halloween avec les groupes Suspifun, La Pignata et Lispency, puis DJ La Vague. Prix libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Soirée de soutien à La Merveilleuse : 13 Lanternes (techno/bass, live machines, conga, violon)",
-   "lieu": "Brasserie Communale",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 21:00"
-   ],
-   "genre": "Électro",
-   "prix": "Gratuit",
-   "resume": "Soirée de soutien à La Merveilleuse avec 13 Lanternes, set de techno et bass avec machines live, conga et violon. Entrée gratuite.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Medianoche (milonga), Fumo Sola et Clapet (platines, expé)",
-   "lieu": "La Société Étrange",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 19:30"
-   ],
-   "genre": "Expérimental",
-   "prix": "5€",
-   "resume": "Soirée mêlant milonga avec Medianoche et platines expérimentales avec Fumo Sola et Clapet.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Christine Bertocchi & Lucie Taffin (sabbat contemporain)",
-   "lieu": "Le Non-Lieu",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 20:30"
-   ],
-   "genre": "Expérimental",
-   "prix": "10/11€",
-   "resume": "Performance de Christine Bertocchi et Lucie Taffin, présentée comme un sabbat contemporain.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
-  },
-  {
-   "titre": "Concert raï & chaâbi algérien",
-   "lieu": "La Mer à Boire",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 21:00"
-   ],
-   "genre": "Musiques du monde",
-   "prix": "Entrée libre",
-   "resume": "Concert de musiques algériennes raï et chaâbi, en entrée libre.",
-   "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-150.pdf",
-   "source": "Vortex #150, agenda des salles underground (octobre 2026)"
   },
   {
    "titre": "Entertorment et Soul Hater",
@@ -1565,126 +1120,6 @@
    "prix": "À partir de 22€",
    "resume": "Concert de variété française de Dominique Lamour, comédien et metteur en scène cofondateur de la compagnie du Carré Rond, première de neuf dates jusqu'en mai 2027.",
    "lien": "https://www.infoconcert.com/concerts/concert-dominique-lamour-marseille-1930507",
-   "source": "Infoconcert"
-  },
-  {
-   "titre": "Ulysse",
-   "lieu": "Le Makeda",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-29 19:30"
-   ],
-   "genre": "Pop",
-   "prix": "À partir de 22,95€",
-   "resume": "Concert pop d'Ulysse au Makeda.",
-   "lien": "https://www.infoconcert.com/concerts/concert-ulysse-marseille-1950301",
-   "source": "Infoconcert"
-  },
-  {
-   "titre": "Julian Pollack aka J3PO",
-   "lieu": "La Caverne du Jazz",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:00"
-   ],
-   "genre": "Jazz",
-   "resume": "Concert de jazz de Julian Pollack, alias J3PO, à La Caverne du Jazz.",
-   "lien": "https://www.infoconcert.com/concerts/concert-julian-pollack-aka-j3po-marseille-1896543",
-   "source": "Infoconcert"
-  },
-  {
-   "titre": "Patrick Bruel",
-   "lieu": "Le Dôme",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:00"
-   ],
-   "genre": "Variété",
-   "prix": "À partir de 55€",
-   "statut": "Annulé",
-   "resume": "Concert de variété de Patrick Bruel au Dôme.",
-   "lien": "https://www.infoconcert.com/concerts/concert-patrick-bruel-marseille-1883975",
-   "source": "Infoconcert"
-  },
-  {
-   "titre": "Diez",
-   "lieu": "L'Affranchi",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:00"
-   ],
-   "genre": "Rap / Hip-Hop",
-   "prix": "À partir de 12€",
-   "resume": "Concert de rap de Diez à L'Affranchi.",
-   "lien": "https://www.infoconcert.com/concerts/concert-diez-marseille-1955023",
-   "source": "Infoconcert",
-   "statut": "Complet"
-  },
-  {
-   "titre": "Papaya Jazz",
-   "lieu": "La Caravelle",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:30"
-   ],
-   "genre": "Jazz",
-   "prix": "À partir de 4€",
-   "resume": "Concert de jazz de Papaya Jazz à La Caravelle.",
-   "lien": "https://www.infoconcert.com/concerts/concert-papaya-jazz-marseille-1966643",
-   "source": "Infoconcert"
-  },
-  {
-   "titre": "Rui Ho / Nick Labaque / Bernadette Subaru",
-   "lieu": "Le Petit Cab, Friche la Belle de Mai",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 23:30"
-   ],
-   "genre": "Électro",
-   "prix": "À partir de 16€",
-   "resume": "Soirée électro au Petit Cab avec Rui Ho, Nick Labaque et Bernadette Subaru.",
-   "lien": "https://www.infoconcert.com/concerts/concert-rui-ho-nick-labaque-bernadette-subaru-marseille-1957825",
-   "source": "Infoconcert"
-  },
-  {
-   "titre": "Vioflesh + Beloog-A",
-   "lieu": "Le Molotov",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 20:30"
-   ],
-   "genre": "Metal",
-   "prix": "14€ (11€ en prévente)",
-   "resume": "Concert de metal du groupe Vioflesh au Molotov.",
-   "lien": "https://www.infoconcert.com/concerts/concert-vioflesh-marseille-1872665",
-   "source": "Infoconcert"
-  },
-  {
-   "titre": "Eyehategod + Mezcal Wizard",
-   "lieu": "Le Molotov",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-11-01 20:30"
-   ],
-   "genre": "Metal",
-   "prix": "26€ (23€ en prévente)",
-   "lien": "https://www.infoconcert.com/concerts/concert-eyehategod-marseille-1906085",
    "source": "Infoconcert"
   },
   {
@@ -3258,20 +2693,6 @@
    "source": "Infoconcert"
   },
   {
-   "titre": "Soom T",
-   "lieu": "La Halle de Martigues, Martigues",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-11-01 18:00"
-   ],
-   "genre": "Reggae / Dub",
-   "prix": "À partir de 10€",
-   "lien": "https://www.infoconcert.com/concerts/concert-soom-t-martigues-1849327",
-   "source": "Infoconcert"
-  },
-  {
    "titre": "Tano",
    "lieu": "Artea, Carnoux-en-Provence",
    "categories": [
@@ -3461,83 +2882,6 @@
    "source": "Infoconcert"
   },
   {
-   "titre": "Les Cigales Engatsées + lauréats Class'Eurock",
-   "lieu": "MJC Martigues, Martigues",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 19:00"
-   ],
-   "genre": "Rock",
-   "prix": "11€",
-   "note": "Tremplin TPA 2026",
-   "resume": "Soirée rock du tremplin TPA 2026 à la MJC de Martigues : Les Cigales Engatsées et les lauréats de Class'Eurock.",
-   "lien": "https://shotgun.live/fr/events/tpa-2026-les-cigales-engatses-laureat-class-eurock",
-   "source": "Shotgun"
-  },
-  {
-   "titre": "U.22 x Sororo Club : Mia Koden, Mila Necchella, Réjane",
-   "lieu": "Unité.22",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 23:59"
-   ],
-   "genre": "Électro",
-   "prix": "À partir de 10,49€",
-   "note": "Soirée club",
-   "resume": "Soirée club à l'Unité.22 avec Mia Koden, Mila Necchella et Réjane.",
-   "lien": "https://shotgun.live/fr/events/u22xsororoclub-miakoden-milanecchella-rejane",
-   "source": "Shotgun"
-  },
-  {
-   "titre": "Septaria + Messalina + Yarostan + Butterknifes",
-   "lieu": "Salle du Roucas, Vitrolles",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 19:00"
-   ],
-   "genre": "Metal",
-   "prix": "11€",
-   "note": "Tremplin TPA 2026",
-   "resume": "Soirée de tremplin metal TPA 2026 avec Septaria, Messalina, Yarostan et Butterknifes à la salle du Roucas, à Vitrolles.",
-   "lien": "https://shotgun.live/fr/events/tpa-2026-septaria-messalina-yarostan-butterknifes",
-   "source": "Shotgun"
-  },
-  {
-   "titre": "VV8 + EMA",
-   "lieu": "Le Makeda",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31"
-   ],
-   "resume": "Concert de VV8 et EMA au Makeda.",
-   "lien": "https://www.songkick.com/concerts/43410140-vv8-at-le-makeda",
-   "source": "Songkick"
-  },
-  {
-   "titre": "U.22 x La Glitzer : Cleo, Romanesco, Taka",
-   "lieu": "Unité.22",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 23:59"
-   ],
-   "genre": "Électro",
-   "prix": "À partir de 10,49€",
-   "note": "Soirée club",
-   "resume": "Soirée club électro à Unité.22 avec Cleo, Romanesco et Taka, en collaboration avec La Glitzer.",
-   "lien": "https://shotgun.live/fr/events/u22xlaglitzer-cleo-romanesco-taka",
-   "source": "Shotgun"
-  },
-  {
    "titre": "Taiwan MC + ODG",
    "lieu": "Cabaret Aléatoire",
    "categories": [
@@ -3599,11 +2943,12 @@
     "concert"
    ],
    "dates": [
-    "2026-11-07"
+    "2026-11-07 20:00"
    ],
    "genre": "Jazz",
    "lien": "https://www.songkick.com/concerts/43334287-youn-sun-nah-at-salle-guy-obino",
-   "source": "Songkick"
+   "source": "Songkick",
+   "prix": "15 à 31€"
   },
   {
    "titre": "LB aka Labat + Yenkov + Bella Claxton",
@@ -3850,10 +3195,11 @@
     "concert"
    ],
    "dates": [
-    "2026-11-28"
+    "2026-11-28 20:00"
    ],
    "lien": "https://www.songkick.com/concerts/42875600-monroe-aka-monroe-vata-at-eglise-saintvincentdepaul",
-   "source": "Songkick"
+   "source": "Songkick",
+   "prix": "À partir de 32€"
   },
   {
    "titre": "Dakeez",
@@ -5997,102 +5343,18 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Visite-atelier en famille",
-   "lieu": "Musée Cantini",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-27 14:00",
-    "2026-10-29 14:00",
-    "2026-10-30 14:00"
-   ],
-   "prix": "Adultes gratuit, enfants 4€",
-   "resume": "Visites-ateliers en famille au musée Cantini, 1h30 : enluminure (dès 7 ans), maquette inspirée des constructions métalliques (dès 6 ans), dessin et collage d'après Saul Steinberg (dès 7 ans). Réservation obligatoire.",
-   "lien": "https://musees.marseille.fr/visite-atelier-en-famille-cantini",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Fictions archéologiques autour d'AFRICA de Louisa Babari",
    "lieu": "Musée d'art contemporain [mac]",
    "categories": [
     "visite"
    ],
    "dates": [
-    "2026-10-17/2026-10-31",
     "2026-12-19/2027-01-03"
    ],
    "prix": "Gratuit",
    "note": "Sauf lundi, 25/12 et 1/1",
    "resume": "Atelier gratuit en continu dans le hall du mac, dès 5 ans : assembler des fragments visuels pour imaginer des archéologies fictives autour de l'œuvre AFRICA de Louisa Babari.",
    "lien": "https://musees.marseille.fr/fictions-archeologiques-autour-dafrica-de-louisa-babari-mac",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Animations Paroles de fossiles",
-   "lieu": "Muséum d'histoire naturelle",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-20/2026-10-31"
-   ],
-   "heure": "10:00",
-   "prix": "Animation gratuite",
-   "note": "Sauf lundi, 10h-12h et 14h30-17h30",
-   "resume": "Animations autour des fossiles proposées au Muséum d'histoire naturelle, tous les jours sauf le lundi, de 10h à 12h et de 14h30 à 17h30.",
-   "lien": "https://musees.marseille.fr/animations-paroles-de-fossiles-mhnm",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Le premier automne de Simon le hérisson",
-   "lieu": "Muséum d'histoire naturelle",
-   "categories": [
-    "jeune",
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-17/2026-10-31"
-   ],
-   "heure": "16:30",
-   "prix": "Gratuit",
-   "note": "Du mardi au samedi à 16h30",
-   "resume": "Conte pour enfants de 3 à 6 ans suivant un jeune hérisson qui découvre l'automne et cherche un abri pour l'hiver. Durée 20 à 30 minutes.",
-   "lien": "https://musees.marseille.fr/animation-contee-le-premier-automne-de-simon-le-herisson-mhnm",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Balades Airs d'automne",
-   "lieu": "Musée des Beaux-Arts",
-   "categories": [
-    "visite"
-   ],
-   "dates": [
-    "2026-10-17/2026-10-31"
-   ],
-   "prix": "Gratuit",
-   "note": "Tous les jours sauf lundi",
-   "resume": "Visite en autonomie des collections sur le thème de l'automne : repérer les tableaux, scanner un QR code et écouter la musique associée avec son casque.",
-   "lien": "https://musees.marseille.fr/balades-airs-dautomne-mba",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Vacances en famille : Dessine-moi un tableau",
-   "lieu": "Musée des Beaux-Arts",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-29 10:00",
-    "2026-10-29 14:30"
-   ],
-   "prix": "Adultes gratuit, enfants 4€",
-   "note": "3-5 ans à 10h, 6+ ans à 14h30",
-   "resume": "Atelier en famille au Musée des Beaux-Arts pendant les vacances, sur le thème du tableau : séance à 10h pour les 3-5 ans et à 14h30 pour les 6 ans et plus.",
-   "lien": "https://musees.marseille.fr/vacances-en-famille-dessine-moi-un-tableau-mba",
    "source": "Musées de Marseille"
   },
   {
@@ -6288,22 +5550,6 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Atelier Paravents de poche",
-   "lieu": "Château Borély",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-22 14:30",
-    "2026-10-29 14:30"
-   ],
-   "prix": "Enfants 4€, adultes : droit d'entrée",
-   "resume": "Atelier d'1h30 pour les 9 à 13 ans : décorer un petit paravent, Art nouveau d'un côté et Art déco de l'autre. Réservation par e-mail, 4 €.",
-   "lien": "https://musees.marseille.fr/atelier-paravents-de-poche-borely",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Visite ludique Safari nouveau",
    "lieu": "Château Borély",
    "categories": [
@@ -6311,7 +5557,6 @@
     "jeune"
    ],
    "dates": [
-    "2026-10-28 10:00",
     "2026-12-23 10:00",
     "2026-12-30 10:00"
    ],
@@ -6344,8 +5589,6 @@
     "jeune"
    ],
    "dates": [
-    "2026-10-22 10:00",
-    "2026-10-29 10:00",
     "2026-12-31 10:00"
    ],
    "prix": "Gratuit",
@@ -6397,7 +5640,6 @@
     "visite"
    ],
    "dates": [
-    "2026-10-30 11:00",
     "2026-11-03 11:00",
     "2026-11-04 11:00",
     "2026-11-13 11:00",
@@ -6429,22 +5671,6 @@
    ],
    "prix": "Gratuit",
    "lien": "https://musees.marseille.fr/balade-urbaine-marseille-pendant-la-seconde-guerre-mondiale-memorial-des-deportations",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Vacances en famille : Nature peinture !",
-   "lieu": "Musée des Beaux-Arts",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-30 10:00",
-    "2026-10-30 14:30"
-   ],
-   "prix": "Adultes gratuit, enfants 4€",
-   "resume": "Atelier en famille au Musée des Beaux-Arts pendant les vacances, sur le thème de la nature et de la peinture : séances à 10h et 14h30.",
-   "lien": "https://musees.marseille.fr/vacances-en-famille-nature-peinture-mba",
    "source": "Musées de Marseille"
   },
   {
@@ -6560,7 +5786,6 @@
     "jeune"
    ],
    "dates": [
-    "2026-10-20/2026-10-31",
     "2026-12-18/2027-01-02"
    ],
    "prix": "Gratuit",
@@ -6590,7 +5815,6 @@
     "visite"
    ],
    "dates": [
-    "2026-10-24 14:30",
     "2026-11-21 14:30",
     "2026-12-19 14:30"
    ],
@@ -6620,7 +5844,6 @@
     "jeune"
    ],
    "dates": [
-    "2026-10-29 10:00",
     "2026-12-23 14:30",
     "2026-12-30 14:30"
    ],
@@ -6636,7 +5859,6 @@
     "visite"
    ],
    "dates": [
-    "2026-10-31 10:00",
     "2026-11-28 10:00"
    ],
    "prix": "Droit d'entrée + 3€ la visite",
@@ -6652,8 +5874,6 @@
     "jeune"
    ],
    "dates": [
-    "2026-10-31 10:00",
-    "2026-10-31 14:30",
     "2026-12-23 10:00",
     "2026-12-23 14:30"
    ],
@@ -6670,7 +5890,6 @@
     "jeune"
    ],
    "dates": [
-    "2026-10-22 10:00",
     "2026-12-22 14:30"
    ],
    "prix": "Enfants 4€, adultes : droit d'entrée",
@@ -6708,28 +5927,12 @@
    "source": "Musées de Marseille"
   },
   {
-   "titre": "Visite en famille : L'empire des sens",
-   "lieu": "Château Borély",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-30 10:00"
-   ],
-   "prix": "Enfants 4€, adultes : droit d'entrée",
-   "resume": "Visite en famille pour les 4 à 6 ans (45 minutes) : les enfants découvrent parfums, terres cuites, tissus et cuirs au contact des collections. Réservation par e-mail, 4 € par enfant.",
-   "lien": "https://musees.marseille.fr/visite-en-famille-lempire-des-sens-borely",
-   "source": "Musées de Marseille"
-  },
-  {
    "titre": "Visite commentée : L'art de la table",
    "lieu": "Château Borély",
    "categories": [
     "visite"
    ],
    "dates": [
-    "2026-10-24 10:00",
     "2026-11-21 10:00",
     "2026-12-19 10:00"
    ],
@@ -6737,36 +5940,6 @@
    "resume": "Visite commentée des collections du Château Borély consacrée à l'art de la table.",
    "lien": "https://musees.marseille.fr/visite-commentee-autour-des-collections-lart-de-la-table-borely",
    "source": "Musées de Marseille"
-  },
-  {
-   "titre": "Safari d'Halloween",
-   "lieu": "Château Borély",
-   "categories": [
-    "visite",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-31 14:00"
-   ],
-   "prix": "Enfants 4€, adultes : droit d'entrée",
-   "resume": "Jeu de piste d'une heure pour enfants de 4 à 6 ans : retrouver des animaux effrayants représentés sur des objets du musée. Déguisement conseillé, réservation obligatoire par courriel.",
-   "lien": "https://musees.marseille.fr/safari-dhalloween-borely",
-   "source": "Musées de Marseille"
-  },
-  {
-   "titre": "F. Wong, C. Bastier, C. Jauniaux",
-   "lieu": "Cité de la Musique de Marseille",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:00"
-   ],
-   "genre": "Musiques du monde",
-   "prix": "13€ / 9€",
-   "resume": "Trio de voix improvisée et de dispositif électroacoustique spatialisé, bâti sur des témoignages de femmes palestiniennes et israéliennes recueillis après le 7 octobre 2023, en arabe et en hébreu.",
-   "lien": "https://www.citemusique-marseille.com/evenement/francois-wong/",
-   "source": "Cité de la Musique"
   },
   {
    "titre": "La Mal Coiffée",
@@ -6784,7 +5957,7 @@
    "source": "Cité de la Musique"
   },
   {
-   "titre": "Festival Tamazgha #21",
+   "titre": "Hamid Matoub & Mohsen Ferrah (Festival Tamazgha #21)",
    "lieu": "Cité de la Musique de Marseille",
    "categories": [
     "concert"
@@ -6795,7 +5968,7 @@
    "genre": "Musiques du monde",
    "prix": "15€",
    "note": "Mohsen Ferrah, Hamid Matoub",
-   "lien": "https://www.citemusique-marseille.com/evenement/festival-tamazgha-21/",
+   "lien": "https://sudculture.org/event/festival-tamazgha-21-soiree-de-cloture-concerts-hamid-matoub-mohsen-ferrah/",
    "source": "Cité de la Musique"
   },
   {
@@ -7398,21 +6571,6 @@
    "source": "Friche la Belle de Mai"
   },
   {
-   "titre": "Cicatrices. Comment la vulnérabilité fait monde.",
-   "lieu": "La Friche la Belle de Mai",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-29 18:30"
-   ],
-   "prix": "Gratuit",
-   "note": "Avec Constant Spina",
-   "resume": "Rencontre autour de l'ouvrage Cicatrices, sur la vulnérabilité comme manière de faire monde, avec Constant Spina, à la Friche la Belle de Mai. Gratuit.",
-   "lien": "https://www.lafriche.org/evenements/cicatrices-comment-la-vulnerabilite-fait-monde/",
-   "source": "Friche la Belle de Mai"
-  },
-  {
    "titre": "La peinture en lettres. Histoire & renouveau",
    "lieu": "La Friche la Belle de Mai",
    "categories": [
@@ -7603,21 +6761,6 @@
    "source": "Mucem"
   },
   {
-   "titre": "Après-midi portes ouvertes Manger les images",
-   "lieu": "Mucem",
-   "categories": [
-    "visite"
-   ],
-   "dates": [
-    "2026-11-01 14:00"
-   ],
-   "prix": "Gratuit",
-   "note": "14h-18h, J4 niveau 2 ; masterclass, ateliers de design culinaire, barbes à papa, DJ Dizonord",
-   "resume": "Soirée d'Halloween en accès libre autour de l'exposition Manger les images, sur les images ingérées de l'Antiquité à nos jours : ateliers culinaires, masterclass de pâtissiers, sculptures en sucre, sélection de vinyles.",
-   "lien": "https://mucem.org/en/evenement/open-house-for-the-manger-les-images-exhibition/",
-   "source": "Mucem"
-  },
-  {
    "titre": "Le bal des gourmands",
    "lieu": "Mucem",
    "categories": [
@@ -7700,39 +6843,6 @@
    "note": "1-3 ans, 16h",
    "lien": "https://mucem.org/expositions/manger-les-images/",
    "source": "Mucem"
-  },
-  {
-   "titre": "Concert Live Nouveau Monde",
-   "lieu": "La Mûrisserie",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:30",
-    "2026-10-31 20:30"
-   ],
-   "genre": "Chanson",
-   "prix": "À partir de 5€",
-   "note": "Trois groupes",
-   "resume": "Soirée de trois groupes de chanson française (Titi, Soleilx et Etienne Verne) au bistrot, sur deux soirs.",
-   "lien": "https://bistrotmurisserie.fr/evenements/aa5228537ba8111a2074556e3f1d82f3?m=2026-10&v=liste",
-   "source": "La Mûrisserie (Bistrot)"
-  },
-  {
-   "titre": "Murder on the Dancefloor (Halloween)",
-   "lieu": "La Mûrisserie",
-   "categories": [
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-31 20:00",
-    "2026-11-01 20:00"
-   ],
-   "prix": "À partir de 5€",
-   "note": "DJ set, dragshow et jeux",
-   "resume": "Soirée d'Halloween avec DJ set, spectacle drag et jeux, organisée par Bettie Bitch.",
-   "lien": "https://bistrotmurisserie.fr/evenements/4ac3480a188ce20b1fcdc53fd07e29d2?m=2026-10&v=liste",
-   "source": "La Mûrisserie (Bistrot)"
   },
   {
    "titre": "L'Écologie des relations - La Forêt amante de la mer",
@@ -7847,21 +6957,6 @@
    "note": "Dès 10 ans",
    "lien": "https://theatre-lacriee.com/programmation/evenements/le-6eme-jour",
    "source": "La Criée"
-  },
-  {
-   "titre": "L'As des as (Orchestre Philharmonique de Marseille)",
-   "lieu": "Théâtre de l'Odéon, Marseille",
-   "categories": [
-    "classique"
-   ],
-   "dates": [
-    "2026-10-29 20:00"
-   ],
-   "genre": "Classique",
-   "prix": "15€ pour tous",
-   "resume": "Concert de l'Orchestre philharmonique de Marseille intitulé L'As des as, à l'Odéon. Tarif unique de 15 €.",
-   "lien": "https://opera-odeon.marseille.fr/programmation/concert-de-lorchestre-philharmonique-de-marseille-las-de-las",
-   "source": "Opéra-Odéon Marseille"
   },
   {
    "titre": "Florilège",
@@ -8304,19 +7399,6 @@
    "source": "Marseille Tourisme"
   },
   {
-   "titre": "La Martinerie fait sa crémaillère",
-   "lieu": "La Fabulerie",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-30 16:00"
-   ],
-   "resume": "Inauguration de La Martinerie, micro-bibliothèque et espace de création en Lozère autour des récits graphiques et des imaginaires du vivant, après huit mois de travaux. Visite du lieu de 16h à 19h.",
-   "lien": "https://lafabulerie.com/agenda/la-martinerie-fait-sa-cremaillere/",
-   "source": "La Fabulerie"
-  },
-  {
    "titre": "Vernissage itinérant - Nadin Nadine",
    "lieu": "La Fabulerie",
    "categories": [
@@ -8337,16 +7419,11 @@
     "jam"
    ],
    "dates": [
-    "2026-10-28 20:45",
     "2026-11-04 20:45",
     "2026-11-11 20:45",
     "2026-11-18 20:45",
     "2026-11-25 20:45",
-    "2026-12-02 20:45",
-    "2026-12-09 20:45",
-    "2026-12-16 20:45",
-    "2026-12-23 20:45",
-    "2026-12-30 20:45"
+    "2026-12-02 20:45"
    ],
    "prix": "À partir de 2,95€",
    "note": "Hebdo, chaque mercredi (portes 19h)",
@@ -8389,7 +7466,6 @@
     "standup"
    ],
    "dates": [
-    "2026-10-29 21:30",
     "2026-11-03 21:30",
     "2026-11-10 21:30",
     "2026-11-17 21:30",
@@ -8422,7 +7498,6 @@
     "standup"
    ],
    "dates": [
-    "2026-10-31 18:00",
     "2026-11-07 18:00",
     "2026-11-14 18:00",
     "2026-11-21 18:00",
@@ -8494,7 +7569,6 @@
     "classique"
    ],
    "dates": [
-    "2026-10-24 20:30",
     "2026-11-21 20:30"
    ],
    "genre": "Classique",
@@ -8502,22 +7576,6 @@
    "note": "Festival Voix des Suds",
    "resume": "Représentation à l'abbaye Saint-Victor dans le cadre du festival Voix des Suds, organisé par Les Amis de Saint Victor. La page ne détaille pas le programme, encore en attente de validation.",
    "lien": "https://www.myprovence.fr/agenda/festival/marseille/festival-voix-des-suds-2026",
-   "source": "MyProvence"
-  },
-  {
-   "titre": "Memento mori, Claudine François",
-   "lieu": "Basilique Abbaye Saint-Victor",
-   "categories": [
-    "classique"
-   ],
-   "dates": [
-    "2026-10-31 20:30"
-   ],
-   "genre": "Classique",
-   "prix": "À partir de 15€",
-   "note": "Festival Voix des Suds",
-   "resume": "Spectacle Memento mori de Claudine François à la basilique de l'abbaye Saint-Victor, dans le cadre du festival Voix des Suds.",
-   "lien": "https://amisdesaintvictor.com",
    "source": "MyProvence"
   },
   {
@@ -8566,38 +7624,6 @@
    "note": "Festival Voix des Suds",
    "lien": "https://www.myprovence.fr/agenda/festival/marseille/festival-voix-des-suds-2026",
    "source": "MyProvence"
-  },
-  {
-   "titre": "Walking Bass - Clash des Collectifs",
-   "lieu": "Salle des Sucres (La Plateforme), Marseille",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 22:00"
-   ],
-   "genre": "Électro",
-   "prix": "22€",
-   "note": "Collectifs locaux et régionaux, jusqu'à 5h",
-   "resume": "Soirée de face-à-face entre collectifs électro locaux et régionaux à la Salle des Sucres, de 22h à 5h, dans le cadre du Walking Bass Festival.",
-   "lien": "https://www.thewalkingbass.fr",
-   "source": "JDS"
-  },
-  {
-   "titre": "Walking Bass - The Last Raver (Vladimir Cauchemar, Mandragora, Lil Texas...)",
-   "lieu": "Parc Chanot, Marseille",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 18:00"
-   ],
-   "genre": "Électro",
-   "prix": "À partir de 48,20€",
-   "note": "18 artistes, 2 scènes, jusqu'à 5h",
-   "resume": "Deuxième soirée du Walking Bass Festival au Parc Chanot : 18 artistes sur deux scènes, de 18h à 5h, avec hard techno, drum and bass, trance, tekno et bouncy.",
-   "lien": "https://www.thewalkingbass.fr",
-   "source": "JDS"
   },
   {
    "titre": "Festival Films Femmes Méditerranée (21e)",
@@ -8827,119 +7853,6 @@
    "source": "Fest.fr"
   },
   {
-   "titre": "Sorcier Lovecraft",
-   "lieu": "Théâtre des Chartreux",
-   "categories": [
-    "theatre"
-   ],
-   "dates": [
-    "2026-10-28/2026-10-31"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle jeune public inspiré des nouvelles de Lovecraft : la jeune Mitsi et le rat Ralzeimer partent chercher le royaume de Céléphaïs, face aux chats d'Ulthar et à Cthulhu. Au Théâtre des Chartreux.",
-   "lien": "https://www.fest.fr/sorcier-lovecraft-2669933.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Lucas & Veufla - En carence de fer",
-   "lieu": "Marseille 6e",
-   "categories": [
-    "standup"
-   ],
-   "dates": [
-    "2026-10-29 19:30"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle d'humour du duo Lucas & Veufla, intitulé En carence de fer.",
-   "lien": "https://www.fest.fr/lucas-veufla-en-carence-de-fer-2479947.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Allauch ciné - Les Noces funèbres",
-   "lieu": "Allauch",
-   "categories": [
-    "cinema"
-   ],
-   "dates": [
-    "2026-10-30"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Séance de cinéma à Allauch consacrée au film d'animation Les Noces funèbres. Lieu précis non indiqué.",
-   "lien": "https://www.fest.fr/allauch-cine---les-noces-funebres-2706569.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Comedy in the sky",
-   "lieu": "Marseille 3e",
-   "categories": [
-    "standup"
-   ],
-   "dates": [
-    "2026-10-30 18:30"
-   ],
-   "note": "Tour La Marseillaise, 30e étage",
-   "resume": "Soirée de stand-up au 30e étage de la Tour La Marseillaise.",
-   "lien": "https://www.fest.fr/comedy-in-the-sky-2695475.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Patrick Chanfrey - Advienne que devra",
-   "lieu": "Marseille 6e",
-   "categories": [
-    "standup"
-   ],
-   "dates": [
-    "2026-10-30 19:30"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle d'humour en solo de Patrick Chanfrey, intitulé Advienne que devra.",
-   "lien": "https://www.fest.fr/patrick-chanfrey---advienne-que-devra-2671756.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Tablao flamenco avec Guadalupe Torres",
-   "lieu": "Centre Soléa",
-   "categories": [
-    "danse"
-   ],
-   "dates": [
-    "2026-10-30",
-    "2026-10-31"
-   ],
-   "note": "Centre Solea",
-   "resume": "Tablao flamenco avec la danseuse Guadalupe Torres au centre Solea, sur deux soirs.",
-   "lien": "https://www.fest.fr/tablao-flamenco-avec-guadalupe-torres-au-centre-solea-2702053.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Malik Belkhodja - Charo responsable",
-   "lieu": "Marseille 6e",
-   "categories": [
-    "standup"
-   ],
-   "dates": [
-    "2026-10-30 21:00"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle de stand-up de Malik Belkhodja, intitulé Charo responsable.",
-   "lien": "https://www.fest.fr/malik-belkhodja---charo-responsable-2519945.html",
-   "source": "Fest.fr"
-  },
-  {
-   "titre": "Aymeric Lompret - Yolo",
-   "lieu": "Marseille 3e",
-   "categories": [
-    "standup"
-   ],
-   "dates": [
-    "2026-10-31 20:00"
-   ],
-   "note": "Lieu précis non indiqué",
-   "resume": "Spectacle de stand-up d'Aymeric Lompret, intitulé Yolo.",
-   "lien": "https://www.fest.fr/aymeric-lompret---yolo-2489935.html",
-   "source": "Fest.fr"
-  },
-  {
    "titre": "Les Gabians",
    "lieu": "Marseille 6e",
    "categories": [
@@ -8955,29 +7868,35 @@
   },
   {
    "titre": "Thomas Piet - Koala",
-   "lieu": "Marseille 6e",
+   "lieu": "Théâtre L'Art Dû",
    "categories": [
     "standup"
    ],
    "dates": [
-    "2026-11-05 19:30"
+    "2026-11-05 19:30",
+    "2026-11-06 19:30",
+    "2026-11-07 19:30"
    ],
    "note": "Lieu précis non indiqué",
    "lien": "https://www.fest.fr/thomas-piet-koala-2479886.html",
-   "source": "Fest.fr"
+   "source": "Fest.fr",
+   "prix": "22€"
   },
   {
    "titre": "Le mec en rose",
-   "lieu": "Marseille 6e",
+   "lieu": "Théâtre L'Art Dû",
    "categories": [
     "standup"
    ],
    "dates": [
-    "2026-11-05 21:05"
+    "2026-11-05 21:05",
+    "2026-11-06 21:05",
+    "2026-11-07 21:05"
    ],
    "note": "Lieu précis non indiqué",
    "lien": "https://www.fest.fr/le-mec-en-rose-2479867.html",
-   "source": "Fest.fr"
+   "source": "Fest.fr",
+   "prix": "22€"
   },
   {
    "titre": "Les Trois Soeurs (Théâtre de la mer)",
@@ -9089,16 +8008,19 @@
   },
   {
    "titre": "Axel Lattuada - P.E.R.A.V.",
-   "lieu": "Marseille 6e",
+   "lieu": "Théâtre L'Art Dû",
    "categories": [
     "standup"
    ],
    "dates": [
-    "2026-11-19 21:00"
+    "2026-11-19 21:00",
+    "2026-11-20 21:00",
+    "2026-11-21 21:00"
    ],
    "note": "Lieu précis non indiqué",
    "lien": "https://www.fest.fr/axel-lattuada---perav-2519890.html",
-   "source": "Fest.fr"
+   "source": "Fest.fr",
+   "prix": "22€"
   },
   {
    "titre": "Improglio - cabaret d'improvisation théâtrale",
@@ -9128,29 +8050,33 @@
   },
   {
    "titre": "Tristan Pierre - Melanjolie",
-   "lieu": "Marseille 6e",
+   "lieu": "Théâtre L'Art Dû",
    "categories": [
     "standup"
    ],
    "dates": [
-    "2026-11-26 21:10"
+    "2026-11-26 21:10",
+    "2026-11-27 21:10"
    ],
    "note": "Lieu précis non indiqué",
    "lien": "https://www.fest.fr/tristan-pierre-melanjolie-2479858.html",
-   "source": "Fest.fr"
+   "source": "Fest.fr",
+   "prix": "22€"
   },
   {
    "titre": "David Salles - La vie est folle et moi aussi",
-   "lieu": "Marseille 6e",
+   "lieu": "Théâtre L'Art Dû",
    "categories": [
     "standup"
    ],
    "dates": [
-    "2026-11-27 19:30"
+    "2026-11-27 19:30",
+    "2026-11-28 19:30"
    ],
    "note": "Lieu précis non indiqué",
    "lien": "https://www.fest.fr/david-salles---la-vie-est-folle-et-moi-aussi-2546637.html",
-   "source": "Fest.fr"
+   "source": "Fest.fr",
+   "prix": "22€"
   },
   {
    "titre": "Du chaos naissent les rêves",
@@ -9365,16 +8291,18 @@
   },
   {
    "titre": "Yacine Belhousse 2026",
-   "lieu": "Marseille 6e",
+   "lieu": "Théâtre L'Art Dû",
    "categories": [
     "standup"
    ],
    "dates": [
-    "2026-12-21 21:00"
+    "2026-12-11 19:30",
+    "2026-12-12 19:30"
    ],
    "note": "Lieu précis non indiqué",
    "lien": "https://www.fest.fr/yacine-belhousse-2026-2479935.html",
-   "source": "Fest.fr"
+   "source": "Fest.fr",
+   "prix": "22€"
   },
   {
    "titre": "Plein phare",
@@ -9414,169 +8342,6 @@
    "note": "Lieu précis non indiqué",
    "lien": "https://www.fest.fr/l-art-du-mensonge---tournee-2684858.html",
    "source": "Fest.fr"
-  },
-  {
-   "titre": "L'ombre en soi qui écrit (Wajdi Mouawad)",
-   "lieu": "Mucem, auditorium",
-   "categories": [
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-29 18:00"
-   ],
-   "prix": "15/11€",
-   "note": "Performance, dès 16 ans",
-   "resume": "Performance de Wajdi Mouawad, seul en scène, adaptée de sa leçon inaugurale au Collège de France : conférence, théâtre et poésie sur l'écriture, l'exil et la violence. Dès 16 ans.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Une éducation orientale",
-   "lieu": "Mucem",
-   "categories": [
-    "rencontre",
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-29 20:00"
-   ],
-   "prix": "15/11€",
-   "note": "Lecture musicale et dessinée, Berberian/Nurpetlian",
-   "resume": "Lecture musicale et dessinée de Charles Berberian, d'après son album Une éducation orientale (Casterman, 2023) sur sa famille méditerranéenne. Il dessine en direct avec Herminée Nurpetlian (chant) et Charbel Haber.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "La Bibliothèque bleue",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-30 14:30"
-   ],
-   "prix": "Gratuit sur réservation",
-   "note": "Plateau critique et conseils de lecture",
-   "resume": "Émission critique façon radio où l'équipe de programmation des Rencontres et L'Orient-Le Jour présentent leurs coups de cœur de lecture sur la Méditerranée, suivie d'un échange avec le public.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Table ronde : Habiter l'entre-deux",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-30 16:30"
-   ],
-   "prix": "Gratuit sur réservation",
-   "note": "Ashour, Dichy, Ruiz de Elvira",
-   "resume": "Table ronde sur la vie dans l'entre-deux, entre les rives, exils et retours, avec Ahmad Ashour, Albert Dichy et Laura Ruiz de Elvira.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Masterclasse : Raphaël Pitti, un médecin dans la guerre",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "conference"
-   ],
-   "dates": [
-    "2026-10-31 11:00"
-   ],
-   "prix": "Gratuit sur réservation",
-   "resume": "Masterclasse du médecin humanitaire Raphaël Pitti sur son expérience de terrain en Ukraine, en Syrie et à Gaza, son usage du droit et la solidarité.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Table ronde : S'affranchir de la règle commune",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-31 14:30"
-   ],
-   "prix": "Gratuit sur réservation",
-   "note": "Heurtaux, Houry, Bessis",
-   "resume": "Table ronde sur le droit international appliqué de façon sélective et le sort des civils, avec Jérôme Heurtaux, Nadim Houry et Sophie Bessis.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Les 900 ans d'Averroès : Averroès parmi nous",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "conference"
-   ],
-   "dates": [
-    "2026-10-31 17:30"
-   ],
-   "prix": "Gratuit sur réservation",
-   "note": "Brenet, Bou Akl, Tixier du Mesnil",
-   "resume": "Entretien pour les 900 ans de la naissance d'Averroès sur l'actualité de son héritage, avec textes, images et projections. Intervenants : Jean-Baptiste Brenet, Ziad Bou Akl, Emmanuelle Tixier du Mesnil.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "En l'absence de Leïla Shahid (hommage)",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-31 20:00"
-   ],
-   "prix": "10/5€ (couplé Rima)",
-   "note": "Avec Simone Bitton, Dominique Eddé, etc.",
-   "resume": "Hommage à la diplomate et voix palestinienne Leïla Shahid, avec témoignages, archives, lectures et accompagnement musical de Sary Khalifé. Avec Simone Bitton, Dominique Eddé, Mohamed El Khatib.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Rima Poésie Club",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-10-31 21:00"
-   ],
-   "prix": "10/5€ (couplé hommage)",
-   "note": "Lecture de poésie, avec Rim Battal, Maram Al Masri",
-   "resume": "Soirée de poésie contemporaine du monde arabe, première délocalisation à Marseille du Rima Poésie Club, avec Rim Battal, Maram Al Masri et Sary Khalifé au violoncelle.",
-   "lien": "https://nouvellesrencontresaverroes.com",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Masterclasse : Printemps arabes, quinze ans après",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "conference"
-   ],
-   "dates": [
-    "2026-11-01 11:00"
-   ],
-   "prix": "Gratuit sur réservation",
-   "note": "Lina Attalah, Haythem Mekki",
-   "lien": "https://www.2e-bureau.com/wp-content/uploads/2026/08/cp_NOUVELLES_RENCONTRES_DAVERROES_2026.pdf",
-   "source": "Averroès (communiqué)"
-  },
-  {
-   "titre": "Table ronde : Aspirations contrariées, citoyennetés réinventées ?",
-   "lieu": "Théâtre de l'Odéon",
-   "categories": [
-    "rencontre"
-   ],
-   "dates": [
-    "2026-11-01 14:30"
-   ],
-   "prix": "Gratuit sur réservation",
-   "note": "Dakhli, El Chazli, Makaremi",
-   "lien": "https://www.2e-bureau.com/wp-content/uploads/2026/08/cp_NOUVELLES_RENCONTRES_DAVERROES_2026.pdf",
-   "source": "Averroès (communiqué)"
   },
   {
    "titre": "Angela Detanico et Rafael Lain : Champ étoilé",
@@ -10211,60 +8976,6 @@
    "source": "Marseille Tourisme"
   },
   {
-   "titre": "Cheminements",
-   "lieu": "Théâtre Massalia (Friche la Belle de Mai)",
-   "categories": [
-    "jeune",
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-28 10:00",
-    "2026-10-28 15:00",
-    "2026-10-29 15:00",
-    "2026-10-29 19:00"
-   ],
-   "prix": "7 à 10€",
-   "note": "Théâtre d'ombre, F.L.O.P., dès 6 ans",
-   "lien": "https://www.festivalenribambelle.com/programmation/cheminements",
-   "source": "Festival En Ribambelle"
-  },
-  {
-   "titre": "Liteul Pipol - Les deux lunes",
-   "lieu": "Théâtre Massalia (Friche la Belle de Mai)",
-   "categories": [
-    "jeune",
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-29 10:00",
-    "2026-10-29 16:00",
-    "2026-10-30 10:00",
-    "2026-10-30 16:00",
-    "2026-10-31 10:00",
-    "2026-10-31 16:00"
-   ],
-   "prix": "7 à 10€",
-   "note": "Durée 35 min, festival En Ribambelle",
-   "lien": "https://www.marseille-tourisme.com/vivez-marseille-blog/agenda/liteul-pipol-les-deux-lunes-marseille-3eme-fr-6665120/",
-   "source": "Marseille Tourisme"
-  },
-  {
-   "titre": "Rouge Courroux",
-   "lieu": "Théâtre Massalia (Friche la Belle de Mai)",
-   "categories": [
-    "jeune",
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-31 10:00",
-    "2026-10-31 16:00"
-   ],
-   "prix": "7 à 10€",
-   "note": "Théâtre musical, Les Becs Verseurs, dès 4 ans",
-   "lien": "https://www.festivalenribambelle.com/programmation/rouge-courroux",
-   "source": "Festival En Ribambelle"
-  },
-  {
    "titre": "Un animal, des animals",
    "lieu": "Théâtre Massalia (Friche la Belle de Mai)",
    "categories": [
@@ -10840,19 +9551,6 @@
    "source": "Scènes et Cinés"
   },
   {
-   "titre": "Denise Jardinière vous invite chez elle",
-   "lieu": "Théâtre Comoedia, Aubagne",
-   "categories": [
-    "theatre"
-   ],
-   "dates": [
-    "2026-10-31 20:00"
-   ],
-   "prix": "De 4 à 25€",
-   "lien": "https://www.aubagne.fr/app/uploads/2026/09/Programme-du-theatre-Comoedia-2026-2027.pdf",
-   "source": "Comoedia Aubagne"
-  },
-  {
    "titre": "Eau chaude à tous les étages",
    "lieu": "Théâtre Comoedia, Aubagne",
    "categories": [
@@ -11122,20 +9820,6 @@
    "source": "La Chaudronnerie"
   },
   {
-   "titre": "S'adapter",
-   "lieu": "Conservatoire Zino-Francescatti, La Ciotat",
-   "categories": [
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-31 18:00"
-   ],
-   "prix": "Gratuit",
-   "note": "Asso Reg'art; gratuit sur inscription",
-   "lien": "https://www.fest.fr/spectacle-quotsadapterquot-par-lassociation-regart-2703492.html",
-   "source": "fest.fr"
-  },
-  {
    "titre": "Marcher dans le vent",
    "lieu": "Le Sémaphore, Port-de-Bouc",
    "categories": [
@@ -11147,18 +9831,6 @@
    ],
    "prix": "4€",
    "lien": "https://www.fest.fr/marcher-dans-le-vent-2588027.html",
-   "source": "fest.fr"
-  },
-  {
-   "titre": "Théâtre en liberté : Oscar",
-   "lieu": "Espace 233, Istres",
-   "categories": [
-    "theatre"
-   ],
-   "dates": [
-    "2026-10-30 20:30"
-   ],
-   "lien": "https://www.fest.fr/theatre-en-liberte-oscar-2678660.html",
    "source": "fest.fr"
   },
   {
@@ -11276,19 +9948,6 @@
    "source": "Agenda Culturel 13"
   },
   {
-   "titre": "Tamar Baruch, Toutes les choses…",
-   "lieu": "Café-Théâtre du Têtard",
-   "categories": [
-    "spectacle"
-   ],
-   "dates": [
-    "2026-10-30 20:00"
-   ],
-   "prix": "Dès 14,5€",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/tamar-baruch-dans-toutes-les-choses.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
    "titre": "En roue libre (impro sur le couple)",
    "lieu": "Café-Théâtre du Têtard",
    "categories": [
@@ -11368,7 +10027,6 @@
     "spectacle"
    ],
    "dates": [
-    "2026-10-22 14:00",
     "2026-11-05 14:00",
     "2026-11-05 21:00",
     "2026-11-05 21:15",
@@ -11428,12 +10086,6 @@
     "theatre"
    ],
    "dates": [
-    "2026-10-24 17:00",
-    "2026-10-24 20:00",
-    "2026-10-25 17:00",
-    "2026-10-25 20:00",
-    "2026-10-31 17:00",
-    "2026-10-31 20:00",
     "2026-12-06 17:00",
     "2027-01-16 20:00",
     "2027-01-17 17:00",
@@ -11452,9 +10104,6 @@
     "theatre"
    ],
    "dates": [
-    "2026-10-23 20:30",
-    "2026-10-24 20:30",
-    "2026-10-25 16:00",
     "2027-02-26 20:30",
     "2027-02-27 20:30"
    ],
@@ -11608,21 +10257,6 @@
    "source": "Fnacspectacles"
   },
   {
-   "titre": "La véritable histoire de Jack O'Lantern",
-   "lieu": "L'Antidote",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-28 15:00",
-    "2026-10-31 15:00"
-   ],
-   "prix": "8,95€",
-   "note": "Contes",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/la-veritable-histoire-de-jack-o-lantern.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
    "titre": "Braquage sans fin",
    "lieu": "L'Antidote",
    "categories": [
@@ -11668,19 +10302,6 @@
    ],
    "prix": "15,50€",
    "lien": "https://13.agendaculturel.fr/danse/marseille/",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Lolo Sinclar, Barbe, perruque et vérité",
-   "lieu": "Petit théâtre des îles",
-   "categories": [
-    "humour"
-   ],
-   "dates": [
-    "2026-10-31"
-   ],
-   "prix": "Dès 15,5€",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/lolo-sinclar-dans-barbe-perruque-et-verite.html",
    "source": "Agenda Culturel 13"
   },
   {
@@ -11850,7 +10471,6 @@
     "humour"
    ],
    "dates": [
-    "2026-10-28 20:30",
     "2026-11-25 20:30",
     "2026-12-30 20:30"
    ],
@@ -11980,101 +10600,6 @@
    "prix": "Dès 10,95€",
    "note": "Dates précises : voir lien",
    "lien": "https://13.agendaculturel.fr/jeune-public/marseille/c-est-dans-la-boite.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Patatrouille",
-   "lieu": "Le Quai du Rire",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-15/2026-11-01"
-   ],
-   "prix": "Dès 10€",
-   "note": "Dates précises : voir lien",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/patatrouille.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "L'anniversaire magique",
-   "lieu": "Théâtre L'Archange",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-30/2026-10-31"
-   ],
-   "prix": "Dès 10,95€",
-   "note": "Dates précises : voir lien",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/l-anniversaire-magique.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Les Jumeaux Magiciens, Drôle de Magie",
-   "lieu": "Divine Comédie",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-26/2026-10-29"
-   ],
-   "prix": "Dès 10,95€",
-   "note": "Dates précises : voir lien",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/les-jumeaux-magiciens-dans-drole-de-magie-1.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Frankenstein",
-   "lieu": "Le Quai du Rire",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-21/2026-11-01"
-   ],
-   "prix": "Dès 12€",
-   "note": "Dates précises : voir lien",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/frankenstein.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Le grenier magique de Lili",
-   "lieu": "Théâtre L'Archange",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-29"
-   ],
-   "prix": "Dès 10,95€",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/le-grenier-magique-de-lili-1.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Meurtre à Halloween",
-   "lieu": "Théâtre Marie-Jeanne",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-31"
-   ],
-   "prix": "Dès 10€",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/meurtre-a-halloween.html",
-   "source": "Agenda Culturel 13"
-  },
-  {
-   "titre": "Soirée petit frisson",
-   "lieu": "Divadlo théâtre",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-30"
-   ],
-   "prix": "14€",
-   "lien": "https://13.agendaculturel.fr/jeune-public/marseille/soiree-petit-frisson.html",
    "source": "Agenda Culturel 13"
   },
   {
@@ -12960,20 +11485,6 @@
     "manif"
    ],
    "dates": [
-    "2026-10-31 18:00"
-   ],
-   "note": "Chaque samedi",
-   "resume": "Rassemblement hebdomadaire d'un collectif d'associations, syndicats et partis pour demander l'arrêt des massacres à Gaza et des colonies en Cisjordanie.",
-   "lien": "https://mars-infos.org/manifestation-de-soutien-a-gaza-8349",
-   "source": "manif"
-  },
-  {
-   "titre": "Manifestation de soutien à Gaza",
-   "lieu": "Porte d'Aix",
-   "categories": [
-    "manif"
-   ],
-   "dates": [
     "2026-11-07 18:00"
    ],
    "note": "Chaque samedi",
@@ -13134,20 +11645,6 @@
    "source": "Les Théâtres"
   },
   {
-   "titre": "Afrimayé présente Twa",
-   "lieu": "Zoumaï",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-30 20:00"
-   ],
-   "genre": "Chorale",
-   "resume": "Fête de sortie du troisième album de la chorale Afrimayé, avec disques et objets en vente sur place.",
-   "lien": "https://www.instagram.com/chorale.afrimaye/p/DehvLsRx3g6/",
-   "source": "Zoumaï"
-  },
-  {
    "titre": "Bar des sciences : nos villes seront-elles habitables à +4°C ?",
    "lieu": "Zoumaï",
    "categories": [
@@ -13245,21 +11742,6 @@
    "source": "13.agendaculturel.fr"
   },
   {
-   "titre": "L'Art de se faire ghoster",
-   "lieu": "Le Quai du Rire",
-   "categories": [
-    "theatre",
-    "humour"
-   ],
-   "dates": [
-    "2026-10-30",
-    "2026-10-31"
-   ],
-   "prix": "À partir de 17€",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/",
-   "source": "13.agendaculturel.fr"
-  },
-  {
    "titre": "La vie n'est pas un conte de fée",
    "lieu": "Le Quai du Rire",
    "categories": [
@@ -13270,20 +11752,6 @@
     "2026-11-04"
    ],
    "prix": "À partir de 17€",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/",
-   "source": "13.agendaculturel.fr"
-  },
-  {
-   "titre": "60 minutes 30 impros",
-   "lieu": "Le Quai du Rire",
-   "categories": [
-    "theatre",
-    "humour"
-   ],
-   "dates": [
-    "2026-10-29"
-   ],
-   "prix": "À partir de 12€",
    "lien": "https://13.agendaculturel.fr/theatre/marseille/",
    "source": "13.agendaculturel.fr"
   },
@@ -13302,21 +11770,6 @@
    "source": "13.agendaculturel.fr"
   },
   {
-   "titre": "La vente aux enchères",
-   "lieu": "L'Antidote",
-   "categories": [
-    "theatre",
-    "humour"
-   ],
-   "dates": [
-    "2026-10-30",
-    "2026-10-31"
-   ],
-   "prix": "19€",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/",
-   "source": "13.agendaculturel.fr"
-  },
-  {
    "titre": "Fables of Faubus, Paul Reas",
    "lieu": "Centre Photographique Marseille",
    "categories": [
@@ -13330,34 +11783,6 @@
    "resume": "Rétrospective du photographe documentaire britannique Paul Reas (1982-2012) : la classe ouvrière et le déclin industriel du Royaume-Uni, en six chapitres.",
    "lien": "https://www.marseille-tourisme.com/vivez-marseille-blog/agenda/fables-of-faubus-marseille-2eme-fr-6554092/",
    "source": "marseille-tourisme.com / p-a-c.fr"
-  },
-  {
-   "titre": "Vernissage : Fables of Faubus, Paul Reas",
-   "lieu": "Centre Photographique Marseille",
-   "categories": [
-    "vernissage"
-   ],
-   "dates": [
-    "2026-10-30 18:30"
-   ],
-   "prix": "Gratuit",
-   "resume": "Vernissage de l'exposition consacrée au photographe britannique Paul Reas.",
-   "lien": "https://oam.io/expositions/fables-faubus",
-   "source": "oam.io"
-  },
-  {
-   "titre": "Finissage : Hors Peindre #Bougainville",
-   "lieu": "Ateliers Jeanne Barret",
-   "categories": [
-    "vernissage"
-   ],
-   "dates": [
-    "2026-10-31 18:00"
-   ],
-   "prix": "Gratuit",
-   "note": "De 18h à minuit",
-   "resume": "Soirée de clôture de l'atelier de peinture Hors Peindre aux Ateliers Jeanne Barret.",
-   "source": "p-a-c.fr"
   },
   {
    "titre": "Tout autre chose",
@@ -13390,35 +11815,6 @@
    "source": "lafriche.org"
   },
   {
-   "titre": "Je passe des frontières, Alain Andrade",
-   "lieu": "Galerie du Tableau",
-   "categories": [
-    "expo"
-   ],
-   "dates": [
-    "2026-10-05/2026-10-31"
-   ],
-   "prix": "Gratuit",
-   "note": "Du lundi au samedi, 11h-18h ; 37 rue Sylvabelle, Marseille 6e",
-   "resume": "Exposition de photographies d'Alain Andrade.",
-   "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/je-passe-des-frontieres-exposition-alain-andrade-marseille-6eme-en-6822215/",
-   "source": "marseille-tourisme.com"
-  },
-  {
-   "titre": "Peintures, Thomas Boulmier",
-   "lieu": "Galerie La Nave Va",
-   "categories": [
-    "expo"
-   ],
-   "dates": [
-    "2026-10-08/2026-10-31"
-   ],
-   "prix": "Entrée libre",
-   "note": "16 boulevard National, Marseille 1er",
-   "resume": "Exposition de peintures de Thomas Boulmier.",
-   "source": "p-a-c.fr"
-  },
-  {
    "titre": "Acupuncture Mikado, Malte Martin",
    "lieu": "Galerie Territoires Partagés",
    "categories": [
@@ -13430,21 +11826,6 @@
    "prix": "Entrée libre",
    "resume": "Exposition du graphiste et artiste Malte Martin.",
    "source": "p-a-c.fr"
-  },
-  {
-   "titre": "Mister Freeze",
-   "lieu": "L'Aérosol (La Tulipe), Marseille 15e",
-   "categories": [
-    "expo"
-   ],
-   "dates": [
-    "2026-09-12/2026-11-01"
-   ],
-   "prix": "5€",
-   "note": "Samedi et dimanche, 10h-20h ; 5 boulevard Romieu",
-   "resume": "Festival-exposition de graffiti et street art dans l'ancienne savonnerie La Tulipe, avec plus de 1 500 m² de murs peints, des installations et des performances.",
-   "lien": "https://www.marseille-tourisme.com/vivez-marseille-blog/agenda/mister-freeze-marseille-15eme-fr-6659647/",
-   "source": "marseille-tourisme.com"
   },
   {
    "titre": "Eleonas",
@@ -13708,34 +12089,6 @@
    "lien": "https://lemolotov.com/events/dreamachine-festival-keiyaa-broodoo-ramses/"
   },
   {
-   "titre": "Pop Porn",
-   "lieu": "Le Makeda",
-   "categories": [
-    "concert"
-   ],
-   "genre": "DJ set pop, électro",
-   "dates": [
-    "2026-10-30 22:30"
-   ],
-   "prix": "10,99€",
-   "source": "Shotgun",
-   "lien": "https://shotgun.live/en/events/pop-porn"
-  },
-  {
-   "titre": "La Wo DJ set spécial Halloween",
-   "lieu": "Le Makeda",
-   "categories": [
-    "concert"
-   ],
-   "genre": "DJ set trance, acid techno, bounce",
-   "dates": [
-    "2026-10-31 22:30"
-   ],
-   "prix": "10,99€",
-   "source": "Shotgun",
-   "lien": "https://shotgun.live/en/events/la-wo-dj-set-special-halloween"
-  },
-  {
    "titre": "Sunshine People",
    "lieu": "Le Makeda",
    "categories": [
@@ -13776,21 +12129,6 @@
    "prix": "10,99€",
    "source": "Shotgun",
    "lien": "https://shotgun.live/en/events/perreoclub4"
-  },
-  {
-   "titre": "Heaven or Hell by Bim Bam Boom",
-   "lieu": "Le Chapiteau",
-   "categories": [
-    "concert"
-   ],
-   "genre": "DJ sets (soirée Halloween)",
-   "dates": [
-    "2026-10-31 22:00"
-   ],
-   "prix": "À partir de 8,59€",
-   "note": "38 traverse Notre-Dame du Bon Secours, 13003",
-   "source": "Shotgun",
-   "lien": "https://shotgun.live/en/venues/le-chapiteau-marseille"
   },
   {
    "titre": "Bakélite Duo",
@@ -13926,8 +12264,9 @@
    "genre": "Blues, country, folk",
    "note": "Portes 19h, concert 20h. Adhésion 3€.",
    "resume": "La chanteuse de Kansas City revisite les traditions de la musique américaine avec sa voix de contralto.",
-   "lien": "https://lameson.com/evenements/krystle-warren/",
-   "source": "lameson.com"
+   "lien": "https://jazzsurlaville.org/evenement/raul-midon/",
+   "source": "lameson.com",
+   "prix": "15€"
   },
   {
    "titre": "Raul Midón",
@@ -13987,7 +12326,8 @@
    "genre": "Jazz",
    "note": "Jazz sur la Ville.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/jazz-sur-la-ville-marseille-en-6799548/",
-   "source": "Office de tourisme de Marseille"
+   "source": "Office de tourisme de Marseille",
+   "prix": "Entrée libre debout (places assises sur réservation avec restauration)"
   },
   {
    "titre": "Franck Amsallem Trio",
@@ -14001,7 +12341,8 @@
    "genre": "Jazz",
    "note": "Jazz sur la Ville (les mercredis à 20h) ; horaire à confirmer.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/jazz-sur-la-ville-marseille-en-6799548/",
-   "source": "Office de tourisme de Marseille"
+   "source": "Office de tourisme de Marseille",
+   "prix": "Entrée libre debout (places assises sur réservation avec restauration)"
   },
   {
    "titre": "Stéphanie Trick & Paolo Alderighi",
@@ -14015,7 +12356,8 @@
    "genre": "Jazz, piano",
    "note": "Jazz sur la Ville (les mercredis à 20h) ; horaire à confirmer.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/jazz-sur-la-ville-marseille-en-6799548/",
-   "source": "Office de tourisme de Marseille"
+   "source": "Office de tourisme de Marseille",
+   "prix": "Entrée libre debout (places assises sur réservation avec restauration)"
   },
   {
    "titre": "Loin du désordre - Salma Quartet",
@@ -14029,7 +12371,8 @@
    "genre": "Jazz",
    "note": "Jazz sur la Ville (les mercredis à 20h) ; horaire à confirmer.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/jazz-sur-la-ville-marseille-en-6799548/",
-   "source": "Office de tourisme de Marseille"
+   "source": "Office de tourisme de Marseille",
+   "prix": "Entrée libre debout (places assises sur réservation avec restauration)"
   },
   {
    "titre": "The Jazz Room : un voyage au cœur de La Nouvelle-Orléans",
@@ -14038,10 +12381,10 @@
     "concert"
    ],
    "dates": [
-    "2026-11-13 21:00"
+    "2026-11-13 19:00"
    ],
    "genre": "Jazz, blues",
-   "prix": "De 24 à 28€",
+   "prix": "De 24 à 35€",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/the-jazz-room-un-voyage-au-coeur-de-la-nouvelle-orleans-marseille-5eme-en-6571301/",
    "source": "Office de tourisme de Marseille"
   },
@@ -14088,21 +12431,6 @@
    "resume": "L'ancien chanteur de Mustang interprète les chansons de son album Cinéma permanent pour lancer le Mois du doc.",
    "lien": "https://en.destinationlaciotat.com/offers/special-concert-with-jean-felzine-la-ciotat-en-6867898/",
    "source": "Destination La Ciotat"
-  },
-  {
-   "titre": "L'Ascenseur cosmique 2.0",
-   "lieu": "La Chaudronnerie, La Ciotat",
-   "categories": [
-    "concert",
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-29 17:00"
-   ],
-   "prix": "27€ (abonné/réduit 22€, -12 ans 15€)",
-   "resume": "Concert illustré de Monsieur Lune et cinq musiciens, avec bande-son et dessins animés, à partir de 6 ans.",
-   "lien": "https://www.lachaudronnerie-laciotat.com/evenement/lascenseur-cosmique-2-0/",
-   "source": "La Chaudronnerie"
   },
   {
    "titre": "Eric Fraticelli",
@@ -14199,7 +12527,6 @@
     "standup"
    ],
    "dates": [
-    "2026-10-26 20:30",
     "2026-11-02 20:30",
     "2026-11-09 20:30",
     "2026-11-16 20:30",
@@ -14465,21 +12792,6 @@
    "source": "Billetreduc"
   },
   {
-   "titre": "Sarah Jatombo, Choisir ?",
-   "lieu": "La Grange Comedy",
-   "categories": [
-    "humour",
-    "standup"
-   ],
-   "dates": [
-    "2026-10-29 20:45"
-   ],
-   "prix": "13€",
-   "note": "55 cours Gouffé, Marseille 6e",
-   "lien": "https://www.billetreduc.com/salle/la-grange-comedy-club",
-   "source": "Billetreduc / agendaculturel"
-  },
-  {
    "titre": "English Comedy Night",
    "lieu": "La Grange Comedy",
    "categories": [
@@ -14487,7 +12799,6 @@
     "standup"
    ],
    "dates": [
-    "2026-10-30 19:00",
     "2026-11-06 19:00",
     "2026-11-13 19:00",
     "2026-11-20 19:00"
@@ -14499,20 +12810,6 @@
    "source": "Billetreduc"
   },
   {
-   "titre": "Crash Test",
-   "lieu": "La Grange Comedy",
-   "categories": [
-    "humour",
-    "standup"
-   ],
-   "dates": [
-    "2026-10-30"
-   ],
-   "prix": "6€",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/crash-test.html",
-   "source": "agendaculturel"
-  },
-  {
    "titre": "Salima Passion (en rodage)",
    "lieu": "La Grange Comedy",
    "categories": [
@@ -14522,7 +12819,9 @@
    "dates": [
     "2026-11-04 19:00",
     "2026-11-11 19:00",
-    "2026-11-18 19:00"
+    "2026-11-18 19:00",
+    "2026-12-02 19:00",
+    "2026-12-16 19:00"
    ],
    "prix": "Dès 16€",
    "lien": "https://www.billetreduc.com/salle/la-grange-comedy-club",
@@ -14599,37 +12898,6 @@
    "note": "Date déduite de Billetreduc ; agendaculturel indique aussi le 13 nov.",
    "lien": "https://www.billetreduc.com/salle/la-grange-comedy-club",
    "source": "Billetreduc / agendaculturel"
-  },
-  {
-   "titre": "Zouz, Bedou : Jazz Comedy Club",
-   "lieu": "Théâtre L'Art Dû",
-   "categories": [
-    "humour",
-    "standup",
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31"
-   ],
-   "prix": "18€",
-   "resume": "Soirée mêlant stand-up et jazz.",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/zouz-bedou-jazz-comedy-club.html",
-   "source": "agendaculturel"
-  },
-  {
-   "titre": "La Pilule - Comedy Club",
-   "lieu": "Théâtre L'Art Dû",
-   "categories": [
-    "humour",
-    "standup"
-   ],
-   "dates": [
-    "2026-10-26/2026-11-01"
-   ],
-   "prix": "Dès 5,95€",
-   "lien": "https://13.agendaculturel.fr/theatre/marseille/la-pilule-comedy-club.html",
-   "source": "agendaculturel",
-   "note": "Dates précises : voir lien"
   },
   {
    "titre": "Nico Lamoneyrie, Dans le noir, nos ombres se touchent encore",
@@ -14768,9 +13036,6 @@
     "visite"
    ],
    "dates": [
-    "2026-10-31 15:00",
-    "2026-10-31 16:00",
-    "2026-10-31 17:00",
     "2026-11-07 15:00",
     "2026-11-07 16:00",
     "2026-11-07 17:00"
@@ -14779,23 +13044,6 @@
    "resume": "Visites guidées de 30 minutes des expositions en cours à la Friche.",
    "lien": "https://www.lafriche.org/evenements/visite-flash-16/",
    "source": "Friche la Belle de Mai (agenda)"
-  },
-  {
-   "titre": "Visites flash",
-   "lieu": "Mucem",
-   "categories": [
-    "visite"
-   ],
-   "dates": [
-    "2026-10-26 14:00",
-    "2026-10-28 14:00",
-    "2026-10-29 14:00"
-   ],
-   "prix": "Gratuit avec un billet d'exposition",
-   "note": "Créneaux 14h-16h ; ensuite chaque samedi et dimanche (horaires non précisés)",
-   "resume": "Courtes visites guidées de Mossi Traoré, Manger les images, Méditerranées et Populaire ?.",
-   "lien": "https://mucem.org/en/evenement/flash-tours/",
-   "source": "Mucem"
   },
   {
    "titre": "Vernissage : résidence Pop diplôme, Louis-Marie Ropars",
@@ -14913,27 +13161,12 @@
    "source": "Fest.fr"
   },
   {
-   "titre": "Vernissage : Inspiration, association Regard",
-   "lieu": "Espace du Bras d'Or, Aubagne",
-   "categories": [
-    "vernissage"
-   ],
-   "dates": [
-    "2026-10-30 18:00"
-   ],
-   "prix": "Entrée libre",
-   "note": "Animation musicale des Choubidoux à 19h30",
-   "lien": "https://www.fest.fr/l-association-regard-presente-l-exposition-inspiration-2702014.html",
-   "source": "Fest.fr"
-  },
-  {
    "titre": "Visite guidée de l'exposition Inspiration",
    "lieu": "Espace du Bras d'Or, Aubagne",
    "categories": [
     "visite"
    ],
    "dates": [
-    "2026-11-01 15:00",
     "2026-11-05 10:30"
    ],
    "resume": "Visites guidées par Martine Huet et, le 5/11, l'artiste Dominique Gouiffes.",
@@ -15012,21 +13245,6 @@
    "resume": "Foire traditionnelle des santonniers sur le Vieux-Port, avec animations les mercredis et week-ends (ateliers, musique, dédicaces).",
    "lien": "https://foire-aux-santons-de-marseille.fr/",
    "source": "onivapp / Tendance Hôtellerie"
-  },
-  {
-   "titre": "Fête de la Citrouille",
-   "lieu": "Place Jean Jaurès, Martigues",
-   "categories": [
-    "jeune"
-   ],
-   "dates": [
-    "2026-10-31 14:00"
-   ],
-   "prix": "Gratuit",
-   "note": "14h-17h30, venir déguisé",
-   "resume": "Après-midi d'Halloween pour les enfants : défilés, maquillage, jeux en bois, structures gonflables et concours de décoration de citrouilles.",
-   "lien": "https://www.citizenkid.com/sortie/halloween-a-martigues-a1065119",
-   "source": "CitizenKid"
   },
   {
    "titre": "Infiniment Robin (Muriel Robin)",
@@ -15217,36 +13435,6 @@
    "resume": "Concert de Second Major et Auto à L'Intermédiaire, place Jean-Jaurès.",
    "lien": "https://www.concertandco.com/lieu/intermediaire-marseille/salle-concert-352.htm",
    "source": "Concert and Co"
-  },
-  {
-   "titre": "Ourania Jazz Quartet",
-   "lieu": "Club 27",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-29 20:30"
-   ],
-   "genre": "Jazz vocal",
-   "prix": "10€ (+ adhésion annuelle 10€)",
-   "resume": "Quartet jazz avec Ourania Vaud (voix), José Assa (piano), Philippe Gallet (contrebasse) et Yves De Lucas (batterie). Ouverture et apéro à 19h30.",
-   "lien": "https://club27.fr/",
-   "source": "Club 27"
-  },
-  {
-   "titre": "Julien Brunetaud Trio",
-   "lieu": "Club 27",
-   "categories": [
-    "concert"
-   ],
-   "dates": [
-    "2026-10-31 20:30"
-   ],
-   "genre": "Boogie-woogie, jazz, blues",
-   "prix": "10€ (+ adhésion annuelle 10€)",
-   "resume": "Le pianiste Julien Brunetaud en trio avec Sam Favreau (contrebasse) et Cédrick Bec (batterie), entre boogie-woogie, jazz et blues. Ouverture et apéro à 19h30.",
-   "lien": "https://club27.fr/",
-   "source": "Club 27"
   },
   {
    "titre": "Nuit du cirque : Run Run (Collectif Merkén)",
@@ -15603,6 +13791,303 @@
    "resume": "Rencontre autour du football, des supporters et des identités dans les villes portuaires, proposée avec le Campus AFD et l'INA.",
    "lien": "https://www.lafriche.org/evenements/ports-dattache-football-supporters-et-identites-dans-les-villes-portuaires/",
    "source": "Friche la Belle de Mai (agenda)"
+  },
+  {
+   "titre": "Nova Shapers (release party) + Jostle",
+   "lieu": "Leda Atomica Musique",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 20:00"
+   ],
+   "genre": "Rock alternatif / pop rock",
+   "prix": "5€ en prévente, 7€ sur place (+3€ d'adhésion, espèces)",
+   "note": "Ouverture des portes à 19h. Organisé par Never Heal Production.",
+   "resume": "Double plateau rock : Jostle, trio marseillais formé en 2004, sort son sixième album White Noise ; Nova Shapers présente son premier album First Step on the Moon.",
+   "lien": "https://shotgun.live/fr/events/nova-shapers-released-party-jostle",
+   "source": "Shotgun"
+  },
+  {
+   "titre": "Tiwiza + Rabie Houti",
+   "lieu": "Le Makeda",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-21 20:00"
+   ],
+   "genre": "Rock / raï, sons nord-africains",
+   "prix": "13€ en prévente, 15€ sur place",
+   "resume": "Soirée à deux groupes : Tiwiza (Toulouse) mêle sonorités nord-africaines et rock'n'roll, Rabie Houti Band revisite des mélodies arabo-andalouses avec blues, afrobeat et swing.",
+   "lien": "https://shotgun.live/fr/events/tiwiza-rabie-houti",
+   "source": "Shotgun"
+  },
+  {
+   "titre": "La Fièvre : Mention Très Fièr·Es (soirée de soutien Pas Peur de Fier)",
+   "lieu": "Le Molotov",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 20:30"
+   ],
+   "genre": "Rap, R&B, trap, baile funk",
+   "prix": "6€ (tarif solidaire), 9€ (early), 12€",
+   "note": "Soirée de soutien à l'association Pas Peur de Fier ; tombola. Live + DJ sets.",
+   "resume": "Lives de Creamy G et cheapjewels, DJ sets de Kayla et Feufou, au profit d'une association marseillaise contre les discriminations liées au genre et à l'orientation sexuelle.",
+   "lien": "https://shotgun.live/fr/events/la-fievre-mention-tres-fieres",
+   "source": "Shotgun"
+  },
+  {
+   "titre": "Concert de gospel solidaire pour Les Enfants de Catherine",
+   "lieu": "Jardin Amable Chanot",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-21 19:00"
+   ],
+   "genre": "Gospel",
+   "prix": "30€ (à confirmer)",
+   "note": "Événement caritatif, 35 musiciens et chanteurs.",
+   "resume": "Deuxième édition du concert de gala du fonds de dotation Les Enfants de Catherine, au profit des enfants atteints de cancer et de la recherche en neurosciences.",
+   "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/concert-de-gospel-evenement-solidaire-pour-les-enfants-de-catherine-marseille-8eme-en-6568710/",
+   "source": "Office de tourisme de Marseille / Unidivers"
+  },
+  {
+   "titre": "L'Homme armé, une messe pour la paix (Karl Jenkins) par les Chœurs de Provence",
+   "lieu": "Église Notre-Dame du Mont",
+   "categories": [
+    "concert",
+    "classique"
+   ],
+   "dates": [
+    "2026-11-29 16:00"
+   ],
+   "genre": "Musique chorale",
+   "prix": "20€ (réduit 15€)",
+   "resume": "Concert choral de la messe de Karl Jenkins par les Chœurs de Provence.",
+   "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/lhomme-arme-une-messe-pour-la-paix-de-karl-jenkins-par-les-choeurs-de-provence-marseille-6eme-en-6849667/",
+   "source": "Office de tourisme de Marseille"
+  },
+  {
+   "titre": "Laurent Pit : les instantanés (duo d'impro)",
+   "lieu": "Théâtre L'Art Dû",
+   "categories": [
+    "theatre",
+    "humour"
+   ],
+   "dates": [
+    "2026-11-13 21:00",
+    "2026-11-14 21:00"
+   ],
+   "prix": "16€ (réduit 6€)",
+   "resume": "Spectacle d'improvisation en duo, classé en humour et théâtre par la billetterie. Aucun descriptif détaillé n'est publié.",
+   "lien": "https://www.lartdutheatre.fr",
+   "source": "provence-alpes-cotedazur.com"
+  },
+  {
+   "titre": "Petit escargot",
+   "lieu": "Théâtre des Chartreux",
+   "categories": [
+    "jeune",
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-14 10:15",
+    "2026-11-14 16:00"
+   ],
+   "prix": "8€ (réduit 5 à 6€)",
+   "note": "Jeune public",
+   "resume": "Conte musical de la compagnie du Renard Bleu : un petit escargot se réveille sans sa coquille et traverse les saisons, entre ombres et lumières.",
+   "source": "Marseille Tourisme"
+  },
+  {
+   "titre": "Le mauvais œil 89 : Daisuke Ichiba",
+   "lieu": "La Friche la Belle de Mai",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-11-26/2027-01-25"
+   ],
+   "prix": "Gratuit",
+   "note": "Galerie Le Dernier Cri",
+   "resume": "Nouvelle exposition de la série Le mauvais œil à la galerie Le Dernier Cri, consacrée à l'artiste Daisuke Ichiba.",
+   "lien": "https://www.lafriche.org/evenements/le-mauvais-oeil-89-daisuke-ichiba/",
+   "source": "Friche la Belle de Mai"
+  },
+  {
+   "titre": "Guillaume Bresson, Untitled (2026)",
+   "lieu": "1fa9f.space, 104 rue Paradis, Marseille 6e",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-08-29/2026-11-26"
+   ],
+   "resume": "Exposition de peintures de Guillaume Bresson, ouverte par un vernissage le 29 août.",
+   "lien": "https://art-o-rama.fr/in-town-2",
+   "source": "Art-o-rama (In Town)"
+  },
+  {
+   "titre": "HOT (Cyril Benhamou trio)",
+   "lieu": "La Caverne du Jazz",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 21:00"
+   ],
+   "genre": "Jazz",
+   "resume": "Concert du trio de Cyril Benhamou dans le cadre du festival Jazz sur la Ville.",
+   "lien": "https://jazzsurlaville.org/evenement/hot/",
+   "source": "Jazz sur la Ville"
+  },
+  {
+   "titre": "La Violeta (Violeta Ocampo)",
+   "lieu": "La Mesón",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 19:00"
+   ],
+   "genre": "Jazz",
+   "resume": "Concert de Violeta Ocampo dans le cadre du festival Jazz sur la Ville.",
+   "lien": "https://jazzsurlaville.org/evenement/la-violeta/",
+   "source": "Jazz sur la Ville"
+  },
+  {
+   "titre": "This is the girl (Eyma et Perrine Mansuy)",
+   "lieu": "Les Voies du Chant, Archipel 49, Marseille 4e",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 20:00"
+   ],
+   "genre": "Jazz, chanson",
+   "prix": "12 à 15€",
+   "resume": "Concert piano et voix qui explore l'univers de Patti Smith, dans le cadre du festival Jazz sur la Ville.",
+   "lien": "https://jazzsurlaville.org/evenement/this-is-the-girl/",
+   "source": "Jazz sur la Ville"
+  },
+  {
+   "titre": "Three Blind Mice (Félix Hunot, Malo Mazurié, Sébastien Girardot)",
+   "lieu": "Hôtel C2",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-12-02 20:00"
+   ],
+   "genre": "Jazz",
+   "prix": "Entrée libre debout (places assises sur réservation avec restauration)",
+   "resume": "Concert du trio dans le cadre du festival Jazz sur la Ville.",
+   "lien": "https://jazzsurlaville.org/evenement/three-blind-mice/",
+   "source": "Jazz sur la Ville"
+  },
+  {
+   "titre": "Souvenirs d'exil, Sibongile Mbambo",
+   "lieu": "La Mesón",
+   "categories": [
+    "expo"
+   ],
+   "dates": [
+    "2026-11-02/2026-12-06"
+   ],
+   "prix": "Entrée libre",
+   "resume": "Exposition de Sibongile Mbambo présentée pendant le festival Jazz sur la Ville.",
+   "lien": "https://jazzsurlaville.org/evenement/souvenirs-dexil/",
+   "source": "Jazz sur la Ville"
+  },
+  {
+   "titre": "Amar Amarni (Festival Tamazgha #21)",
+   "lieu": "Le 15ème Art, Marseille 15e",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-05 20:30"
+   ],
+   "genre": "Musique berbère",
+   "note": "Sur réservation",
+   "resume": "Concert du peintre et musicien Amar Amarni dans le cadre du festival Tamazgha.",
+   "lien": "https://sudculture.org/event/festival-tamazgha-21-amar-amarni-en-concert/",
+   "source": "Sud Culture"
+  },
+  {
+   "titre": "Hommage à Chérif Kheddam, conférence et musique (Festival Tamazgha #21)",
+   "lieu": "CMA Mirabeau, Marseille 15e",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-06"
+   ],
+   "note": "Sur réservation, heure non publiée",
+   "resume": "Soirée consacrée à l'œuvre de Chérif Kheddam, animée par Fadila Yahou, ouverte par la troupe Taylut.",
+   "lien": "https://sudculture.org/event/festival-tamazgha-21-conference-animee-par-said-sadi-musique/",
+   "source": "Sud Culture"
+  },
+  {
+   "titre": "Atelier de pratique musicale (Festival Tamazgha #21)",
+   "lieu": "Le 15ème Art, Marseille 15e",
+   "categories": [
+    "visite"
+   ],
+   "dates": [
+    "2026-11-04 14:00"
+   ],
+   "prix": "Entrée libre",
+   "note": "Jusqu'à 17h",
+   "resume": "Atelier ouvert à tous pour essayer des instruments traditionnels et modernes d'Afrique du Nord.",
+   "lien": "https://sudculture.org/event/festival-tamazgha-21-atelier-de-pratique-musicales-14h17h/",
+   "source": "Sud Culture"
+  },
+  {
+   "titre": "Changement de vie (in)volontaire",
+   "lieu": "Salle Paul Eluard, La Ciotat",
+   "categories": [
+    "humour",
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-19 20:30"
+   ],
+   "note": "Spectacle solidaire",
+   "resume": "Seul-en-scène de Jean-Michel Rallet : un milliardaire climatosceptique vit peut-être son dernier jour. Recette au profit de deux associations.",
+   "lien": "https://www.fest.fr/spectacle-humoristique-et-solidaire-changement-de-vie-involontaire-2731296.html",
+   "source": "Fest.fr"
+  },
+  {
+   "titre": "L'Éternel féminin",
+   "lieu": "La Chaudronnerie, La Ciotat",
+   "categories": [
+    "spectacle"
+   ],
+   "dates": [
+    "2026-11-25 20:00"
+   ],
+   "resume": "Comédie musicale qui retrace, des années 1920 à aujourd'hui, la carrière de chanteuses, depuis un café parisien.",
+   "lien": "https://www.fest.fr/comedie-musicale-l-eternel-feminin-2731334.html",
+   "source": "Fest.fr"
+  },
+  {
+   "titre": "Rassemblement des retraités",
+   "lieu": "Les Réformés (haut de la Canebière)",
+   "categories": [
+    "manif"
+   ],
+   "dates": [
+    "2026-11-05 10:30"
+   ],
+   "note": "Vérifier la levée ou non de l'arrêté préfectoral",
+   "resume": "Rendez-vous annoncé par LSR Marseille, relais des organisations de retraités, contre les mesures d'austérité du projet de budget 2027.",
+   "lien": "https://marseille.evous.fr/citoyen/manifestations/",
+   "source": "manif"
   }
  ]
 }
