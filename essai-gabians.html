@@ -158,6 +158,7 @@ footer a{color:var(--accent)}
 .map .land{fill:var(--bg)}
 .map .sea{fill:var(--soft);stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
 .map .isl{fill:var(--bg)}
+:root[data-theme="dark"] .map svg{background:var(--bg)}:root[data-theme="dark"] .map .land,:root[data-theme="dark"] .map .isl{fill:var(--soft)}:root[data-theme="dark"] .map .sea{fill:var(--bg)}
 .map .road{fill:none;stroke:var(--line);stroke-width:3;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
 .map .lbl{font-family:var(--f-body);fill:var(--muted);letter-spacing:.04em;text-transform:uppercase}
 .map .pt{fill:var(--hl);stroke:none;cursor:pointer;transition:r .15s}
@@ -663,14 +664,14 @@ function smooth(a){var q=a.map(function(p){return [+px(p[0]),+py(p[1])]}),d="M"+
 function pts(a){return a.map(function(p){return px(p[0])+","+py(p[1])}).join(" ")}
 function where(v){var m=v.match(OUTRX);if(m)return {out:m[0]};for(var i=0;i<PL.length;i++)if(PL[i][0].test(v))return {k:i};return null}
 /* carte : Marseille et alentours, dessin simplifié, zoomable (doigts, molette, boutons + et −) */
-var COAST=[[5.295,43.375],[5.300,43.366],[5.312,43.360],[5.325,43.355],[5.338,43.345],[5.348,43.333],[5.356,43.322],[5.360,43.312],[5.362,43.304],[5.3600,43.2985],[5.3605,43.2962],[5.3640,43.2960],[5.3700,43.2972],[5.3745,43.2969],[5.3757,43.2958],[5.3748,43.2940],[5.3700,43.2934],[5.3640,43.2938],[5.360,43.2925],[5.356,43.2905],[5.3605,43.2885],[5.352,43.2835],[5.356,43.278],[5.361,43.274],[5.368,43.267],[5.373,43.260],[5.372,43.252],[5.369,43.243],[5.362,43.236],[5.352,43.228],[5.345,43.218]];
+var COAST=[[5.295,43.375],[5.303,43.368],[5.313,43.3645],[5.322,43.360],[5.333,43.353],[5.343,43.344],[5.350,43.336],[5.355,43.327],[5.358,43.318],[5.361,43.310],[5.3625,43.304],[5.3615,43.2985],[5.3608,43.2963],[5.3650,43.2958],[5.3700,43.2963],[5.3742,43.2962],[5.3752,43.2951],[5.3735,43.2938],[5.3690,43.2933],[5.3640,43.2935],[5.3605,43.2930],[5.3592,43.2912],[5.3622,43.2900],[5.3570,43.2880],[5.3530,43.2865],[5.3505,43.2835],[5.3545,43.2800],[5.3610,43.2760],[5.3680,43.2710],[5.3725,43.2650],[5.3742,43.2600],[5.3715,43.2520],[5.3680,43.2450],[5.3630,43.2360],[5.3550,43.2260],[5.3480,43.2170],[5.3500,43.2130]];
 /* côte du golfe de Fos à La Ciotat, autour de la côte de Marseille */
 var WEST=[[4.66,43.355],[4.75,43.36],[4.80,43.375],[4.84,43.40],[4.88,43.43],[4.93,43.443],[4.965,43.425],[4.99,43.402],[5.03,43.393],[5.045,43.37],[5.035,43.343],[5.055,43.326],[5.10,43.329],[5.15,43.327],[5.20,43.337],[5.25,43.350],[5.282,43.362]];
 var EAST=[[5.36,43.212],[5.40,43.205],[5.44,43.203],[5.48,43.206],[5.515,43.212],[5.535,43.214],[5.555,43.205],[5.575,43.180],[5.60,43.172],[5.625,43.168],[5.66,43.180],[5.70,43.170],[5.76,43.150],[5.86,43.120]];
 var SHORE=WEST.concat(COAST.slice(1),EAST);
 var BERRE=[[5.06,43.412],[5.02,43.440],[4.99,43.478],[4.995,43.515],[5.035,43.548],[5.09,43.540],[5.14,43.512],[5.175,43.480],[5.21,43.452],[5.222,43.430],[5.185,43.410],[5.12,43.400]];
 var ISL=[[[5.302,43.284],[5.312,43.287],[5.323,43.285],[5.318,43.281],[5.306,43.281]],[[5.299,43.276],[5.306,43.280],[5.313,43.277],[5.308,43.268],[5.301,43.270]],[[5.3245,43.2805],[5.3268,43.2805],[5.3268,43.2785],[5.3245,43.2785]],[[5.375,43.180],[5.392,43.183],[5.398,43.178],[5.383,43.174]]];
-var ROADS=[[[5.3755,43.2955],[5.3850,43.2975],[5.3925,43.2995]],[[5.378,43.2950],[5.3835,43.2855],[5.3905,43.2770],[5.3950,43.2710],[5.3840,43.2650],[5.3735,43.2605]],[[5.3835,43.2855],[5.3920,43.2860],[5.4050,43.2850]],[[5.3685,43.3060],[5.3800,43.3010],[5.3925,43.2995],[5.4050,43.3020]]];
+var ROADS=[[[5.3745,43.2955],[5.385,43.2978],[5.393,43.2995]],[[5.378,43.295],[5.3835,43.286],[5.3885,43.2795],[5.395,43.271],[5.384,43.265],[5.374,43.261]],[[5.3728,43.304],[5.378,43.311],[5.384,43.325],[5.387,43.34],[5.382,43.362]],[[5.3690,43.3085],[5.3650,43.3200],[5.3620,43.3300],[5.3520,43.3440],[5.3380,43.3570],[5.3230,43.3655]],[[5.399,43.311],[5.406,43.3],[5.405,43.289],[5.4,43.279],[5.395,43.271]],[[5.405,43.289],[5.425,43.2865],[5.46,43.285],[5.51,43.286],[5.56,43.29]],[[5.3650,43.2905],[5.3570,43.2860],[5.3560,43.2815],[5.3630,43.2775],[5.3705,43.2715],[5.3760,43.2640]],[[5.387,43.34],[5.418,43.332],[5.432,43.312],[5.418,43.29],[5.405,43.289]],[[5.3685,43.306],[5.38,43.301],[5.393,43.2995],[5.406,43.3]]];
 var LBL=[["Vieux-Port",5.3640,43.2990],["Joliette",5.3700,43.3160],["Belle de Mai",5.3920,43.3170],["Estaque",5.3150,43.3650],["Castellane",5.3850,43.2830],["Bonne Mère",5.3660,43.2830],["Frioul",5.2990,43.2895],["Prado",5.3960,43.2640],["Canebière",5.3860,43.3005],["La Plaine",5.3880,43.2952]];
 /* villes autour de Marseille (centre-ville), clés identiques au nom repéré dans le lieu */
 var TOWNS={"Aubagne":[5.570,43.292],"Martigues":[5.054,43.405],"Fos-sur-Mer":[4.945,43.438],"Istres":[4.987,43.513],"La Ciotat":[5.605,43.175],"Miramas":[5.002,43.582],"Marignane":[5.215,43.417],"Port-de-Bouc":[4.985,43.405],"Carnoux":[5.565,43.257],"Gémenos":[5.628,43.296],"Auriol":[5.634,43.371],"Vitrolles":[5.248,43.460],"Allauch":[5.482,43.336],"Cabriès":[5.379,43.441],"Châteauneuf":[5.163,43.384],"Plan-de-Cuques":[5.463,43.347],"Penne-sur-Huveaune":[5.516,43.282],"Ensuès":[5.203,43.354],"Cassis":[5.538,43.214],"Trets":[5.684,43.448],"Cornillon":[5.072,43.564],"Port-Saint-Louis":[4.804,43.387],"Aix":[5.447,43.529]};
@@ -992,7 +993,7 @@ html{position:relative;min-height:100%}
       else if(job.style=="dive"){g.mode="dpre";g.sp=r(150,190);g.y=r(.02,.1)*H}
       else{g.mode="go";g.sp=r(140,210)}}
     else if(job&&job.oust){var V=job.oust;g.f=g.face=V.x<W/2?1:-1;g.x=g.f>0?-g.w*.6:W+g.w*.6;g.y=cl(V.y-r(40,140),H*.04,H*.8);startOust(g,V)}
-    else if(job&&job.chase){g.mode="chase";g.prey=job.chase;g.sp=r(230,260);g.chT=0;job.chase.chased=g;g.willFight=Math.random()<.4}
+    else if(job&&job.chase){g.mode="chase";g.prey=job.chase;g.sp=r(230,260);g.chT=0;job.chase.chased=g;g.willFight=Math.random()<.3}
     gulls.push(g);if(!raf){last=performance.now();SY=window.scrollY||0;raf=requestAnimationFrame(tick)}
   }
   function bye(g){if(g.fight)endBrawl(g.fight);if(g.vic&&g.vic.harassed===g)g.vic.harassed=null;
@@ -1052,7 +1053,7 @@ html{position:relative;min-height:100%}
       if(g.gl){g.gvy+=26*dt;o.tvy=g.gvy}else{g.flap=true;o.tvy=g.cvy}
       if(!g.ev&&!g.held&&g.x>W*.12&&g.x<W*.88&&Math.random()<dt*.18&&gulls.filter(function(o){return o.mode=="perch"||o.mode=="land"}).length<2){
         var jb=perchable();if(jb){g.mode="land";g.sp=r(110,150);g.pel=jb.perch;g.ptext=!!jb.text;g.ox=r(.12,.85)}}
-      if(g.mode=="cross"&&!g.ev&&Math.random()<dt*(g.gentle?.14:.05)){g.ev=pick(g.held?["vent","cri","cri","hesite"]:g.gentle?["chute","hesite","hesite","vent"]:["chute","vent","cri","cri","hesite"]);g.evT=0}
+      if(g.mode=="cross"&&!g.ev&&Math.random()<dt*(g.gentle?.14:.11)){g.ev=pick(g.held?["vent","cri","cri"]:g.gentle?["chute","hesite","hesite","vent"]:["chute","chute","chute","chute","vent","hesite","cri"]);g.evT=0}
     }else if(g.mode=="go"){
       if(!g.tgt.isConnected){toCross(g)}else{var R=g.tgt.getBoundingClientRect();
         if(R.bottom<0||R.top>H)toCross(g);
@@ -1201,11 +1202,11 @@ html{position:relative;min-height:100%}
     else{a.mode="cross";a.f=a.face=Math.random()<.5?-aw:aw;a.sp=r(90,120);a.gl=false;a.seg=1;a.cvy=-r(30,60);a.vx=a.f*60}
     a.ev="cri";a.evT=0}
   function startOust(a,b){if(a.mode=="perch")takeoff(a);a.mode="oust";a.vic=b;b.harassed=a;a.oside=a.x<b.x?-1:1;a.osT=null;a.sp=r(170,210);a.ev=null}
-  function startChase(a,b){if(a.mode=="perch")takeoff(a);a.mode="chase";a.prey=b;b.chased=a;b.spooked=0;a.sp=r(230,260);a.chT=0;a.ev="cri";a.evT=0;a.willFight=Math.random()<.4}
+  function startChase(a,b){if(a.mode=="perch")takeoff(a);a.mode="chase";a.prey=b;b.chased=a;b.spooked=0;a.sp=r(230,260);a.chT=0;a.ev="cri";a.evT=0;a.willFight=Math.random()<.3}
   function quarrel(dt){
     var W=innerWidth,free=gulls.filter(function(g){return (g.mode=="cross"||g.mode=="perch"||g.mode=="peck"||g.mode=="land"||g.mode=="skim")&&!g.chased&&!g.harassed&&g.x>0&&g.x<W});
     for(var i=0;i<free.length;i++)for(var j=0;j<free.length;j++){var a=free[i],b=free[j];
-      if(a!==b&&a.mean>.3&&a.mode=="cross"&&b.mode=="perch"&&Math.hypot(a.x-b.x,a.y-b.y)<W*.5&&Math.random()<dt*1.1*a.mean){startOust(a,b);return}}
+      if(a!==b&&a.mean>.3&&a.mode=="cross"&&b.mode=="perch"&&Math.hypot(a.x-b.x,a.y-b.y)<W*.5&&Math.random()<dt*.55*a.mean){startOust(a,b);return}}
     for(var i=0;i<free.length;i++)for(var j=0;j<free.length;j++){var a=free[i],b=free[j];
       if(a!==b&&a.mean>.3&&(a.mode=="cross"||a.mode=="perch")&&a.fought!==b&&Math.hypot(a.x-b.x,a.y-b.y)<W*(b.gentle?.6:.45)&&Math.random()<dt*(b.gentle?1.1:.35)*a.mean){startChase(a,b);return}}
   }
@@ -1228,22 +1229,22 @@ html{position:relative;min-height:100%}
       var thieves=gulls.filter(function(g){return g.tgt&&!g.held&&STEAL[g.mode]}).length,x=Math.random(),job=null;
       var Wd=innerWidth,preys=gulls.filter(function(g){return !g.chased&&!g.harassed&&g.mode!="chase"&&g.mode!="dive"&&g.mode!="dpre"&&(g.mode=="perch"||g.mode=="peck"||g.held||g.mode=="go"||g.mode=="land"||(g.face>0?g.x>Wd*.1&&g.x<Wd*.55:g.x<Wd*.9&&g.x>Wd*.45))});
       var busy={};gulls.forEach(function(g){busy[g.mode=="go"||g.mode=="peck"?"peck":g.mode=="dpre"?"dive":g.mode=="land"||g.mode=="perch"?"perch":g.mode]=1});
-      var opts=[];if(preys.length&&!busy.chase)opts.push("chase","chase");if(preys.some(function(g){return g.gentle}))opts.push("chase","chase");
+      var opts=[];if(preys.length&&!busy.chase)opts.push("chase","chase","chase","chase","chase");if(preys.some(function(g){return g.gentle}))opts.push("chase","chase");
       ["skim","peck"].forEach(function(st){if(!busy[st]&&thieves<2)opts.push(st,st,st)});
-      if(!busy.dive&&thieves<2&&Math.random()<.15)opts.push("dive");
+      if(!busy.dive&&thieves<2&&Math.random()<.07)opts.push("dive");
       var perched=gulls.filter(function(g){return g.mode=="perch"||g.mode=="land"}).length;
-      if(perched<2)opts.push("perch","perch","perch","perch","perch");if(!busy.cross&&Math.random()<.25)opts.push("cross");
+      if(perched<2)opts.push("perch","perch","perch","perch");if(!busy.cross&&Math.random()<.25)opts.push("cross");
       var sitting=gulls.filter(function(g){return g.mode=="perch"&&!g.harassed});
-      if(sitting.length&&!busy.oust)opts.push("oust","oust","oust","oust");
+      if(sitting.length&&!busy.oust)opts.push("oust","oust","oust","oust","oust","oust","oust","oust","oust","oust");
       var pk=opts.length?pick(opts):"cross";
       /* la grande majorité viennent voler une lettre (au passage ou en picorant, rarement en piqué) */
-      if(thieves<2&&Math.random()<.8){var st=["skim","peck"].filter(function(k){return !busy[k]});pk=Math.random()<.1&&!busy.dive?"dive":st.length?pick(st):pick(["skim","peck"])}
+      if(thieves<2&&Math.random()<.55){var st=["skim","peck"].filter(function(k){return !busy[k]});pk=Math.random()<.05&&!busy.dive?"dive":st.length?pick(st):pick(["skim","peck"])}
       var soft=preys.filter(function(g){return g.gentle});
       if(pk=="oust")job={oust:pick(sitting)};
       else if(pk=="chase")job={chase:soft.length&&Math.random()<.8?pick(soft):pick(preys)};else if(pk=="perch")job=perchable();else if(pk!="cross")job=grabbable(pk)||perchable();
       spawn(job);
     }
-    loopT=setTimeout(loop,gulls.length?r(6000,13000):r(1500,4000));
+    loopT=setTimeout(loop,gulls.length?r(4500,10000):r(1500,4000));
   }
   loopT=setTimeout(loop,2000);
 })();
