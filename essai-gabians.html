@@ -1015,24 +1015,25 @@ html{position:relative;min-height:100%}
      2) les ailes se replient et le corps bascule vers l'avant par-dessus les pattes, avec un petit tassement, 3) position posée */
   var PBT="translate(-5.5 -26.1) scale(.70791) translate(15.65 36.88)";
   function touchdown(g,dt,cyp){
-    var T1=.36,T2=1.0;g.td+=dt;var t=g.td;
-    function e(v){v=cl(v,0,1);return v<.5?4*v*v*v:1-Math.pow(-2*v+2,3)/2}function sm(v){v=cl(v,0,1);return v*v*(3-2*v)}
+    /* 1) descente qui garde sa vitesse puis freine, pattes en avant, corps qui se cabre puis revient presque droit avant le contact ;
+       2) au contact, plus aucune rotation d'ensemble : seule la silhouette posée, calée sur celle en vol, se redresse en douceur */
+    var T1=.42,T2=1.05;if(g.rtd==null)g.rtd=g.rot;g.td+=dt;var t=g.td;
+    function sm(v){v=cl(v,0,1);return v*v*(3-2*v)}function eo(v){v=cl(v,0,1);return 1-(1-v)*(1-v)}
     if(t<T1){var u=t/T1;
-      g.flap=u<.7;g.y=g.y0td+(cyp-g.y0td)*e(u);
-      g.laT=-62+22*e(u);g.rot+=(-16-g.rot)*Math.min(1,dt*10);
+      g.flap=u<.6;g.y=g.y0td+(cyp-g.y0td)*eo(u);
+      g.laT=-62+22*sm(u);
+      g.rot=u<.5?g.rtd+(-14-g.rtd)*sm(u/.5):-14+9*sm((u-.5)/.5);
     }else{
       if(g.pb.style.display=="none"){g.pb.style.display="";g.pb.style.opacity="0";g.laT=-40}
-      var v=(t-T1)/(T2-T1),f=sm(v/.3);g.y=cyp;
+      var v=(t-T1)/(T2-T1),f=sm(v/.25);g.y=cyp;g.rot=-5;
       g.nb.style.opacity=(1-f).toFixed(3);g.pb.style.opacity=f.toFixed(3);
-      /* le corps suit : il passe de basculé en arrière à droit, avec un léger dépassement, et se tasse un instant sur les pattes */
-      /* départ calé sur la silhouette en vol (pattes au même endroit, tête basculée vers l'avant), puis le corps se redresse avec un léger dépassement et se tasse */
-      var s=cl(v,0,1),ob=1+2.2*Math.pow(s-1,3)+1.2*Math.pow(s-1,2),k=1-Math.pow(1-s,3),a=17*(1-ob),dx=-14*(1-k),dy=-1*(1-k),sq=1-.06*Math.sin(Math.PI*cl((v-.35)*1.6,0,1));
+      var s=cl(v,0,1),k=1-Math.pow(1-s,3),ob=1+2.2*Math.pow(s-1,3)+1.2*Math.pow(s-1,2),a=16*(1-ob),dx=-28*(1-k),dy=-1*(1-k),sq=1-.05*Math.sin(Math.PI*cl((v-.35)*1.6,0,1));
       g.pb.setAttribute("transform","translate("+dx.toFixed(2)+" "+dy.toFixed(2)+") rotate("+a.toFixed(2)+" 117.7 117.6) translate(117.7 117.6) scale(1 "+sq.toFixed(3)+") translate(-117.7 -117.6) "+PBT);
-      g.rot+=(-5-g.rot)*Math.min(1,dt*8);
-      if(t>=T2){fold(g,true,true);g.td=null;g.laT=null}
+      if(t>=T2){fold(g,true,true);g.td=null;g.laT=null;g.rtd=null}
     }
   }
-  function fold(g,on,pc){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":"";var q=!!(on&&pc);g.nb.style.display=q?"none":"";g.pb.style.display=q?"":"none";g.nb.style.opacity=g.pb.style.opacity="";g.pb.setAttribute("transform",PBT);if(!pc){g.td=null;g.laT=null}}
+
+  function fold(g,on,pc){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":"";var q=!!(on&&pc);g.nb.style.display=q?"none":"";g.pb.style.display=q?"":"none";g.nb.style.opacity=g.pb.style.opacity="";g.pb.setAttribute("transform",PBT);if(!pc){g.td=null;g.laT=null;g.rtd=null}}
   function takeoff(g){fold(g,false);g.mode="cross";g.f=Math.random()<.7?g.face:-g.face;g.face=g.f;g.vy=-r(90,140);g.vx=g.f*30;g.ev=null;g.gl=false;g.seg=1.4;g.cvy=-r(60,90)}
   /* approche d'un point : il plane de loin, bat des ailes pour freiner en arrivant */
   function seek(g,cx,cy,o){var dx=cx-g.x,dy=cy-g.y,d=Math.hypot(dx,dy)||1,v=g.sp*Math.min(1,d/170)+25;
