@@ -829,7 +829,10 @@ html{position:relative;min-height:100%}
 :root[data-theme="dark"] .gab.old svg{filter:drop-shadow(0 0 1px rgba(255,255,255,.85))}
 /* ancien style (contours) : le noir devient gris foncé, sauf les yeux et le sourcil */
 :root:not([data-theme="dark"]) .gab.old svg [stroke="#021123"]:not(.br):not(.ey *){stroke:#76766f}
-:root[data-theme="dark"] .gab.old svg [fill="#021123"]:not(.ey *){fill:#5d5d57}
+:root[data-theme="dark"] .gab.old svg [fill="#021123"]:not(.ey *){fill:#6a7b90}
+:root[data-theme="dark"] .gab.old svg .bd [fill="#fff"]:not(.ey *),:root[data-theme="dark"] .gab.old svg .pb [fill="#fff"]:not(.ey *){fill:#f2f5f9}
+:root[data-theme="dark"] .gab.old svg .wf [fill="#fff"]:not(.ey *),:root[data-theme="dark"] .gab.old svg .th2 [fill="#fff"]:not(.ey *){fill:#b7c4d3}
+:root[data-theme="dark"] .gab.old svg .wn [fill="#fff"]:not(.ey *),:root[data-theme="dark"] .gab.old svg .fo [fill="#fff"]:not(.ey *),:root[data-theme="dark"] .gab.old svg .fo2 [fill="#fff"]:not(.ey *),:root[data-theme="dark"] .gab.old svg .th [fill="#fff"]:not(.ey *){fill:#d6dee8}
 .gab-sky .gb{fill:#efefeb}.gab-sky .gw{fill:#e2e2dd}.gab-sky .gf{fill:#cfcfc9}.gab-sky .gd{fill:#021123}.gab-sky .gy{fill:#fff43d}.gab-sky .gyl{stroke:#fff43d}.gab-sky .gds{stroke:#9b9b94}:root[data-theme="dark"] .gab-sky .gds{stroke:#74746d}
 :root[data-theme="dark"] .gab-sky .gb{fill:#fff}:root[data-theme="dark"] .gab-sky .gw{fill:#d9d9d3}:root[data-theme="dark"] .gab-sky .gf{fill:#b4b4ad}:root[data-theme="dark"] .gab-sky .gd{fill:#5d5d57}
 .gab-lt{position:absolute;line-height:1;white-space:pre;pointer-events:none;color:var(--fg)}
@@ -1012,23 +1015,27 @@ html{position:relative;min-height:100%}
      2) les ailes se replient et le corps bascule vers l'avant par-dessus les pattes, avec un petit tassement, 3) position posée */
   var PBT="translate(-5.5 -26.1) scale(.70791) translate(15.65 36.88)";
   function touchdown(g,dt,cyp){
-    var T1=.24,T2=.62;g.td+=dt;var t=g.td;
-    function e(v){v=cl(v,0,1);return 1-Math.pow(1-v,3)}
+    /* atterrissage en trois temps, sans jamais changer de dessin au moment du contact :
+       1) descente qui freine, pattes en avant, corps qui se cabre puis revient presque droit ;
+       2) contact avec le dessin en vol : les ailes se replient progressivement, le corps se tasse un peu ;
+       3) il reste posé avec ce dessin, sans passer au dessin « posé » (le changement de dessin faisait sauter le corps) */
+    var T1=.42,T2=1.05;if(g.rtd==null){g.rtd=g.rot;g.ws0=g.ws}g.td+=dt;var t=g.td;
+    function sm(v){v=cl(v,0,1);return v*v*(3-2*v)}function eo(v){v=cl(v,0,1);return 1-(1-v)*(1-v)}
     if(t<T1){var u=t/T1;
-      g.flap=true;g.y=g.y0td+(cyp-g.y0td)*e(u);
-      g.laT=-62+22*e(u);g.rot+=(-16-g.rot)*Math.min(1,dt*10);
-    }else{
-      if(g.pb.style.display=="none"){fold(g,true,true);g.td=t;g.laT=-40}
-      var v=(t-T1)/(T2-T1),f=cl(v/.4,0,1);g.y=cyp;
-      g.nb.style.display=f<1?"":"none";g.nb.style.opacity=(1-f).toFixed(2);g.pb.style.opacity=f.toFixed(2);
-      /* le corps suit : il passe de basculé en arrière à droit, avec un léger dépassement, et se tasse un instant sur les pattes */
-      var s=cl(v,0,1),ob=1+2.2*Math.pow(s-1,3)+1.2*Math.pow(s-1,2),a=-14*(1-ob),sq=1-.08*Math.sin(Math.PI*cl(v*1.4,0,1));
-      g.pb.setAttribute("transform","rotate("+a.toFixed(2)+" 110 124) translate(110 124) scale(1 "+sq.toFixed(3)+") translate(-110 -124) "+PBT);
-      g.rot+=(-5-g.rot)*Math.min(1,dt*8);
-      if(t>=T2){g.td=null;g.laT=null;g.nb.style.display="none";g.nb.style.opacity=g.pb.style.opacity="";g.pb.setAttribute("transform",PBT)}
+      g.flap=u<.6;g.y=g.y0td+(cyp-g.y0td)*eo(u);
+      g.laT=-62+32*sm(u);
+      g.rot=u<.5?g.rtd+(-14-g.rtd)*sm(u/.5):-14+9*sm((u-.5)/.5);
+    }else{var w=sm((t-T1)/(T2-T1));
+      g.rot=-5;g.laT=-30;g.y=cyp+1.5*g.u*Math.sin(Math.PI*cl((t-T1)/(T2-T1),0,1));
+      g.ws=g.ws0*(1-.85*w);
+      g.fo.style.display="";g.fo.style.opacity=sm((w-.35)/.65).toFixed(3);
+      /* il reste posé avec ce même dessin, ailes repliées : aucun changement de dessin, donc aucun saut */
+      if(t>=T2){g.ws=g.ws0;g.fo.style.opacity="";g.y=cyp;fold(g,true);g.rtd=null}
     }
   }
-  function fold(g,on,pc){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":"";var q=!!(on&&pc);g.nb.style.display=q?"none":"";g.pb.style.display=q?"":"none";g.nb.style.opacity=g.pb.style.opacity="";g.pb.setAttribute("transform",PBT);if(!pc){g.td=null;g.laT=null}}
+
+
+  function fold(g,on,pc){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":"";var q=!!(on&&pc);g.nb.style.display=q?"none":"";g.pb.style.display=q?"":"none";g.nb.style.opacity=g.pb.style.opacity="";g.pb.setAttribute("transform",PBT);if(!pc){g.td=null;g.laT=null;g.rtd=null}if(g.ws0!=null&&!on){g.ws=g.ws0;g.fo.style.opacity=""}}
   function takeoff(g){fold(g,false);g.mode="cross";g.f=Math.random()<.7?g.face:-g.face;g.face=g.f;g.vy=-r(90,140);g.vx=g.f*30;g.ev=null;g.gl=false;g.seg=1.4;g.cvy=-r(60,90)}
   /* approche d'un point : il plane de loin, bat des ailes pour freiner en arrivant */
   function seek(g,cx,cy,o){var dx=cx-g.x,dy=cy-g.y,d=Math.hypot(dx,dy)||1,v=g.sp*Math.min(1,d/170)+25;
