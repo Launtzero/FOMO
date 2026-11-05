@@ -14680,7 +14680,8 @@
    "prix": "8€",
    "resume": "Festival Dreamachine.",
    "lien": "https://www.vortexfrommars.org/IMG/pdf/vortex-151.pdf",
-   "source": "Vortex"
+   "source": "Vortex",
+   "note": "Ouverture du Dreamachine Festival."
   },
   {
    "titre": "Bladi Sound System",
@@ -16029,6 +16030,156 @@
    "resume": "Balade commentée « Sur les traces des colonisations à Marseille » : l'héritage colonial lisible dans les rues, monuments et noms du centre-ville.",
    "lien": "https://marsetlempire.fr/",
    "source": "Mars et l'empire"
+  },
+  {
+   "titre": "Une histoire de la médecine à Marseille",
+   "lieu": "La Cômerie",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-05 15:00"
+   ],
+   "resume": "Conférence sur l'histoire de la médecine à Marseille.",
+   "lien": "https://yeswecamp.org/lieu/la-comerie/",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Pierre Rosanvallon : La Tyrannie du présent",
+   "lieu": "La Cômerie",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-06 19:00"
+   ],
+   "resume": "Rencontre avec l'historien Pierre Rosanvallon autour de son livre « La Tyrannie du présent », organisée par Coudes à coudes.",
+   "lien": "https://yeswecamp.org/lieu/la-comerie/",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Les Musiciens du Roy d'Espagne",
+   "lieu": "La Cômerie",
+   "categories": [
+    "classique"
+   ],
+   "dates": [
+    "2026-11-07 18:00"
+   ],
+   "genre": "Baroque",
+   "resume": "Concert de musique baroque.",
+   "lien": "https://yeswecamp.org/lieu/la-comerie/",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Le cabaret improvisé des Presque !",
+   "lieu": "La Cômerie",
+   "categories": [
+    "theatre"
+   ],
+   "dates": [
+    "2026-11-14 19:30"
+   ],
+   "resume": "Spectacle d'improvisation théâtrale.",
+   "lien": "https://yeswecamp.org/lieu/la-comerie/",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Marseille Jazz Collective",
+   "lieu": "La Cômerie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-25 20:00"
+   ],
+   "genre": "Jazz",
+   "resume": "Concert du Marseille Jazz Collective.",
+   "lien": "https://yeswecamp.org/lieu/la-comerie/",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Messe basse",
+   "lieu": "La Cômerie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-27 18:00"
+   ],
+   "genre": "Électro",
+   "resume": "Soirée DJ sets.",
+   "lien": "https://yeswecamp.org/lieu/la-comerie/",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Bonne Marseille #3",
+   "lieu": "La Mûrisserie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-06 21:00"
+   ],
+   "genre": "Tech house / techno",
+   "resume": "Soirée DJ, jusqu'à 2h.",
+   "lien": "https://planet-mars.fr/lieu/la-murisserie",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Hip hop 100 % live band",
+   "lieu": "La Mûrisserie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-07 20:00"
+   ],
+   "genre": "Hip-hop",
+   "resume": "Soirée hip-hop et rap avec musiciens live.",
+   "lien": "https://planet-mars.fr/lieu/la-murisserie",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Purple session + marché de créateur·ices",
+   "lieu": "La Mûrisserie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-13 20:00"
+   ],
+   "genre": "Électro",
+   "resume": "Soirée musique électronique avec marché de créateurs.",
+   "lien": "https://planet-mars.fr/lieu/la-murisserie",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Deepers : We just want you to dance",
+   "lieu": "La Mûrisserie",
+   "categories": [
+    "concert"
+   ],
+   "dates": [
+    "2026-11-14 21:00"
+   ],
+   "genre": "House",
+   "resume": "Soirée DJ house, jusqu'à 2h.",
+   "lien": "https://planet-mars.fr/lieu/la-murisserie",
+   "source": "Planet Mars"
+  },
+  {
+   "titre": "Histoire des artistes #2",
+   "lieu": "La Mûrisserie",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-22 18:00"
+   ],
+   "resume": "Conférence consacrée à l'histoire d'artistes.",
+   "lien": "https://planet-mars.fr/lieu/la-murisserie",
+   "source": "Planet Mars"
   }
  ]
 }
