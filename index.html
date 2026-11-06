@@ -1267,4 +1267,20 @@ L.push(o)})});
 function k(o){var d=o.startDate.slice(0,10);return d<T?T:d}L.sort(function(a,b){return k(a)<k(b)?-1:k(a)>k(b)?1:0});L=L.slice(0,150);
 var s=document.createElement("script");s.type="application/ld+json";s.textContent=JSON.stringify({"@context":"https://schema.org","@graph":L});document.head.appendChild(s)}).catch(function(){})})();
 </script>
+<script>/* statistiques GoatCounter (sans cookies) : visites + clics. GC = code du compte GoatCounter ; vide = rien n'est compté */
+(function(){var GC="";if(!GC||/^(localhost|127\.)/.test(location.hostname)||location.protocol==="file:")return;
+var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://"+GC+".goatcounter.com/count");document.head.appendChild(s);
+function c(path,title){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:(title||"").slice(0,120),event:true})}catch(e){}}
+var q1=0;document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("a,button");if(!t)return;
+ if(t.matches("[data-ev]")){var d=document.getElementById(t.dataset.ev);if(d&&d.hidden)c("ouvrir-evenement",t.textContent.trim())}
+ else if(t.matches(".plus[data-for]"))return;
+ else if(t.matches(".det-l a")){var h="";try{h=new URL(t.href).hostname}catch(x){}c("clic-source",h)}
+ else if(/maps\.apple|google\.com\/maps|waze\.com/.test(t.href||""))c("clic-itineraire",/waze/.test(t.href)?"Waze":/apple/.test(t.href)?"Plans":"Google Maps")
+ else if(t.matches("[data-pin]"))c("voir-adresse")
+ else if(t.matches("[data-cat]"))c("rubrique-"+t.dataset.cat,t.textContent.replace(/\d+/g,"").trim())
+ else if(t.matches("[data-day]"))c("calendrier")
+ else if(t.matches("a.propose"))c("clic-proposer")
+ else if(t.matches("[data-zm]"))c("carte-zoom")},true);
+document.addEventListener("input",function(e){if(!q1&&e.target.matches&&e.target.matches("input[type=search],#q")){q1=1;c("recherche")}},true);
+})();</script>
 </body></html>

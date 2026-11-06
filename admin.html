@@ -88,6 +88,7 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
     <div class="tabs" role="tablist">
       <button type="button" data-tab="mod" aria-pressed="true">À modérer<i id="nmod"></i></button>
       <button type="button" data-tab="ag" aria-pressed="false">Agenda<i id="nag"></i></button>
+      <button type="button" data-tab="st" aria-pressed="false">Statistiques</button>
     </div>
 
     <!-- Propositions des structures -->
@@ -122,6 +123,20 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
       <p class="muted" id="count"></p>
       <div class="list" id="list"></div>
       <div class="acts"><button id="more" hidden>Afficher plus</button></div>
+    </div>
+    <!-- Statistiques -->
+    <div id="tab-st" hidden>
+      <div id="st-set" class="card" hidden>
+        <h2>Brancher les statistiques</h2>
+        <p>Les statistiques viennent de GoatCounter (gratuit, sans cookies). Colle ici le lien secret de ton tableau GoatCounter, de la forme <code>https://xxx.goatcounter.com?access-token=…</code>. Comme la clé GitHub, il reste dans ce navigateur seulement.</p>
+        <input id="st-url" type="url" autocomplete="off" placeholder="https://….goatcounter.com?access-token=…">
+        <div class="acts"><button class="main" id="st-save">Enregistrer</button></div>
+        <div class="err" id="st-err"></div>
+      </div>
+      <div id="st-view" hidden>
+        <p class="muted">Visites et clics des visiteurs sur fo-mo.fr. Les clics apparaissent comme des lignes à part : <b>ouvrir-evenement</b> (le titre est indiqué), <b>clic-source</b> (lien « On donne nos sources »), <b>clic-itineraire</b> (Google Maps, Plans, Waze), <b>voir-adresse</b>, <b>rubrique-…</b>, <b>calendrier</b>, <b>recherche</b>, <b>carte-zoom</b>, <b>clic-proposer</b>. <a id="st-open" href="#" target="_blank" rel="noopener">Ouvrir en grand</a> · <a href="#" id="st-chg">changer le lien</a></p>
+        <iframe id="st-frame" title="Statistiques GoatCounter" style="width:100%;height:1600px;border:1px solid var(--line);border-radius:14px;background:#fff" loading="lazy"></iframe>
+      </div>
     </div>
     <div class="acts"><span class="sp"></span><button id="logout">Se déconnecter</button></div>
   </section>
@@ -219,7 +234,9 @@ function renderTabs(){
   $("nmod").innerHTML=n?'<span class="badge">'+n+'</span>':' 0';
   $("nag").textContent=" "+data.evenements.length;
   [].forEach.call(document.querySelectorAll(".tabs button"),function(b){b.setAttribute("aria-pressed",b.dataset.tab===tab)});
-  $("tab-mod").hidden=tab!=="mod"; $("tab-ag").hidden=tab!=="ag";
+  $("tab-mod").hidden=tab!=="mod"; $("tab-ag").hidden=tab!=="ag"; $("tab-st").hidden=tab!=="st";
+  $("foot").hidden=tab==="st"&&!changes;
+  if(tab==="st")renderStats();
 }
 function renderProps(){
   var L=props.propositions.slice().sort(function(a,b){return (a.recu_le||"")<(b.recu_le||"")?-1:1});
@@ -350,6 +367,15 @@ $("pub").onclick=function(){
   .finally(function(){btn.textContent="Publier";upd()});
 };
 
+function renderStats(){
+  var u=store("fomo_stats");
+  $("st-set").hidden=!!u; $("st-view").hidden=!u;
+  if(u){if($("st-frame").getAttribute("src")!==u)$("st-frame").setAttribute("src",u);$("st-open").href=u}
+}
+$("st-save").onclick=function(){var u=$("st-url").value.trim();
+  if(!/^https:\/\/[a-z0-9-]+\.goatcounter\.com\/?\?.*access-token=/.test(u)){$("st-err").textContent="Ce lien ne ressemble pas à un lien secret GoatCounter (il doit contenir « access-token= »).";return}
+  $("st-err").textContent="";store("fomo_stats",u);renderStats()};
+$("st-chg").onclick=function(e){e.preventDefault();store("fomo_stats",null);$("st-frame").removeAttribute("src");renderStats()};
 CATS.forEach(function(c){var o=document.createElement("option");o.value=c[0];o.textContent=c[1];$("fc").appendChild(o)});
 var t=store("fomo_tok"); if(t)login(t); else $("login").hidden=false;
 })();
