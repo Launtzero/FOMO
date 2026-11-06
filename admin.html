@@ -8,14 +8,14 @@
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <style>
 :root{--bg:#fff;--surface:#f4f6f9;--soft:#ebeef3;--line:#dde2ea;--fg:#021123;--muted:#5c6675;--hl:#fff43d;--warn:#c2410c;--ok:#1d6b2f;
-  --f:"Helvetica Neue",Helvetica,Arial,sans-serif}
+  --prop:#c9a7ff;--main:#9fe7ff;--f:"Helvetica Neue",Helvetica,Arial,sans-serif}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 var(--f);padding:24px 16px 120px}
 .wrap{max-width:60rem;margin:0 auto}
 h1{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:0 0 4px}
 h2{font-size:18px;margin:0 0 12px}
-p.muted,.muted{color:var(--muted)}
+.muted{color:var(--muted)}
 a{color:inherit}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer;border:1px solid var(--fg);background:var(--bg);border-radius:999px;padding:6px 14px}
@@ -26,8 +26,13 @@ input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px
 textarea{min-height:70px;resize:vertical}
 label{display:block;font-size:12.5px;font-weight:700;margin:12px 0 4px}
 label small{font-weight:400;color:var(--muted)}
+.tabs{display:flex;gap:6px;margin:18px 0 4px;flex-wrap:wrap}
+.tabs button{border-color:var(--line);font-weight:700}
+.tabs button[aria-pressed="true"]{background:var(--fg);border-color:var(--fg);color:#fff}
+.tabs i{font-style:normal;font-weight:400;margin-left:4px;opacity:.75}
+.tabs .badge{background:var(--warn);color:#fff;border-radius:999px;padding:0 7px;margin-left:4px;font-style:normal;font-weight:700;opacity:1}
 .bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:16px 0}
-.bar input,.bar select{width:auto;flex:1 1 180px}
+.bar input,.bar select{width:auto;flex:1 1 170px}
 .card{background:var(--surface);border-radius:16px;padding:16px;margin:16px 0}
 .list{border-top:1px solid var(--line)}
 .row{display:grid;grid-template-columns:7.5rem 1fr auto;gap:10px;padding:9px 4px;border-bottom:1px solid var(--line);cursor:pointer;align-items:baseline}
@@ -35,9 +40,20 @@ label small{font-weight:400;color:var(--muted)}
 .row .d{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
 .row .t{font-weight:700}
 .row .l{color:var(--muted);font-size:13px}
-.tag{font-size:11.5px;border-radius:999px;padding:1px 8px;background:var(--soft);white-space:nowrap}
+.tag{display:inline-block;font-size:11.5px;border-radius:999px;padding:1px 8px;background:var(--soft);white-space:nowrap}
 .tag.s{background:var(--fg);color:#fff}
 .tag.mod{background:var(--hl)}
+.tag.o-prop{background:var(--prop)}
+.tag.o-main{background:var(--main)}
+.tag.ok{background:#c8f5c2}
+.tag.ko{background:#ffd9c7}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:6px 0 0}
+.prop{background:var(--surface);border-radius:16px;padding:14px 16px;margin:12px 0}
+.prop h3{margin:0 0 2px;font-size:17px}
+.prop .meta{color:var(--muted);font-size:13.5px}
+.prop .txt{white-space:pre-wrap;background:var(--bg);border-radius:10px;padding:8px 10px;margin:10px 0 0;font-size:14px}
+.prop .chk{margin-top:10px;font-size:13.5px}
+.prop .acts{margin-top:12px}
 .cats{display:flex;flex-wrap:wrap;gap:6px}
 .cats label{display:inline-flex;gap:5px;align-items:center;margin:0;font-weight:400;font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 10px;cursor:pointer}
 .cats input{width:auto;margin:0}
@@ -51,15 +67,15 @@ dialog{border:none;border-radius:18px;padding:20px;width:min(44rem,100%);max-hei
 dialog::backdrop{background:rgba(2,17,35,.45)}
 .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
 .acts .sp{flex:1}
+.empty{padding:24px 4px;color:var(--muted)}
 @media (max-width:600px){.grid2{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}.row .d{grid-column:1/-1}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>FOMO · admin</h1>
-  <p class="muted">Ajouter, corriger ou retirer des événements. Les changements ne sont mis en ligne qu'au clic sur « Publier » ; le site se met à jour une à deux minutes après.</p>
+  <p class="muted">Rien n'est mis en ligne avant le clic sur « Publier » ; le site se met à jour une à deux minutes après.</p>
 
-  <!-- Connexion -->
   <section id="login" class="card" hidden>
     <h2>Connexion</h2>
     <p>Colle ta clé GitHub (elle commence par <code>github_pat_</code>). Elle reste enregistrée dans ce navigateur seulement, pas sur le site.</p>
@@ -68,21 +84,46 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
     <div class="err" id="lerr"></div>
   </section>
 
-  <!-- Liste -->
   <section id="app" hidden>
-    <div class="bar">
-      <input id="q" type="search" placeholder="Chercher (titre, lieu, artiste…)">
-      <select id="fc"><option value="">Toutes les rubriques</option></select>
-      <select id="fw">
-        <option value="avenir">À venir</option>
-        <option value="tout">Tout</option>
-        <option value="mod">Modifiés (pas encore publiés)</option>
-      </select>
-      <button class="main" id="new">+ Nouvel événement</button>
+    <div class="tabs" role="tablist">
+      <button type="button" data-tab="mod" aria-pressed="true">À modérer<i id="nmod"></i></button>
+      <button type="button" data-tab="ag" aria-pressed="false">Agenda<i id="nag"></i></button>
     </div>
-    <p class="muted" id="count"></p>
-    <div class="list" id="list"></div>
-    <div class="acts"><button id="more" hidden>Afficher plus</button><span class="sp"></span><button id="logout">Se déconnecter</button></div>
+
+    <!-- Propositions des structures -->
+    <div id="tab-mod">
+      <p class="muted">Événements proposés par les lieux et organisateurs avec le formulaire « Proposer un événement ». La tâche automatique les relève dans la boîte mail et vérifie ce qu'elle peut, mais <b>ne publie rien</b> : c'est toi qui acceptes ou refuses.</p>
+      <div id="props"></div>
+    </div>
+
+    <!-- Agenda -->
+    <div id="tab-ag" hidden>
+      <div class="legend">
+        <span><span class="tag">auto</span> trouvé par la mise à jour automatique</span>
+        <span><span class="tag o-prop">proposé</span> proposition acceptée</span>
+        <span><span class="tag o-main">à la main</span> ajouté par toi</span>
+      </div>
+      <div class="bar">
+        <input id="q" type="search" placeholder="Chercher (titre, lieu, artiste…)">
+        <select id="fo">
+          <option value="">Toutes origines</option>
+          <option value="auto">Automatique</option>
+          <option value="prop">Propositions acceptées</option>
+          <option value="main">Ajoutés à la main</option>
+        </select>
+        <select id="fc"><option value="">Toutes les rubriques</option></select>
+        <select id="fw">
+          <option value="avenir">À venir</option>
+          <option value="tout">Tout</option>
+          <option value="mod">Modifiés (pas encore publiés)</option>
+        </select>
+        <button class="main" id="new">+ Nouvel événement</button>
+      </div>
+      <p class="muted" id="count"></p>
+      <div class="list" id="list"></div>
+      <div class="acts"><button id="more" hidden>Afficher plus</button></div>
+    </div>
+    <div class="acts"><span class="sp"></span><button id="logout">Se déconnecter</button></div>
   </section>
 </div>
 
@@ -95,6 +136,7 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
 <dialog id="dlg">
   <form id="f" method="dialog">
     <h2 id="dt">Événement</h2>
+    <p class="muted" id="dorig"></p>
     <label>Titre</label><input name="titre" required>
     <label>Lieu <small>(choisir dans la liste si le lieu existe déjà)</small></label><input name="lieu" list="lieux" required>
     <datalist id="lieux"></datalist>
@@ -110,14 +152,14 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
     <label>Résumé <small>1 à 2 phrases neutres</small></label><textarea name="resume"></textarea>
     <label>Note pratique</label><input name="note">
     <label>Lien</label><input name="lien" type="url" placeholder="https://…">
-    <label>Source</label><input name="source">
+    <label>Source <small>(« Ajout manuel » si tu l'ajoutes toi-même)</small></label><input name="source">
     <div class="err" id="ferr"></div>
     <div class="acts">
       <button type="button" class="danger" id="del">Supprimer</button>
       <button type="button" id="dup">Dupliquer</button>
       <span class="sp"></span>
       <button type="button" id="cancel">Fermer</button>
-      <button type="submit" class="main" value="ok">Valider</button>
+      <button type="submit" class="main" value="ok" id="ok">Valider</button>
     </div>
   </form>
 </dialog>
@@ -126,53 +168,89 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
 
 <script>
 (function(){
-var REPO="Launtzero/FOMO", PATH="evenements.json", BRANCH="main", API="https://api.github.com/repos/"+REPO+"/contents/"+PATH;
+var REPO="Launtzero/FOMO", BRANCH="main", BASE="https://api.github.com/repos/"+REPO;
+var EV="evenements.json", PR="propositions.json";
+var SRC_PROP="Proposition formulaire", SRC_MAIN="Ajout manuel";
 var CATS=[["concert","Concert"],["jam","Jam & open mic"],["standup","Stand-up"],["humour","Humour"],["theatre","Théâtre"],["spectacle","Spectacle"],["danse","Danse"],["classique","Opéra & classique"],["jeune","Jeune public"],["festival","Festival"],["expo","Exposition"],["vernissage","Vernissage"],["visite","Visites & ateliers"],["conference","Conférences & rencontres"],["cinema","Cinéma"],["manif","Manifs"]];
+var CL={};CATS.forEach(function(c){CL[c[0]]=c[1]});
 var FIELDS=["titre","lieu","categories","dates","heure","genre","prix","statut","note","resume","lien","source"];
 var $=function(i){return document.getElementById(i)};
-var token="", sha="", orig=null, data=null, changes=0, shown=80, cur=-1, modified={};
+var token="", head="", data=null, props=null, changes=0, shown=80, cur=-1, curProp=null, modified={}, tab="mod";
+
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function toast(t){var m=$("msg");m.textContent=t;m.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(function(){m.hidden=true},4000)}
 function b64dec(s){var bin=atob(s.replace(/\n/g,"")),u=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return new TextDecoder().decode(u)}
-function b64enc(str){var u=new TextEncoder().encode(str),s="",c=0x8000;for(var i=0;i<u.length;i+=c)s+=String.fromCharCode.apply(null,u.subarray(i,i+c));return btoa(s)}
 function today(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
 function first(e){return (e.dates&&e.dates[0]||"").slice(0,16)}
 function last(e){var m="";(e.dates||[]).forEach(function(x){var y=x.split("/").pop().slice(0,10);if(y>m)m=y});return m}
+function origin(e){return e.source===SRC_PROP?"prop":e.source===SRC_MAIN?"main":"auto"}
+function otag(e){var o=origin(e);return o==="prop"?'<span class="tag o-prop">proposé</span>':o==="main"?'<span class="tag o-main">à la main</span>':'<span class="tag">auto</span>'}
+function fdate(x){if(!x)return"";var p=x.split("/");if(p.length>1)return"du "+p[0]+" au "+p[1];return x}
 
-function api(method,body){
-  return fetch(API+(method==="GET"?"?ref="+BRANCH+"&t="+Date.now():""),{method:method,headers:{"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"},body:body?JSON.stringify(body):undefined,cache:"no-store"})
-  .then(function(r){return r.json().then(function(j){if(!r.ok){var e=new Error(j.message||("Erreur "+r.status));e.status=r.status;throw e}return j})});
+function gh(method,path,body){
+  return fetch(BASE+path,{method:method,headers:{"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"},body:body?JSON.stringify(body):undefined,cache:"no-store"})
+  .then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok){var e=new Error(j.message||("Erreur "+r.status));e.status=r.status;throw e}return j})});
+}
+function getFile(path,ref){
+  return gh("GET","/contents/"+path+"?ref="+ref).then(function(j){if(!j.content)throw new Error("Fichier trop gros : "+path);return JSON.parse(b64dec(j.content))})
+  .catch(function(e){if(e.status===404&&path===PR)return{propositions:[],traitees:[]};throw e});
 }
 function load(){
-  return api("GET").then(function(j){
-    var txt=j.content?b64dec(j.content):null;
-    if(txt===null)throw new Error("Fichier trop gros pour être lu");
-    sha=j.sha; orig=txt; data=JSON.parse(txt); changes=0; modified={};
+  return gh("GET","/git/ref/heads/"+BRANCH).then(function(r){head=r.object.sha;
+    return Promise.all([getFile(EV,head),getFile(PR,head)])}).then(function(res){
+    data=res[0]; props=res[1]; props.propositions=props.propositions||[]; props.traitees=props.traitees||[];
+    changes=0; modified={};
     data.evenements.forEach(function(e,i){e.__id=i});
-    fillLieux(); render(); upd();
+    fillLieux(); renderAll(); upd();
   });
 }
 function login(t){
   token=t.trim(); $("lerr").textContent="";
   load().then(function(){store("fomo_tok",token);$("login").hidden=true;$("app").hidden=false;$("foot").hidden=false})
   .catch(function(e){$("login").hidden=false;$("app").hidden=true;$("foot").hidden=true;
-    $("lerr").textContent=(e.status===401||e.status===403||e.status===404)?"Clé refusée : vérifie qu'elle donne accès au dépôt FOMO en lecture et écriture (« Contents »).":("Impossible de charger : "+e.message)});
+    $("lerr").textContent=(e.status===401||e.status===403||e.status===404)?"Clé refusée (ou expirée) : vérifie qu'elle donne accès au dépôt FOMO, « Contents » en lecture et écriture.":("Impossible de charger : "+e.message)});
 }
 
 function fillLieux(){var s={};data.evenements.forEach(function(e){s[e.lieu]=1});$("lieux").innerHTML=Object.keys(s).sort().map(function(l){return'<option value="'+esc(l)+'">'}).join("")}
+function renderAll(){renderTabs();renderProps();render()}
+function renderTabs(){
+  var n=props.propositions.length;
+  $("nmod").innerHTML=n?'<span class="badge">'+n+'</span>':' 0';
+  $("nag").textContent=" "+data.evenements.length;
+  [].forEach.call(document.querySelectorAll(".tabs button"),function(b){b.setAttribute("aria-pressed",b.dataset.tab===tab)});
+  $("tab-mod").hidden=tab!=="mod"; $("tab-ag").hidden=tab!=="ag";
+}
+function renderProps(){
+  var L=props.propositions.slice().sort(function(a,b){return (a.recu_le||"")<(b.recu_le||"")?-1:1});
+  if(!L.length){$("props").innerHTML='<p class="empty">Aucune proposition en attente.</p>';return}
+  $("props").innerHTML=L.map(function(p){
+    var v=p.verification||"", cls=/^confirm/i.test(v)?"ok":(v?"ko":"");
+    return '<div class="prop" data-pid="'+esc(p.id)+'">'
+     +'<h3>'+esc(p.titre||"(sans titre)")+'</h3>'
+     +'<div class="meta">'+esc((p.dates||[]).map(fdate).join(" · "))+(p.heure?" · "+esc(p.heure):"")+' · '+esc(p.lieu||"lieu ?")+'</div>'
+     +'<div class="meta">'+esc((p.categories||[]).map(function(c){return CL[c]||c}).join(", "))+(p.genre?" · "+esc(p.genre):"")+(p.prix?" · "+esc(p.prix):"")
+     +(p.recu_le?" · reçue le "+esc(p.recu_le.slice(0,10)):"")+'</div>'
+     +(p.lien?'<div class="meta"><a href="'+esc(p.lien)+'" target="_blank" rel="noopener">'+esc(p.lien)+'</a></div>':"")
+     +(p.texte?'<div class="txt">'+esc(p.texte)+'</div>':"")
+     +'<div class="chk">'+(v?'<span class="tag '+cls+'">'+esc(v)+'</span> ':"")+esc(p.commentaire||"")
+     +(p.mail?' · <a href="'+esc(p.mail)+'" target="_blank" rel="noopener">voir le mail</a>':"")+'</div>'
+     +'<div class="acts"><button type="button" class="main" data-act="accept">Vérifier et accepter</button><button type="button" class="danger" data-act="refuse">Refuser</button></div>'
+     +'</div>'}).join("");
+}
 function render(){
-  var q=$("q").value.trim().toLowerCase(), c=$("fc").value, w=$("fw").value, t=today();
+  var q=$("q").value.trim().toLowerCase(), c=$("fc").value, o=$("fo").value, w=$("fw").value, t=today();
   var ev=data.evenements.filter(function(e){
     if(c&&(e.categories||[]).indexOf(c)<0)return false;
+    if(o&&origin(e)!==o)return false;
     if(w==="avenir"&&last(e)<t)return false;
     if(w==="mod"&&!modified[e.__id])return false;
     if(q){var h=[e.titre,e.lieu,e.genre,e.resume,e.source].join(" ").toLowerCase();if(h.indexOf(q)<0)return false}
     return true}).sort(function(a,b){return first(a)<first(b)?-1:first(a)>first(b)?1:0});
   $("count").textContent=ev.length+" événement"+(ev.length>1?"s":"");
   $("list").innerHTML=ev.slice(0,shown).map(function(e){
-    var d=first(e).replace("T"," "), n=(e.dates||[]).length;
-    return '<div class="row" data-id="'+e.__id+'"><span class="d">'+esc(d.indexOf("/")>0?"→ "+e.dates[0].split("/")[1]:d)+(n>1?" +"+(n-1):"")+'</span><span><span class="t">'+esc(e.titre)+'</span><br><span class="l">'+esc(e.lieu)+' · '+esc((e.categories||[]).join(", "))+(e.prix?' · '+esc(e.prix):"")+'</span></span><span>'+(modified[e.__id]?'<span class="tag mod">modifié</span> ':"")+(e.statut?'<span class="tag s">'+esc(e.statut)+'</span>':"")+'</span></div>'}).join("")||'<p class="muted">Rien trouvé.</p>';
+    var d=first(e), n=(e.dates||[]).length;
+    return '<div class="row" data-id="'+e.__id+'"><span class="d">'+esc(d.indexOf("/")>0?"→ "+e.dates[0].split("/")[1]:d)+(n>1?" +"+(n-1):"")+'</span><span><span class="t">'+esc(e.titre)+'</span><br><span class="l">'+esc(e.lieu)+' · '+esc((e.categories||[]).join(", "))+(e.prix?' · '+esc(e.prix):"")+'</span></span><span>'+(modified[e.__id]?'<span class="tag mod">modifié</span> ':"")+(e.statut?'<span class="tag s">'+esc(e.statut)+'</span> ':"")+otag(e)+'</span></div>'}).join("")||'<p class="empty">Rien trouvé.</p>';
   $("more").hidden=ev.length<=shown;
 }
 function upd(){
@@ -180,13 +258,25 @@ function upd(){
   $("pub").disabled=$("undo").disabled=!changes;
 }
 
-function open(i){
-  cur=i; var e=i<0?{categories:[],dates:[]}:data.evenements.find(function(x){return x.__id===i});
-  var f=$("f"); $("ferr").textContent=""; $("dt").textContent=i<0?"Nouvel événement":"Modifier";
-  FIELDS.forEach(function(k){if(k==="categories")return;var el=f.elements[k];if(!el)return;el.value=k==="dates"?(e.dates||[]).join("\n"):(e[k]||"")});
+function fillForm(e,title,orig){
+  var f=$("f"); $("ferr").textContent=""; $("dt").textContent=title; $("dorig").textContent=orig||"";
+  FIELDS.forEach(function(k){if(k==="categories")return;var el=f.elements[k];el.value=k==="dates"?(e.dates||[]).join("\n"):(e[k]||"")});
   $("fcats").innerHTML=CATS.map(function(c){return'<label><input type="checkbox" value="'+c[0]+'"'+((e.categories||[]).indexOf(c[0])>=0?" checked":"")+'>'+esc(c[1])+'</label>'}).join("");
-  $("del").hidden=$("dup").hidden=i<0;
   $("dlg").showModal();
+}
+function open(i){
+  cur=i; curProp=null;
+  var e=i<0?{categories:[],dates:[],source:SRC_MAIN}:data.evenements.find(function(x){return x.__id===i});
+  $("del").hidden=$("dup").hidden=i<0; $("ok").textContent="Valider";
+  var o=i<0?"":origin(e)==="auto"?"Trouvé par la mise à jour automatique ("+(e.source||"?")+"). Attention : une prochaine mise à jour peut le retoucher si la source change.":origin(e)==="prop"?"Proposition acceptée : la mise à jour automatique n'y touche pas.":"Ajouté à la main : la mise à jour automatique n'y touche pas.";
+  fillForm(e,i<0?"Nouvel événement":"Modifier",o);
+}
+function openProp(pid){
+  var p=props.propositions.find(function(x){return x.id===pid}); if(!p)return;
+  cur=-1; curProp=pid;
+  var e={}; FIELDS.forEach(function(k){if(p[k]!==undefined)e[k]=p[k]}); e.source=SRC_PROP;
+  $("del").hidden=$("dup").hidden=true; $("ok").textContent="Accepter et ajouter à l'agenda";
+  fillForm(e,"Accepter la proposition","Vérifie et corrige si besoin (résumé neutre, lieu écrit comme dans la liste), puis accepte.");
 }
 var RD=/^\d{4}-\d{2}-\d{2}( \d{2}:\d{2})?$/, RP=/^\d{4}-\d{2}-\d{2}\/\d{4}-\d{2}-\d{2}$/;
 function readForm(){
@@ -206,24 +296,34 @@ function readForm(){
   return {o:o,err:err};
 }
 function clean(o,base){var r={},ks=Object.keys(base||o).concat(FIELDS,Object.keys(o));ks.forEach(function(k){if(k==="__id"||k in r)return;var v=o[k];if(v!==undefined&&v!==""&&!(Array.isArray(v)&&!v.length))r[k]=v});return r}
+function closeProp(pid,verdict){
+  props.propositions=props.propositions.filter(function(x){return x.id!==pid});
+  props.traitees.push({id:pid,decision:verdict,le:today()});
+}
 $("f").addEventListener("submit",function(ev){
   var r=readForm(); if(r.err.length){ev.preventDefault();$("ferr").innerHTML=r.err.map(esc).join("<br>");return}
   var o=r.o;
-  if(cur<0){o=clean(o);o.__id=Date.now();data.evenements.push(o);modified[o.__id]=1}
-  else{var i=data.evenements.findIndex(function(x){return x.__id===cur});o.__id=cur;
-    var a=JSON.stringify(clean(data.evenements[i])),b=JSON.stringify(clean(o,data.evenements[i]));if(a===b)return;o=clean(o,data.evenements[i]);o.__id=cur;data.evenements[i]=o;modified[cur]=1}
-  changes++; fillLieux(); render(); upd(); toast("Enregistré (pas encore publié)");
+  if(curProp){o.source=SRC_PROP;o=clean(o);o.__id=Date.now();data.evenements.push(o);modified[o.__id]=1;closeProp(curProp,"acceptée");curProp=null;toast("Proposition acceptée (pas encore publiée)")}
+  else if(cur<0){if(!o.source)o.source=SRC_MAIN;o=clean(o);o.__id=Date.now();data.evenements.push(o);modified[o.__id]=1;toast("Ajouté (pas encore publié)")}
+  else{var i=data.evenements.findIndex(function(x){return x.__id===cur});
+    var nb=clean(o,data.evenements[i]);if(JSON.stringify(clean(data.evenements[i]))===JSON.stringify(nb))return;
+    nb.__id=cur;data.evenements[i]=nb;modified[cur]=1;toast("Enregistré (pas encore publié)")}
+  changes++; fillLieux(); renderAll(); upd();
 });
 $("cancel").onclick=function(){$("dlg").close()};
 $("del").onclick=function(){
   var e=data.evenements.find(function(x){return x.__id===cur});
   if(!confirm("Supprimer « "+e.titre+" » ?"))return;
-  data.evenements=data.evenements.filter(function(x){return x.__id!==cur});changes++;$("dlg").close();render();upd();toast("Supprimé (pas encore publié)");
+  data.evenements=data.evenements.filter(function(x){return x.__id!==cur});changes++;$("dlg").close();renderAll();upd();toast("Supprimé (pas encore publié)");
 };
-$("dup").onclick=function(){cur=-1;$("dt").textContent="Nouvel événement (copie)";$("del").hidden=$("dup").hidden=true;$("f").elements.dates.value="";$("f").elements.dates.focus()};
+$("dup").onclick=function(){cur=-1;$("dt").textContent="Nouvel événement (copie)";$("dorig").textContent="";$("del").hidden=$("dup").hidden=true;$("f").elements.dates.value="";$("f").elements.dates.focus()};
 $("list").onclick=function(ev){var r=ev.target.closest(".row");if(r)open(+r.dataset.id)};
+$("props").onclick=function(ev){var b=ev.target.closest("button[data-act]");if(!b)return;var pid=b.closest(".prop").dataset.pid;
+  if(b.dataset.act==="accept")openProp(pid);
+  else{var p=props.propositions.find(function(x){return x.id===pid});if(!confirm("Refuser « "+(p.titre||"cette proposition")+" » ? Elle ne sera pas publiée."))return;closeProp(pid,"refusée");changes++;renderAll();upd();toast("Proposition refusée (pas encore publié)")}};
+[].forEach.call(document.querySelectorAll(".tabs button"),function(b){b.onclick=function(){tab=b.dataset.tab;renderTabs()}});
 $("new").onclick=function(){open(-1)};
-$("q").oninput=$("fc").onchange=$("fw").onchange=function(){shown=80;render()};
+$("q").oninput=$("fc").onchange=$("fo").onchange=$("fw").onchange=function(){shown=80;render()};
 $("more").onclick=function(){shown+=200;render()};
 $("undo").onclick=function(){if(confirm("Annuler tous les changements non publiés ?"))load().then(function(){toast("Changements annulés")})};
 $("logout").onclick=function(){if(changes&&!confirm("Des changements ne sont pas publiés. Se déconnecter quand même ?"))return;store("fomo_tok",null);location.reload()};
@@ -231,16 +331,22 @@ $("go").onclick=function(){login($("tok").value)};
 $("tok").onkeydown=function(e){if(e.key==="Enter")login($("tok").value)};
 window.addEventListener("beforeunload",function(e){if(changes){e.preventDefault();e.returnValue=""}});
 
+/* Publication : un seul enregistrement GitHub pour l'agenda et les propositions */
 $("pub").onclick=function(){
   var btn=$("pub");btn.disabled=true;btn.textContent="Publication…";
   var out={};Object.keys(data).forEach(function(k){out[k]=data[k]});
   out.evenements=data.evenements.map(function(e){return clean(e)});
-  var txt=JSON.stringify(out,null,1);
-  api("PUT",{message:"Admin : "+changes+" changement"+(changes>1?"s":"")+" dans l'agenda",content:b64enc(txt),sha:sha,branch:BRANCH})
-  .then(function(j){sha=j.content.sha;orig=txt;changes=0;modified={};render();upd();toast("Publié ! Le site sera à jour dans une à deux minutes.")})
+  var files=[{path:EV,mode:"100644",type:"blob",content:JSON.stringify(out,null,1)},
+             {path:PR,mode:"100644",type:"blob",content:JSON.stringify(props,null,1)+"\n"}];
+  var msg="Admin : "+changes+" changement"+(changes>1?"s":"")+" (agenda et propositions)";
+  gh("GET","/git/commits/"+head).then(function(c){
+    return gh("POST","/git/trees",{base_tree:c.tree.sha,tree:files})})
+  .then(function(t){return gh("POST","/git/commits",{message:msg,tree:t.sha,parents:[head]})})
+  .then(function(c){return gh("PATCH","/git/refs/heads/"+BRANCH,{sha:c.sha,force:false}).then(function(){head=c.sha})})
+  .then(function(){changes=0;modified={};renderAll();upd();toast("Publié ! Le site sera à jour dans une à deux minutes.")})
   .catch(function(e){
-    if(e.status===409||e.status===422)alert("L'agenda a été modifié entre-temps (sans doute par la mise à jour automatique). Recharge la page, puis refais tes changements.");
-    else alert("La publication a échoué : "+e.message);upd()})
+    if(e.status===422||e.status===409)alert("L'agenda a été modifié entre-temps (sans doute par la mise à jour automatique). Rien n'a été écrasé. Recharge la page, puis refais tes changements.");
+    else alert("La publication a échoué : "+e.message)})
   .finally(function(){btn.textContent="Publier";upd()});
 };
 

@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /essai-
 Disallow: /admin.html
+Disallow: /propositions.json
 Sitemap: https://fo-mo.fr/sitemap.xml
