@@ -338,15 +338,17 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
 :root[data-theme="dark"] .gab.old svg [stroke-width=".6357"]{stroke-width:1.27}
 
 /* ESSAI OULALA : logo manuscrit en largeur ; calendrier réduit à 80 % */
-/* calendrier resserré à 80 % : cases et espaces réduits, textes à leur taille normale */
-.top .cal .cal-h{margin-bottom:4px}
-.top .cal .cal-h button{width:32px;height:32px}
-.top .cal .grid{row-gap:0;column-gap:0}
-.top .cal .dow{padding:0 0 1px}
-.top .cal .day{width:26px;height:26px}
+/* ordinateur seulement : calendrier resserré à 80 % (cases et espaces réduits, textes à taille normale, petites flèches) */
+@media (min-width:561px){
+  .top .cal .cal-h{margin-bottom:4px}
+  .top .cal .cal-h button{width:26px;height:26px}
+  .top .cal .cal-h button svg{width:13px;height:13px}
+  .top .cal .grid{row-gap:0;column-gap:0}
+  .top .cal .dow{padding:0 0 1px}
+  .top .cal .day{width:26px;height:26px}
+}
 @media (min-width:861px){.top .cal{width:calc((16rem - 10px) * .8)}}
 @media (min-width:561px) and (max-width:860px){.top .cal{width:calc((17.5rem - 10px) * .8)}}
-@media (max-width:560px){.top .cal{width:80%}.top .cal .day{width:30px;height:30px}}
 @media (min-width:561px){
   .top .today{align-items:center}
   .top .today .logo{height:auto;width:min(100%,500px);margin:0}
