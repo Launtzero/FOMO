@@ -68,6 +68,29 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
 .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
 .acts .sp{flex:1}
 .empty{padding:24px 4px;color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px;gap:2px}
+.seg button{border:none;padding:5px 12px}
+.seg button[aria-pressed="true"]{background:var(--fg);color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 14px}
+.kpi{background:var(--surface);border-radius:16px;padding:14px 16px}
+.kpi b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi span{font-size:12.5px;color:var(--muted)}
+.kpi.hl{background:var(--hl)}
+.kpi.hl span{color:var(--fg)}
+.panel{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:0 0 12px}
+.panel h3{font-size:14px;margin:0 0 10px}
+.grid2c{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .tip{position:absolute;pointer-events:none;background:var(--fg);color:#fff;border-radius:8px;padding:5px 9px;font-size:12.5px;white-space:nowrap;transform:translate(-50%,-110%)}
+.hb{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;align-items:center;font-size:13.5px;margin:0 0 7px}
+.hb .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hb .v{font-variant-numeric:tabular-nums;color:var(--muted);font-size:12.5px}
+.hb .t{grid-column:1/-1;height:8px;background:var(--soft);border-radius:4px;overflow:hidden}
+.hb .t i{display:block;height:100%;background:var(--fg);border-radius:0 4px 4px 0;min-width:3px}
+.hb:first-child .t i{background:var(--fg)}
+.none{color:var(--muted);font-size:13.5px}
+@media (max-width:700px){.kpis{grid-template-columns:1fr 1fr}.grid2c{grid-template-columns:1fr}}
 @media (max-width:600px){.grid2{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}.row .d{grid-column:1/-1}}
 </style>
 </head>
@@ -127,15 +150,37 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
     <!-- Statistiques -->
     <div id="tab-st" hidden>
       <div id="st-set" class="card" hidden>
-        <h2>Brancher les statistiques</h2>
-        <p>Les statistiques viennent de GoatCounter (gratuit, sans cookies). Colle ici le lien secret de ton tableau GoatCounter, de la forme <code>https://xxx.goatcounter.com?access-token=…</code>. Comme la clé GitHub, il reste dans ce navigateur seulement.</p>
-        <input id="st-url" type="url" autocomplete="off" placeholder="https://….goatcounter.com?access-token=…">
+        <h2>Brancher les graphiques</h2>
+        <p>Les chiffres viennent de GoatCounter. Pour les afficher ici en graphiques, il faut une <b>clé API</b> GoatCounter en lecture seule :</p>
+        <ol class="muted" style="margin:0 0 10px;padding-left:20px">
+          <li>sur launtzero.goatcounter.com, clique sur ton nom en haut, puis <b>API</b> ;</li>
+          <li>crée une clé, coche seulement <b>« Read statistics »</b>, enregistre ;</li>
+          <li>copie la clé et colle-la ci-dessous. Elle reste dans ce navigateur seulement.</li>
+        </ol>
+        <input id="st-key" type="password" autocomplete="off" placeholder="Clé API GoatCounter">
         <div class="acts"><button class="main" id="st-save">Enregistrer</button></div>
         <div class="err" id="st-err"></div>
       </div>
       <div id="st-view" hidden>
-        <p class="muted">Visites et clics des visiteurs sur fo-mo.fr. Les clics apparaissent comme des lignes à part : <b>ouvrir-evenement</b> (le titre est indiqué), <b>clic-source</b> (lien « On donne nos sources »), <b>clic-itineraire</b> (Google Maps, Plans, Waze), <b>voir-adresse</b>, <b>rubrique-…</b>, <b>calendrier</b>, <b>recherche</b>, <b>carte-zoom</b>, <b>clic-proposer</b>. <a id="st-open" href="#" target="_blank" rel="noopener">Ouvrir en grand</a> · <a href="#" id="st-chg">changer le lien</a></p>
-        <iframe id="st-frame" title="Statistiques GoatCounter" style="width:100%;height:1600px;border:1px solid var(--line);border-radius:14px;background:#fff" loading="lazy"></iframe>
+        <div class="bar st-bar">
+          <span class="seg" id="st-per">
+            <button type="button" data-d="7" aria-pressed="true">7 jours</button><button type="button" data-d="30" aria-pressed="false">30 jours</button><button type="button" data-d="90" aria-pressed="false">3 mois</button>
+          </span>
+          <span class="sp"></span>
+          <button type="button" id="st-reload">Actualiser</button>
+        </div>
+        <div class="err" id="st-verr"></div>
+        <div class="kpis" id="st-kpis"></div>
+        <div class="panel"><h3>Visiteurs par jour</h3><div class="chart" id="st-line"></div></div>
+        <div class="grid2c">
+          <div class="panel"><h3>Événements les plus ouverts</h3><div id="st-ev"></div></div>
+          <div class="panel"><h3>Rubriques cliquées</h3><div id="st-cat"></div></div>
+          <div class="panel"><h3>D'où viennent les visiteurs</h3><div id="st-ref"></div></div>
+          <div class="panel"><h3>Ce que font les visiteurs</h3><div id="st-act"></div></div>
+          <div class="panel"><h3>Appareils</h3><div id="st-size"></div></div>
+          <div class="panel"><h3>Pays</h3><div id="st-loc"></div></div>
+        </div>
+        <p class="muted" style="font-size:13px">Visiteurs : personnes différentes par jour (sans cookies, donc approximatif). <a id="st-full" href="https://launtzero.goatcounter.com" target="_blank" rel="noopener">Tableau complet sur GoatCounter</a> · <a href="#" id="st-chg">changer la clé</a></p>
       </div>
     </div>
     <div class="acts"><span class="sp"></span><button id="logout">Se déconnecter</button></div>
@@ -367,15 +412,93 @@ $("pub").onclick=function(){
   .finally(function(){btn.textContent="Publier";upd()});
 };
 
-function renderStats(){
-  var u=store("fomo_stats");
-  $("st-set").hidden=!!u; $("st-view").hidden=!u;
-  if(u){if($("st-frame").getAttribute("src")!==u)$("st-frame").setAttribute("src",u);$("st-open").href=u}
+/* ---------- Statistiques (API GoatCounter) ---------- */
+var GCAPI="https://launtzero.goatcounter.com/api/v0", stDays=7, stLoaded=0, stFmt=0;
+function gcGet(path,q){
+  var fmts=[function(d){return d.toISOString().slice(0,13)+":00:00Z"},function(d){return d.toISOString().slice(0,10)}];
+  function go(fi){
+    var u=GCAPI+path+"?"+Object.keys(q).map(function(k){var v=q[k];if(v instanceof Date)v=fmts[fi](v);return k+"="+encodeURIComponent(v)}).join("&");
+    return fetch(u,{headers:{"Authorization":"Bearer "+store("fomo_gc_key"),"Content-Type":"application/json"}}).then(function(r){
+      if(r.status===400&&fi===0){stFmt=1;return go(1)}
+      return r.json().catch(function(){return{}}).then(function(j){if(!r.ok){var e=new Error((j&&(j.error||j.errors&&JSON.stringify(j.errors)))||("Erreur "+r.status));e.status=r.status;throw e}return j})});
+  }
+  return go(stFmt);
 }
-$("st-save").onclick=function(){var u=$("st-url").value.trim();
-  if(!/^https:\/\/[a-z0-9-]+\.goatcounter\.com\/?\?.*access-token=/.test(u)){$("st-err").textContent="Ce lien ne ressemble pas à un lien secret GoatCounter (il doit contenir « access-token= »).";return}
-  $("st-err").textContent="";store("fomo_stats",u);renderStats()};
-$("st-chg").onclick=function(e){e.preventDefault();store("fomo_stats",null);$("st-frame").removeAttribute("src");renderStats()};
+function renderStats(){
+  var k=store("fomo_gc_key");
+  $("st-set").hidden=!!k; $("st-view").hidden=!k;
+  if(k&&stLoaded!==stDays)loadStats();
+}
+function nf(n){return (n||0).toLocaleString("fr-FR")}
+function pct(a,b){return b?Math.round(a*100/b):0}
+var FRDAY=["dim.","lun.","mar.","mer.","jeu.","ven.","sam."], FRM=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+function dlabel(s,long){var d=new Date(s+"T12:00:00");return (long?FRDAY[d.getDay()]+" ":"")+d.getDate()+" "+FRM[d.getMonth()]}
+function bars(el,rows,unit){
+  if(!rows.length){$(el).innerHTML='<p class="none">Pas encore de données.</p>';return}
+  var mx=Math.max.apply(null,rows.map(function(r){return r[1]}))||1;
+  $(el).innerHTML=rows.map(function(r){return '<div class="hb" title="'+esc(r[0])+' : '+nf(r[1])+' '+unit+'"><span class="n">'+esc(r[0])+'</span><span class="v">'+nf(r[1])+'</span><span class="t"><i style="width:'+(r[1]*100/mx)+'%"></i></span></div>'}).join("");
+}
+function line(el,pts){
+  var W=Math.max(300,Math.round($(el).clientWidth||760)),H=W<500?190:220,L=34,R=10,T=12,B=26,n=pts.length,mx=Math.max(4,Math.max.apply(null,pts.map(function(p){return p[1]})));
+  var step=Math.pow(10,Math.floor(Math.log10(mx)));if(mx/step<2)step/=5;else if(mx/step<5)step/=2;step=Math.max(1,Math.round(step));
+  var top=Math.ceil(mx/step)*step, x=function(i){return L+(n<2?0:i*(W-L-R)/(n-1))}, y=function(v){return T+(H-T-B)*(1-v/top)};
+  var g="",lab="";for(var v=0;v<=top;v+=step){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="var(--line)" stroke-width="1"/>';lab+='<text x="'+(L-6)+'" y="'+(y(v)+4)+'" text-anchor="end" font-size="11" fill="var(--muted)">'+v+'</text>'}
+  var every=Math.ceil(n/Math.max(3,Math.floor(W/95))),xl="";pts.forEach(function(p,i){if((n-1-i)%every===0)xl+='<text x="'+x(i)+'" y="'+(H-6)+'" text-anchor="middle" font-size="11" fill="var(--muted)">'+dlabel(p[0])+'</text>'});
+  var d=pts.map(function(p,i){return (i?"L":"M")+x(i).toFixed(1)+" "+y(p[1]).toFixed(1)}).join(" ");
+  var area=d+" L"+x(n-1)+" "+y(0)+" L"+x(0)+" "+y(0)+" Z";
+  $(el).innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Visiteurs par jour">'+g+lab+xl
+   +'<path d="'+area+'" fill="var(--hl)" opacity=".85"/><path d="'+d+'" fill="none" stroke="var(--fg)" stroke-width="2" stroke-linejoin="round"/>'
+   +'<line id="st-x" y1="'+T+'" y2="'+y(0)+'" stroke="var(--fg)" stroke-width="1" stroke-dasharray="3 3" visibility="hidden"/><circle id="st-dot" r="4.5" fill="var(--fg)" stroke="#fff" stroke-width="2" visibility="hidden"/>'
+   +'<rect x="'+L+'" y="0" width="'+(W-L-R)+'" height="'+H+'" fill="transparent" id="st-hit"/></svg><div class="tip" id="st-tip" hidden></div>';
+  var svg=$(el).querySelector("svg"),tip=$("st-tip");
+  function mv(ev){var r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)*W/r.width,i=Math.max(0,Math.min(n-1,Math.round((px-L)/((W-L-R)/Math.max(1,n-1)))));
+    var cx=x(i),cy=y(pts[i][1]);$("st-x").setAttribute("x1",cx);$("st-x").setAttribute("x2",cx);$("st-x").setAttribute("visibility","visible");
+    $("st-dot").setAttribute("cx",cx);$("st-dot").setAttribute("cy",cy);$("st-dot").setAttribute("visibility","visible");
+    tip.hidden=false;tip.style.left=(cx*r.width/W)+"px";tip.style.top=(cy*r.height/H)+"px";tip.innerHTML="<b>"+nf(pts[i][1])+"</b> visiteur"+(pts[i][1]>1?"s":"")+" · "+dlabel(pts[i][0],1)}
+  function out(){tip.hidden=true;$("st-x").setAttribute("visibility","hidden");$("st-dot").setAttribute("visibility","hidden")}
+  svg.addEventListener("pointermove",mv);svg.addEventListener("pointerleave",out);
+}
+var CATN={};CATS.forEach(function(c){CATN[c[0]]=c[1]});
+var ACT={"voir-adresse":"Voir l'adresse","calendrier":"Changer de jour","recherche":"Faire une recherche","carte-zoom":"Zoomer la carte","clic-proposer":"« Proposer un événement »","clic-source":"« On donne nos sources »","clic-itineraire":"Itinéraire"};
+function loadStats(){
+  var end=new Date(),start=new Date(end.getTime()-(stDays-1)*864e5);start.setHours(0,0,0,0);end.setHours(end.getHours()+1,0,0,0);
+  var q={start:start,end:end};$("st-verr").textContent="";$("st-kpis").innerHTML='<p class="none">Chargement…</p>';
+  var Q=function(o){var r={};for(var k in q)r[k]=q[k];for(k in o)r[k]=o[k];return r};
+  gcGet("/stats/total",q).then(function(tot){
+    return Promise.all([gcGet("/stats/hits",Q({limit:100})),gcGet("/stats/toprefs",Q({limit:8})),gcGet("/stats/sizes",q),gcGet("/stats/locations",Q({limit:6}))]).then(function(r){return [tot].concat(r)})})
+  .then(function(r){
+    stLoaded=stDays;
+    var tot=r[0],hits=(r[1].hits||[]),refs=(r[2].stats||[]),sizes=(r[3].stats||[]),locs=(r[4].stats||[]);
+    var days=(tot.stats||[]).map(function(s){return [s.day,s.daily||0]});
+    var best=days.reduce(function(a,b){return b[1]>a[1]?b:a},["",0]);
+    var ev=hits.filter(function(h){return h.event===true||h.event==="true"||h.event===1}), pages=hits.filter(function(h){return !(h.event===true||h.event==="true"||h.event===1)});
+    var opens=0;ev.forEach(function(h){if(/^ev:/.test(h.path)||h.path==="ouvrir-evenement")opens+=h.count});
+    $("st-kpis").innerHTML='<div class="kpi hl"><b>'+nf(tot.total)+'</b><span>visiteurs sur '+stDays+' jours</span></div>'
+      +'<div class="kpi"><b>'+nf(Math.round((tot.total||0)/stDays*10)/10)+'</b><span>visiteurs par jour en moyenne</span></div>'
+      +'<div class="kpi"><b>'+nf(opens)+'</b><span>événements ouverts</span></div>'
+      +'<div class="kpi"><b>'+(best[1]?nf(best[1]):"–")+'</b><span>'+(best[1]?"record : "+dlabel(best[0],1):"meilleur jour")+'</span></div>';
+    line("st-line",days);
+    bars("st-ev",ev.filter(function(h){return /^ev:/.test(h.path)}).map(function(h){return [h.path.slice(3),h.count]}).slice(0,10),"ouvertures");
+    bars("st-cat",ev.filter(function(h){return /^rubrique-/.test(h.path)}).map(function(h){var k=h.path.slice(9);return [CATN[k]||k,h.count]}).slice(0,10),"clics");
+    bars("st-ref",refs.map(function(x){return [x.name||"Accès direct ou inconnu",x.count]}),"visiteurs");
+    var act={};ev.forEach(function(h){var k=h.path.replace(/:.*/,"");if(k==="source")k="clic-source";if(k==="itineraire")k="clic-itineraire";if(ACT[k])act[k]=(act[k]||0)+h.count});
+    var it=ev.filter(function(h){return /^itineraire:/.test(h.path)}).map(function(h){return ["Itinéraire "+h.path.slice(11),h.count]});
+    bars("st-act",Object.keys(act).filter(function(k){return k!=="clic-itineraire"}).map(function(k){return [ACT[k],act[k]]}).concat(it).sort(function(a,b){return b[1]-a[1]}),"clics");
+    var SZ={phone:"Téléphone",tablet:"Tablette",desktop:"Ordinateur",desktophd:"Grand écran",unknown:"Inconnu"};
+    var st=sizes.reduce(function(a,x){return a+x.count},0);
+    bars("st-size",sizes.filter(function(x){return x.count}).map(function(x){return [(SZ[x.id]||x.id)+" · "+pct(x.count,st)+" %",x.count]}),"visiteurs");
+    var dn;try{dn=new Intl.DisplayNames(["fr"],{type:"region"})}catch(e){}
+    bars("st-loc",locs.map(function(x){var n=x.name||x.id||"?";if(dn&&/^[A-Z]{2}$/.test(x.id||""))try{n=dn.of(x.id)}catch(e){}return [n,x.count]}),"visiteurs");
+  }).catch(function(e){
+    $("st-kpis").innerHTML="";
+    $("st-verr").textContent=(e.status===401||e.status===403)?"Clé GoatCounter refusée : vérifie qu'elle a bien la permission « Read statistics » (bouton « changer la clé » en bas).":"Impossible de charger les statistiques : "+e.message;
+  });
+}
+$("st-save").onclick=function(){var k=$("st-key").value.trim();if(k.length<10){$("st-err").textContent="Cette clé paraît trop courte.";return}$("st-err").textContent="";store("fomo_gc_key",k);stLoaded=0;renderStats()};
+$("st-chg").onclick=function(e){e.preventDefault();store("fomo_gc_key",null);stLoaded=0;renderStats()};
+$("st-reload").onclick=function(){stLoaded=0;renderStats()};
+var rsz;window.addEventListener("resize",function(){clearTimeout(rsz);rsz=setTimeout(function(){if(tab==="st"&&stLoaded){stLoaded=0;renderStats()}},400)});
+[].forEach.call(document.querySelectorAll("#st-per button"),function(b){b.onclick=function(){stDays=+b.dataset.d;[].forEach.call(document.querySelectorAll("#st-per button"),function(x){x.setAttribute("aria-pressed",x===b)});renderStats()}});
 CATS.forEach(function(c){var o=document.createElement("option");o.value=c[0];o.textContent=c[1];$("fc").appendChild(o)});
 var t=store("fomo_tok"); if(t)login(t); else $("login").hidden=false;
 })();

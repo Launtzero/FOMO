@@ -1272,10 +1272,10 @@ var s=document.createElement("script");s.type="application/ld+json";s.textConten
 var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://"+GC+".goatcounter.com/count");document.head.appendChild(s);
 function c(path,title){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:(title||"").slice(0,120),event:true})}catch(e){}}
 var q1=0;document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("a,button");if(!t)return;
- if(t.matches("[data-ev]")){var d=document.getElementById(t.dataset.ev);if(d&&d.hidden)c("ouvrir-evenement",t.textContent.trim())}
+ if(t.matches("[data-ev]")){var d=document.getElementById(t.dataset.ev);if(d&&d.hidden)var ti=t.textContent.trim();c("ev:"+ti.slice(0,90),ti)}
  else if(t.matches(".plus[data-for]"))return;
- else if(t.matches(".det-l a")){var h="";try{h=new URL(t.href).hostname}catch(x){}c("clic-source",h)}
- else if(/maps\.apple|google\.com\/maps|waze\.com/.test(t.href||""))c("clic-itineraire",/waze/.test(t.href)?"Waze":/apple/.test(t.href)?"Plans":"Google Maps")
+ else if(t.matches(".det-l a")){var h="";try{h=new URL(t.href).hostname}catch(x){}c("source:"+h,h)}
+ else if(/maps\.apple|google\.com\/maps|waze\.com/.test(t.href||""))var ap=/waze/.test(t.href)?"Waze":/apple/.test(t.href)?"Plans":"Google Maps";c("itineraire:"+ap,ap)
  else if(t.matches("[data-pin]"))c("voir-adresse")
  else if(t.matches("[data-cat]"))c("rubrique-"+t.dataset.cat,t.textContent.replace(/\d+/g,"").trim())
  else if(t.matches("[data-day]"))c("calendrier")
