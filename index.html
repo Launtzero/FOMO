@@ -1267,6 +1267,22 @@ L.push(o)})});
 function k(o){var d=o.startDate.slice(0,10);return d<T?T:d}L.sort(function(a,b){return k(a)<k(b)?-1:k(a)>k(b)?1:0});L=L.slice(0,150);
 var s=document.createElement("script");s.type="application/ld+json";s.textContent=JSON.stringify({"@context":"https://schema.org","@graph":L});document.head.appendChild(s)}).catch(function(){})})();
 </script>
+<style>/* case entière cliquable : survol coloré sur ordinateur, case ouverte colorée, « On donne nos sources » blanc à contour noir */
+.row{cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .15s}
+.row .det,.row .adr{cursor:auto}
+@media (hover:hover){.row:hover{background:color-mix(in srgb,var(--hl) 22%,transparent)}}
+.row:has(.evt[aria-expanded="true"]){background:color-mix(in srgb,var(--hl) 22%,transparent)}
+.det .det-l a,:root:not([data-theme="dark"]) .det .det-l a{background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 .5px var(--fg)}
+.det .det-l a:hover{background:var(--soft)}
+</style>
+<script>/* un clic n'importe où dans la case = comme le bouton « + » (sauf sur un lien, un bouton ou le texte du résumé) */
+document.addEventListener("click",function(e){
+  var r=e.target.closest&&e.target.closest(".row");if(!r)return;
+  if(e.target.closest("a,button,input,select,textarea,label,.det,.adr"))return;
+  try{var sel=window.getSelection();if(sel&&String(sel).length)return}catch(x){}
+  var b=r.querySelector("[data-ev]");if(b)b.click();
+});
+</script>
 <script>/* statistiques GoatCounter (sans cookies) : visites + clics. GC = code du compte GoatCounter ; vide = rien n'est compté */
 (function(){var GC="launtzero";if(!GC||/^(localhost|127\.)/.test(location.hostname)||location.protocol==="file:")return;try{if(localStorage.getItem("skipgc")==="t")return}catch(e){}
 function hit(o){try{var q=[];o.rnd=Math.random().toString(36).slice(2,8);for(var k in o)if(o[k]!==undefined&&o[k]!=="")q.push(k+"="+encodeURIComponent(o[k]));var u="https://"+GC+".goatcounter.com/count?"+q.join("&");if(!(navigator.sendBeacon&&navigator.sendBeacon(u)))(new Image()).src=u}catch(e){}}
