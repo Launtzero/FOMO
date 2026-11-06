@@ -150,15 +150,15 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
     <!-- Statistiques -->
     <div id="tab-st" hidden>
       <div id="st-set" class="card" hidden>
-        <h2>Brancher les graphiques</h2>
-        <p>Les chiffres viennent de GoatCounter. Pour les afficher ici en graphiques, il faut une <b>clé API</b> GoatCounter en lecture seule :</p>
-        <ol class="muted" style="margin:0 0 10px;padding-left:20px">
-          <li>sur launtzero.goatcounter.com, clique sur ton nom en haut, puis <b>API</b> ;</li>
-          <li>crée une clé, coche seulement <b>« Read statistics »</b>, enregistre ;</li>
-          <li>copie la clé et colle-la ci-dessous. Elle reste dans ce navigateur seulement.</li>
+        <h2>Brancher les graphiques (une seule fois)</h2>
+        <p>Les chiffres sont relevés chez GoatCounter toutes les heures par GitHub, qui a besoin de ta clé API GoatCounter (celle avec « Read statistics ») :</p>
+        <ol style="margin:0 0 10px;padding-left:20px">
+          <li>sur github.com, ouvre le dépôt <b>Launtzero/FOMO</b>, puis <b>Settings</b> → <b>Secrets and variables</b> → <b>Actions</b> ;</li>
+          <li><b>New repository secret</b> : Name = <code>GOATCOUNTER_KEY</code>, Secret = ta clé GoatCounter, puis <b>Add secret</b> ;</li>
+          <li>onglet <b>Actions</b> du dépôt → <b>Statistiques GoatCounter</b> → <b>Run workflow</b> (pour ne pas attendre l'heure suivante) ;</li>
+          <li>une minute plus tard, clique sur « Actualiser » ici.</li>
         </ol>
-        <input id="st-key" type="password" autocomplete="off" placeholder="Clé API GoatCounter">
-        <div class="acts"><button class="main" id="st-save">Enregistrer</button></div>
+        <div class="acts"><button class="main" id="st-retry">Actualiser</button></div>
         <div class="err" id="st-err"></div>
       </div>
       <div id="st-view" hidden>
@@ -180,7 +180,7 @@ dialog::backdrop{background:rgba(2,17,35,.45)}
           <div class="panel"><h3>Appareils</h3><div id="st-size"></div></div>
           <div class="panel"><h3>Pays</h3><div id="st-loc"></div></div>
         </div>
-        <p class="muted" style="font-size:13px">Visiteurs : personnes différentes par jour (sans cookies, donc approximatif). <a id="st-full" href="https://launtzero.goatcounter.com" target="_blank" rel="noopener">Tableau complet sur GoatCounter</a> · <a href="#" id="st-chg">changer la clé</a></p>
+        <p class="muted" style="font-size:13px">Visiteurs : personnes différentes par jour (sans cookies, donc approximatif). <a id="st-full" href="https://launtzero.goatcounter.com" target="_blank" rel="noopener">Tableau complet sur GoatCounter</a> · <span id="st-maj"></span></p>
       </div>
     </div>
     <div class="acts"><span class="sp"></span><button id="logout">Se déconnecter</button></div>
@@ -413,21 +413,14 @@ $("pub").onclick=function(){
 };
 
 /* ---------- Statistiques (API GoatCounter) ---------- */
-var GCAPI="https://launtzero.goatcounter.com/api/v0", stDays=7, stLoaded=0, stFmt=0;
-function gcGet(path,q){
-  var fmts=[function(d){return d.toISOString().slice(0,13)+":00:00Z"},function(d){return d.toISOString().slice(0,10)}];
-  function go(fi){
-    var u=GCAPI+path+"?"+Object.keys(q).map(function(k){var v=q[k];if(v instanceof Date)v=fmts[fi](v);return k+"="+encodeURIComponent(v)}).join("&");
-    return fetch(u,{headers:{"Authorization":"Bearer "+store("fomo_gc_key")}}).then(function(r){
-      if(r.status===400&&fi===0){stFmt=1;return go(1)}
-      return r.json().catch(function(){return{}}).then(function(j){if(!r.ok){var e=new Error((j&&(j.error||j.errors&&JSON.stringify(j.errors)))||("Erreur "+r.status));e.status=r.status;throw e}return j})});
-  }
-  return go(stFmt);
-}
+var stDays=7;
+var stData=null;
 function renderStats(){
-  var k=store("fomo_gc_key");
-  $("st-set").hidden=!!k; $("st-view").hidden=!k;
-  if(k&&stLoaded!==stDays)loadStats();
+  if(stData){$("st-set").hidden=true;$("st-view").hidden=false;drawStats();return}
+  $("st-verr").textContent="";
+  gh("GET","/contents/stats.json?ref=stats&t="+Date.now()).then(function(j){stData=JSON.parse(b64dec(j.content));renderStats()})
+  .catch(function(e){$("st-view").hidden=true;$("st-set").hidden=false;
+    $("st-err").textContent=e.status===404?"Pas encore de chiffres : fais les étapes ci-dessus (ou attends le prochain relevé, toutes les heures).":"Impossible de lire les statistiques : "+e.message});
 }
 function nf(n){return (n||0).toLocaleString("fr-FR")}
 function pct(a,b){return b?Math.round(a*100/b):0}
@@ -460,14 +453,11 @@ function line(el,pts){
 }
 var CATN={};CATS.forEach(function(c){CATN[c[0]]=c[1]});
 var ACT={"voir-adresse":"Voir l'adresse","calendrier":"Changer de jour","recherche":"Faire une recherche","carte-zoom":"Zoomer la carte","clic-proposer":"« Proposer un événement »","clic-source":"« On donne nos sources »","clic-itineraire":"Itinéraire"};
-function loadStats(){
-  var end=new Date(),start=new Date(end.getTime()-(stDays-1)*864e5);start.setHours(0,0,0,0);end.setHours(end.getHours()+1,0,0,0);
-  var q={start:start,end:end};$("st-verr").textContent="";$("st-kpis").innerHTML='<p class="none">Chargement…</p>';
-  var Q=function(o){var r={};for(var k in q)r[k]=q[k];for(k in o)r[k]=o[k];return r};
-  gcGet("/stats/total",q).then(function(tot){
-    return Promise.all([gcGet("/stats/hits",Q({limit:100})),gcGet("/stats/toprefs",Q({limit:8})),gcGet("/stats/sizes",q),gcGet("/stats/locations",Q({limit:6}))]).then(function(r){return [tot].concat(r)})})
-  .then(function(r){
-    stLoaded=stDays;
+function drawStats(){
+  var P=stData["p"+stDays]||{};
+  var m=stData.maj?new Date(stData.maj):null;$("st-maj").textContent=m?"chiffres relevés le "+m.toLocaleString("fr-FR",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"}):"";
+  (function(){
+    var r=[{total:P.total,total_events:P.total_events,stats:P.jours||[]},{hits:P.hits||[]},{stats:P.refs||[]},{stats:P.sizes||[]},{stats:P.locs||[]}];
     var tot=r[0],hits=(r[1].hits||[]),refs=(r[2].stats||[]),sizes=(r[3].stats||[]),locs=(r[4].stats||[]);
     var days=(tot.stats||[]).map(function(s){return [s.day,s.daily||0]});
     var best=days.reduce(function(a,b){return b[1]>a[1]?b:a},["",0]);
@@ -489,15 +479,10 @@ function loadStats(){
     bars("st-size",sizes.filter(function(x){return x.count}).map(function(x){return [(SZ[x.id]||x.id)+" · "+pct(x.count,st)+" %",x.count]}),"visiteurs");
     var dn;try{dn=new Intl.DisplayNames(["fr"],{type:"region"})}catch(e){}
     bars("st-loc",locs.map(function(x){var n=x.name||x.id||"?";if(dn&&/^[A-Z]{2}$/.test(x.id||""))try{n=dn.of(x.id)}catch(e){}return [n,x.count]}),"visiteurs");
-  }).catch(function(e){
-    $("st-kpis").innerHTML="";
-    $("st-verr").textContent=(e.status===401||e.status===403)?"Clé GoatCounter refusée : vérifie qu'elle a bien la permission « Read statistics » (bouton « changer la clé » en bas).":(e instanceof TypeError?"Le navigateur n'arrive pas à joindre GoatCounter. Le plus souvent, c'est un bloqueur de publicité ou de traqueurs (extension Safari, AdGuard, 1Blocker…) qui bloque goatcounter.com : autorise fo-mo.fr dans ce bloqueur, ou essaie dans un autre navigateur. (Détail : "+e.message+")":"Impossible de charger les statistiques : "+e.message);
-  });
+  })();
 }
-$("st-save").onclick=function(){var k=$("st-key").value.trim();if(k.length<10){$("st-err").textContent="Cette clé paraît trop courte.";return}$("st-err").textContent="";store("fomo_gc_key",k);stLoaded=0;renderStats()};
-$("st-chg").onclick=function(e){e.preventDefault();store("fomo_gc_key",null);stLoaded=0;renderStats()};
-$("st-reload").onclick=function(){stLoaded=0;renderStats()};
-var rsz;window.addEventListener("resize",function(){clearTimeout(rsz);rsz=setTimeout(function(){if(tab==="st"&&stLoaded){stLoaded=0;renderStats()}},400)});
+$("st-reload").onclick=$("st-retry").onclick=function(){stData=null;renderStats()};
+var rsz;window.addEventListener("resize",function(){clearTimeout(rsz);rsz=setTimeout(function(){if(tab==="st"&&stData)drawStats()},400)});
 [].forEach.call(document.querySelectorAll("#st-per button"),function(b){b.onclick=function(){stDays=+b.dataset.d;[].forEach.call(document.querySelectorAll("#st-per button"),function(x){x.setAttribute("aria-pressed",x===b)});renderStats()}});
 CATS.forEach(function(c){var o=document.createElement("option");o.value=c[0];o.textContent=c[1];$("fc").appendChild(o)});
 var t=store("fomo_tok"); if(t)login(t); else $("login").hidden=false;
