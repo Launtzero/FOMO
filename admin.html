@@ -418,7 +418,7 @@ function gcGet(path,q){
   var fmts=[function(d){return d.toISOString().slice(0,13)+":00:00Z"},function(d){return d.toISOString().slice(0,10)}];
   function go(fi){
     var u=GCAPI+path+"?"+Object.keys(q).map(function(k){var v=q[k];if(v instanceof Date)v=fmts[fi](v);return k+"="+encodeURIComponent(v)}).join("&");
-    return fetch(u,{headers:{"Authorization":"Bearer "+store("fomo_gc_key"),"Content-Type":"application/json"}}).then(function(r){
+    return fetch(u,{headers:{"Authorization":"Bearer "+store("fomo_gc_key")}}).then(function(r){
       if(r.status===400&&fi===0){stFmt=1;return go(1)}
       return r.json().catch(function(){return{}}).then(function(j){if(!r.ok){var e=new Error((j&&(j.error||j.errors&&JSON.stringify(j.errors)))||("Erreur "+r.status));e.status=r.status;throw e}return j})});
   }
@@ -491,7 +491,7 @@ function loadStats(){
     bars("st-loc",locs.map(function(x){var n=x.name||x.id||"?";if(dn&&/^[A-Z]{2}$/.test(x.id||""))try{n=dn.of(x.id)}catch(e){}return [n,x.count]}),"visiteurs");
   }).catch(function(e){
     $("st-kpis").innerHTML="";
-    $("st-verr").textContent=(e.status===401||e.status===403)?"Clé GoatCounter refusée : vérifie qu'elle a bien la permission « Read statistics » (bouton « changer la clé » en bas).":"Impossible de charger les statistiques : "+e.message;
+    $("st-verr").textContent=(e.status===401||e.status===403)?"Clé GoatCounter refusée : vérifie qu'elle a bien la permission « Read statistics » (bouton « changer la clé » en bas).":(e instanceof TypeError?"Le navigateur n'arrive pas à joindre GoatCounter. Le plus souvent, c'est un bloqueur de publicité ou de traqueurs (extension Safari, AdGuard, 1Blocker…) qui bloque goatcounter.com : autorise fo-mo.fr dans ce bloqueur, ou essaie dans un autre navigateur. (Détail : "+e.message+")":"Impossible de charger les statistiques : "+e.message);
   });
 }
 $("st-save").onclick=function(){var k=$("st-key").value.trim();if(k.length<10){$("st-err").textContent="Cette clé paraît trop courte.";return}$("st-err").textContent="";store("fomo_gc_key",k);stLoaded=0;renderStats()};
