@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin · FOMO</title>
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<style>
+:root{--bg:#fff;--surface:#f4f6f9;--soft:#ebeef3;--line:#dde2ea;--fg:#021123;--muted:#5c6675;--hl:#fff43d;--warn:#c2410c;--ok:#1d6b2f;
+  --f:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 var(--f);padding:24px 16px 120px}
+.wrap{max-width:60rem;margin:0 auto}
+h1{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:0 0 4px}
+h2{font-size:18px;margin:0 0 12px}
+p.muted,.muted{color:var(--muted)}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:1px solid var(--fg);background:var(--bg);border-radius:999px;padding:6px 14px}
+button.main{background:var(--hl);border-color:var(--hl);font-weight:700}
+button.danger{border-color:var(--warn);color:var(--warn)}
+button:disabled{opacity:.4;cursor:default}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--bg)}
+textarea{min-height:70px;resize:vertical}
+label{display:block;font-size:12.5px;font-weight:700;margin:12px 0 4px}
+label small{font-weight:400;color:var(--muted)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:16px 0}
+.bar input,.bar select{width:auto;flex:1 1 180px}
+.card{background:var(--surface);border-radius:16px;padding:16px;margin:16px 0}
+.list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:7.5rem 1fr auto;gap:10px;padding:9px 4px;border-bottom:1px solid var(--line);cursor:pointer;align-items:baseline}
+.row:hover{background:var(--surface)}
+.row .d{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
+.row .t{font-weight:700}
+.row .l{color:var(--muted);font-size:13px}
+.tag{font-size:11.5px;border-radius:999px;padding:1px 8px;background:var(--soft);white-space:nowrap}
+.tag.s{background:var(--fg);color:#fff}
+.tag.mod{background:var(--hl)}
+.cats{display:flex;flex-wrap:wrap;gap:6px}
+.cats label{display:inline-flex;gap:5px;align-items:center;margin:0;font-weight:400;font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 10px;cursor:pointer}
+.cats input{width:auto;margin:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.err{color:var(--warn);font-size:13px;margin-top:8px}
+.msg{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--fg);color:#fff;border-radius:999px;padding:8px 16px;font-size:13.5px;max-width:calc(100% - 32px)}
+.foot{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:12px 16px}
+.foot .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.foot .n{flex:1}
+dialog{border:none;border-radius:18px;padding:20px;width:min(44rem,100%);max-height:92vh}
+dialog::backdrop{background:rgba(2,17,35,.45)}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.acts .sp{flex:1}
+@media (max-width:600px){.grid2{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}.row .d{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>FOMO · admin</h1>
+  <p class="muted">Ajouter, corriger ou retirer des événements. Les changements ne sont mis en ligne qu'au clic sur « Publier » ; le site se met à jour une à deux minutes après.</p>
+
+  <!-- Connexion -->
+  <section id="login" class="card" hidden>
+    <h2>Connexion</h2>
+    <p>Colle ta clé GitHub (elle commence par <code>github_pat_</code>). Elle reste enregistrée dans ce navigateur seulement, pas sur le site.</p>
+    <input id="tok" type="password" autocomplete="off" placeholder="github_pat_…">
+    <div class="acts"><button class="main" id="go">Se connecter</button></div>
+    <div class="err" id="lerr"></div>
+  </section>
+
+  <!-- Liste -->
+  <section id="app" hidden>
+    <div class="bar">
+      <input id="q" type="search" placeholder="Chercher (titre, lieu, artiste…)">
+      <select id="fc"><option value="">Toutes les rubriques</option></select>
+      <select id="fw">
+        <option value="avenir">À venir</option>
+        <option value="tout">Tout</option>
+        <option value="mod">Modifiés (pas encore publiés)</option>
+      </select>
+      <button class="main" id="new">+ Nouvel événement</button>
+    </div>
+    <p class="muted" id="count"></p>
+    <div class="list" id="list"></div>
+    <div class="acts"><button id="more" hidden>Afficher plus</button><span class="sp"></span><button id="logout">Se déconnecter</button></div>
+  </section>
+</div>
+
+<div class="foot" id="foot" hidden><div class="wrap">
+  <span class="n" id="pending">Aucun changement</span>
+  <button id="undo" disabled>Tout annuler</button>
+  <button class="main" id="pub" disabled>Publier</button>
+</div></div>
+
+<dialog id="dlg">
+  <form id="f" method="dialog">
+    <h2 id="dt">Événement</h2>
+    <label>Titre</label><input name="titre" required>
+    <label>Lieu <small>(choisir dans la liste si le lieu existe déjà)</small></label><input name="lieu" list="lieux" required>
+    <datalist id="lieux"></datalist>
+    <label>Rubriques</label><div class="cats" id="fcats"></div>
+    <label>Dates <small>une par ligne : 2026-11-20 20:00 · ou 2026-11-20 sans heure · ou 2026-11-01/2027-01-31 pour une période (expo)</small></label>
+    <textarea name="dates" required></textarea>
+    <div class="grid2">
+      <div><label>Prix <small>ex. 12€, Entrée libre, Prix libre</small></label><input name="prix"></div>
+      <div><label>Statut</label><select name="statut"><option value="">Normal</option><option>Complet</option><option>Annulé</option><option>Reporté</option></select></div>
+      <div><label>Genre musical <small>(concerts)</small></label><input name="genre"></div>
+      <div><label>Heure de début <small>(période hors expo, ex. 20:00)</small></label><input name="heure"></div>
+    </div>
+    <label>Résumé <small>1 à 2 phrases neutres</small></label><textarea name="resume"></textarea>
+    <label>Note pratique</label><input name="note">
+    <label>Lien</label><input name="lien" type="url" placeholder="https://…">
+    <label>Source</label><input name="source">
+    <div class="err" id="ferr"></div>
+    <div class="acts">
+      <button type="button" class="danger" id="del">Supprimer</button>
+      <button type="button" id="dup">Dupliquer</button>
+      <span class="sp"></span>
+      <button type="button" id="cancel">Fermer</button>
+      <button type="submit" class="main" value="ok">Valider</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="msg" id="msg" hidden></div>
+
+<script>
+(function(){
+var REPO="Launtzero/FOMO", PATH="evenements.json", BRANCH="main", API="https://api.github.com/repos/"+REPO+"/contents/"+PATH;
+var CATS=[["concert","Concert"],["jam","Jam & open mic"],["standup","Stand-up"],["humour","Humour"],["theatre","Théâtre"],["spectacle","Spectacle"],["danse","Danse"],["classique","Opéra & classique"],["jeune","Jeune public"],["festival","Festival"],["expo","Exposition"],["vernissage","Vernissage"],["visite","Visites & ateliers"],["conference","Conférences & rencontres"],["cinema","Cinéma"],["manif","Manifs"]];
+var FIELDS=["titre","lieu","categories","dates","heure","genre","prix","statut","note","resume","lien","source"];
+var $=function(i){return document.getElementById(i)};
+var token="", sha="", orig=null, data=null, changes=0, shown=80, cur=-1, modified={};
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function toast(t){var m=$("msg");m.textContent=t;m.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(function(){m.hidden=true},4000)}
+function b64dec(s){var bin=atob(s.replace(/\n/g,"")),u=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return new TextDecoder().decode(u)}
+function b64enc(str){var u=new TextEncoder().encode(str),s="",c=0x8000;for(var i=0;i<u.length;i+=c)s+=String.fromCharCode.apply(null,u.subarray(i,i+c));return btoa(s)}
+function today(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function first(e){return (e.dates&&e.dates[0]||"").slice(0,16)}
+function last(e){var m="";(e.dates||[]).forEach(function(x){var y=x.split("/").pop().slice(0,10);if(y>m)m=y});return m}
+
+function api(method,body){
+  return fetch(API+(method==="GET"?"?ref="+BRANCH+"&t="+Date.now():""),{method:method,headers:{"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"},body:body?JSON.stringify(body):undefined,cache:"no-store"})
+  .then(function(r){return r.json().then(function(j){if(!r.ok){var e=new Error(j.message||("Erreur "+r.status));e.status=r.status;throw e}return j})});
+}
+function load(){
+  return api("GET").then(function(j){
+    var txt=j.content?b64dec(j.content):null;
+    if(txt===null)throw new Error("Fichier trop gros pour être lu");
+    sha=j.sha; orig=txt; data=JSON.parse(txt); changes=0; modified={};
+    data.evenements.forEach(function(e,i){e.__id=i});
+    fillLieux(); render(); upd();
+  });
+}
+function login(t){
+  token=t.trim(); $("lerr").textContent="";
+  load().then(function(){store("fomo_tok",token);$("login").hidden=true;$("app").hidden=false;$("foot").hidden=false})
+  .catch(function(e){$("login").hidden=false;$("app").hidden=true;$("foot").hidden=true;
+    $("lerr").textContent=(e.status===401||e.status===403||e.status===404)?"Clé refusée : vérifie qu'elle donne accès au dépôt FOMO en lecture et écriture (« Contents »).":("Impossible de charger : "+e.message)});
+}
+
+function fillLieux(){var s={};data.evenements.forEach(function(e){s[e.lieu]=1});$("lieux").innerHTML=Object.keys(s).sort().map(function(l){return'<option value="'+esc(l)+'">'}).join("")}
+function render(){
+  var q=$("q").value.trim().toLowerCase(), c=$("fc").value, w=$("fw").value, t=today();
+  var ev=data.evenements.filter(function(e){
+    if(c&&(e.categories||[]).indexOf(c)<0)return false;
+    if(w==="avenir"&&last(e)<t)return false;
+    if(w==="mod"&&!modified[e.__id])return false;
+    if(q){var h=[e.titre,e.lieu,e.genre,e.resume,e.source].join(" ").toLowerCase();if(h.indexOf(q)<0)return false}
+    return true}).sort(function(a,b){return first(a)<first(b)?-1:first(a)>first(b)?1:0});
+  $("count").textContent=ev.length+" événement"+(ev.length>1?"s":"");
+  $("list").innerHTML=ev.slice(0,shown).map(function(e){
+    var d=first(e).replace("T"," "), n=(e.dates||[]).length;
+    return '<div class="row" data-id="'+e.__id+'"><span class="d">'+esc(d.indexOf("/")>0?"→ "+e.dates[0].split("/")[1]:d)+(n>1?" +"+(n-1):"")+'</span><span><span class="t">'+esc(e.titre)+'</span><br><span class="l">'+esc(e.lieu)+' · '+esc((e.categories||[]).join(", "))+(e.prix?' · '+esc(e.prix):"")+'</span></span><span>'+(modified[e.__id]?'<span class="tag mod">modifié</span> ':"")+(e.statut?'<span class="tag s">'+esc(e.statut)+'</span>':"")+'</span></div>'}).join("")||'<p class="muted">Rien trouvé.</p>';
+  $("more").hidden=ev.length<=shown;
+}
+function upd(){
+  $("pending").textContent=changes?changes+" changement"+(changes>1?"s":"")+" à publier":"Aucun changement";
+  $("pub").disabled=$("undo").disabled=!changes;
+}
+
+function open(i){
+  cur=i; var e=i<0?{categories:[],dates:[]}:data.evenements.find(function(x){return x.__id===i});
+  var f=$("f"); $("ferr").textContent=""; $("dt").textContent=i<0?"Nouvel événement":"Modifier";
+  FIELDS.forEach(function(k){if(k==="categories")return;var el=f.elements[k];if(!el)return;el.value=k==="dates"?(e.dates||[]).join("\n"):(e[k]||"")});
+  $("fcats").innerHTML=CATS.map(function(c){return'<label><input type="checkbox" value="'+c[0]+'"'+((e.categories||[]).indexOf(c[0])>=0?" checked":"")+'>'+esc(c[1])+'</label>'}).join("");
+  $("del").hidden=$("dup").hidden=i<0;
+  $("dlg").showModal();
+}
+var RD=/^\d{4}-\d{2}-\d{2}( \d{2}:\d{2})?$/, RP=/^\d{4}-\d{2}-\d{2}\/\d{4}-\d{2}-\d{2}$/;
+function readForm(){
+  var f=$("f"), o={}, err=[];
+  FIELDS.forEach(function(k){
+    if(k==="categories"){o.categories=[].slice.call($("fcats").querySelectorAll("input:checked")).map(function(x){return x.value});return}
+    var v=f.elements[k].value.trim();
+    if(k==="dates"){v=v.split(/\n+/).map(function(x){return x.trim().replace("T"," ")}).filter(Boolean);
+      v.forEach(function(x){if(!RD.test(x)&&!RP.test(x))err.push("Date mal écrite : « "+x+" »")});if(!v.length)err.push("Il faut au moins une date.")}
+    if(k==="heure"&&v&&!/^\d{2}:\d{2}$/.test(v))err.push("Heure à écrire comme 20:00.");
+    if(v&&v.length!==0)o[k]=v;
+  });
+  if(!o.titre)err.push("Le titre est obligatoire.");
+  if(!o.lieu)err.push("Le lieu est obligatoire.");
+  if(!o.categories.length)err.push("Choisis au moins une rubrique.");
+  if(o.categories.indexOf("manif")>=0)delete o.prix;
+  return {o:o,err:err};
+}
+function clean(o,base){var r={},ks=Object.keys(base||o).concat(FIELDS,Object.keys(o));ks.forEach(function(k){if(k==="__id"||k in r)return;var v=o[k];if(v!==undefined&&v!==""&&!(Array.isArray(v)&&!v.length))r[k]=v});return r}
+$("f").addEventListener("submit",function(ev){
+  var r=readForm(); if(r.err.length){ev.preventDefault();$("ferr").innerHTML=r.err.map(esc).join("<br>");return}
+  var o=r.o;
+  if(cur<0){o=clean(o);o.__id=Date.now();data.evenements.push(o);modified[o.__id]=1}
+  else{var i=data.evenements.findIndex(function(x){return x.__id===cur});o.__id=cur;
+    var a=JSON.stringify(clean(data.evenements[i])),b=JSON.stringify(clean(o,data.evenements[i]));if(a===b)return;o=clean(o,data.evenements[i]);o.__id=cur;data.evenements[i]=o;modified[cur]=1}
+  changes++; fillLieux(); render(); upd(); toast("Enregistré (pas encore publié)");
+});
+$("cancel").onclick=function(){$("dlg").close()};
+$("del").onclick=function(){
+  var e=data.evenements.find(function(x){return x.__id===cur});
+  if(!confirm("Supprimer « "+e.titre+" » ?"))return;
+  data.evenements=data.evenements.filter(function(x){return x.__id!==cur});changes++;$("dlg").close();render();upd();toast("Supprimé (pas encore publié)");
+};
+$("dup").onclick=function(){cur=-1;$("dt").textContent="Nouvel événement (copie)";$("del").hidden=$("dup").hidden=true;$("f").elements.dates.value="";$("f").elements.dates.focus()};
+$("list").onclick=function(ev){var r=ev.target.closest(".row");if(r)open(+r.dataset.id)};
+$("new").onclick=function(){open(-1)};
+$("q").oninput=$("fc").onchange=$("fw").onchange=function(){shown=80;render()};
+$("more").onclick=function(){shown+=200;render()};
+$("undo").onclick=function(){if(confirm("Annuler tous les changements non publiés ?"))load().then(function(){toast("Changements annulés")})};
+$("logout").onclick=function(){if(changes&&!confirm("Des changements ne sont pas publiés. Se déconnecter quand même ?"))return;store("fomo_tok",null);location.reload()};
+$("go").onclick=function(){login($("tok").value)};
+$("tok").onkeydown=function(e){if(e.key==="Enter")login($("tok").value)};
+window.addEventListener("beforeunload",function(e){if(changes){e.preventDefault();e.returnValue=""}});
+
+$("pub").onclick=function(){
+  var btn=$("pub");btn.disabled=true;btn.textContent="Publication…";
+  var out={};Object.keys(data).forEach(function(k){out[k]=data[k]});
+  out.evenements=data.evenements.map(function(e){return clean(e)});
+  var txt=JSON.stringify(out,null,1);
+  api("PUT",{message:"Admin : "+changes+" changement"+(changes>1?"s":"")+" dans l'agenda",content:b64enc(txt),sha:sha,branch:BRANCH})
+  .then(function(j){sha=j.content.sha;orig=txt;changes=0;modified={};render();upd();toast("Publié ! Le site sera à jour dans une à deux minutes.")})
+  .catch(function(e){
+    if(e.status===409||e.status===422)alert("L'agenda a été modifié entre-temps (sans doute par la mise à jour automatique). Recharge la page, puis refais tes changements.");
+    else alert("La publication a échoué : "+e.message);upd()})
+  .finally(function(){btn.textContent="Publier";upd()});
+};
+
+CATS.forEach(function(c){var o=document.createElement("option");o.value=c[0];o.textContent=c[1];$("fc").appendChild(o)});
+var t=store("fomo_tok"); if(t)login(t); else $("login").hidden=false;
+})();
+</script>
+</body>
+</html>
