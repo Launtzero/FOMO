@@ -208,5 +208,5 @@ document.getElementById("again").addEventListener("click",function(){document.ge
 })();
 </script>
 
-<script>/* statistiques GoatCounter (sans cookies) */(function(){var GC="launtzero";if(!GC||location.protocol==="file:")return;var u="https://"+GC+".goatcounter.com/count?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+[screen.width,screen.height,window.devicePixelRatio||1].join(",")+"&rnd="+Math.random().toString(36).slice(2,8);try{if(!(navigator.sendBeacon&&navigator.sendBeacon(u)))(new Image()).src=u}catch(e){}})();</script>
+<script>/* statistiques GoatCounter (sans cookies) */(function(){var GC="launtzero";if(!GC||location.protocol==="file:")return;try{if(localStorage.getItem("skipgc")==="t")return}catch(e){}var u="https://"+GC+".goatcounter.com/count?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+[screen.width,screen.height,window.devicePixelRatio||1].join(",")+"&rnd="+Math.random().toString(36).slice(2,8);try{if(!(navigator.sendBeacon&&navigator.sendBeacon(u)))(new Image()).src=u}catch(e){}})();</script>
 </body></html>
