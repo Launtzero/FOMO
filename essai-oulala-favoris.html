@@ -365,6 +365,23 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   /* étiquettes trop longues (prix, genre) : passent à la ligne au lieu d'élargir la page */
   .tag{white-space:normal;max-width:100%;overflow-wrap:anywhere}
 }
+
+/* ESSAI OULALA FAVORIS : flèches noires partout, logo collé en haut sur ordinateur, cœurs et pastille « Mes favoris » */
+html .top .cal .cal-h button{color:var(--fg)}
+@media (min-width:561px){html .top .today .logo{margin-top:-36px}}
+:root{--vermillon:#e34234}
+.chips .saut{flex-basis:100%;height:0}
+html .chip.mine,html .chip.mine.zero{opacity:1;background:var(--bg);color:var(--fg);border:0;box-shadow:inset 0 0 0 .5px var(--fg);align-items:center}
+html .chip.mine i{color:inherit;opacity:.6}
+html .chip.mine svg,html .chip.mine.has svg{width:13px;height:12px;fill:var(--vermillon);stroke:none}
+html .chip.mine[aria-pressed="true"]{background:var(--fg);color:var(--bg);box-shadow:inset 0 0 0 .5px var(--fg)}
+html .det .keep,html .det .keep[aria-pressed="true"]{background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 .5px var(--fg)}
+html .det .keep svg{width:12px;height:11px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
+html .det .keep[aria-pressed="true"] svg{fill:currentColor}
+/* cœur rouge vermillon sous l'heure, sans pousser le reste de la fiche */
+html .row .time{position:relative}
+html .time .kh{position:absolute;left:0;top:100%;margin-top:6px;color:var(--vermillon)}
+html .time .kh svg{display:block;width:13px;height:12px;fill:currentColor}
 </style>
 
 <div class="wrap">
@@ -484,7 +501,7 @@ function chips(){
   var any=Object.keys(state.cats).some(function(k){return state.cats[k]});
   var h='';
   CATS.forEach(function(c){var n=cnt[c[0]]||0;if(MUTE[c[0]])return;h+='<button type="button" class="chip'+(n?'':' zero')+'" aria-pressed="'+(!!state.cats[c[0]])+'" data-cat="'+c[0]+'">'+esc(c[1])+' <i>'+n+'</i></button>'});
-  var mn=mineN();h+='<button type="button" class="chip mine'+(mn?' has':' zero')+'" aria-pressed="'+(!!state.mine)+'" data-mine="1">'+'<svg viewBox="0 0 20 18" aria-hidden="true"><path d="M10 17.2S1.2 11.6 1.2 5.6A4.4 4.4 0 0 1 10 3.7a4.4 4.4 0 0 1 8.8 1.9c0 6-8.8 11.6-8.8 11.6z"/></svg>'+'Mes événements <i>'+mn+'</i></button>';
+  var mn=mineN();h='<button type="button" class="chip mine'+(mn?' has':' zero')+'" aria-pressed="'+(!!state.mine)+'" data-mine="1">'+'<svg viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></svg>'+'Mes favoris <i>'+mn+'</i></button><span class="saut"></span>'+h;
   document.getElementById("chips").innerHTML=h;
 }
 
@@ -525,8 +542,8 @@ function row(o,ctx){
   if(price){var pp='<span class="tag price'+(o.x==="Complet"?" full":"")+(stop?" stop":"")+'">'+esc(price)+'</span>',gt=o.g?'<span class="tag g">'+esc(o.g)+'</span>':'';tags=gt&&tags.indexOf(gt)>=0?tags.replace(gt,pp+gt):tags+pp}
   var hh=ctx==='range'?hrs(o,state.sel||T):null;var meta=[esc(o.v),(hh&&hh!==1&&hh!=='closed')?'ouvert '+esc(hh):'',(o.n===o.g?'':esc(o.n))].filter(function(x,i,ar){return x&&ar.indexOf(x)===i}).join(" · ");
   var d=DESC[o.i]||{},link=d.l||o.u,id="ev"+(EVK++);
-  var det='<div class="det" id="'+id+'" hidden>'+(d.d?'<p>'+esc(d.d)+'</p>':'')+'<div class="det-l"><button type="button" class="keep" data-keep="1" aria-pressed="'+(!!MINE[mkey(o)])+'" aria-label="Garder dans mes événements"><svg viewBox="0 0 20 18" aria-hidden="true"><path d="M10 17.2S1.2 11.6 1.2 5.6A4.4 4.4 0 0 1 10 3.7a4.4 4.4 0 0 1 8.8 1.9c0 6-8.8 11.6-8.8 11.6z"/></svg></button><button type="button" class="pin" data-pin="'+id+'" aria-expanded="false" aria-label="Adresse et itinéraire"><svg viewBox="0 0 16 20" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.6 0 0 3.5 0 7.9 0 13.5 8 20 8 20s8-6.5 8-12.1C16 3.5 12.4 0 8 0zm0 10.9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></button><a href="'+esc(link)+'" target="_blank" rel="noopener">On donne nos sources</a></div>'+adr(o,id)+'</div>';
-  var wpl=where(o.v);var tn=mixed()&&tone(o);return '<div class="row'+(stop?" gone":"")+(MINE[mkey(o)]?" kept":"")+'" data-k="'+esc(mkey(o))+'" data-ke="'+esc(o.e||o.d)+'"'+(tn?' style="--hl:'+tn+';--accent:'+tn+';--glow:'+GLOWS[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+';--glow-o:'+GLOWO[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+'"':'')+(wpl&&wpl.k!=null?' data-pl="'+wpl.k+'"':(wpl&&wpl.out?' data-pl="o:'+esc(wpl.out)+'"':''))+'><div class="time">'+esc(when)+'<span class="kh" title="Dans mes événements"><svg viewBox="0 0 20 18" aria-hidden="true"><path d="M10 17.2S1.2 11.6 1.2 5.6A4.4 4.4 0 0 1 10 3.7a4.4 4.4 0 0 1 8.8 1.9c0 6-8.8 11.6-8.8 11.6z"/></svg></span></div><div class="ttl"><button type="button" class="evt" aria-expanded="false" aria-controls="'+id+'" data-ev="'+id+'">'+esc(o.t)+'</button><span class="meta">'+meta+'</span>'+det+'</div><div class="tags"><button type="button" class="plus" data-for="'+id+'" aria-label="Voir le résumé" tabindex="-1"></button>'+tags+'</div></div>';
+  var det='<div class="det" id="'+id+'" hidden>'+(d.d?'<p>'+esc(d.d)+'</p>':'')+'<div class="det-l"><button type="button" class="keep" data-keep="1" aria-pressed="'+(!!MINE[mkey(o)])+'" aria-label="Garder dans mes favoris"><svg viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></svg></button><button type="button" class="pin" data-pin="'+id+'" aria-expanded="false" aria-label="Adresse et itinéraire"><svg viewBox="0 0 16 20" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.6 0 0 3.5 0 7.9 0 13.5 8 20 8 20s8-6.5 8-12.1C16 3.5 12.4 0 8 0zm0 10.9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></button><a href="'+esc(link)+'" target="_blank" rel="noopener">On donne nos sources</a></div>'+adr(o,id)+'</div>';
+  var wpl=where(o.v);var tn=mixed()&&tone(o);return '<div class="row'+(stop?" gone":"")+(MINE[mkey(o)]?" kept":"")+'" data-k="'+esc(mkey(o))+'" data-ke="'+esc(o.e||o.d)+'"'+(tn?' style="--hl:'+tn+';--accent:'+tn+';--glow:'+GLOWS[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+';--glow-o:'+GLOWO[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+'"':'')+(wpl&&wpl.k!=null?' data-pl="'+wpl.k+'"':(wpl&&wpl.out?' data-pl="o:'+esc(wpl.out)+'"':''))+'><div class="time">'+esc(when)+'<span class="kh" title="Dans mes favoris"><svg viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></svg></span></div><div class="ttl"><button type="button" class="evt" aria-expanded="false" aria-controls="'+id+'" data-ev="'+id+'">'+esc(o.t)+'</button><span class="meta">'+meta+'</span>'+det+'</div><div class="tags"><button type="button" class="plus" data-for="'+id+'" aria-label="Voir le résumé" tabindex="-1"></button>'+tags+'</div></div>';
 }
 function list(){
   if(state.q)return found();
@@ -824,7 +841,7 @@ document.addEventListener("click",function(e){
     loadQR(function(err){var q=bx.querySelector(".qr");if(err||!window.qrcode){q.remove();return}var c=qrcode(0,"M");c.addData(url);c.make();q.innerHTML=c.createSvgTag({cellSize:4,margin:0,scalable:true})});return}
   if(b.dataset.copy){var u=(document.getElementById("sendbox")||{}).dataset.url;if(!u)return;var ok=function(){b.textContent="Lien copié"};
     if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u).then(ok,function(){prompt("Copiez ce lien :",u)});else prompt("Copiez ce lien :",u);return}
-  if(b.dataset.share){var u2=(document.getElementById("sendbox")||{}).dataset.url;if(u2)navigator.share({title:"Mes événements FOMO",url:u2}).catch(function(){});return}
+  if(b.dataset.share){var u2=(document.getElementById("sendbox")||{}).dataset.url;if(u2)navigator.share({title:"Mes favoris",url:u2}).catch(function(){});return}
   if(b.dataset.mine){state.mine=!state.mine;if(state.mine){state.cats={};state.sel=null}else state.cats={concert:true};all();return}
   if(b.dataset.day){state.mine=false;state.sel=state.sel===b.dataset.day?null:b.dataset.day;state.run=false;all();return}
   if(b.dataset.clear){state.sel=null;all();return}
@@ -860,7 +877,7 @@ function mineList(){
   var el=document.getElementById("list");
   var seen={},res=OCC.filter(function(o){var k=mkey(o);if(!MINE[k]||!alive(o)||seen[k])return false;seen[k]=1;return true});
   var now=res.filter(function(o){return o.e&&o.d<=T}).sort(function(x,y){return vrank(x)-vrank(y)}),later=res.filter(function(o){return !(o.e&&o.d<=T)});
-  var n=res.length,h='<section class="sec mes"><h2>Mes événements<span>'+n+' à venir · gardés sur cet appareil</span></h2>';
+  var n=res.length,h='<section class="sec mes"><h2>Mes favoris<span>'+n+' à venir · gardés sur cet appareil</span></h2>';
   if(NOTE){h+='<p class="note">'+esc(NOTE)+'</p>';NOTE=""}
   if(n)h+='<button type="button" class="send" data-send="1" aria-expanded="false">Envoyer ma liste sur un autre appareil</button><div class="sendbox" id="sendbox" hidden></div>';
   if(!n)h+='<div class="empty">Aucun événement gardé pour l\'instant. Ouvrez un événement et touchez le cœur : il vous attendra ici.</div>';
