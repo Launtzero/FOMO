@@ -64,7 +64,7 @@
     "2026-11-29 13:30",
     "2026-11-29 17:30"
    ],
-   "prix": "45 à 65€ (enfant 35€)",
+   "prix": "45 à 65€",
    "lien": "https://www.cepacsilo-marseille.fr/evenement/casse-noisette-2/",
    "source": "Cepac Silo"
   },
@@ -568,7 +568,7 @@
     "2026-11-19 20:00"
    ],
    "genre": "Opéra",
-   "prix": "De 8 à 80€ (-28 ans : 10€)",
+   "prix": "De 8 à 80€",
    "note": "Opéra",
    "lien": "https://opera-odeon.marseille.fr/programmation/le-villi",
    "source": "Opéra – Odéon"
@@ -2414,7 +2414,7 @@
    "dates": [
     "2026-11-21 20:00"
    ],
-   "prix": "49€ (réduit 44€, abonné 42€, Access Culture 20€)",
+   "prix": "49€",
    "note": "Plus réservable sur Infoconcert",
    "lien": "https://www.lachaudronnerie-laciotat.com/evenement/ballet-preljocaj/",
    "source": "Infoconcert",
@@ -6151,7 +6151,7 @@
    "note": "Danse et musique, dès 6 mois (Théâtre Massalia)",
    "lien": "https://www.lafriche.org/evenements/3-pm-3-petits-moments/",
    "source": "Friche la Belle de Mai",
-   "prix": "10€ (réduit 7€)"
+   "prix": "10€"
   },
   {
    "titre": "Mossi Traoré, la mode aussi",
@@ -6651,7 +6651,7 @@
     "2026-11-19 19:00",
     "2026-11-20 20:00"
    ],
-   "prix": "22€ (réduit 3 à 14€)",
+   "prix": "22€",
    "note": "Dès 16 ans",
    "lien": "https://www.theatrejoliette.fr/programmation/26-27/je-meurs-de-ne-pas-mourir",
    "source": "Théâtre Joliette"
@@ -8193,7 +8193,7 @@
     "2026-11-18 20:00",
     "2026-11-19 20:00"
    ],
-   "prix": "18€ (réduit 3 à 12€)",
+   "prix": "18€",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/mon-frere-par-francois-gremaud-marseille-14eme-en-6613623/",
    "source": "Marseille Tourisme"
   },
@@ -8207,7 +8207,7 @@
    "dates": [
     "2026-11-27 19:30"
    ],
-   "prix": "18€ (réduit 3 à 12€)",
+   "prix": "18€",
    "note": "Cie Pernette, Petits pas de danse, dès 6 ans",
    "lien": "https://www.lezef.org/fr/saison/26-27/murmures-985",
    "source": "Le Zef"
@@ -8236,7 +8236,7 @@
    "dates": [
     "2026-12-01 20:00"
    ],
-   "prix": "18€ (réduit 3 à 12€)",
+   "prix": "18€",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/lullaby-shot-marseille-14eme-en-6613635/",
    "source": "Marseille Tourisme"
   },
@@ -10028,7 +10028,7 @@
     "2026-11-15 10:00",
     "2026-11-15 11:15"
    ],
-   "prix": "8€ (réduit 6€)",
+   "prix": "8€",
    "lien": "https://13.agendaculturel.fr/jeune-public/marseille/la-bulle-enchantee-concert-pour-petit-voyageur.html",
    "source": "Agenda Culturel 13"
   },
@@ -10949,11 +10949,11 @@
    "categories": [
     "concert"
    ],
-   "genre": "blues touareg (tichoumaren)",
+   "genre": "blues touareg",
    "dates": [
     "2026-11-11 20:30"
    ],
-   "prix": "20€ (18€ en prévente)",
+   "prix": "20€",
    "source": "Le Molotov",
    "lien": "https://lemolotov.com/events/tissilawen-mehtoze/"
   },
@@ -10967,7 +10967,7 @@
    "dates": [
     "2026-11-21 20:30"
    ],
-   "prix": "10€ (espèces uniquement), 8€ en prévente",
+   "prix": "10€, 8€ en prévente",
    "resume": "Soirée drag show et DJ sets.",
    "source": "Le Molotov",
    "lien": "https://lemolotov.com/events/chimeres-iv-le-bal-des-ombres/"
@@ -10982,7 +10982,7 @@
    "dates": [
     "2026-11-14 19:30"
    ],
-   "prix": "22€ (prévente dès 8€)",
+   "prix": "22€",
    "source": "Le Molotov",
    "lien": "https://lemolotov.com/events/dreamachine-festival-keiyaa-broodoo-ramses/"
   },
@@ -11085,7 +11085,7 @@
     "2026-11-13 19:00"
    ],
    "genre": "Pop alternative",
-   "prix": "12€ (+3€ d'adhésion)",
+   "prix": "12€",
    "note": "Portes 19h, concert 20h. Jazz sur la Ville.",
    "resume": "Le groupe marseillais présente son album SOBER.",
    "lien": "https://lameson.com/evenements/dirtycute/",
@@ -11101,7 +11101,7 @@
     "2026-11-14 19:00"
    ],
    "genre": "Jazz",
-   "prix": "15€ (+3€ d'adhésion)",
+   "prix": "15€",
    "note": "Portes 19h, concert 20h. Jazz sur la Ville.",
    "resume": "Trio piano-contrebasse-batterie (Francesca Han, Pierre Fenichel, Fred Pasqua) dont le concert suit en tableaux le parcours d'Edmond Dantès.",
    "lien": "https://lameson.com/evenements/trio-wakan/",
@@ -11166,7 +11166,7 @@
    "note": "Jazz sur la Ville (les mercredis à 20h) ; horaire à confirmer.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/jazz-sur-la-ville-marseille-en-6799548/",
    "source": "Office de tourisme de Marseille",
-   "prix": "Entrée libre debout (places assises sur réservation avec restauration)"
+   "prix": "Entrée libre debout"
   },
   {
    "titre": "Stéphanie Trick & Paolo Alderighi",
@@ -11181,7 +11181,7 @@
    "note": "Jazz sur la Ville (les mercredis à 20h) ; horaire à confirmer.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/jazz-sur-la-ville-marseille-en-6799548/",
    "source": "Office de tourisme de Marseille",
-   "prix": "Entrée libre debout (places assises sur réservation avec restauration)"
+   "prix": "Entrée libre debout"
   },
   {
    "titre": "Loin du désordre - Salma Quartet",
@@ -11196,7 +11196,7 @@
    "note": "Jazz sur la Ville (les mercredis à 20h) ; horaire à confirmer.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/jazz-sur-la-ville-marseille-en-6799548/",
    "source": "Office de tourisme de Marseille",
-   "prix": "Entrée libre debout (places assises sur réservation avec restauration)"
+   "prix": "Entrée libre debout"
   },
   {
    "titre": "The Jazz Room : un voyage au cœur de La Nouvelle-Orléans",
@@ -11222,7 +11222,7 @@
     "2026-11-10 12:30"
    ],
    "genre": "Orgue",
-   "prix": "Gratuit (libre participation)",
+   "prix": "Gratuit",
    "resume": "Pause musicale d'une demi-heure au grand orgue, en solo ou avec un autre musicien, organisée par l'association des Amis de l'orgue de Notre-Dame du Mont.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/les-auditions-du-marche-marseille-6eme-en-6610797/",
    "source": "Office de tourisme de Marseille"
@@ -11265,7 +11265,7 @@
    "dates": [
     "2026-11-14 17:00"
    ],
-   "prix": "22€ (abonné 20€, -18 ans 12€)",
+   "prix": "22€",
    "resume": "Récital de piano mêlant Chopin et fado portugais, salle Saint-Exupéry (cycle « Samedi ça vous dit ? »).",
    "lien": "https://www.lachaudronnerie-laciotat.com/evenement/le-piano-entre-nuit-danse-et-nostalgie/",
    "source": "La Chaudronnerie"
@@ -11279,7 +11279,7 @@
    "dates": [
     "2026-11-17 20:00"
    ],
-   "prix": "39€ (réduit 34€, abonné 32€, Access Culture 20€)",
+   "prix": "39€",
    "resume": "Pièce de Mathieu Rannou, mise en scène Benoît Lavigne, avec Franck Desmedt, sur la vie de Saint-Exupéry. Déconseillé aux moins de 12 ans.",
    "lien": "https://www.lachaudronnerie-laciotat.com/evenement/saint-exupery-le-commandeur-des-oiseaux/",
    "source": "La Chaudronnerie"
@@ -11293,7 +11293,7 @@
    "dates": [
     "2026-11-24 19:30"
    ],
-   "prix": "25€ (abonné 20€)",
+   "prix": "25€",
    "resume": "L'écrivain voyageur évoque ses expériences, la liberté et la protection de l'environnement.",
    "lien": "https://www.lachaudronnerie-laciotat.com/evenement/conference-sylvain-tesson/",
    "source": "La Chaudronnerie",
@@ -11341,7 +11341,7 @@
     "2026-11-16 20:30",
     "2026-11-23 20:30"
    ],
-   "prix": "8€ (boisson incluse)",
+   "prix": "8€",
    "resume": "Scène ouverte du lundi : de nouveaux humoristes testent leurs textes.",
    "lien": "https://13.agendaculturel.fr/theatre/marseille/les-gates.html",
    "source": "agendaculturel"
@@ -11919,7 +11919,7 @@
    "dates": [
     "2026-11-17 18:30"
    ],
-   "prix": "10€ (adhérents)",
+   "prix": "10€",
    "note": "Tarif non-adhérent non indiqué",
    "lien": "https://www.fest.fr/les-conferences-du-centre-culturel-cassis---lucca-en-toscane-2689115.html",
    "source": "fest.fr"
@@ -11935,7 +11935,7 @@
     "2026-11-10 21:00",
     "2026-11-17 21:00"
    ],
-   "genre": "Jazz (jam session)",
+   "genre": "Jam jazz",
    "prix": "Gratuit",
    "resume": "Jam session jazz hebdomadaire du mardi soir, menée par un binôme de musiciens locaux différent chaque semaine. Batterie, contrebasse, piano, ampli et micros sur place.",
    "lien": "https://www.bouger-en-provence.com/evenement/concert/jam-jazz-derape-%F0%9F%A5%B3-%F0%9F%8E%B7%F0%9F%8E%B9%F0%9F%8E%BA%F0%9F%A5%81%F0%9F%8E%B8/",
@@ -11951,7 +11951,7 @@
    "dates": [
     "2026-11-11 20:00"
    ],
-   "genre": "Jam session (jazz, funk, rock, soul, hip-hop, reggae, électro)",
+   "genre": "Jam session",
    "prix": "Prix libre",
    "resume": "Jam ouverte aux musiciens de tous niveaux organisée par le label Boucan avec La Baguetterie : batterie, clavier, ampli guitare et micros fournis. Le public peut venir simplement écouter.",
    "lien": "https://www.myprovence.fr/agenda/concert/marseille/jam-ais-fini-0",
@@ -12026,7 +12026,7 @@
    "dates": [
     "2026-11-14 19:00"
    ],
-   "prix": "15,44€ (réduit 12,41€) ; gratuit sur réservation (publics@archaos.fr)",
+   "prix": "15,44€; gratuit sur réservation",
    "note": "Dès 10 ans, 1h20. 22 bd de la Méditerranée",
    "resume": "Théâtre, marionnette et suspension aérienne : Run Run, collectionneur d'objets suspendu à un manège, raconte l'histoire cachée d'un village bouleversé par un coup d'État. Des collégiens de Rosa Parks jouent avec les artistes.",
    "lien": "https://www.billetweb.fr/run-run-collectif-merken-la-nuit-du-cirque-2026",
@@ -12041,7 +12041,7 @@
    "dates": [
     "2026-11-20 19:00"
    ],
-   "prix": "Gratuit sur réservation (publics@archaos.fr)",
+   "prix": "Gratuit sur réservation",
    "resume": "Sortie de résidence de la Cie Aquilomba (Maïra de Oliveira Aggio) : exploration circassienne de la mémoire de l'Atlantique noir, avec quatre interprètes et un immense hamac en caroá.",
    "lien": "https://www.marseille-tourisme.com/vivez-marseille-blog/agenda/desafogadas-non-noyees-undrowned-marseille-15eme-fr-6674476/",
    "source": "Marseille Tourisme"
@@ -12069,7 +12069,7 @@
    "dates": [
     "2026-11-14 20:30"
    ],
-   "prix": "16€ (adhérent 13€, enfant 8€)",
+   "prix": "16€",
    "resume": "Seul-en-scène mêlant guitare, chansons et stand-up autodérisoire, avec improvisations à partir des histoires du public.",
    "lien": "https://en.destinationlaciotat.com/offers/stand-up-by-fabien-guyno-the-guitar-man-la-ciotat-en-5740614/",
    "source": "Destination La Ciotat"
@@ -12084,7 +12084,7 @@
    "dates": [
     "2026-11-27 20:30"
    ],
-   "prix": "25€ (adhérents CCC 20€)",
+   "prix": "25€",
    "note": "Placement libre, ouverture 20h",
    "resume": "Lancement du comedy club du Centre culturel de Cassis avec Moustazou, BabaRUDY, Mano Parmigiano, Marco Paolo et Bedou.",
    "lien": "https://booking.ot-cassis.com/stand-up-comedy-the-calanque-comedy-club.html",
@@ -12323,7 +12323,7 @@
     "2026-11-13 20:00"
    ],
    "genre": "Rock alternatif / pop rock",
-   "prix": "5€ en prévente, 7€ sur place (+3€ d'adhésion, espèces)",
+   "prix": "5€ en prévente, 7€ sur place",
    "note": "Ouverture des portes à 19h. Organisé par Never Heal Production.",
    "resume": "Double plateau rock : Jostle, trio marseillais formé en 2004, sort son sixième album White Noise ; Nova Shapers présente son premier album First Step on the Moon.",
    "lien": "https://shotgun.live/fr/events/nova-shapers-released-party-jostle",
@@ -12354,7 +12354,7 @@
     "2026-11-13 20:30"
    ],
    "genre": "Rap, R&B, trap, baile funk",
-   "prix": "6€ (tarif solidaire), 9€ (early), 12€",
+   "prix": "6€, 9€, 12€",
    "note": "Soirée de soutien à l'association Pas Peur de Fier ; tombola. Live + DJ sets.",
    "resume": "Lives de Creamy G et cheapjewels, DJ sets de Kayla et Feufou, au profit d'une association marseillaise contre les discriminations liées au genre et à l'orientation sexuelle.",
    "lien": "https://shotgun.live/fr/events/la-fievre-mention-tres-fieres",
@@ -12387,7 +12387,7 @@
     "2026-11-29 16:00"
    ],
    "genre": "Musique chorale",
-   "prix": "20€ (réduit 15€)",
+   "prix": "20€",
    "resume": "Concert choral de la messe de Karl Jenkins par les Chœurs de Provence.",
    "lien": "https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/lhomme-arme-une-messe-pour-la-paix-de-karl-jenkins-par-les-choeurs-de-provence-marseille-6eme-en-6849667/",
    "source": "Office de tourisme de Marseille"
@@ -12403,7 +12403,7 @@
     "2026-11-13 21:00",
     "2026-11-14 21:00"
    ],
-   "prix": "16€ (réduit 6€)",
+   "prix": "16€",
    "resume": "Spectacle d'improvisation en duo, classé en humour et théâtre par la billetterie. Aucun descriptif détaillé n'est publié.",
    "lien": "https://www.lartdutheatre.fr",
    "source": "provence-alpes-cotedazur.com"
@@ -12419,7 +12419,7 @@
     "2026-11-14 10:15",
     "2026-11-14 16:00"
    ],
-   "prix": "8€ (réduit 5 à 6€)",
+   "prix": "8€",
    "note": "Jeune public",
    "resume": "Conte musical de la compagnie du Renard Bleu : un petit escargot se réveille sans sa coquille et traverse les saisons, entre ombres et lumières.",
    "source": "Marseille Tourisme"
@@ -12505,7 +12505,7 @@
     "2026-12-02 20:00"
    ],
    "genre": "Jazz",
-   "prix": "Entrée libre debout (places assises sur réservation avec restauration)",
+   "prix": "Entrée libre debout",
    "resume": "Concert du trio dans le cadre du festival Jazz sur la Ville.",
    "lien": "https://jazzsurlaville.org/evenement/three-blind-mice/",
    "source": "Jazz sur la Ville"
@@ -14443,7 +14443,7 @@
    "dates": [
     "2027-03-19/2027-03-22"
    ],
-   "prix": "Dès 10€ (réduit dès 7€)",
+   "prix": "Dès 10€",
    "resume": "Salon d'art contemporain réunissant peinture, sculpture, photographie et arts graphiques au Palais de l'Europe.",
    "lien": "https://siac-marseille.fr",
    "source": "Marseille Tourisme"
@@ -14501,7 +14501,7 @@
     "2026-11-28 20:00"
    ],
    "genre": "chanson / pop",
-   "prix": "30€ (réduit 25€)",
+   "prix": "30€",
    "resume": "Concert de Chemsou Freeklane, artiste de la nouvelle génération, auteur des albums « Lalla Mira » et « Nomad », dont les chansons parlent d'amour, de vie et de résilience.",
    "lien": "https://www.dataperpane.fr/event/freeklane-en-tournee-2026-3",
    "source": "Marseille Tourisme"
@@ -14530,7 +14530,7 @@
    "dates": [
     "2026-11-13 22:00"
    ],
-   "genre": "deep house, techno (DJ)",
+   "genre": "deep house, techno",
    "resume": "Soirée club deep house et techno au Chapiteau.",
    "lien": "https://www.technoairlines.com/event/undisputed-deep-house-to-techno-le-chapiteau-2026-11-13",
    "source": "technoairlines.com (page club Le Chapiteau ; billetterie Shotgun)"
@@ -14544,7 +14544,7 @@
    "dates": [
     "2026-11-14 22:00"
    ],
-   "genre": "électro (DJ)",
+   "genre": "électro",
    "resume": "Soirée club Earthquake avec les DJ Saligo, NOGE et shefox.",
    "lien": "https://www.technoairlines.com/event/earthquake-w-saligo-noge-shefox-le-chapiteau-2026-11-14",
    "source": "technoairlines.com (page club Le Chapiteau ; billetterie Shotgun)"
@@ -14558,7 +14558,7 @@
    "dates": [
     "2026-11-20 22:00"
    ],
-   "genre": "électro (DJ)",
+   "genre": "électro",
    "resume": "Soirée club Sweat Club avec Carlala, Scorpio Qveen et d'autres DJ.",
    "lien": "https://www.technoairlines.com/event/sweat-club-w-carlala-scorpio-qveen-more-le-chapiteau-2026-11-20",
    "source": "technoairlines.com (page club Le Chapiteau ; billetterie Shotgun)"
