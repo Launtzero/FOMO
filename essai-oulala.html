@@ -361,6 +361,7 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
   .top .cal .cal-h button svg{width:11px;height:11px}
   .top .cal .cal-h button{color:var(--fg)}
   .top .cal .cal-h b{min-width:0}
+  .top .cal{overflow:hidden;touch-action:pan-y}
   /* étiquettes trop longues (prix, genre) : passent à la ligne au lieu d'élargir la page */
   .tag{white-space:normal;max-width:100%;overflow-wrap:anywhere}
 }
@@ -1329,10 +1330,26 @@ var q1=0;document.addEventListener("click",function(e){var t=e.target.closest&&e
  else if(t.matches("[data-zm]"))c("carte-zoom")},true);
 document.addEventListener("input",function(e){if(!q1&&e.target.matches&&e.target.matches("input[type=search],#q")){q1=1;c("recherche")}},true);
 })();</script>
-<script>/* ESSAI OULALA : changer de mois en balayant le calendrier à gauche ou à droite */
-(function(){var x0=null,y0=0,c=document.getElementById("cal");if(!c)return;
-c.addEventListener("touchstart",function(e){var t=e.touches[0];x0=t.clientX;y0=t.clientY},{passive:true});
-c.addEventListener("touchend",function(e){if(x0==null)return;var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
-if(Math.abs(dx)>40&&Math.abs(dx)>1.5*Math.abs(dy)){var b=c.querySelector('[data-nav="'+(dx<0?1:-1)+'"]');if(b)b.click()}},{passive:true});
+<script>/* ESSAI OULALA : changer de mois en balayant le calendrier ; les jours suivent le doigt puis glissent pour laisser entrer le mois suivant */
+(function(){var c=document.getElementById("cal");if(!c)return;
+var x0=null,y0=0,dx=0,horiz=null,busy=false,D=170;
+function grid(){return c.querySelector(".grid")}
+function lisse(){return !(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)}
+function entre(sens){var g=grid();if(!g||!lisse()||!g.animate)return;
+ g.animate([{transform:"translateX("+(sens*100)+"%)",opacity:.2},{transform:"translateX(0)",opacity:1}],{duration:D+40,easing:"cubic-bezier(.2,.7,.3,1)"})}
+function change(sens){/* sens 1 = mois suivant (les jours partent à gauche) */
+ if(busy)return;busy=true;var g=grid(),b=c.querySelector('[data-nav="'+sens+'"]');
+ var fin=function(){if(b)b.click();entre(sens);busy=false};
+ if(g&&g.animate&&lisse()){var a=g.animate([{transform:"translateX("+dx+"px)",opacity:1},{transform:"translateX("+(-sens*100)+"%)",opacity:.2}],{duration:D,easing:"ease-in",fill:"forwards"});a.onfinish=fin}else fin()}
+c.addEventListener("touchstart",function(e){if(busy)return;var t=e.touches[0];x0=t.clientX;y0=t.clientY;dx=0;horiz=null},{passive:true});
+c.addEventListener("touchmove",function(e){if(x0==null)return;var t=e.touches[0],ddx=t.clientX-x0,ddy=t.clientY-y0;
+ if(horiz==null&&(Math.abs(ddx)>8||Math.abs(ddy)>8))horiz=Math.abs(ddx)>Math.abs(ddy);
+ if(horiz){dx=ddx;var g=grid();if(g)g.style.transform="translateX("+dx+"px)";if(e.cancelable)e.preventDefault()}},{passive:false});
+c.addEventListener("touchend",function(){if(x0==null)return;x0=null;var g=grid();
+ if(horiz&&Math.abs(dx)>40){change(dx<0?1:-1)}
+ else if(g&&dx){if(g.animate&&lisse())g.animate([{transform:"translateX("+dx+"px)"},{transform:"translateX(0)"}],{duration:150,easing:"ease-out"});}
+ if(g)g.style.transform="";dx=0},{passive:true});
+/* les flèches font aussi glisser les jours */
+c.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-nav]");if(!b||busy||!e.isTrusted)return;var s=+b.getAttribute("data-nav");setTimeout(function(){entre(s)},0)});
 })();</script>
 </body></html>
