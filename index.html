@@ -400,6 +400,9 @@ function alive(o){return (o.e||o.d)>=T}
 /* mes événements : gardés dans le navigateur de l'appareil (rien n'est envoyé) */
 var MK="fomo-mes",MINE={};try{MINE=JSON.parse(localStorage.getItem(MK)||"{}")||{}}catch(e){MINE={}}
 function mkey(o){return o.t+"|"+o.v+"|"+o.d}
+function hk(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0).toString(36)}
+var NOTE="";
+function mineLink(){var seen={},a=[];OCC.forEach(function(o){var k=mkey(o);if(MINE[k]&&alive(o)&&!seen[k]){seen[k]=1;a.push(hk(k))}});return location.origin+location.pathname.replace(/index\.html$/,"")+"#mes="+a.join(".")}
 function saveMine(){try{localStorage.setItem(MK,JSON.stringify(MINE))}catch(e){}}
 (function(){var ch=0;for(var k in MINE)if(!(MINE[k]>=T)){delete MINE[k];ch=1}if(ch)saveMine()})();
 function mineN(){var n=0,seen={};OCC.forEach(function(o){var k=mkey(o);if(MINE[k]&&alive(o)&&!seen[k]){seen[k]=1;n++}});return n}
@@ -785,6 +788,14 @@ document.addEventListener("click",function(e){
   if(b.dataset.keep){var rw=b.closest(".row");if(!rw)return;var k=rw.getAttribute("data-k"),on=!MINE[k];if(on)MINE[k]=rw.getAttribute("data-ke");else delete MINE[k];saveMine();
     document.querySelectorAll(".row").forEach(function(r){if(r.getAttribute("data-k")!==k)return;r.classList.toggle("kept",on);var kb=r.querySelector("[data-keep]");if(kb)kb.setAttribute("aria-pressed",on)});
     var mc=document.querySelector(".chip.mine");if(mc){var mn=mineN();mc.querySelector("i").textContent=mn;mc.classList.toggle("has",!!mn);mc.classList.toggle("zero",!mn)}return}
+  if(b.dataset.send){var bx=document.getElementById("sendbox");if(!bx)return;if(!bx.hidden){bx.hidden=true;b.setAttribute("aria-expanded","false");return}
+    var url=mineLink(),sh=!!navigator.share;
+    bx.innerHTML='<div class="qr" aria-label="QR code à scanner avec l\'autre appareil"></div><div class="sb"><p>Scannez ce code avec l\'autre appareil, ou envoyez-vous le lien. Votre liste s\'ajoutera à celle qui s\'y trouve déjà.</p><div class="sb-b">'+(sh?'<button type="button" data-share="1">Partager le lien</button>':'')+'<button type="button" class="'+(sh?'alt':'')+'" data-copy="1">Copier le lien</button></div></div>';
+    bx.dataset.url=url;bx.hidden=false;b.setAttribute("aria-expanded","true");
+    loadQR(function(err){var q=bx.querySelector(".qr");if(err||!window.qrcode){q.remove();return}var c=qrcode(0,"M");c.addData(url);c.make();q.innerHTML=c.createSvgTag({cellSize:4,margin:0,scalable:true})});return}
+  if(b.dataset.copy){var u=(document.getElementById("sendbox")||{}).dataset.url;if(!u)return;var ok=function(){b.textContent="Lien copié"};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u).then(ok,function(){prompt("Copiez ce lien :",u)});else prompt("Copiez ce lien :",u);return}
+  if(b.dataset.share){var u2=(document.getElementById("sendbox")||{}).dataset.url;if(u2)navigator.share({title:"Mes événements FOMO",url:u2}).catch(function(){});return}
   if(b.dataset.mine){state.mine=!state.mine;if(state.mine){state.cats={};state.sel=null}else state.cats={concert:true};all();return}
   if(b.dataset.day){state.mine=false;state.sel=state.sel===b.dataset.day?null:b.dataset.day;state.run=false;all();return}
   if(b.dataset.clear){state.sel=null;all();return}
@@ -821,6 +832,8 @@ function mineList(){
   var seen={},res=OCC.filter(function(o){var k=mkey(o);if(!MINE[k]||!alive(o)||seen[k])return false;seen[k]=1;return true});
   var now=res.filter(function(o){return o.e&&o.d<=T}).sort(function(x,y){return vrank(x)-vrank(y)}),later=res.filter(function(o){return !(o.e&&o.d<=T)});
   var n=res.length,h='<section class="sec mes"><h2>Mes événements<span>'+n+' à venir · gardés sur cet appareil</span></h2>';
+  if(NOTE){h+='<p class="note">'+esc(NOTE)+'</p>';NOTE=""}
+  if(n)h+='<button type="button" class="send" data-send="1" aria-expanded="false">Envoyer ma liste sur un autre appareil</button><div class="sendbox" id="sendbox" hidden></div>';
   if(!n)h+='<div class="empty">Aucun événement gardé pour l\'instant. Ouvrez un événement et touchez le cœur : il vous attendra ici.</div>';
   if(now.length){h+='<h3>En cours</h3>';now.forEach(function(o){h+=row(o,"range")})}
   var day=null;later.forEach(function(o){if(o.d!==day){day=o.d;h+='<h3>'+esc(o.d===T?"Aujourd'hui":fmtLong(o.d))+'</h3>'}h+=row(o,o.e?"start":"")});
@@ -837,6 +850,18 @@ function mineList(){
   document.addEventListener("click",function(e){var b=e.target.closest("[data-cat],[data-day],[data-mine]");if(b&&state.q){q.value="";state.q="";sync()}},true);
   window.clearQ=function(){q.value="";state.q="";sync()};
   sync();
+})();
+function loadQR(cb){if(window.qrcode)return cb();var sc=document.createElement("script");sc.src="qrcode.js";sc.onload=function(){cb()};sc.onerror=function(){cb(1)};document.head.appendChild(sc)}
+/* arrivée par un lien de transfert : la liste reçue s'ajoute à celle de l'appareil */
+(function(){var m=/#mes=([0-9a-z.]*)/.exec(location.hash);if(!m)return;
+  var want={};m[1].split(".").forEach(function(x){if(x)want[x]=1});
+  var add=0,had=0,seen={};OCC.forEach(function(o){var k=mkey(o);if(seen[k]||!alive(o))return;var h=hk(k);if(!want[h])return;seen[k]=1;delete want[h];if(MINE[k])had++;else{MINE[k]=o.e||o.d;add++}});
+  var lost=Object.keys(want).length;saveMine();
+  NOTE=add?(add+(add>1?" événements ajoutés":" événement ajouté")+" à votre liste."):(had?"Ces événements étaient déjà dans votre liste.":"Aucun événement reçu.");
+  if(lost)NOTE+=" "+lost+(lost>1?" sont passés ou ont changé depuis l'envoi.":" est passé ou a changé depuis l'envoi.");
+  state.mine=true;state.cats={};state.sel=null;
+  try{history.replaceState(null,"",location.pathname+location.search)}catch(e){location.hash=""}
+  window.__mesRecu=add;
 })();
 head();all();
 }
@@ -1309,6 +1334,18 @@ var s=document.createElement("script");s.type="application/ld+json";s.textConten
 .time .kh svg{width:11px;height:10px;fill:currentColor}
 .row.kept .time .kh{display:block}
 .sec.mes .row.kept .time .kh{display:none}
+.send{align-self:flex-start;width:auto;font:inherit;font-size:13.5px;margin:2px 0 12px;padding:6px 14px;border:0;border-radius:999px;background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 .5px var(--fg);cursor:pointer}
+.send:hover{background:var(--soft)}
+.sendbox{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;margin:0 0 16px;padding:14px;border-radius:14px;background:var(--surface)}
+.sendbox .qr{flex:none;width:156px;height:156px;padding:6px;border-radius:10px;background:#fff;box-sizing:border-box}
+.sendbox .qr svg{display:block;width:100%;height:100%}
+.sendbox .qr svg path{fill:#021123}
+.sendbox .sb{flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:10px;font-size:13.5px}
+.sendbox .sb p{margin:0;color:var(--muted)}
+.sendbox .sb-b{display:flex;flex-wrap:wrap;gap:8px}
+.sendbox .sb-b button{font:inherit;font-size:13.5px;padding:6px 14px;border:0;border-radius:999px;cursor:pointer;background:var(--fg);color:var(--bg)}
+.sendbox .sb-b button.alt{background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 .5px var(--fg)}
+.mes .note{margin:0 0 12px;padding:10px 14px;border-radius:14px;background:color-mix(in srgb,var(--hl) 35%,transparent);font-size:13.5px}
 </style>
 <script>/* un clic n'importe où dans la case = comme le bouton « + » (sauf sur un lien, un bouton ou le texte du résumé) */
 document.addEventListener("click",function(e){
@@ -1323,6 +1360,7 @@ document.addEventListener("click",function(e){
 function hit(o){try{var q=[];o.rnd=Math.random().toString(36).slice(2,8);for(var k in o)if(o[k]!==undefined&&o[k]!=="")q.push(k+"="+encodeURIComponent(o[k]));var u="https://"+GC+".goatcounter.com/count?"+q.join("&");if(!(navigator.sendBeacon&&navigator.sendBeacon(u)))(new Image()).src=u}catch(e){}}
 var sz=[screen.width,screen.height,window.devicePixelRatio||1].join(",");
 hit({p:location.pathname,t:document.title,r:document.referrer,s:sz});
+if(/#mes=/.test(location.hash))c("liste-recue");
 function c(path,title){hit({p:path,t:(title||"").slice(0,120),e:"true",s:sz})}
 var q1=0;document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("a,button");if(!t)return;
  if(t.matches("[data-ev]")){var d=document.getElementById(t.dataset.ev);if(d&&d.hidden){var ti=t.textContent.trim();c("ev:"+ti.slice(0,90),ti)}}
@@ -1332,6 +1370,7 @@ var q1=0;document.addEventListener("click",function(e){var t=e.target.closest&&e
  else if(t.matches("[data-pin]"))c("voir-adresse")
  else if(t.matches("[data-keep]")){if(t.getAttribute("aria-pressed")!=="true")c("garder")}
  else if(t.matches("[data-mine]"))c("mes-evenements")
+ else if(t.matches("[data-send]")){if(t.getAttribute("aria-expanded")!=="true")c("envoyer-liste")}
  else if(t.matches("[data-cat]"))c("rubrique-"+t.dataset.cat,t.textContent.replace(/\d+/g,"").trim())
  else if(t.matches("[data-day]"))c("calendrier")
  else if(t.matches("a.propose"))c("clic-proposer")
