@@ -396,6 +396,14 @@ html .time .kh svg{display:block;width:13px;height:12px;fill:currentColor}
 
 /* ESSAI : jour du calendrier. Sans rubrique : rond noir, chiffre blanc (inversé la nuit). */
 html:root.sans-rub .top .cal .day.now,html:root.sans-rub .top .cal .day.sel{background:var(--fg);color:var(--bg);box-shadow:none}
+
+/* ESSAI : gabian posé qui tourne la tête (œil, bec et sourcil pivotent autour du centre de la tête) */
+.gab .hd{transform-box:view-box;transform-origin:168px 55px;transition:transform .22s ease-in-out}
+.gab .hs{display:none}
+.gab.tr .hd{transform:scaleX(-1)}
+.gab.tr .hs{display:inline}
+.gab.tr .bp{clip-path:url(#gab-nh)}
+.gab.tr .tu{visibility:hidden}
 </style>
 
 <div class="wrap">
@@ -986,7 +994,7 @@ html{position:relative;min-height:100%}
       '<g class="ey"><circle cx="167" cy="40.8" r="6.3" fill="#fff" '+SE+'/><circle class="pu" cx="168.4" cy="40" r="1.9" fill="'+K+'"/></g>':
       '<g class="ey"><circle cx="167" cy="41.5" r="5.2" fill="#fff" '+SE+'/><circle class="pu" cx="168.8" cy="42.6" r="2.4" fill="'+K+'"/>'+
       '<path d="M161.8 40.6C164 36.6 170 36.4 172.3 40.4" fill="#fff" '+SE+'/></g><path class="br" d="M159 34.6l15.5 2" '+SE+'/>';
-    return '<svg viewBox="0 -10 222 125"><g class="bd"><g class="nb">'+
+    return '<svg viewBox="0 -10 222 125"><defs><clipPath id="gab-hc"><circle cx="168" cy="46" r="17"/></clipPath><clipPath id="gab-nh"><path clip-rule="evenodd" d="M-50-50H300V200H-50ZM185 46a17 17 0 1 0-34 0a17 17 0 1 0 34 0Z"/></clipPath></defs><g class="bd"><g class="nb">'+
     '<g class="wf"><path d="M112 56C118 36 134 14 160 0C168 -4 178 -6 186 -6C192 -5 191 0 186 1C191 3 189 8 183 8C187 11 184 15 178 14C170 16 162 20 156 26C146 36 138 46 134 56Z" fill="#fff" '+S+'/>'+
     '<path d="M160 0C168 -4 178 -6 186 -6C192 -5 191 0 186 1C191 3 189 8 183 8C187 11 184 15 178 14C172 15 166 17 162 20C164 16 161 13 158 14C160 10 157 7 154 8C156 4 157 2 160 0Z" fill="'+K+'" '+S+'/></g>'+
     /* pattes : sortent des cuisses */
@@ -994,13 +1002,13 @@ html{position:relative;min-height:100%}
     '<path d="M90.5 121.3l-11 2.5 5 2 2 3 6-4zM100.5 122.8l-11 2.5 5 2 2 3 6-4z" fill="'+Y+'" '+S+'/></g>'+
     '<g class="th2"><path class="t2f" d="'+T1.fill+'" fill="#fff" '+S+'/></g>'+
     '<g class="tl"><g transform="'+tt+'"><path d="M46 61C38 57 26 53 16 53C9 53 8 59 14 60.5C7 61 6 67.5 13 68C7 70 8 76.5 15 75.5C24 74 36 74 46 77Z" fill="'+K+'" '+S+'/></g></g>'+
-    '<path d="'+body+'" fill="#fff" '+S+'/>'+
+    '<path class="bp" d="'+body+'" fill="#fff" '+S+'/>'+
     /* cuisses plumées, bien grasses, qui font la jonction avec le ventre */
     '<g class="th"><path class="thf" d="'+T0.fill+'" fill="#fff"/><path class="ths" d="'+T0.line+'" fill="none" '+S+'/><path class="thk" d="'+T0.tick+'" '+T+'/></g>'+
     '<path class="tu" d="M159 33.5q1-7 6-6.5q-2.5 2-1.5 5.5" fill="#fff" '+S+'/>'+
-    '<path d="M66 80q10 3 20 3" '+T+'/>'+brow+eye+
+    '<path d="M66 80q10 3 20 3" '+T+'/>'+'<g class="hd"><g class="hs" clip-path="url(#gab-hc)"><path d="'+body+'" fill="#fff" '+S+'/></g><path d="M159 33.5q1-7 6-6.5q-2.5 2-1.5 5.5" fill="#fff" '+S+'/>'+brow+eye+
     '<g class="bkw" transform="'+bt+'"><g class="bk"><path d="M185 52C194 52 202 52 208 52C206 55 200 56.6 194 56.6C190 56.6 187 56 185 54.5Z" fill="'+Y+'" '+S+'/></g>'+
-    '<path d="M183 44C195 42.8 207 43 214 46C216.6 47.5 216.2 50.6 213.6 51.6C212 50.2 210 50 207 50C199 50 191 51 184.5 52.2Z" fill="'+Y+'" '+S+'/></g>'+
+    '<path d="M183 44C195 42.8 207 43 214 46C216.6 47.5 216.2 50.6 213.6 51.6C212 50.2 210 50 207 50C199 50 191 51 184.5 52.2Z" fill="'+Y+'" '+S+'/></g></g>'+
     '<g class="fo" style="display:none"><path d="M140 54C120 49 92 51 70 56L40 57C33 58 33 64 40 64L62 66C86 70 120 66 140 54Z" fill="#fff" '+S+'/>'+
     '<path d="M70 56L40 57C33 58 33 64 40 64L62 66C59 62 63 58 70 56Z" fill="'+K+'" '+S+'/><path d="M84 62q8 2 14 0M104 61q8 1 14-1" '+T+'/></g>'+
     '<g class="wn"><path d="M98 62L130 58C124 36 104 14 76 4C62 -1 46 -2 34 0L60 22C64 26 66 30 64 33C70 34 72 38 70 42C77 42 80 47 78 51C85 51 88 56 86 60C90 61 94 62 98 62Z" fill="#fff"/>'+
@@ -1118,7 +1126,7 @@ html{position:relative;min-height:100%}
     g.held.remove();g.held=null;restore(g.tgt,1700);g.ev="cri";g.evT=0;
   }
   var STEAL={go:1,peck:1,skim:1,dpre:1,dive:1};
-  function toCross(g){if(g.tgt&&!g.held&&STEAL[g.mode])unwrap(g.tgt);if(g.mode=="dive")fold(g,false);g.mode="cross";g.f=g.face}
+  function toCross(g){if(g.el)g.el.classList.remove("tr");if(g.tgt&&!g.held&&STEAL[g.mode])unwrap(g.tgt);if(g.mode=="dive")fold(g,false);g.mode="cross";g.f=g.face}
   function grab(g){var c=document.createElement("span");c.className="gab-lt";c.textContent=g.tgt.textContent;c.style.font=fontOf(g.tgt);
     c.style.left=(g.w/2+(g.tk+1)*g.u)+"px";c.style.top=(g.h/2+1*g.u)+"px";g.el.appendChild(c);g.held=c;g.tgt.style.visibility="hidden";g.open=0}
   /* atterrissage souple (0,6 s) : 1) les pattes partent en avant et accrochent le sol pendant que les ailes freinent,
@@ -1146,7 +1154,7 @@ html{position:relative;min-height:100%}
 
 
   function fold(g,on,pc){g.fo.style.display=on?"":"none";g.wn.style.display=g.wfar.style.display=on?"none":"";var q=!!(on&&pc);g.nb.style.display=q?"none":"";g.pb.style.display=q?"":"none";g.nb.style.opacity=g.pb.style.opacity="";g.pb.setAttribute("transform",PBT);if(!pc){g.td=null;g.laT=null;g.rtd=null}if(g.ws0!=null&&!on){g.ws=g.ws0;g.fo.style.opacity=""}}
-  function takeoff(g){fold(g,false);g.mode="cross";g.f=Math.random()<.7?g.face:-g.face;g.face=g.f;g.vy=-r(90,140);g.vx=g.f*30;g.ev=null;g.gl=false;g.seg=1.4;g.cvy=-r(60,90)}
+  function takeoff(g){if(g.el)g.el.classList.remove("tr");fold(g,false);g.mode="cross";g.f=Math.random()<.7?g.face:-g.face;g.face=g.f;g.vy=-r(90,140);g.vx=g.f*30;g.ev=null;g.gl=false;g.seg=1.4;g.cvy=-r(60,90)}
   /* approche d'un point : il plane de loin, bat des ailes pour freiner en arrivant */
   function seek(g,cx,cy,o){var dx=cx-g.x,dy=cy-g.y,d=Math.hypot(dx,dy)||1,v=g.sp*Math.min(1,d/170)+25;
     o.tvx=dx/d*v;o.tvy=dy/d*v;if(Math.abs(dx)>50)g.face=dx>0?1:-1;g.flap=d<120||o.tvy<-25;return d}
@@ -1178,7 +1186,7 @@ html{position:relative;min-height:100%}
           if(A){g.face=A.x>g.x?1:-1;g.rot+=(-13-g.rot)*Math.min(1,dt*8);g.pdx=1.2;g.pdy=-.6;
             if(!g.gentle&&Math.random()<dt*3)g.open=22;else g.open*=.85;if(g.gentle)g.open=Math.max(g.open,7)}
           else{g.rot+=(-5-g.rot)*Math.min(1,dt*6);
-            g.look-=dt;if(g.look<0){g.look=r(.8,2.6);var a=Math.random();if(a<.4)g.face=-g.face;else if(a<.6&&!g.ev){g.ev="cri";g.evT=0}else if(a<.8){g.pdx=r(-1.2,1.2);g.pdy=r(-.8,1.1)}}}
+            g.look-=dt;if(g.look<0){g.look=r(.8,2.6);var a=Math.random();if(a<.22)g.face=-g.face;else if(a<.55){g.el.classList.toggle("tr")}else if(a<.7&&!g.ev){g.ev="cri";g.evT=0}else if(a<.88){g.pdx=r(-1.2,1.2);g.pdy=r(-.8,1.1)}}}
           if(g.pt>g.pd&&!g.harassed)takeoff(g)}}
     }
     if(g.mode=="skim"){
