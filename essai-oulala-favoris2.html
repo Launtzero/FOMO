@@ -1281,16 +1281,20 @@ html{position:relative;min-height:100%}
       else if(e=="cri"){g.open=(q<.25||(q>.4&&q<.65))?24:0;if(q>.8){g.ev=null;g.open=0}}
     }
     if(!hold){var k=dt*(g.mode=="go"||g.mode=="land"||g.mode=="chase"?3:2);g.vx+=(o.tvx-g.vx)*Math.min(1,k);g.vy+=(o.tvy-g.vy)*Math.min(1,k);g.x+=g.vx*dt;g.y+=g.vy*dt;
-      var tr=cl(Math.atan2(g.vy,Math.abs(g.vx)+40)*57*.55,-25,25)+(g.panic?Math.sin(g.t*14)*6:0);g.rot+=(tr-g.rot)*Math.min(1,dt*3);
+      var tr=cl(Math.atan2(g.vy,Math.abs(g.vx)+40)*57*.55,-25,25)+(g.panic?Math.sin(g.t*14)*6:0);var bk0=g.brk||0;tr=tr*(1-bk0)-28*bk0;g.rot+=(tr-g.rot)*Math.min(1,dt*(3+4*bk0));
       if(g.ev!="cri"&&g.mode!="peck")g.open=Math.max(g.open*.8,g.slack?13:0)}
     /* il bat des ailes pour monter, décoller, freiner ou paniquer ; sinon il plane */
     var flapping=!g.glide&&(g.flap||g.panic||g.hover);
+    /* FREINAGE À L'ATTERRISSAGE (observé sur de vrais gabians) : en arrivant, il se redresse, bat des ailes
+       beaucoup plus vite et ramène le battement vers l'avant pour freiner ; ça s'estompe au contact */
+    var btg=g.mode=="land"&&g.ld!=null?cl(1-g.ld/120,0,1):(g.td!=null&&g.td<.42?1-g.td/.42:0);
+    g.brk=(g.brk||0)+(btg-(g.brk||0))*Math.min(1,dt*6);if(g.brk>.05)flapping=true;
     g.amp+=((flapping?1:0)-g.amp)*Math.min(1,dt*4);
-    var hz=g.hz*(g.panic?1.8:1)*(g.hover?1.4:1);
+    var hz=g.hz*(g.panic?1.8:1)*(g.hover?1.4:1)*(1+1.4*(g.brk||0));
     if(flapping||g.amp>.05)g.p+=dt*hz*Math.PI*2;
     var base=g.glide?.1:g.kg,cs=Math.cos(g.p),k1=base+(.075+.925*cs-base)*g.amp,k2=base+(.075+.925*Math.cos(g.p-.5)-base)*g.amp,sx=g.span*g.ws;
     var wm=function(kk){kk*=g.ws;return "matrix("+sx.toFixed(3)+" 0 0 "+kk.toFixed(3)+" "+(110*(1-sx)).toFixed(2)+" "+(58*(1-kk)).toFixed(2)+")"};
-    at(g.wn,wm(k1));at(g.wfar,wm(k2));
+    var wr=g.brk>.01?"rotate("+(g.brk*(-24-12*Math.sin(g.p))).toFixed(1)+" 110 58) ":"";at(g.wn,wr+wm(k1));at(g.wfar,wr+wm(k2));
     /* souplesse du corps : léger ondulé, plus ou moins marqué selon le gabian */
     var sh=g.flex*.035*Math.sin(g.p+.6)*g.amp,sq=1-g.flex*.025*cs*g.amp;
     at(g.bd,"matrix(1 "+sh.toFixed(4)+" 0 "+sq.toFixed(4)+" 0 "+(60-60*sq-111*sh).toFixed(2)+")");
