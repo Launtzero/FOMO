@@ -370,7 +370,11 @@ footer .pres-l{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
 html .top .cal .cal-h button{color:var(--fg)}
 @media (min-width:561px){html .top .today .logo{margin-top:-36px}}
 :root{--vermillon:#e34234}
-.chips .saut{flex-basis:100%;height:0}
+.chips .fav-l{flex-basis:100%;display:flex}
+/* même écart partout : barre de recherche, Mes favoris, lignes de rubriques */
+html .top .rub{gap:8px}
+/* barre de recherche : même contour que « Mes favoris » (fin, noir) */
+html .srch,html .srch:hover,html .srch:focus-within,html .srch.on{border:0;box-shadow:inset 0 0 0 .5px var(--fg)}
 html .chip.mine,html .chip.mine.zero{opacity:1;background:var(--bg);color:var(--fg);border:0;box-shadow:inset 0 0 0 .5px var(--fg);align-items:baseline}
 html .chip.mine i{color:inherit;opacity:.6}
 html .chip.mine svg,html .chip.mine.has svg{width:13px;height:12px;fill:var(--vermillon);stroke:none;align-self:center}
@@ -501,7 +505,7 @@ function chips(){
   var any=Object.keys(state.cats).some(function(k){return state.cats[k]});
   var h='';
   CATS.forEach(function(c){var n=cnt[c[0]]||0;if(MUTE[c[0]])return;h+='<button type="button" class="chip'+(n?'':' zero')+'" aria-pressed="'+(!!state.cats[c[0]])+'" data-cat="'+c[0]+'">'+esc(c[1])+' <i>'+n+'</i></button>'});
-  var mn=mineN();h='<button type="button" class="chip mine'+(mn?' has':' zero')+'" aria-pressed="'+(!!state.mine)+'" data-mine="1">'+'<svg viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></svg>'+'Mes favoris <i>'+mn+'</i></button><span class="saut"></span>'+h;
+  var mn=mineN();h='<div class="fav-l"><button type="button" class="chip mine'+(mn?' has':' zero')+'" aria-pressed="'+(!!state.mine)+'" data-mine="1">'+'<svg viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></svg>'+'Mes favoris <i>'+mn+'</i></button></div>'+h;
   document.getElementById("chips").innerHTML=h;
 }
 
