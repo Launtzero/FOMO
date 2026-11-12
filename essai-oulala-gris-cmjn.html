@@ -893,7 +893,7 @@ document.addEventListener("click",function(e){
     var mc=document.querySelector(".chip.mine");if(mc){var mn=mineN();mc.querySelector("i").textContent=mn;mc.classList.toggle("has",!!mn);mc.classList.toggle("zero",!mn)}return}
   if(b.dataset.send){var bx=document.getElementById("sendbox");if(!bx)return;if(!bx.hidden){bx.hidden=true;b.setAttribute("aria-expanded","false");return}
     var url=mineLink(),sh=!!navigator.share;
-    bx.innerHTML='<div class="qr" aria-label="QR code à scanner avec l\'autre appareil"></div><div class="sb"><p><b>Vos favoris restent sur l\'appareil où vous les avez gardés.</b></p><p>Pour les retrouver sur votre téléphone ou votre ordinateur, scannez ce code avec l\'autre appareil, ou envoyez-vous le lien.</p><p>Ils s\'ajoutent à ceux qui s\'y trouvent déjà : rien n\'est effacé. Refaites-le quand vous gardez de nouveaux événements.</p><div class="sb-b">'+(sh?'<button type="button" data-share="1">Partager le lien</button>':'')+'<button type="button" class="'+(sh?'alt':'')+'" data-copy="1">Copier le lien</button></div></div>';
+    bx.innerHTML='<div class="qr" aria-label="QR code à scanner avec l\'autre appareil"></div><div class="sb"><p><b>Vos favoris restent sur l\'appareil où vous les avez gardés.</b></p><p>Pour les retrouver sur votre téléphone ou votre ordinateur, scannez ce code avec l\'autre appareil, ou envoyez-vous le lien.</p><p>Ils s\'ajoutent à ceux qui s\'y trouvent déjà : rien n\'est effacé. Opération à refaire quand vous likez de nouveaux événements sur cet appareil.</p><div class="sb-b">'+(sh?'<button type="button" data-share="1">Partager le lien</button>':'')+'<button type="button" class="'+(sh?'alt':'')+'" data-copy="1">Copier le lien</button></div></div>';
     bx.dataset.url=url;bx.hidden=false;b.setAttribute("aria-expanded","true");
     loadQR(function(err){var q=bx.querySelector(".qr");if(err||!window.qrcode){q.remove();return}var c=qrcode(0,"M");c.addData(url);c.make();q.innerHTML=c.createSvgTag({cellSize:4,margin:0,scalable:true})});return}
   if(b.dataset.copy){var u=(document.getElementById("sendbox")||{}).dataset.url;if(!u)return;var ok=function(){b.textContent="Lien copié"};
@@ -937,7 +937,7 @@ function mineList(){
   var n=res.length,h='<section class="sec mes"><h2>Mes favoris<span>'+n+' à venir · sur cet appareil</span></h2>';
   if(NOTE){h+='<p class="note">'+esc(NOTE)+'</p>';NOTE=""}
   if(n)h+='<button type="button" class="send" data-send="1" aria-expanded="false">Retrouver mes favoris sur un autre appareil</button><div class="sendbox" id="sendbox" hidden></div>';
-  if(!n)h+='<div class="empty">Aucun favori pour l\'instant. Touchez le cœur sous l\'heure d\'un événement : il vous attendra ici.</div>';
+  if(!n)h+='<div class="empty">Aucun favori pour l\'instant. Touchez le cœur à gauche d\'un événement : il vous attendra ici.</div>';
   if(now.length){h+='<h3>En cours</h3>';now.forEach(function(o){h+=row(o,"range")})}
   var day=null;later.forEach(function(o){if(o.d!==day){day=o.d;h+='<h3>'+esc(o.d===T?"Aujourd'hui":fmtLong(o.d))+'</h3>'}h+=row(o,o.e?"start":"")});
   h+='</section>';el.innerHTML=h;map(res);hits();
