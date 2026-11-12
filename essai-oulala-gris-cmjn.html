@@ -431,7 +431,9 @@ html .row.hit,html .row:has(.evt[aria-expanded="true"]){background:color-mix(in 
 @media (min-width:561px){html .row{padding-left:5px}}
 
 /* ESSAI : barre de recherche petite (« Recherche »), elle s'agrandit seulement quand on clique dedans ou qu'elle contient du texte */
-html .srch{width:8.4rem;transition:width .2s ease}
+html .srch{width:130px;transition:width .2s ease}
+html .chips .chip.mine{width:130px;justify-content:flex-start;box-sizing:border-box;padding-left:11px}
+@media (max-width:560px){html .srch{width:136px}html .chips .chip.mine{width:136px;height:32px}}
 html .srch:focus-within,html .srch.on{width:15.5rem}
 </style>
 
