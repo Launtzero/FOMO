@@ -426,6 +426,9 @@ html:root:not([data-theme="dark"]) .tag.g{color:var(--tag-ink,var(--fg))}
 :root[data-rub="theatre"]:not([data-theme="dark"]) .tag.g{color:#fff}
 html .row.hit,html .row:has(.evt[aria-expanded="true"]){background:color-mix(in srgb,var(--hl) var(--row-pct,22%),transparent)}
 @media (hover:hover){html .row:hover{background:color-mix(in srgb,var(--hl) var(--row-pct,22%),transparent)}}
+
+/* ESSAI : ordinateur, un peu d'air à gauche de l'heure et du cœur dans les cases d'événements */
+@media (min-width:561px){html .row{padding-left:10px}}
 </style>
 
 <div class="wrap">
@@ -437,7 +440,7 @@ html .row.hit,html .row:has(.evt[aria-expanded="true"]){background:color-mix(in 
     <div class="rub" id="rub">
       <form class="srch" id="srch" role="search" onsubmit="return false">
         <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-        <input type="search" id="q" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Ne rien louper à Marseille" aria-label="Chercher un événement : artiste, salle, genre, spectacle">
+        <input type="search" id="q" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Recherche" aria-label="Chercher un événement : artiste, salle, genre, spectacle">
         <button type="button" class="x" id="qx" aria-label="Effacer la recherche" hidden>×</button>
       </form>
       <nav class="chips" id="chips" aria-label="Catégories"></nav>
@@ -1494,4 +1497,12 @@ c.addEventListener("touchend",function(){if(x0==null)return;x0=null;var g=grid()
 /* les flèches font aussi glisser les jours */
 c.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-nav]");if(!b||busy||!e.isTrusted)return;var s=+b.getAttribute("data-nav");setTimeout(function(){entre(s)},0)});
 })();</script>
+<script>/* ESSAI : ordinateur, logo 15 % plus grand, bord droit aligné sur le bord droit du bloc des événements */
+(function(){function al(){var lg=document.querySelector(".top .today .logo"),L=document.getElementById("list"),td=document.querySelector(".top .today");if(!lg||!L||!td)return;
+ lg.style.width=lg.style.maxWidth=lg.style.marginLeft=lg.style.marginRight=lg.style.left=lg.style.flexShrink="";
+ if(!matchMedia("(min-width:561px)").matches)return;
+ var cg=document.querySelector(".top .cal .grid")||document.querySelector(".top .cal"),lr=L.getBoundingClientRect().right,w=lg.getBoundingClientRect().width*1.15;if(cg)w=Math.min(w,lr-cg.getBoundingClientRect().right-28);var vb=lg.viewBox&&lg.viewBox.baseVal,pad=vb&&vb.width?3/vb.width*w:0;
+ lg.style.width=w.toFixed(1)+"px";lg.style.maxWidth="none";lg.style.flexShrink="0";lg.style.left="0";lg.style.marginLeft="auto";
+ lg.style.marginRight=(td.getBoundingClientRect().right-lr-pad).toFixed(1)+"px";var dx=(lr+pad)-lg.getBoundingClientRect().right;if(Math.abs(dx)>.5)lg.style.left=dx.toFixed(1)+"px"}
+ window.addEventListener("resize",al);window.addEventListener("load",al);if(document.fonts)document.fonts.ready.then(al);setTimeout(al,300);al()})();</script>
 </body></html>
