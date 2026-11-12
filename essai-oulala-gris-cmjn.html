@@ -428,7 +428,11 @@ html .row.hit,html .row:has(.evt[aria-expanded="true"]){background:color-mix(in 
 @media (hover:hover){html .row:hover{background:color-mix(in srgb,var(--hl) var(--row-pct,22%),transparent)}}
 
 /* ESSAI : ordinateur, un peu d'air à gauche de l'heure et du cœur dans les cases d'événements */
-@media (min-width:561px){html .row{padding-left:10px}}
+@media (min-width:561px){html .row{padding-left:5px}}
+
+/* ESSAI : barre de recherche petite (« Recherche »), elle s'agrandit seulement quand on clique dedans ou qu'elle contient du texte */
+html .srch{width:8.4rem;transition:width .2s ease}
+html .srch:focus-within,html .srch.on{width:15.5rem}
 </style>
 
 <div class="wrap">
@@ -1497,11 +1501,11 @@ c.addEventListener("touchend",function(){if(x0==null)return;x0=null;var g=grid()
 /* les flèches font aussi glisser les jours */
 c.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-nav]");if(!b||busy||!e.isTrusted)return;var s=+b.getAttribute("data-nav");setTimeout(function(){entre(s)},0)});
 })();</script>
-<script>/* ESSAI : ordinateur, logo 15 % plus grand, bord droit aligné sur le bord droit du bloc des événements */
+<script>/* ESSAI : ordinateur, logo 7,5 % plus grand, bord droit aligné sur le bord droit du bloc des événements */
 (function(){function al(){var lg=document.querySelector(".top .today .logo"),L=document.getElementById("list"),td=document.querySelector(".top .today");if(!lg||!L||!td)return;
  lg.style.width=lg.style.maxWidth=lg.style.marginLeft=lg.style.marginRight=lg.style.left=lg.style.flexShrink="";
  if(!matchMedia("(min-width:561px)").matches)return;
- var cg=document.querySelector(".top .cal .grid")||document.querySelector(".top .cal"),lr=L.getBoundingClientRect().right,w=lg.getBoundingClientRect().width*1.15;if(cg)w=Math.min(w,lr-cg.getBoundingClientRect().right-28);var vb=lg.viewBox&&lg.viewBox.baseVal,pad=vb&&vb.width?3/vb.width*w:0;
+ var cg=document.querySelector(".top .cal .grid")||document.querySelector(".top .cal"),lr=L.getBoundingClientRect().right,w=lg.getBoundingClientRect().width*1.075;if(cg)w=Math.min(w,lr-cg.getBoundingClientRect().right-28);var vb=lg.viewBox&&lg.viewBox.baseVal,pad=vb&&vb.width?3/vb.width*w:0;
  lg.style.width=w.toFixed(1)+"px";lg.style.maxWidth="none";lg.style.flexShrink="0";lg.style.left="0";lg.style.marginLeft="auto";
  lg.style.marginRight=(td.getBoundingClientRect().right-lr-pad).toFixed(1)+"px";var dx=(lr+pad)-lg.getBoundingClientRect().right;if(Math.abs(dx)>.5)lg.style.left=dx.toFixed(1)+"px"}
  window.addEventListener("resize",al);window.addEventListener("load",al);if(document.fonts)document.fonts.ready.then(al);setTimeout(al,300);al()})();</script>
