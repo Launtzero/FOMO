@@ -27,6 +27,15 @@ html body .chip.mine svg,html body .chip.mine.has svg{fill:none;stroke:currentCo
 html body .chip.mine[aria-pressed="true"] svg{fill:var(--vermillon);stroke:none}
 @media (max-width:560px){html body .chip.mine svg,html body .chip.mine.has svg{stroke-width:4.68}html body .chip.mine[aria-pressed="true"] svg{stroke:none}}
 </style>
+<style>/* partager un événement : pastille ronde comme celle du lieu */
+.det .shr{flex:none;width:23px;height:23px;border:0;border-radius:999px;padding:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 var(--fin,.5px) var(--fg)}
+.det .shr svg{width:13px;height:13px}
+.det .shr:hover{background:var(--soft)}
+.row.partage{animation:partage 4s ease-out}
+@keyframes partage{0%,40%{background:color-mix(in srgb,var(--hl) 45%,transparent)}100%{background:transparent}}
+#bulle{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--fg);color:var(--bg);font-size:13px;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:9999}
+#bulle.on{opacity:1;transform:translate(-50%,0)}
+</style>
 </head><body>
 <title>FOMO, ne rien louper à Marseille</title>
 <meta name="description" content="Agenda culturel de Marseille et alentours : concerts, théâtre, danse, expositions, vernissages, conférences et manifs, au jour le jour.">
@@ -645,7 +654,7 @@ function row(o,ctx){
   if(price){var pp='<span class="tag price'+(o.x==="Complet"?" full":"")+(stop?" stop":"")+'">'+esc(price)+'</span>',gt=o.g?'<span class="tag g">'+esc(o.g)+'</span>':'';tags=gt&&tags.indexOf(gt)>=0?tags.replace(gt,pp+gt):tags+pp}
   var hh=ctx==='range'?hrs(o,state.sel||T):null;var meta=[esc(o.v),(hh&&hh!==1&&hh!=='closed')?'ouvert '+esc(hh):'',(o.n===o.g?'':esc(o.n))].filter(function(x,i,ar){return x&&ar.indexOf(x)===i}).join(" · ");
   var d=DESC[o.i]||{},link=d.l||o.u,id="ev"+(EVK++);
-  var det='<div class="det" id="'+id+'" hidden>'+(d.d?'<p>'+esc(d.d)+'</p>':'')+'<div class="det-l"><button type="button" class="pin" data-pin="'+id+'" aria-expanded="false" aria-label="Adresse et itinéraire"><svg viewBox="0 0 16 20" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.6 0 0 3.5 0 7.9 0 13.5 8 20 8 20s8-6.5 8-12.1C16 3.5 12.4 0 8 0zm0 10.9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></button><a href="'+esc(link)+'" target="_blank" rel="noopener">On donne nos sources</a></div>'+adr(o,id)+'</div>';
+  var det='<div class="det" id="'+id+'" hidden>'+(d.d?'<p>'+esc(d.d)+'</p>':'')+'<div class="det-l"><button type="button" class="pin" data-pin="'+id+'" aria-expanded="false" aria-label="Adresse et itinéraire"><svg viewBox="0 0 16 20" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.6 0 0 3.5 0 7.9 0 13.5 8 20 8 20s8-6.5 8-12.1C16 3.5 12.4 0 8 0zm0 10.9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></button><button type="button" class="shr" data-share="1" aria-label="Partager cet événement" title="Partager"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.6 4.2v4.3C7.2 8.9 3.6 12.6 2.6 19.8c2.3-3.6 5.6-5.4 11-5.4v4.4l7.8-7.3z"/></svg></button><a href="'+esc(link)+'" target="_blank" rel="noopener">On donne nos sources</a></div>'+adr(o,id)+'</div>';
   var wpl=where(o.v);var tn=mixed()&&tone(o);return '<div class="row'+(stop?" gone":"")+(MINE[mkey(o)]?" kept":"")+'" data-k="'+esc(mkey(o))+'" data-ke="'+esc(o.e||o.d)+'"'+(tn?' style="'+(tn=="#2457e8"?'--hl-ink:#fff;--tag-ink:#fff;--row-pct:11%;--row-pct-nuit:32%;--row-tint-nuit:#1d2fd0;':tn=="#4674af"||tn=="#7a24a6"||tn=="#83074d"?'--hl-ink:#fff;--tag-ink:#fff;--row-pct:14%;':'')+'--hl:'+tn+';--accent:'+tn+';--glow:'+GLOWS[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+';--glow-o:'+GLOWO[o.c.filter(function(x){return !MUTE[x]&&TONES[x]})[0]]+'"':'')+(wpl&&wpl.k!=null?' data-pl="'+wpl.k+'"':(wpl&&wpl.out?' data-pl="o:'+esc(wpl.out)+'"':''))+'><div class="time">'+esc(when)+'<button type="button" class="kh" data-keep="1" aria-pressed="'+(!!MINE[mkey(o)])+'" aria-label="Garder dans mes favoris"><svg viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></svg></button></div><div class="ttl"><button type="button" class="evt" aria-expanded="false" aria-controls="'+id+'" data-ev="'+id+'">'+esc(o.t)+'</button><span class="meta">'+meta+'</span>'+det+'</div><div class="tags"><button type="button" class="plus" data-for="'+id+'" aria-label="Voir le résumé" tabindex="-1"></button>'+tags+'</div></div>';
 }
 function list(){
@@ -939,7 +948,8 @@ function all(){var t=Object.keys(state.cats).filter(function(k){return state.cat
 document.addEventListener("click",function(e){
   var b=e.target.closest("button");if(!b)return;
   if(b.dataset.nav){state.m+=+b.dataset.nav;if(state.m<0){state.m=11;state.y--}if(state.m>11){state.m=0;state.y++}cal();return}
-  if(b.dataset.keep){var rw=b.closest(".row");if(!rw)return;var k=rw.getAttribute("data-k"),on=!MINE[k];if(on)MINE[k]=rw.getAttribute("data-ke");else delete MINE[k];saveMine();
+  if(b.dataset.share){var rw=b.closest(".row");if(rw)partage(rw.getAttribute("data-k"));return}
+   if(b.dataset.keep){var rw=b.closest(".row");if(!rw)return;var k=rw.getAttribute("data-k"),on=!MINE[k];if(on)MINE[k]=rw.getAttribute("data-ke");else delete MINE[k];saveMine();
     document.querySelectorAll(".row").forEach(function(r){if(r.getAttribute("data-k")!==k)return;r.classList.toggle("kept",on);r.querySelectorAll("[data-keep]").forEach(function(kb){kb.setAttribute("aria-pressed",on)})});
     var mc=document.querySelector(".chip.mine");if(mc){var mn=mineN();mc.querySelector("i").textContent=mn;mc.classList.toggle("has",!!mn);mc.classList.toggle("zero",!mn)}return}
   if(b.dataset.send){var bx=document.getElementById("sendbox");if(!bx)return;if(!bx.hidden){bx.hidden=true;b.setAttribute("aria-expanded","false");return}
@@ -1017,8 +1027,23 @@ function loadQR(cb){if(window.qrcode)return cb();var sc=document.createElement("
   try{history.replaceState(null,"",location.pathname+location.search)}catch(e){location.hash=""}
   window.__mesRecu=add;
 })();
+/* arrivée par un lien partagé (#ev=…) : ouvre le bon jour, déplie l'événement et le met en évidence */
+var EVOPEN=null;
+(function(){var m=/#ev=([0-9a-z]+)/.exec(location.hash);if(!m)return;var o=OCC.filter(function(x){return hk(mkey(x))===m[1]})[0];
+ try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}
+ if(!o||!alive(o)){setTimeout(function(){bulle("Cet événement est passé ou n'est plus dans l'agenda")},600);return}
+ var d=o.d>=T?o.d:T;state.sel=d===T?null:d;state.cats={};state.mine=false;state.y=+d.slice(0,4);state.m=+d.slice(5,7)-1;EVOPEN=mkey(o)})();
 head();all();
+if(EVOPEN)setTimeout(function(){var r=[].slice.call(document.querySelectorAll(".row")).filter(function(x){return x.getAttribute("data-k")===EVOPEN})[0];if(!r)return;
+ var t=r.querySelector(".evt");if(t&&t.getAttribute("aria-expanded")!=="true")t.click();r.classList.add("partage");r.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){r.classList.remove("partage")},4000)},150);
 }
+/* partager un événement (menu de partage du téléphone, sinon lien copié) */
+function partage(k){var o=OCC.filter(function(x){return mkey(x)===k})[0];if(!o)return;
+ var quand=o.e&&isExpo(o)?"jusqu'au "+fmtShort(o.e):fmtLong(o.d)+(o.h?" à "+o.h.replace(":","h"):"");
+ var url=location.origin+location.pathname.replace(/index\.html$/,"")+"#ev="+hk(k),txt=o.t+"\n"+quand.charAt(0).toUpperCase()+quand.slice(1)+" · "+o.v;
+ if(navigator.share){navigator.share({title:o.t,text:txt,url:url}).catch(function(){});return}
+ var all2=txt+"\n"+url;(navigator.clipboard?navigator.clipboard.writeText(all2):Promise.reject()).then(function(){bulle("Lien copié : vous pouvez le coller dans un message")},function(){window.prompt("Copiez ce lien :",url)})}
+function bulle(s){var b=document.getElementById("bulle");if(!b){b=document.createElement("div");b.id="bulle";document.body.appendChild(b)}b.textContent=s;b.classList.add("on");clearTimeout(bulle.t);bulle.t=setTimeout(function(){b.classList.remove("on")},2600)}
 fetch("evenements.json",{cache:"no-cache"}).then(function(r){return r.json()}).then(START).catch(function(){var l=document.getElementById("list");if(l)l.innerHTML="<p class=\"empty\">L’agenda n’a pas pu être chargé. Réessayez dans un instant.</p>"});
 })();
 </script>
