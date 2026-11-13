@@ -474,6 +474,13 @@ function drawStats(){
       +'<div class="kpi"><b>'+nf(Math.round((tot.total||0)/stDays*10)/10)+'</b><span>visites par jour en moyenne</span></div>'
       +'<div class="kpi"><b>'+nf(opens)+'</b><span>événements ouverts</span></div>'
       +'<div class="kpi"><b>'+(best[1]?nf(best[1]):"–")+'</b><span>'+(best[1]?"record : "+dlabel(best[0],1):"meilleur jour")+'</span></div>';
+    /* visiteurs uniques : un appareil compté une seule fois par mois (calendrier) ; nouveaux : première visite de l'appareil */
+    var P90=(stData.p90||{}).hits||[],MO=function(o){var d=new Date();d.setDate(1);d.setMonth(d.getMonth()+o);return d.toISOString().slice(0,7)},MN=function(m){return new Date(m+"-15").toLocaleDateString("fr-FR",{month:"long"})};
+    var um=function(m){var x=P90.filter(function(h){return h.path==="visiteur-mois:"+m})[0];return x?x.count:0};
+    var nv=hits.filter(function(h){return h.path==="nouveau-visiteur"}).reduce(function(s,h){return s+h.count},0);
+    $("st-kpis").innerHTML+='<div class="kpi hl"><b>'+nf(um(MO(0)))+'</b><span>visiteurs uniques en '+MN(MO(0))+'</span></div>'
+      +'<div class="kpi"><b>'+(um(MO(-1))?nf(um(MO(-1))):"–")+'</b><span>visiteurs uniques en '+MN(MO(-1))+'</span></div>'
+      +'<div class="kpi"><b>'+nf(nv)+'</b><span>nouveaux visiteurs sur '+stDays+' jours</span></div>';
     line("st-line",days);
     bars("st-ev",ev.filter(function(h){return /^ev:/.test(h.path)}).map(function(h){return [h.path.slice(3),h.count]}).slice(0,10),"ouvertures");
     bars("st-cat",ev.filter(function(h){return /^rubrique-/.test(h.path)}).map(function(h){var k=h.path.slice(9);return [CATN[k]||k,h.count]}).slice(0,10),"clics");
