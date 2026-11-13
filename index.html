@@ -18,6 +18,13 @@ html .chip[aria-pressed="true"]:not(.mine),html .day.now:not(.tod),html .day.sel
 :root:not([data-theme="dark"])[data-rub="jeune"] .logo path{fill:url(#fond-jeune-j)}
 :root:not([data-theme="dark"])[data-rub="spectacle"] .logo path{fill:url(#fond-spectacle-j)}
 </style>
+<style>/* jour : à l'arrivée (aucune rubrique), logo du gris de la mer de la carte */
+:root.sans-rub:not([data-theme="dark"]) .logo{color:var(--soft)}
+/* « Mes favoris » non coché : cœur en contour, même épaisseur que la loupe ; coché : cœur rouge plein */
+html body .chip.mine svg,html body .chip.mine.has svg{fill:none;stroke:currentColor;stroke-width:2.64;stroke-linejoin:round;overflow:visible}
+html body .chip.mine[aria-pressed="true"] svg{fill:var(--vermillon);stroke:none}
+@media (max-width:560px){html body .chip.mine svg,html body .chip.mine.has svg{stroke-width:3.12}html body .chip.mine[aria-pressed="true"] svg{stroke:none}}
+</style>
 </head><body>
 <title>FOMO, ne rien louper à Marseille</title>
 <meta name="description" content="Agenda culturel de Marseille et alentours : concerts, théâtre, danse, expositions, vernissages, conférences et manifs, au jour le jour.">
