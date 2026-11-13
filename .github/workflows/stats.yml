@@ -26,6 +26,7 @@ jobs:
           fmt = [lambda d: d.strftime("%Y-%m-%dT%H:00:00Z"), lambda d: d.strftime("%Y-%m-%d")]
           fi = [0]
           def get(path, start, end, **extra):
+              essais = 0
               while True:
                   q = {"start": fmt[fi[0]](start), "end": fmt[fi[0]](end)}
                   q.update({k: str(v) for k, v in extra.items()})
@@ -43,7 +44,21 @@ jobs:
                       if e.code == 429:
                           time.sleep(2)
                           continue
-                      raise SystemExit("GoatCounter %s %s : %s" % (e.code, path, body))
+                      # GoatCounter répond parfois « not found » ou une erreur serveur pendant quelques minutes : on réessaie,
+                      # puis on abandonne ce passage SANS échec (les chiffres précédents restent affichés, pas de mail d'erreur)
+                      essais += 1
+                      if essais <= 3 and (e.code == 404 or e.code >= 500):
+                          time.sleep(20 * essais)
+                          continue
+                      print("::warning::GoatCounter %s %s : %s (relevé sauté, on réessaiera à la prochaine heure)" % (e.code, path, body))
+                      raise SystemExit(0)
+                  except (urllib.error.URLError, TimeoutError) as e:
+                      essais += 1
+                      if essais <= 3:
+                          time.sleep(20 * essais)
+                          continue
+                      print("::warning::GoatCounter injoignable : %s (relevé sauté)" % e)
+                      raise SystemExit(0)
           import urllib.parse
           now = dt.datetime.now(dt.timezone.utc)
           end = now.replace(minute=0, second=0, microsecond=0) + dt.timedelta(hours=1)
@@ -69,6 +84,7 @@ jobs:
       - name: Ranger dans la branche stats
         run: |
           cd out
+          if [ ! -f stats.json ]; then echo "Pas de nouveaux chiffres cette fois-ci"; exit 0; fi
           git init -q -b stats
           git config user.name "Statistiques FOMO"
           git config user.email "actions@users.noreply.github.com"
