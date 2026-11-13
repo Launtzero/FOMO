@@ -47,8 +47,6 @@ html body .chip.mine[aria-pressed="true"] svg{fill:var(--vermillon);stroke:none}
   html .time .kh::after{left:-8px;right:-8px;top:-8px;bottom:-10px}
 }
 </style>
-<style>footer .audience{font-size:12px;color:var(--muted)}footer .audience button{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}</style>
-<script>document.addEventListener("click",function(e){if(e.target&&e.target.id==="nocount"){try{localStorage.setItem("skipgc","t");localStorage.removeItem("fomo-vu")}catch(x){}e.target.textContent="C'est noté : cet appareil n'est plus compté.";e.target.disabled=true}});</script>
 </head><body>
 <title>FOMO, ne rien louper à Marseille</title>
 <meta name="description" content="Agenda culturel de Marseille et alentours : concerts, théâtre, danse, expositions, vernissages, conférences et manifs, au jour le jour.">
@@ -531,7 +529,6 @@ html .sendbox .sb p b{color:var(--fg);font-weight:600}
     <div class="pres-l"><div class="pres">AGENDA CULTUREL. MARSEILLE ET ALENTOURS</div>
     <ul><li><a class="propose" href="contribuer.html">Proposer un événement</a></li></ul></div>
     <div>Données relevées le <span id="maj">…</span>. Horaires, prix et annulations peuvent changer : touchez un événement pour ouvrir sa page.</div>
-    <div class="audience">Mesure d'audience anonyme, sans publicité ni pistage d'un site à l'autre : votre appareil garde seulement le mois de sa dernière visite, 13 mois au plus. <button type="button" id="nocount">Ne pas être compté</button></div>
   </footer>
 </div>
 
