@@ -559,7 +559,7 @@ function ymd(dt){return dt.getFullYear()+"-"+pad(dt.getMonth()+1)+"-"+pad(dt.get
 function dt(s){return new Date(s+"T12:00:00")}
 var T=ymd(new Date());
 var MUTE={jam:1,standup:1,humour:1,cinema:1,festival:1};
-var state={sel:null,cats:{},y:+T.slice(0,4),m:+T.slice(5,7)-1,more:1,run:false};
+var state={sel:null,cats:{concert:true},y:+T.slice(0,4),m:+T.slice(5,7)-1,more:1,run:false};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function fmtLong(s){return dt(s).toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})}
 function fmtShort(s){return dt(s).toLocaleDateString("fr-FR",{day:"numeric",month:"short"})}
