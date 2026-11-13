@@ -20,10 +20,10 @@ html .chip[aria-pressed="true"]:not(.mine),html .day.now:not(.tod),html .day.sel
 </style>
 <style>/* jour : à l'arrivée (aucune rubrique), logo du gris de la mer de la carte */
 :root.sans-rub:not([data-theme="dark"]) .logo{color:var(--soft)}
-/* « Mes favoris » non coché : cœur en contour, même épaisseur que la loupe ; coché : cœur rouge plein */
-html body .chip.mine svg,html body .chip.mine.has svg{fill:none;stroke:currentColor;stroke-width:2.64;stroke-linejoin:round;overflow:visible}
+/* « Mes favoris » non coché : cœur en contour intérieur, 3/4 de l'épaisseur de la loupe (trait doublé, rogné par la forme du cœur) ; coché : cœur rouge plein */
+html body .chip.mine svg,html body .chip.mine.has svg{fill:none;stroke:currentColor;stroke-width:3.96;stroke-linejoin:round}
 html body .chip.mine[aria-pressed="true"] svg{fill:var(--vermillon);stroke:none}
-@media (max-width:560px){html body .chip.mine svg,html body .chip.mine.has svg{stroke-width:3.12}html body .chip.mine[aria-pressed="true"] svg{stroke:none}}
+@media (max-width:560px){html body .chip.mine svg,html body .chip.mine.has svg{stroke-width:4.68}html body .chip.mine[aria-pressed="true"] svg{stroke:none}}
 </style>
 </head><body>
 <title>FOMO, ne rien louper à Marseille</title>
@@ -602,7 +602,7 @@ function chips(){
   var any=Object.keys(state.cats).some(function(k){return state.cats[k]});
   var h='';
   CATS.forEach(function(c){var n=cnt[c[0]]||0;if(MUTE[c[0]])return;h+='<button type="button" class="chip'+(n?'':' zero')+'" aria-pressed="'+(!!state.cats[c[0]])+'" data-cat="'+c[0]+'">'+esc(c[1])+' <i>'+n+'</i></button>'});
-  var mn=mineN();h='<div class="fav-l"><button type="button" class="chip mine'+(mn?' has':' zero')+'" aria-pressed="'+(!!state.mine)+'" data-mine="1">'+'<svg viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></svg>'+'Mes favoris <i>'+mn+'</i></button></div>'+h;
+  var mn=mineN();h='<div class="fav-l"><button type="button" class="chip mine'+(mn?' has':' zero')+'" aria-pressed="'+(!!state.mine)+'" data-mine="1">'+'<svg viewBox="0 0 24 22" aria-hidden="true"><defs><clipPath id="coeur-mine"><path d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></clipPath></defs><path clip-path="url(#coeur-mine)" d="M12 20.6c-.3-.2-10.4-6.4-10.4-13.2C1.6 4.3 4 1.9 7 1.9c2.1 0 3.9 1.2 5 3 1.1-1.8 2.9-3 5-3 3 0 5.4 2.4 5.4 5.5 0 6.8-10.1 13-10.4 13.2z"/></svg>'+'Mes favoris <i>'+mn+'</i></button></div>'+h;
   document.getElementById("chips").innerHTML=h;
 }
 
