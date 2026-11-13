@@ -1040,10 +1040,6 @@ var EVOPEN=null;
  try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}
  if(!o||!alive(o)){setTimeout(function(){bulle("Cet événement est passé ou n'est plus dans l'agenda")},600);return}
  var d=o.d>=T?o.d:T;state.sel=d===T?null:d;state.cats={};state.mine=false;state.y=+d.slice(0,4);state.m=+d.slice(5,7)-1;EVOPEN=mkey(o)})();
-head();all();
-if(EVOPEN)setTimeout(function(){var r=[].slice.call(document.querySelectorAll(".row")).filter(function(x){return x.getAttribute("data-k")===EVOPEN})[0];if(!r)return;
- var t=r.querySelector(".evt");if(t&&t.getAttribute("aria-expanded")!=="true")t.click();r.classList.add("partage");r.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){r.classList.remove("partage")},4000)},150);
-}
 /* ESSAI PARTAGE : envoyer un événement (menu de partage du téléphone, sinon lien copié) */
 function partage(k){var o=OCC.filter(function(x){return mkey(x)===k})[0];if(!o)return;
  var quand=o.e&&isExpo(o)?"jusqu'au "+fmtShort(o.e):fmtLong(o.d)+(o.h?" à "+o.h.replace(":","h"):"");
@@ -1051,6 +1047,10 @@ function partage(k){var o=OCC.filter(function(x){return mkey(x)===k})[0];if(!o)r
  if(navigator.share){navigator.share({title:o.t,text:txt,url:url}).catch(function(){});return}
  var all2=txt+"\n"+url;(navigator.clipboard?navigator.clipboard.writeText(all2):Promise.reject()).then(function(){bulle("Lien copié : vous pouvez le coller dans un message")},function(){window.prompt("Copiez ce lien :",url)})}
 function bulle(s){var b=document.getElementById("bulle");if(!b){b=document.createElement("div");b.id="bulle";document.body.appendChild(b)}b.textContent=s;b.classList.add("on");clearTimeout(bulle.t);bulle.t=setTimeout(function(){b.classList.remove("on")},2600)}
+head();all();
+if(EVOPEN)setTimeout(function(){var r=[].slice.call(document.querySelectorAll(".row")).filter(function(x){return x.getAttribute("data-k")===EVOPEN})[0];if(!r)return;
+ var t=r.querySelector(".evt");if(t&&t.getAttribute("aria-expanded")!=="true")t.click();r.classList.add("partage");r.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){r.classList.remove("partage")},4000)},150);
+}
 fetch("evenements.json",{cache:"no-cache"}).then(function(r){return r.json()}).then(START).catch(function(){var l=document.getElementById("list");if(l)l.innerHTML="<p class=\"empty\">L’agenda n’a pas pu être chargé. Réessayez dans un instant.</p>"});
 })();
 </script>
