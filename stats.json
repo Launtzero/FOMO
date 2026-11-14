@@ -1,0 +1,1882 @@
+{
+ "maj": "2026-11-14T17:54:20Z",
+ "p7": {
+  "total": 123,
+  "total_events": 88,
+  "jours": [
+   {
+    "day": "2026-11-08",
+    "daily": 14
+   },
+   {
+    "day": "2026-11-09",
+    "daily": 6
+   },
+   {
+    "day": "2026-11-10",
+    "daily": 27
+   },
+   {
+    "day": "2026-11-11",
+    "daily": 19
+   },
+   {
+    "day": "2026-11-12",
+    "daily": 31
+   },
+   {
+    "day": "2026-11-13",
+    "daily": 10
+   },
+   {
+    "day": "2026-11-14",
+    "daily": 16
+   }
+  ],
+  "hits": [
+   {
+    "path": "/",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 25
+   },
+   {
+    "path": "calendrier",
+    "title": "",
+    "event": true,
+    "count": 11
+   },
+   {
+    "path": "rubrique-spectacle",
+    "title": "Spectacle",
+    "event": true,
+    "count": 6
+   },
+   {
+    "path": "visiteur-mois:2026-11",
+    "title": "Visiteur unique du mois",
+    "event": true,
+    "count": 5
+   },
+   {
+    "path": "nouveau-visiteur",
+    "title": "Nouveau visiteur",
+    "event": true,
+    "count": 5
+   },
+   {
+    "path": "rubrique-concert",
+    "title": "Concert",
+    "event": true,
+    "count": 5
+   },
+   {
+    "path": "/essai-oulala.html",
+    "title": "Oulala (essai), ne rien louper à Marseille",
+    "event": false,
+    "count": 5
+   },
+   {
+    "path": "rubrique-theatre",
+    "title": "Théâtre",
+    "event": true,
+    "count": 5
+   },
+   {
+    "path": "/contribuer.html",
+    "title": "Proposer un événement · FOMO Marseille",
+    "event": false,
+    "count": 4
+   },
+   {
+    "path": "rubrique-conference",
+    "title": "Conférences & rencontres",
+    "event": true,
+    "count": 4
+   },
+   {
+    "path": "rubrique-expo",
+    "title": "Exposition",
+    "event": true,
+    "count": 4
+   },
+   {
+    "path": "rubrique-manif",
+    "title": "Manifs",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "ev:Rencontre avec Ariella Aïsha Azoulay",
+    "title": "Rencontre avec Ariella Aïsha Azoulay",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Jean Felzine (ouverture du Mois du doc)",
+    "title": "Jean Felzine (ouverture du Mois du doc)",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "source:www.fest.fr",
+    "title": "www.fest.fr",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "clic-proposer",
+    "title": "",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "rubrique-visite",
+    "title": "Visites & ateliers",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "source:www.vortexfrommars.org",
+    "title": "www.vortexfrommars.org",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Brouhaharmonia + Jimmy Looping + Télécastré + Fita",
+    "title": "Brouhaharmonia + Jimmy Looping + Télécastré + Fita",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Médée/s, Louise Vignaud et Rachida Brakni",
+    "title": "Médée/s, Louise Vignaud et Rachida Brakni",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Les Rascasses",
+    "title": "Les Rascasses",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Vernissage : Un entre-deux, 31e salon d'automne",
+    "title": "Vernissage : Un entre-deux, 31e salon d'automne",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:ÅÅÅ + Canari Sans Lasso + Impro(bable)",
+    "title": "ÅÅÅ + Canari Sans Lasso + Impro(bable)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Ziùr + V:Triol + Ola Terreur",
+    "title": "Ziùr + V:Triol + Ola Terreur",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:La peinture en lettres. Histoire & renouveau",
+    "title": "La peinture en lettres. Histoire & renouveau",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Lancement Sentō Trip, rencontre avec César Debargue",
+    "title": "Lancement Sentō Trip, rencontre avec César Debargue",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Kino Panic Attack",
+    "title": "Kino Panic Attack",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:sceneweb.fr",
+    "title": "sceneweb.fr",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Salma, mon amour, Ahmed El Attar (À tous les mondes #1)",
+    "title": "Salma, mon amour, Ahmed El Attar (À tous les mondes #1)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Populaire ? Trésors des collections du Mucem",
+    "title": "Populaire ? Trésors des collections du Mucem",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-jeune",
+    "title": "Jeune public",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:theatre-lacriee.com",
+    "title": "theatre-lacriee.com",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Jouer La Mouette",
+    "title": "Jouer La Mouette",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Les filles désir",
+    "title": "Les filles désir",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Bladi Sound System",
+    "title": "Bladi Sound System",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "/essai-oulala-favoris.html",
+    "title": "Oulala (essai), ne rien louper à Marseille",
+    "event": false,
+    "count": 1
+   },
+   {
+    "path": "ev:Jam-ais fini !",
+    "title": "Jam-ais fini !",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Franck Amsallem Trio",
+    "title": "Franck Amsallem Trio",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "garder",
+    "title": "",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Still Fresh",
+    "title": "Still Fresh",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Vardhum (Question de danse)",
+    "title": "Vardhum (Question de danse)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-vernissage",
+    "title": "Vernissage",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "recherche",
+    "title": "",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:www.martigues-tourisme.com",
+    "title": "www.martigues-tourisme.com",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Brunch musical : Rewind",
+    "title": "Brunch musical : Rewind",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-danse",
+    "title": "Danse",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "voir-adresse",
+    "title": "",
+    "event": true,
+    "count": 1
+   }
+  ],
+  "refs": [
+   {
+    "name": "",
+    "count": 116
+   },
+   {
+    "name": "Google",
+    "count": 2
+   },
+   {
+    "name": "www.ecosia.org",
+    "count": 1
+   }
+  ],
+  "sizes": [
+   {
+    "id": "phone",
+    "count": 99
+   },
+   {
+    "id": "tablet",
+    "count": 2
+   },
+   {
+    "id": "desktop",
+    "count": 18
+   },
+   {
+    "id": "desktophd",
+    "count": 4
+   },
+   {
+    "id": "unknown",
+    "count": 0
+   }
+  ],
+  "locs": [
+   {
+    "id": "FR",
+    "name": "France",
+    "count": 118
+   },
+   {
+    "id": "US",
+    "name": "United States",
+    "count": 2
+   },
+   {
+    "id": "CZ",
+    "name": "Czechia",
+    "count": 1
+   },
+   {
+    "id": "IE",
+    "name": "Ireland",
+    "count": 1
+   },
+   {
+    "id": "SE",
+    "name": "Sweden",
+    "count": 1
+   }
+  ]
+ },
+ "p30": {
+  "total": 189,
+  "total_events": 138,
+  "jours": [
+   {
+    "day": "2026-10-16",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-17",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-18",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-19",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-20",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-21",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-22",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-23",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-24",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-25",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-26",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-27",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-28",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-29",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-30",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-31",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-01",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-02",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-03",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-04",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-05",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-06",
+    "daily": 37
+   },
+   {
+    "day": "2026-11-07",
+    "daily": 29
+   },
+   {
+    "day": "2026-11-08",
+    "daily": 14
+   },
+   {
+    "day": "2026-11-09",
+    "daily": 6
+   },
+   {
+    "day": "2026-11-10",
+    "daily": 27
+   },
+   {
+    "day": "2026-11-11",
+    "daily": 19
+   },
+   {
+    "day": "2026-11-12",
+    "daily": 31
+   },
+   {
+    "day": "2026-11-13",
+    "daily": 10
+   },
+   {
+    "day": "2026-11-14",
+    "daily": 16
+   }
+  ],
+  "hits": [
+   {
+    "path": "/",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 32
+   },
+   {
+    "path": "calendrier",
+    "title": "",
+    "event": true,
+    "count": 15
+   },
+   {
+    "path": "rubrique-concert",
+    "title": "Concert",
+    "event": true,
+    "count": 9
+   },
+   {
+    "path": "/essai-oulala.html",
+    "title": "Oulala (essai), ne rien louper à Marseille",
+    "event": false,
+    "count": 9
+   },
+   {
+    "path": "rubrique-theatre",
+    "title": "Théâtre",
+    "event": true,
+    "count": 8
+   },
+   {
+    "path": "rubrique-spectacle",
+    "title": "Spectacle",
+    "event": true,
+    "count": 6
+   },
+   {
+    "path": "rubrique-conference",
+    "title": "Conférences & rencontres",
+    "event": true,
+    "count": 6
+   },
+   {
+    "path": "rubrique-expo",
+    "title": "Exposition",
+    "event": true,
+    "count": 6
+   },
+   {
+    "path": "visiteur-mois:2026-11",
+    "title": "Visiteur unique du mois",
+    "event": true,
+    "count": 5
+   },
+   {
+    "path": "nouveau-visiteur",
+    "title": "Nouveau visiteur",
+    "event": true,
+    "count": 5
+   },
+   {
+    "path": "/contribuer.html",
+    "title": "Proposer un événement · FOMO Marseille",
+    "event": false,
+    "count": 4
+   },
+   {
+    "path": "rubrique-manif",
+    "title": "Manifs",
+    "event": true,
+    "count": 4
+   },
+   {
+    "path": "rubrique-visite",
+    "title": "Visites & ateliers",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "rubrique-danse",
+    "title": "Danse",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "source:www.vortexfrommars.org",
+    "title": "www.vortexfrommars.org",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "ev:Jwles",
+    "title": "Jwles",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "ev:Rencontre avec Ariella Aïsha Azoulay",
+    "title": "Rencontre avec Ariella Aïsha Azoulay",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Jean Felzine (ouverture du Mois du doc)",
+    "title": "Jean Felzine (ouverture du Mois du doc)",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "source:www.fest.fr",
+    "title": "www.fest.fr",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "clic-proposer",
+    "title": "",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "voir-adresse",
+    "title": "",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:L'Expérience Cysoul",
+    "title": "L'Expérience Cysoul",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Al Walid + Falzar",
+    "title": "Al Walid + Falzar",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Le poil de la bête",
+    "title": "Le poil de la bête",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "/essai-case.html",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 2
+   },
+   {
+    "path": "ev:Nina Uzan",
+    "title": "Nina Uzan",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Josman",
+    "title": "Josman",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Brouhaharmonia + Jimmy Looping + Télécastré + Fita",
+    "title": "Brouhaharmonia + Jimmy Looping + Télécastré + Fita",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Médée/s, Louise Vignaud et Rachida Brakni",
+    "title": "Médée/s, Louise Vignaud et Rachida Brakni",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Les Rascasses",
+    "title": "Les Rascasses",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Vernissage : Un entre-deux, 31e salon d'automne",
+    "title": "Vernissage : Un entre-deux, 31e salon d'automne",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:ÅÅÅ + Canari Sans Lasso + Impro(bable)",
+    "title": "ÅÅÅ + Canari Sans Lasso + Impro(bable)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Ziùr + V:Triol + Ola Terreur",
+    "title": "Ziùr + V:Triol + Ola Terreur",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:La peinture en lettres. Histoire & renouveau",
+    "title": "La peinture en lettres. Histoire & renouveau",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Lancement Sentō Trip, rencontre avec César Debargue",
+    "title": "Lancement Sentō Trip, rencontre avec César Debargue",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Kino Panic Attack",
+    "title": "Kino Panic Attack",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:sceneweb.fr",
+    "title": "sceneweb.fr",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Salma, mon amour, Ahmed El Attar (À tous les mondes #1)",
+    "title": "Salma, mon amour, Ahmed El Attar (À tous les mondes #1)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Populaire ? Trésors des collections du Mucem",
+    "title": "Populaire ? Trésors des collections du Mucem",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-jeune",
+    "title": "Jeune public",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:theatre-lacriee.com",
+    "title": "theatre-lacriee.com",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Jouer La Mouette",
+    "title": "Jouer La Mouette",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Les filles désir",
+    "title": "Les filles désir",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Bladi Sound System",
+    "title": "Bladi Sound System",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "/essai-oulala-favoris.html",
+    "title": "Oulala (essai), ne rien louper à Marseille",
+    "event": false,
+    "count": 1
+   },
+   {
+    "path": "ev:Jam-ais fini !",
+    "title": "Jam-ais fini !",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Franck Amsallem Trio",
+    "title": "Franck Amsallem Trio",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "garder",
+    "title": "",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Still Fresh",
+    "title": "Still Fresh",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Vardhum (Question de danse)",
+    "title": "Vardhum (Question de danse)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-vernissage",
+    "title": "Vernissage",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "recherche",
+    "title": "",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:www.martigues-tourisme.com",
+    "title": "www.martigues-tourisme.com",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Brunch musical : Rewind",
+    "title": "Brunch musical : Rewind",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:HeroFestival Marseille (Saison XII)",
+    "title": "HeroFestival Marseille (Saison XII)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:planet-mars.fr",
+    "title": "planet-mars.fr",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Hip hop 100 % live band",
+    "title": "Hip hop 100 % live band",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-classique",
+    "title": "Opéra & classique",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Röm",
+    "title": "Röm",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Master Boot Record",
+    "title": "Master Boot Record",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Bonne Marseille #3",
+    "title": "Bonne Marseille #3",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Mariad",
+    "title": "Mariad",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Taiwan MC + ODG",
+    "title": "Taiwan MC + ODG",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Rymden + Nils Petter Molvaer",
+    "title": "Rymden + Nils Petter Molvaer",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Animal détecté + Télécastré + Mumuse",
+    "title": "Animal détecté + Télécastré + Mumuse",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Marie Colomera + Melba",
+    "title": "Marie Colomera + Melba",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "/essai-inter.html",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 1
+   },
+   {
+    "path": "/essai-roboto.html",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 1
+   },
+   {
+    "path": "carte-zoom",
+    "title": "",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:La Mal Coiffée",
+    "title": "La Mal Coiffée",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Kaz D'Aïla",
+    "title": "Kaz D'Aïla",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:dome.marseille.fr",
+    "title": "dome.marseille.fr",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "/test-telephone",
+    "title": "",
+    "event": false,
+    "count": 1
+   }
+  ],
+  "refs": [
+   {
+    "name": "",
+    "count": 182
+   },
+   {
+    "name": "Google",
+    "count": 2
+   },
+   {
+    "name": "www.ecosia.org",
+    "count": 1
+   }
+  ],
+  "sizes": [
+   {
+    "id": "phone",
+    "count": 152
+   },
+   {
+    "id": "tablet",
+    "count": 2
+   },
+   {
+    "id": "desktop",
+    "count": 30
+   },
+   {
+    "id": "desktophd",
+    "count": 4
+   },
+   {
+    "id": "unknown",
+    "count": 1
+   }
+  ],
+  "locs": [
+   {
+    "id": "FR",
+    "name": "France",
+    "count": 184
+   },
+   {
+    "id": "US",
+    "name": "United States",
+    "count": 2
+   },
+   {
+    "id": "CZ",
+    "name": "Czechia",
+    "count": 1
+   },
+   {
+    "id": "IE",
+    "name": "Ireland",
+    "count": 1
+   },
+   {
+    "id": "SE",
+    "name": "Sweden",
+    "count": 1
+   }
+  ]
+ },
+ "p90": {
+  "total": 189,
+  "total_events": 138,
+  "jours": [
+   {
+    "day": "2026-08-17",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-18",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-19",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-20",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-21",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-22",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-23",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-24",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-25",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-26",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-27",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-28",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-29",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-30",
+    "daily": 0
+   },
+   {
+    "day": "2026-08-31",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-01",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-02",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-03",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-04",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-05",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-06",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-07",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-08",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-09",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-10",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-11",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-12",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-13",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-14",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-15",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-16",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-17",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-18",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-19",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-20",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-21",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-22",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-23",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-24",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-25",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-26",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-27",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-28",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-29",
+    "daily": 0
+   },
+   {
+    "day": "2026-09-30",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-01",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-02",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-03",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-04",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-05",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-06",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-07",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-08",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-09",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-10",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-11",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-12",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-13",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-14",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-15",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-16",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-17",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-18",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-19",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-20",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-21",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-22",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-23",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-24",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-25",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-26",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-27",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-28",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-29",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-30",
+    "daily": 0
+   },
+   {
+    "day": "2026-10-31",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-01",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-02",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-03",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-04",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-05",
+    "daily": 0
+   },
+   {
+    "day": "2026-11-06",
+    "daily": 37
+   },
+   {
+    "day": "2026-11-07",
+    "daily": 29
+   },
+   {
+    "day": "2026-11-08",
+    "daily": 14
+   },
+   {
+    "day": "2026-11-09",
+    "daily": 6
+   },
+   {
+    "day": "2026-11-10",
+    "daily": 27
+   },
+   {
+    "day": "2026-11-11",
+    "daily": 19
+   },
+   {
+    "day": "2026-11-12",
+    "daily": 31
+   },
+   {
+    "day": "2026-11-13",
+    "daily": 10
+   },
+   {
+    "day": "2026-11-14",
+    "daily": 16
+   }
+  ],
+  "hits": [
+   {
+    "path": "/",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 32
+   },
+   {
+    "path": "calendrier",
+    "title": "",
+    "event": true,
+    "count": 15
+   },
+   {
+    "path": "rubrique-concert",
+    "title": "Concert",
+    "event": true,
+    "count": 9
+   },
+   {
+    "path": "/essai-oulala.html",
+    "title": "Oulala (essai), ne rien louper à Marseille",
+    "event": false,
+    "count": 9
+   },
+   {
+    "path": "rubrique-theatre",
+    "title": "Théâtre",
+    "event": true,
+    "count": 8
+   },
+   {
+    "path": "rubrique-spectacle",
+    "title": "Spectacle",
+    "event": true,
+    "count": 6
+   },
+   {
+    "path": "rubrique-conference",
+    "title": "Conférences & rencontres",
+    "event": true,
+    "count": 6
+   },
+   {
+    "path": "rubrique-expo",
+    "title": "Exposition",
+    "event": true,
+    "count": 6
+   },
+   {
+    "path": "visiteur-mois:2026-11",
+    "title": "Visiteur unique du mois",
+    "event": true,
+    "count": 5
+   },
+   {
+    "path": "nouveau-visiteur",
+    "title": "Nouveau visiteur",
+    "event": true,
+    "count": 5
+   },
+   {
+    "path": "/contribuer.html",
+    "title": "Proposer un événement · FOMO Marseille",
+    "event": false,
+    "count": 4
+   },
+   {
+    "path": "rubrique-manif",
+    "title": "Manifs",
+    "event": true,
+    "count": 4
+   },
+   {
+    "path": "rubrique-visite",
+    "title": "Visites & ateliers",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "rubrique-danse",
+    "title": "Danse",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "source:www.vortexfrommars.org",
+    "title": "www.vortexfrommars.org",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "ev:Jwles",
+    "title": "Jwles",
+    "event": true,
+    "count": 3
+   },
+   {
+    "path": "ev:Rencontre avec Ariella Aïsha Azoulay",
+    "title": "Rencontre avec Ariella Aïsha Azoulay",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Jean Felzine (ouverture du Mois du doc)",
+    "title": "Jean Felzine (ouverture du Mois du doc)",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "source:www.fest.fr",
+    "title": "www.fest.fr",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "clic-proposer",
+    "title": "",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "voir-adresse",
+    "title": "",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:L'Expérience Cysoul",
+    "title": "L'Expérience Cysoul",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Al Walid + Falzar",
+    "title": "Al Walid + Falzar",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Le poil de la bête",
+    "title": "Le poil de la bête",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "/essai-case.html",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 2
+   },
+   {
+    "path": "ev:Nina Uzan",
+    "title": "Nina Uzan",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Josman",
+    "title": "Josman",
+    "event": true,
+    "count": 2
+   },
+   {
+    "path": "ev:Brouhaharmonia + Jimmy Looping + Télécastré + Fita",
+    "title": "Brouhaharmonia + Jimmy Looping + Télécastré + Fita",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Médée/s, Louise Vignaud et Rachida Brakni",
+    "title": "Médée/s, Louise Vignaud et Rachida Brakni",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Les Rascasses",
+    "title": "Les Rascasses",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Vernissage : Un entre-deux, 31e salon d'automne",
+    "title": "Vernissage : Un entre-deux, 31e salon d'automne",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:ÅÅÅ + Canari Sans Lasso + Impro(bable)",
+    "title": "ÅÅÅ + Canari Sans Lasso + Impro(bable)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Ziùr + V:Triol + Ola Terreur",
+    "title": "Ziùr + V:Triol + Ola Terreur",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:La peinture en lettres. Histoire & renouveau",
+    "title": "La peinture en lettres. Histoire & renouveau",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Lancement Sentō Trip, rencontre avec César Debargue",
+    "title": "Lancement Sentō Trip, rencontre avec César Debargue",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Kino Panic Attack",
+    "title": "Kino Panic Attack",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:sceneweb.fr",
+    "title": "sceneweb.fr",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Salma, mon amour, Ahmed El Attar (À tous les mondes #1)",
+    "title": "Salma, mon amour, Ahmed El Attar (À tous les mondes #1)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Populaire ? Trésors des collections du Mucem",
+    "title": "Populaire ? Trésors des collections du Mucem",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-jeune",
+    "title": "Jeune public",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:theatre-lacriee.com",
+    "title": "theatre-lacriee.com",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Jouer La Mouette",
+    "title": "Jouer La Mouette",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Les filles désir",
+    "title": "Les filles désir",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Bladi Sound System",
+    "title": "Bladi Sound System",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "/essai-oulala-favoris.html",
+    "title": "Oulala (essai), ne rien louper à Marseille",
+    "event": false,
+    "count": 1
+   },
+   {
+    "path": "ev:Jam-ais fini !",
+    "title": "Jam-ais fini !",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Franck Amsallem Trio",
+    "title": "Franck Amsallem Trio",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "garder",
+    "title": "",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Still Fresh",
+    "title": "Still Fresh",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Vardhum (Question de danse)",
+    "title": "Vardhum (Question de danse)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-vernissage",
+    "title": "Vernissage",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "recherche",
+    "title": "",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:www.martigues-tourisme.com",
+    "title": "www.martigues-tourisme.com",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Brunch musical : Rewind",
+    "title": "Brunch musical : Rewind",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:HeroFestival Marseille (Saison XII)",
+    "title": "HeroFestival Marseille (Saison XII)",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:planet-mars.fr",
+    "title": "planet-mars.fr",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Hip hop 100 % live band",
+    "title": "Hip hop 100 % live band",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "rubrique-classique",
+    "title": "Opéra & classique",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Röm",
+    "title": "Röm",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Master Boot Record",
+    "title": "Master Boot Record",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Bonne Marseille #3",
+    "title": "Bonne Marseille #3",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Mariad",
+    "title": "Mariad",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Taiwan MC + ODG",
+    "title": "Taiwan MC + ODG",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Rymden + Nils Petter Molvaer",
+    "title": "Rymden + Nils Petter Molvaer",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Animal détecté + Télécastré + Mumuse",
+    "title": "Animal détecté + Télécastré + Mumuse",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Marie Colomera + Melba",
+    "title": "Marie Colomera + Melba",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "/essai-inter.html",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 1
+   },
+   {
+    "path": "/essai-roboto.html",
+    "title": "FOMO, ne rien louper à Marseille",
+    "event": false,
+    "count": 1
+   },
+   {
+    "path": "carte-zoom",
+    "title": "",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:La Mal Coiffée",
+    "title": "La Mal Coiffée",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "ev:Kaz D'Aïla",
+    "title": "Kaz D'Aïla",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "source:dome.marseille.fr",
+    "title": "dome.marseille.fr",
+    "event": true,
+    "count": 1
+   },
+   {
+    "path": "/test-telephone",
+    "title": "",
+    "event": false,
+    "count": 1
+   }
+  ],
+  "refs": [
+   {
+    "name": "",
+    "count": 182
+   },
+   {
+    "name": "Google",
+    "count": 2
+   },
+   {
+    "name": "www.ecosia.org",
+    "count": 1
+   }
+  ],
+  "sizes": [
+   {
+    "id": "phone",
+    "count": 152
+   },
+   {
+    "id": "tablet",
+    "count": 2
+   },
+   {
+    "id": "desktop",
+    "count": 30
+   },
+   {
+    "id": "desktophd",
+    "count": 4
+   },
+   {
+    "id": "unknown",
+    "count": 1
+   }
+  ],
+  "locs": [
+   {
+    "id": "FR",
+    "name": "France",
+    "count": 184
+   },
+   {
+    "id": "US",
+    "name": "United States",
+    "count": 2
+   },
+   {
+    "id": "CZ",
+    "name": "Czechia",
+    "count": 1
+   },
+   {
+    "id": "IE",
+    "name": "Ireland",
+    "count": 1
+   },
+   {
+    "id": "SE",
+    "name": "Sweden",
+    "count": 1
+   }
+  ]
+ }
+}
