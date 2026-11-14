@@ -10121,7 +10121,7 @@
    "dates": [
     "2026-11-14 18:00"
    ],
-   "note": "Chaque samedi",
+   "note": "Non autorisé par la préfecture selon La Provence (13 nov.)",
    "resume": "Rassemblement hebdomadaire d'un collectif d'associations, syndicats et partis pour demander l'arrêt des massacres à Gaza et des colonies en Cisjordanie.",
    "lien": "https://mars-infos.org/manifestation-de-soutien-a-gaza-8349",
    "source": "manif"
@@ -14302,6 +14302,34 @@
    "resume": "Concert hommage où des artistes reprennent les chansons de Daniel Lévi avec ses musiciens et un orchestre philharmonique, au profit de l'association Daniel Levi.",
    "lien": "https://www.marseille-tourisme.com/vivez-marseille-blog/agenda/concert-association-daniel-levi-marseille-fr-6701981/",
    "source": "Marseille Tourisme"
+  },
+  {
+   "titre": "Rassemblement des gilets jaunes",
+   "lieu": "Quai des Belges (Vieux-Port)",
+   "categories": [
+    "manif"
+   ],
+   "dates": [
+    "2026-11-14 11:00"
+   ],
+   "resume": "Rassemblement à l'appel du mouvement des gilets jaunes, sans revendication précise annoncée.",
+   "note": "Non autorisé par la préfecture selon La Provence (13 nov.)",
+   "lien": "https://securmanif.fr/manifestations/marseille",
+   "source": "Securmanif"
+  },
+  {
+   "titre": "Rassemblement des gilets jaunes",
+   "lieu": "Les Réformés",
+   "categories": [
+    "manif"
+   ],
+   "dates": [
+    "2026-11-14 14:00"
+   ],
+   "resume": "Rassemblement à l'appel du mouvement des gilets jaunes, sans revendication précise annoncée.",
+   "note": "Non autorisé par la préfecture selon La Provence (13 nov.)",
+   "lien": "https://securmanif.fr/manifestations/marseille",
+   "source": "Securmanif"
   }
  ]
 }
