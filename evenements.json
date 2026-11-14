@@ -14327,6 +14327,34 @@
    "resume": "Rassemblement à l'appel du mouvement des gilets jaunes, sans revendication précise annoncée.",
    "lien": "https://securmanif.fr/manifestations/marseille",
    "source": "Securmanif"
+  },
+  {
+   "titre": "Corine Pelluchon : Écologie, universalisme et démocratie",
+   "lieu": "Espace Villeneuve Bargemon",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-27 19:00"
+   ],
+   "prix": "Prix libre",
+   "note": "Réservation conseillée",
+   "resume": "La philosophe Corine Pelluchon propose de refonder les Lumières sur des bases écologiques. Conférence suivie d'un apéro, en ouverture de la saison d'Opera Mundi.",
+   "lien": "https://www.opera-mundi.org/evenement/pour-de-nouvelles-lumieres/",
+   "source": "Opera Mundi"
+  },
+  {
+   "titre": "Rencontre avec Giusi Palomba",
+   "lieu": "Grande Librairie Internationale",
+   "categories": [
+    "conference"
+   ],
+   "dates": [
+    "2026-11-22 18:00"
+   ],
+   "resume": "L'autrice italienne présente Frammenti di un discorso di classe (Einaudi, 2026), dans le cycle Transiti de l'Institut culturel italien.",
+   "lien": "https://iicmarsiglia.esteri.it/fr/gli_eventi/",
+   "source": "Institut culturel italien de Marseille"
   }
  ]
 }
